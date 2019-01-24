@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" xmi:version="2.0">
+  <context name="Default"/>
+  <node componentName="tOracleOutput" componentVersion="2.1" posX="1568" posY="225">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tOracleOutput_1"/>
+    <elementParameter field="TEXT" name="LABEL" value="NEW_EMPLOYEES"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" value="true"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_Hnp8cELzEeittpdzzg9yTQ"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value=""/>
+    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_OCI"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_11"/>
+    <elementParameter field="TEXT" name="RAC_URL" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1521&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" value="ORACLE_OCI"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;Design:Oracle&quot;"/>
+    <elementParameter field="TEXT" name="TABLESCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PASS" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;NEW_EMPLOYEES&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
+    <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&quot; &quot;parameterName2=value2&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA_FLOW:SCHEMA_TYPE" value="BUILT_IN"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA_REJECT:SCHEMA_TYPE" value="BUILT_IN"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="oracle_id"/>
+    <elementParameter field="TEXT" name="JDBC_URL" value="jdbc:oracle:oci:/@talend"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value=""/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TABLE" name="ADD_COLS" value=""/>
+    <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
+    <elementParameter field="CHECK" name="USE_HINT_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="HINT_OPTIONS" value="10000"/>
+    <elementParameter field="CHECK" name="CONVERT_COLUMN_TABLE_TO_UPPERCASE" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
+    <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
+    <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value=""/>
+    <elementParameter field="CHECK" name="USE_TIMESTAMP_FOR_DATE_TYPE" value="true"/>
+    <elementParameter field="CHECK" name="TRIM_CHAR" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <elementParameter field="CHECK" name="USE_BATCH_AND_USE_CONN" value="false"/>
+    <metadata connector="FLOW" name="tOracleOutput_1">
+      <column key="false" length="28" name="EMPLOYEE_ID" precision="0" sourceType="FLOAT" type="id_Float"/>
+      <column key="false" length="28" name="JOB_ID" precision="0" sourceType="FLOAT" type="id_Float"/>
+      <column key="false" length="30" name="FIRST_NAME" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column key="false" length="30" name="LAST_NAME" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column key="false" length="72" name="ADDRESS1" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column key="false" length="72" name="ADDRESS2" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column key="false" length="32" name="CITY" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column key="false" length="2" name="STATE" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column key="false" length="10" name="POSTAL_CODE" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column key="false" length="30" name="OFFICE_PHONE" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column key="false" length="19" name="EFF_DATE" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="TIMESTAMP" type="id_Date"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" posX="1044" posY="225">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1"/>
+    <elementParameter field="TEXT" name="LABEL" value="NEW_EMPLOYEES.INPUT.Sequence"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
+    <elementParameter field="MEMO" name="COMMENT" value="This component created to represent sequence generators"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <metadata connector="FLOW" name="in1">
+      <column key="false" length="28" name="EMPLOYEE_ID" precision="0" sourceType="" type="id_Float"/>
+      <column key="false" length="28" name="JOB_ID" precision="0" sourceType="" type="id_Float"/>
+      <column key="false" length="30" name="FIRST_NAME" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="30" name="LAST_NAME" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="72" name="ADDRESS1" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="32" name="CITY" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="2" name="STATE" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="10" name="POSTAL_CODE" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="30" name="OFFICE_PHONE" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="19" name="EFF_DATE" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="" type="id_Date"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <outputTables name="in1" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="INPUT_2.EMPLOYEE_ID" name="EMPLOYEE_ID" type="id_Float"/>
+        <mapperTableEntries expression="Numeric.sequence(&quot;1613@Mappings@m_XML_Source_Processing@seq_Generate_Sequence_Number1&quot;,0,1)" name="JOB_ID" type="id_Float"/>
+        <mapperTableEntries expression="INPUT_2.FIRST_NAME" name="FIRST_NAME" type="id_String"/>
+        <mapperTableEntries expression="INPUT_2.LAST_NAME" name="LAST_NAME" type="id_String"/>
+        <mapperTableEntries expression="INPUT_2.ADDRESS1" name="ADDRESS1" type="id_String"/>
+        <mapperTableEntries expression="INPUT_2.CITY" name="CITY" type="id_String"/>
+        <mapperTableEntries expression="INPUT_2.STATE" name="STATE" type="id_String"/>
+        <mapperTableEntries expression="INPUT_2.POSTAL_CODE" name="POSTAL_CODE" type="id_String"/>
+        <mapperTableEntries expression="INPUT_2.OFFICE_PHONE" name="OFFICE_PHONE" type="id_String"/>
+        <mapperTableEntries expression="INPUT_2.EFF_DATE" name="EFF_DATE" type="id_Date"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="INPUT_2" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="" name="ADDRESS1" type="id_String"/>
+        <mapperTableEntries expression="" name="CITY" type="id_String"/>
+        <mapperTableEntries expression="" name="EFF_DATE" type="id_Date"/>
+        <mapperTableEntries expression="" name="EMPLOYEE_ID" type="id_Float"/>
+        <mapperTableEntries expression="" name="FIRST_NAME" type="id_String"/>
+        <mapperTableEntries expression="" name="LAST_NAME" type="id_String"/>
+        <mapperTableEntries expression="" name="OFFICE_PHONE" type="id_String"/>
+        <mapperTableEntries expression="" name="POSTAL_CODE" type="id_String"/>
+        <mapperTableEntries expression="" name="STATE" type="id_String"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" posX="783" posY="225">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_2"/>
+    <elementParameter field="TEXT" name="LABEL" value="NEW_EMPLOYEES.INPUT.Sequence.expression"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
+    <elementParameter field="MEMO" name="COMMENT" value="This component created automatically to align schema between nearby components "/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <metadata connector="FLOW" name="INPUT_2">
+      <column key="false" length="28" name="EMPLOYEE_ID" precision="0" sourceType="" type="id_Float"/>
+      <column key="false" length="30" name="FIRST_NAME" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="30" name="LAST_NAME" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="72" name="ADDRESS1" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="32" name="CITY" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="2" name="STATE" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="10" name="POSTAL_CODE" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="30" name="OFFICE_PHONE" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="19" name="EFF_DATE" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="" type="id_Date"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <outputTables name="INPUT_2" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="in2.EMPLOYEE_ID" name="EMPLOYEE_ID" type="id_Float"/>
+        <mapperTableEntries expression="in2.FIRST_NAME" name="FIRST_NAME" type="id_String"/>
+        <mapperTableEntries expression="in2.LAST_NAME" name="LAST_NAME" type="id_String"/>
+        <mapperTableEntries expression="in2.ADDRESS1" name="ADDRESS1" type="id_String"/>
+        <mapperTableEntries expression="in2.CITY" name="CITY" type="id_String"/>
+        <mapperTableEntries expression="in2.STATE" name="STATE" type="id_String"/>
+        <mapperTableEntries expression="TypeConvert.Float2String(in2.ZIP)" name="POSTAL_CODE" type="id_String"/>
+        <mapperTableEntries expression="in2.OFFICE_PHONE" name="OFFICE_PHONE" type="id_String"/>
+        <mapperTableEntries expression="in2.EFF_DATE" name="EFF_DATE" type="id_Date"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="in2" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="" name="ADDRESS1" type="id_String"/>
+        <mapperTableEntries expression="" name="CITY" type="id_String"/>
+        <mapperTableEntries expression="" name="EFF_DATE" type="id_Date"/>
+        <mapperTableEntries expression="" name="EMPLOYEE_ID" type="id_Float"/>
+        <mapperTableEntries expression="" name="FIRST_NAME" type="id_String"/>
+        <mapperTableEntries expression="" name="LAST_NAME" type="id_String"/>
+        <mapperTableEntries expression="" name="OFFICE_PHONE" type="id_String"/>
+        <mapperTableEntries expression="" name="STATE" type="id_String"/>
+        <mapperTableEntries expression="" name="ZIP" type="id_Float"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" posX="1305" posY="225">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_3"/>
+    <elementParameter field="TEXT" name="LABEL" value="NEW_EMPLOYEES.expression"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
+    <elementParameter field="MEMO" name="COMMENT" value="This component created automatically to align schema by position between nearby components "/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <metadata connector="FLOW" name="row3">
+      <column key="false" length="28" name="EMPLOYEE_ID" precision="0" sourceType="" type="id_Float"/>
+      <column key="false" length="28" name="JOB_ID" precision="0" sourceType="" type="id_Float"/>
+      <column key="false" length="30" name="FIRST_NAME" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="30" name="LAST_NAME" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="72" name="ADDRESS1" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="72" name="ADDRESS2" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="32" name="CITY" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="2" name="STATE" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="10" name="POSTAL_CODE" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="30" name="OFFICE_PHONE" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="19" name="EFF_DATE" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="" type="id_Date"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <outputTables name="row3" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="in1.EMPLOYEE_ID" name="EMPLOYEE_ID" type="id_Float"/>
+        <mapperTableEntries expression="in1.JOB_ID" name="JOB_ID" type="id_Float"/>
+        <mapperTableEntries expression="in1.FIRST_NAME" name="FIRST_NAME" type="id_String"/>
+        <mapperTableEntries expression="in1.LAST_NAME" name="LAST_NAME" type="id_String"/>
+        <mapperTableEntries expression="in1.ADDRESS1" name="ADDRESS1" type="id_String"/>
+        <mapperTableEntries name="ADDRESS2" type="id_String"/>
+        <mapperTableEntries expression="in1.CITY" name="CITY" type="id_String"/>
+        <mapperTableEntries expression="in1.STATE" name="STATE" type="id_String"/>
+        <mapperTableEntries expression="in1.POSTAL_CODE" name="POSTAL_CODE" type="id_String"/>
+        <mapperTableEntries expression="in1.OFFICE_PHONE" name="OFFICE_PHONE" type="id_String"/>
+        <mapperTableEntries expression="in1.EFF_DATE" name="EFF_DATE" type="id_Date"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="in1" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="" name="ADDRESS1" type="id_String"/>
+        <mapperTableEntries expression="" name="CITY" type="id_String"/>
+        <mapperTableEntries expression="" name="EFF_DATE" type="id_Date"/>
+        <mapperTableEntries expression="" name="EMPLOYEE_ID" type="id_Float"/>
+        <mapperTableEntries expression="" name="FIRST_NAME" type="id_String"/>
+        <mapperTableEntries expression="" name="JOB_ID" type="id_Float"/>
+        <mapperTableEntries expression="" name="LAST_NAME" type="id_String"/>
+        <mapperTableEntries expression="" name="OFFICE_PHONE" type="id_String"/>
+        <mapperTableEntries expression="" name="POSTAL_CODE" type="id_String"/>
+        <mapperTableEntries expression="" name="STATE" type="id_String"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" posX="0" posY="225">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_4"/>
+    <elementParameter field="TEXT" name="LABEL" value="XMLDSQ_EMPLOYEES"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
+    <elementParameter field="MEMO" name="COMMENT" value="This Source Qualifier is designed for XML files.  The Designer treats each group within the XML Source Qualifier as a separate source of data.  **You cannot pass information from two or more groups into a transformation. "/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <metadata connector="FLOW" name="in3">
+      <column key="false" length="19" name="GPK_EMPLOYEE" precision="0" sourceType="" type="id_Long"/>
+      <column key="false" length="3" name="EMPID" precision="0" sourceType="" type="id_Double"/>
+      <column key="false" length="3" name="DEPTID" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="12" name="LASTNAME" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="8" name="FIRSTNAME" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="22" name="STREETADDRESS" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="14" name="CITY" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="2" name="STATE" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="5" name="ZIP" precision="0" sourceType="" type="id_Double"/>
+      <column key="false" length="2" name="EMPLSTAT" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="10" name="DATEOFHIRE" precision="0" sourceType="" type="id_String"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <outputTables name="in3" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="INPUT.GPK_EMPLOYEE" name="GPK_EMPLOYEE" type="id_Long"/>
+        <mapperTableEntries expression="INPUT.EMPID" name="EMPID" type="id_Double"/>
+        <mapperTableEntries expression="INPUT.DEPTID" name="DEPTID" type="id_String"/>
+        <mapperTableEntries expression="INPUT.LASTNAME" name="LASTNAME" type="id_String"/>
+        <mapperTableEntries expression="INPUT.FIRSTNAME" name="FIRSTNAME" type="id_String"/>
+        <mapperTableEntries expression="INPUT.STREETADDRESS" name="STREETADDRESS" type="id_String"/>
+        <mapperTableEntries expression="INPUT.CITY" name="CITY" type="id_String"/>
+        <mapperTableEntries expression="INPUT.STATE" name="STATE" type="id_String"/>
+        <mapperTableEntries expression="INPUT.ZIP" name="ZIP" type="id_Double"/>
+        <mapperTableEntries expression="INPUT.EMPLSTAT" name="EMPLSTAT" type="id_String"/>
+        <mapperTableEntries expression="INPUT.DATEOFHIRE" name="DATEOFHIRE" type="id_String"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="INPUT" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="CITY" type="id_String"/>
+        <mapperTableEntries name="DATEOFHIRE" type="id_String"/>
+        <mapperTableEntries name="DEPTID" type="id_String"/>
+        <mapperTableEntries name="EMPID" type="id_Double"/>
+        <mapperTableEntries name="EMPLSTAT" type="id_String"/>
+        <mapperTableEntries name="FIRSTNAME" type="id_String"/>
+        <mapperTableEntries name="GPK_EMPLOYEE" type="id_Long"/>
+        <mapperTableEntries name="LASTNAME" type="id_String"/>
+        <mapperTableEntries name="STATE" type="id_String"/>
+        <mapperTableEntries name="STREETADDRESS" type="id_String"/>
+        <mapperTableEntries name="ZIP" type="id_Double"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" posX="522" posY="225">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_5"/>
+    <elementParameter field="TEXT" name="LABEL" value="exp_ADD_PHONE_NUMBER"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
+    <elementParameter field="MEMO" name="COMMENT" value="This Expression adds an office phone number to all employees and sets there effective date to the sysdate."/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <metadata connector="FLOW" name="in2">
+      <column key="false" length="28" name="EMPLOYEE_ID" precision="0" sourceType="" type="id_Float"/>
+      <column key="false" length="10" name="ZIP" precision="0" sourceType="" type="id_Float"/>
+      <column key="false" length="30" name="FIRST_NAME" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="13" name="OFFICE_PHONE" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="29" name="EFF_DATE" pattern="&quot;dd-MM-yyyy&quot;" precision="9" sourceType="" type="id_Date"/>
+      <column key="false" length="30" name="LAST_NAME" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="72" name="ADDRESS1" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="32" name="CITY" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="2" name="STATE" precision="0" sourceType="" type="id_String"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <outputTables name="in2" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="INPUT_1.EMPLOYEE_ID" name="EMPLOYEE_ID" type="id_Float"/>
+        <mapperTableEntries expression="INPUT_1.ZIP" name="ZIP" type="id_Float"/>
+        <mapperTableEntries expression="INPUT_1.FIRST_NAME" name="FIRST_NAME" type="id_String"/>
+        <mapperTableEntries expression="&quot;(800)888-1111&quot;" name="OFFICE_PHONE" type="id_String"/>
+        <mapperTableEntries expression="&quot;2011-01-01&quot;" name="EFF_DATE" type="id_Date"/>
+        <mapperTableEntries expression="INPUT_1.LAST_NAME" name="LAST_NAME" type="id_String"/>
+        <mapperTableEntries expression="INPUT_1.ADDRESS1" name="ADDRESS1" type="id_String"/>
+        <mapperTableEntries expression="INPUT_1.CITY" name="CITY" type="id_String"/>
+        <mapperTableEntries expression="INPUT_1.STATE" name="STATE" type="id_String"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="INPUT_1" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="" name="ADDRESS1" type="id_String"/>
+        <mapperTableEntries expression="" name="CITY" type="id_String"/>
+        <mapperTableEntries expression="" name="EMPLOYEE_ID" type="id_Float"/>
+        <mapperTableEntries expression="" name="FIRST_NAME" type="id_String"/>
+        <mapperTableEntries expression="" name="LAST_NAME" type="id_String"/>
+        <mapperTableEntries expression="" name="STATE" type="id_String"/>
+        <mapperTableEntries expression="" name="ZIP" type="id_Float"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" posX="261" posY="225">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_6"/>
+    <elementParameter field="TEXT" name="LABEL" value="exp_ADD_PHONE_NUMBER.expression"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
+    <elementParameter field="MEMO" name="COMMENT" value="This component created automatically to align schema between nearby components "/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <metadata connector="FLOW" name="INPUT_1">
+      <column key="false" length="28" name="EMPLOYEE_ID" precision="0" sourceType="" type="id_Float"/>
+      <column key="false" length="10" name="ZIP" precision="0" sourceType="" type="id_Float"/>
+      <column key="false" length="30" name="FIRST_NAME" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="30" name="LAST_NAME" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="72" name="ADDRESS1" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="32" name="CITY" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="2" name="STATE" precision="0" sourceType="" type="id_String"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <outputTables name="INPUT_1" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="TypeConvert.Double2Float(in3.EMPID)" name="EMPLOYEE_ID" type="id_Float"/>
+        <mapperTableEntries expression="TypeConvert.Double2Float(in3.ZIP)" name="ZIP" type="id_Float"/>
+        <mapperTableEntries expression="in3.FIRSTNAME" name="FIRST_NAME" type="id_String"/>
+        <mapperTableEntries expression="in3.LASTNAME" name="LAST_NAME" type="id_String"/>
+        <mapperTableEntries expression="in3.STREETADDRESS" name="ADDRESS1" type="id_String"/>
+        <mapperTableEntries expression="in3.CITY" name="CITY" type="id_String"/>
+        <mapperTableEntries expression="in3.STATE" name="STATE" type="id_String"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="in3" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="" name="CITY" type="id_String"/>
+        <mapperTableEntries expression="" name="DATEOFHIRE" type="id_String"/>
+        <mapperTableEntries expression="" name="DEPTID" type="id_String"/>
+        <mapperTableEntries expression="" name="EMPID" type="id_Double"/>
+        <mapperTableEntries expression="" name="EMPLSTAT" type="id_String"/>
+        <mapperTableEntries expression="" name="FIRSTNAME" type="id_String"/>
+        <mapperTableEntries expression="" name="GPK_EMPLOYEE" type="id_Long"/>
+        <mapperTableEntries expression="" name="LASTNAME" type="id_String"/>
+        <mapperTableEntries expression="" name="STATE" type="id_String"/>
+        <mapperTableEntries expression="" name="STREETADDRESS" type="id_String"/>
+        <mapperTableEntries expression="" name="ZIP" type="id_Double"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <connection connectorName="FLOW" label="INPUT_2" lineStyle="0" metaname="out" source="tMap_2" target="tMap_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1"/>
+  </connection>
+  <connection connectorName="FLOW" label="INPUT_1" lineStyle="0" metaname="out" source="tMap_6" target="tMap_5">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2"/>
+  </connection>
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="out" source="tMap_3" target="tOracleOutput_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3"/>
+  </connection>
+  <connection connectorName="FLOW" label="in1" lineStyle="0" metaname="OUTPUT" source="tMap_1" target="tMap_3">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row4"/>
+  </connection>
+  <connection connectorName="FLOW" label="in2" lineStyle="0" metaname="OUTPUT" source="tMap_5" target="tMap_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row5"/>
+  </connection>
+  <connection connectorName="FLOW" label="in3" lineStyle="0" metaname="OUTPUT" source="tMap_4" target="tMap_6">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row6"/>
+  </connection>
+  <note opaque="true" posX="608" posY="32" sizeHeight="193" sizeWidth="545" text="NEW_EMPLOYEES.expression&#13;&#10;&#9;Column EFF_DATE uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;NEW_EMPLOYEES.INPUT.Sequence.expression&#13;&#10;&#9;Column EFF_DATE uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;NEW_EMPLOYEES&#13;&#10;&#9;Column EFF_DATE uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;NEW_EMPLOYEES.INPUT.Sequence&#13;&#10;&#9;Column EFF_DATE uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;exp_ADD_PHONE_NUMBER&#13;&#10;&#9;Column EFF_DATE uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;">
+    <elementParameter field="RADIO" name="NOTETXT_LEFT" value="true"/>
+    <elementParameter field="RADIO" name="NOTETXT_CENTER" value="false"/>
+    <elementParameter field="RADIO" name="NOTELABEL_CENTER" value="false"/>
+    <elementParameter field="RADIO" name="NOTETXT_TOP" value="true"/>
+  </note>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_2ae8e874-d1d5-4f93-b0e6-0938c8bedf71"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>RzN/fO2z6oFK5PdhQb/09JGH4fprlj7ui5CVcDNVpJi77ghDnN9Sey4flKCdNsbdxZAvrPMbItwj
+oEcZeAwH6g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e05334ee-6adb-4fad-bbdf-ba946c9b47e3"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>tNAu0K2HlXeFHJKWQ1tyPnpwf3w6pKdiXUijgfo59Jc45w9AxR3xpDFJ7sKxN1f0FQAQvjCN9AjS
+3GRp607FoQ==</DigestValue></Reference></SignedInfo><SignatureValue>tZT/XTErniEeqohxNJBnvHpIZ+AeZJekLrGMyuDx4s57QCH9uOmxxY+qntW1+yjM+ti9mfJ4dcKK
+DdafYWt3qmpBUctU08uDRJ7SuBUm1JzzR9lrRzA8gLYUYZbY2rtBeZ5u7NWjgofq5njaXt1KfKwB
+pnWLU6KlYXSHLeyduTTTHddXqZZUvWtvmbYDDDmez2igZyfSio6MIHLZrkrfQrJ6DA2LUTNJF2b5
+hL0DBBs9V9NDb4xLJXlURTX8S6X8SS/ONnX2iw9RLEDFwfpxpNI//9BcHux2RX0YskfKJIeyc6Kq
+zNwIsW627cUjBtE+YL+3RWMduG72o1fk0Uv6xg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
+RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
+LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
+VQQIDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1ImRDEpMCcGA1UEAwwg
+RGVmYXVsdCBjb2RlLXNpZ25pbmcgY2VydGlmaWNhdGUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQDiCz1II/o6hDUWu/ygxTCT2o/fYxVzPW23AoONQC/Vuiqh0COyLIgaMTjBPmQdTQFq
+rmM5tD64gi4TEQF+Z3iYt3daLdQUfaW9SzaMlY+XVNz5xnMBVDuiSHJSFE9lKnhgbKAHvOeoJo46
+UgWwb1za0WpRckDtjKcntwEK1orZCgrcIo1nDvFXyB5n0KfpLyktEOa0bSHde50MPbvQeB66XlEb
+lhjfs5S9WnAUja9RgqdwqZoI0ss+x/pjkQygDT8f17MktM21HOtg09lJlhMGJckhgD7jUF5tfYGM
+sv/O27g5CToFhxOnutDtsrDw7AkEQIml8KJp97bQLAFlLnh1AgMBAAGjge0wgeowHQYDVR0OBBYE
+FFzdy6ZfpUX8JwkM/SUrqkwLNqWAMB8GA1UdIwQYMBaAFOd9C3L8tYGZxoAr2SzsgnMytaj3MAsG
+A1UdDwQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAJBgNVHRMEAjAAMHsGCWCGSAGG+EIBDQRu
+FmxEZWZhdWx0IHRoaXJkIHBhcnR5IGNvZGUtc2lnbmluZyBjZXJ0aWZpY2F0ZS4gTm8gY29tbWl0
+bWVudCBpcyBtYWRlIG9uIHRoZSBjb250ZW50IHNpZ25lZCBieSB0aGUgdGhpcmQgcGFydHkwDQYJ
+KoZIhvcNAQELBQADggIBAKzYdnzoFgrRtDLSSzWtwuOrGo5+1RPoDHm/1dlbVnB7oZzUwfRGwZT5
+ser0V7OZyt9wWR8iQ2ka30fHWrNAosNtlIkF88s5YZw7OOIMxR+qYA99BnWLa79DZVIuukI2f5qJ
+Cr9nw6Oygo8CWeNMWhtXcvV4gqROhb2QMBrvWBw9QvNK1XMdtPShfWiXwyPzzRKgwqrN2meXtOY3
+S+MXu6u+RUD9EYeElp9M+9Yp+zRySl5/s+0sbvo7qz369dlsw8XhKXT+s4YQQe3Sx14Kg3SDFXKn
+QcVgycaZMOw4YUxOeP2hKOHnNuOMORfu3qlYkN/0RMGjn6r4PU4+yL276TiWI5b8J06y4leng2as
+r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
+EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
+BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
+6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e05334ee-6adb-4fad-bbdf-ba946c9b47e3" Target="#_2ae8e874-d1d5-4f93-b0e6-0938c8bedf71"><Timestamp>2019-01-24 09:00:12</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
