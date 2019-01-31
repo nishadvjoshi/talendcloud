@@ -1,364 +1,133 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" jobType="Standard" xmi:version="2.0">
-  <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="Target" prompt="" promptNeeded="false" type="id_String" value="&quot;&quot;"/>
-  </context>
-  <parameters>
-    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
-    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
-    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
-    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" show="false" value=""/>
-    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" show="false" value=""/>
-    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" show="false" value=""/>
-    <elementParameter field="TEXT" name="OOZIE_USERNAME" show="false" value=""/>
-    <elementParameter field="TEXT" name="OOZIE_GROUP" show="false" value=""/>
-    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" show="false" value=""/>
-    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" show="false" value=""/>
-    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" show="false" value=""/>
-    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" show="false" value=""/>
-    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" show="false" value=""/>
-    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" show="false" value=""/>
-    <elementParameter field="TEXT" name="OOZIE_END_POINT" show="false" value=""/>
-    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" show="false" value="false"/>
-    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" show="false" value="false"/>
-    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
-    <elementParameter field="TEXT" name="PARALLELIZE_UNIT_SIZE" value="25000"/>
-    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
-    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
-    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
-    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" show="false" value="&quot;C:/Talend-Studio-20181026_1147-V7.1.1/workspace/in.csv&quot;"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;;&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" show="false" value=""/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" show="false" value="ORACLE_12"/>
-    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
-    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="0RMsyjmybrE="/>
-    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" show="false" value="Warning"/>
-    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" show="false" value="Warning"/>
-    <elementParameter field="CHECK" name="PRINT_OPERATIONS" show="false" value="false"/>
-    <elementParameter field="CHECK" name="DISABLE_ERROR" show="false" value="false"/>
-    <elementParameter field="CHECK" name="DISABLE_WARNINGS" show="false" value="true"/>
-    <elementParameter field="CHECK" name="DISABLE_INFO" show="false" value="true"/>
-    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
-    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="false"/>
-    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
-    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" show="false" value="false"/>
-    <elementParameter field="CHECK" name="ON_FILES_FLAG" show="false" value="false"/>
-    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;C:/Talend-Studio-20181026_1147-V7.1.1/workspace/.metadata&quot;"/>
-    <elementParameter field="TEXT" name="FILENAME_STATS" show="false" value="&quot;stats_file.txt&quot;"/>
-    <elementParameter field="TEXT" name="FILENAME_LOGS" show="false" value="&quot;logs_file.txt&quot;"/>
-    <elementParameter field="TEXT" name="FILENAME_METTER" show="false" value="&quot;meter_file.txt&quot;"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="ISO-8859-15"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
-    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" show="false" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="DB_TYPE" show="false" value="tJDBCOutput"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="ORACLE_12"/>
-    <elementParameter field="TEXT" name="URL" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
-    <elementParameter field="TEXT" name="DRIVER_CLASS" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="DATASOURCE" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="0RMsyjmybrE="/>
-    <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
-    <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
-    <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
-    <elementParameter field="DBTABLE" name="TABLE_METER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" show="false" value="true"/>
-    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" show="false" value="true"/>
-    <elementParameter field="CHECK" name="CATCH_USER_WARNING" show="false" value="true"/>
-    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" show="false" value="false"/>
-    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" show="false" value=""/>
-    <elementParameter field="CHECK" name="HEADER_ENABLED" show="false" value="false"/>
-    <elementParameter field="TEXT" name="HEADER_LIBRARY" show="false" value=""/>
-    <elementParameter field="TEXT" name="HEADER_CODE" show="false" value=""/>
-    <elementParameter field="TEXT" name="HEADER_IMPORT" show="false" value=""/>
-    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" show="false" value=""/>
-    <elementParameter field="CHECK" name="FOOTER_ENABLED" show="false" value="false"/>
-    <elementParameter field="TEXT" name="FOOTER_LIBRARY" show="false" value=""/>
-    <elementParameter field="TEXT" name="FOOTER_CODE" show="false" value=""/>
-    <elementParameter field="TEXT" name="FOOTER_IMPORT" show="false" value=""/>
-    <routinesParameter id="_rQRpwB-1EemtwtEDadxD9Q" name="DataMasking"/>
-    <routinesParameter id="_rUIPAB-1EemtwtEDadxD9Q" name="DataQuality"/>
-    <routinesParameter id="_rUmJEB-1EemtwtEDadxD9Q" name="DataQualityDependencies"/>
-    <routinesParameter id="_rU65MB-1EemtwtEDadxD9Q" name="DqStringHandling"/>
-    <routinesParameter id="_rVKJwB-1EemtwtEDadxD9Q" name="DQTechnical"/>
-    <routinesParameter id="_rVruMB-1EemtwtEDadxD9Q" name="DataOperation"/>
-    <routinesParameter id="_rWC6kB-1EemtwtEDadxD9Q" name="Mathematical"/>
-    <routinesParameter id="_rWj38B-1EemtwtEDadxD9Q" name="Numeric"/>
-    <routinesParameter id="_rXE1UB-1EemtwtEDadxD9Q" name="Relational"/>
-    <routinesParameter id="_rXcBsB-1EemtwtEDadxD9Q" name="StringHandling"/>
-    <routinesParameter id="_rYOr4B-1EemtwtEDadxD9Q" name="TalendDataGenerator"/>
-    <routinesParameter id="_rYkqIB-1EemtwtEDadxD9Q" name="TalendDate"/>
-    <routinesParameter id="_rZRNsB-1EemtwtEDadxD9Q" name="TalendString"/>
-    <routinesParameter id="_rZ0nUB-1EemtwtEDadxD9Q" name="TalendStringUtil"/>
-    <routinesParameter id="_raFtEB-1EemtwtEDadxD9Q" name="SQLike"/>
-  </parameters>
-  <node componentName="tOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="0" posY="320">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tOracleInput_1"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_IQtL4k3oEeiSTvM_ARdNaw"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
-    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_OCI"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_11"/>
-    <elementParameter field="TEXT" name="RAC_URL" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="TYPE" show="false" value="ORACLE_OCI"/>
-    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;1521&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;Design:Oracle-ORACLE&quot;"/>
-    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;HR&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE="/>
-    <elementParameter field="TEXT" name="JDBC_URL" show="false" value="jdbc:oracle:oci:/@talend"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;COMPANY_Source&quot;"/>
-    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value=""/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT ADDRESS1,ADDRESS2,CITY,COMPANY_NAME,POSTAL_CODE,STATE,STATE_TAX_ID  FROM \&quot;COMPANY_Source\&quot;&quot;"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
-    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value=""/>
-    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="oracle_id"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value=""/>
-    <elementParameter field="LABEL" name="NOTE" value="This Source Qualifier object is used to retrieve data from the NIELSEN raw data table. The select statement orders the rows by STATE_TAX_ID (the group-by column in the Aggregator transformation), so that the &quot;Sorted Ports&quot; option can be used in the mapping."/>
-    <elementParameter field="CHECK" name="IS_CONVERT_XMLTYPE" value="false"/>
-    <elementParameter field="TABLE" name="CONVERT_XMLTYPE" show="false"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="ISO-8859-15"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="CHECK" name="USE_CURSOR" value="false"/>
-    <elementParameter field="TEXT" name="CURSOR_SIZE" show="false" value="1000"/>
-    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
-    <elementParameter field="TABLE" name="TRIM_COLUMN">
-      <elementValue elementRef="SCHEMA_COLUMN" value="STATE_TAX_ID"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="COMPANY_NAME"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ADDRESS1"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ADDRESS2"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CITY"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="STATE"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="POSTAL_CODE"/>
-      <elementValue elementRef="TRIM" value="false"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="NO_NULL_VALUES" value="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="SQ_NIELSEN"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tOracleInput_1">
-      <column key="false" length="4" name="STATE_TAX_ID" nullable="false" precision="0" sourceType="DOUBLE PRECISION" type="id_Double" usefulColumn="true"/>
-      <column key="false" length="27" name="COMPANY_NAME" nullable="false" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="20" name="ADDRESS1" nullable="false" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="6" name="ADDRESS2" nullable="false" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="13" name="CITY" nullable="false" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="2" name="STATE" nullable="false" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="7" name="POSTAL_CODE" nullable="false" precision="0" sourceType="DOUBLE PRECISION" type="id_Double" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="320">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tAggregateRow_1"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" xmi:version="2.0">
+  <context name="Default"/>
+  <node componentName="tAggregateRow" componentVersion="2.1" posX="813" posY="326">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAggregateRow_1"/>
+    <elementParameter field="TEXT" name="LABEL" value="Agg_RemoveDuplicateRecords"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
     <elementParameter field="TABLE" name="GROUPBYS">
-      <elementValue elementRef="OUTPUT_COLUMN" value="STATE_TAX_ID"/>
       <elementValue elementRef="INPUT_COLUMN" value="STATE_TAX_ID"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="STATE_TAX_ID"/>
     </elementParameter>
     <elementParameter field="TABLE" name="OPERATIONS">
       <elementValue elementRef="OUTPUT_COLUMN" value="ADDRESS1"/>
       <elementValue elementRef="FUNCTION" value="last"/>
       <elementValue elementRef="INPUT_COLUMN" value="ADDRESS1"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
       <elementValue elementRef="OUTPUT_COLUMN" value="ADDRESS2"/>
       <elementValue elementRef="FUNCTION" value="last"/>
       <elementValue elementRef="INPUT_COLUMN" value="ADDRESS2"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
       <elementValue elementRef="OUTPUT_COLUMN" value="CITY"/>
       <elementValue elementRef="FUNCTION" value="last"/>
       <elementValue elementRef="INPUT_COLUMN" value="CITY"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
       <elementValue elementRef="OUTPUT_COLUMN" value="COMPANY_NAME"/>
       <elementValue elementRef="FUNCTION" value="last"/>
       <elementValue elementRef="INPUT_COLUMN" value="COMPANY_NAME"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
       <elementValue elementRef="OUTPUT_COLUMN" value="POSTAL_CODE"/>
       <elementValue elementRef="FUNCTION" value="last"/>
       <elementValue elementRef="INPUT_COLUMN" value="POSTAL_CODE"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
       <elementValue elementRef="OUTPUT_COLUMN" value="STATE"/>
       <elementValue elementRef="FUNCTION" value="last"/>
       <elementValue elementRef="INPUT_COLUMN" value="STATE"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
     </elementParameter>
-    <elementParameter field="TEXT" name="LIST_DELIMITER" value="&quot;,&quot;"/>
-    <elementParameter field="CHECK" name="USE_FINANCIAL_PRECISION" value="true"/>
-    <elementParameter field="CHECK" name="CHECK_TYPE_OVERFLOW" value="false"/>
-    <elementParameter field="CHECK" name="CHECK_ULP" value="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="Agg_RemoveDuplicateRecords"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
-    <elementParameter field="MEMO" name="COMMENT" value="Removes duplicate records.  PowerCenter, by default, will return the last record is no aggregate function is specified."/>
-    <metadata connector="FLOW" name="in4">
-      <column key="false" length="4" name="STATE_TAX_ID" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
-      <column key="false" length="27" name="COMPANY_NAME" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="20" name="ADDRESS1" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="6" name="ADDRESS2" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="13" name="CITY" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="2" name="STATE" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="7" name="POSTAL_CODE" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tOracleOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="2464" posY="224">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tOracleOutput_1"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_IOdwME3oEeiSTvM_ARdNaw"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
-    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_OCI"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_11"/>
-    <elementParameter field="TEXT" name="RAC_URL" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;1521&quot;"/>
-    <elementParameter field="TEXT" name="TYPE" show="false" value="ORACLE_OCI"/>
-    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;Design:Oracle&quot;"/>
-    <elementParameter field="TEXT" name="TABLESCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE="/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;COMPANY_Target&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
-    <elementParameter field="LABEL" name="NOTE" show="false" value="Warning : this component configuration will automatically generate a commit before data insert/update/delete"/>
-    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
-    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
-    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="oracle_id"/>
-    <elementParameter field="TEXT" name="JDBC_URL" show="false" value="jdbc:oracle:oci:/@talend"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value=""/>
-    <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&quot; &quot;parameterName2=value2&quot;"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="ISO-8859-15"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
-    <elementParameter field="TABLE" name="ADD_COLS"/>
-    <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
-    <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="STATE_TAX_ID"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="COMPANY_NAME"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ADDRESS1"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ADDRESS2"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CITY"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="STATE"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="POSTAL_CODE"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="USE_HINT_OPTIONS" value="false"/>
-    <elementParameter field="TABLE" name="HINT_OPTIONS" show="false"/>
-    <elementParameter field="CHECK" name="CONVERT_COLUMN_TABLE_TO_UPPERCASE" value="false"/>
-    <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
-    <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
-    <elementParameter field="CHECK" name="USE_BATCH_AND_USE_CONN" show="false" value="false"/>
-    <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
-    <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
-    <elementParameter field="CHECK" name="USE_TIMESTAMP_FOR_DATE_TYPE" value="true"/>
-    <elementParameter field="CHECK" name="TRIM_CHAR" value="true"/>
-    <elementParameter field="TEXT" name="LABEL" value="COMAPNY_Inserts"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tOracleOutput_1">
-      <column key="false" length="4" name="STATE_TAX_ID" nullable="false" precision="0" sourceType="FLOAT" type="id_Float" usefulColumn="true"/>
-      <column key="false" length="27" name="COMPANY_NAME" nullable="false" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="20" name="ADDRESS1" nullable="false" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="6" name="ADDRESS2" nullable="false" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="13" name="CITY" nullable="false" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="2" name="STATE" nullable="false" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="7" name="POSTAL_CODE" nullable="false" precision="0" sourceType="FLOAT" type="id_Float" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="REJECT" name="REJECT">
-      <column key="false" length="4" name="STATE_TAX_ID" nullable="false" precision="0" sourceType="FLOAT" type="id_Float" usefulColumn="true"/>
-      <column key="false" length="27" name="COMPANY_NAME" nullable="false" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="20" name="ADDRESS1" nullable="false" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="6" name="ADDRESS2" nullable="false" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="13" name="CITY" nullable="false" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="2" name="STATE" nullable="false" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="7" name="POSTAL_CODE" nullable="false" precision="0" sourceType="FLOAT" type="id_Float" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="2208" posY="224">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
-    <elementParameter field="EXTERNAL" name="MAP" value=""/>
-    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
-    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_IdXu5k3oEeiSTvM_ARdNaw-tMap_1-PREVIEW.bmp"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
-    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
-    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
-    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
-    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="COMAPNY_Inserts.expression"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
-    <elementParameter field="MEMO" name="COMMENT" value="This component created automatically to align schema by position between nearby components "/>
-    <metadata connector="FLOW" name="row6">
-      <column key="false" length="4" name="STATE_TAX_ID" nullable="false" precision="0" sourceType="" type="id_Float" usefulColumn="true"/>
-      <column key="false" length="27" name="COMPANY_NAME" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="20" name="ADDRESS1" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="6" name="ADDRESS2" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="13" name="CITY" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="2" name="STATE" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="7" name="POSTAL_CODE" nullable="false" precision="0" sourceType="" type="id_Float" usefulColumn="true"/>
+    <metadata connector="FLOW" name="in3">
+      <column key="false" length="20" name="ADDRESS1" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="6" name="ADDRESS2" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="13" name="CITY" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="27" name="COMPANY_NAME" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="7" name="POSTAL_CODE" precision="0" sourceType="" type="id_Double"/>
+      <column key="false" length="2" name="STATE" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="4" name="STATE_TAX_ID" precision="0" sourceType="" type="id_Double"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
-      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables name="row6" sizeState="INTERMEDIATE">
+      <outputTables name="output" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="last(input_5.ADDRESS1)" name="ADDRESS1" type="id_String"/>
+        <mapperTableEntries expression="last(input_5.ADDRESS2)" name="ADDRESS2" type="id_String"/>
+        <mapperTableEntries expression="last(input_5.CITY)" name="CITY" type="id_String"/>
+        <mapperTableEntries expression="last(input_5.COMPANY_NAME)" name="COMPANY_NAME" type="id_String"/>
+        <mapperTableEntries expression="last(input_5.POSTAL_CODE)" name="POSTAL_CODE" type="id_Double"/>
+        <mapperTableEntries expression="last(input_5.STATE)" name="STATE" type="id_String"/>
+        <mapperTableEntries expression="input_5.STATE_TAX_ID1" name="STATE_TAX_ID" type="id_Double"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="input_5" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="" name="ADDRESS1" type="id_String"/>
+        <mapperTableEntries expression="" name="ADDRESS2" type="id_String"/>
+        <mapperTableEntries expression="" name="CITY" type="id_String"/>
+        <mapperTableEntries expression="" name="COMPANY_NAME" type="id_String"/>
+        <mapperTableEntries expression="" name="POSTAL_CODE" type="id_Double"/>
+        <mapperTableEntries expression="" name="STATE" type="id_String"/>
+        <mapperTableEntries expression="" name="STATE_TAX_ID" type="id_Double"/>
+        <mapperTableEntries expression="" name="STATE_TAX_ID1" type="id_Double"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" posX="550" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1"/>
+    <elementParameter field="TEXT" name="LABEL" value="Agg_RemoveDuplicateRecords.expression"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
+    <elementParameter field="MEMO" name="COMMENT" value="This component created automatically to align schema between nearby components "/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <metadata connector="FLOW" name="row2">
+      <column key="false" length="20" name="ADDRESS1" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="6" name="ADDRESS2" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="13" name="CITY" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="27" name="COMPANY_NAME" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="7" name="POSTAL_CODE" precision="0" sourceType="" type="id_Double"/>
+      <column key="false" length="2" name="STATE" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="4" name="STATE_TAX_ID" precision="0" sourceType="" type="id_Double"/>
+      <column key="false" length="4" name="STATE_TAX_ID1" precision="0" sourceType="" type="id_Double"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <outputTables name="row2" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="ADDRESS1" type="id_String"/>
+        <mapperTableEntries name="ADDRESS2" type="id_String"/>
+        <mapperTableEntries name="CITY" type="id_String"/>
+        <mapperTableEntries name="COMPANY_NAME" type="id_String"/>
+        <mapperTableEntries name="POSTAL_CODE" type="id_Double"/>
+        <mapperTableEntries name="STATE" type="id_String"/>
+        <mapperTableEntries name="STATE_TAX_ID" type="id_Double"/>
+        <mapperTableEntries expression="in5.STATE_TAX_ID" name="STATE_TAX_ID1" type="id_Double"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="in5" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="" name="STATE_TAX_ID" type="id_Double"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tDBOutput" componentVersion="2.1" posX="2990" posY="225">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBOutput_2"/>
+    <elementParameter field="TEXT" name="LABEL" value="COMAPNY_Inserts"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.COMAPNY_InsertsWRITERConnection"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PASS" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;Table&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="$COMAPNY_Inserts.WRITER.Query"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <metadata connector="FLOW" name="tDBOutput_2">
+      <column key="false" length="4" name="STATE_TAX_ID" precision="0" sourceType="NUMERIC" type="id_Float"/>
+      <column key="false" length="27" name="COMPANY_NAME" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column key="false" length="20" name="ADDRESS1" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column key="false" length="6" name="ADDRESS2" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column key="false" length="13" name="CITY" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column key="false" length="2" name="STATE" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column key="false" length="7" name="POSTAL_CODE" precision="0" sourceType="NUMERIC" type="id_Float"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" posX="2729" posY="225">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_2"/>
+    <elementParameter field="TEXT" name="LABEL" value="COMAPNY_Inserts.expression"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
+    <elementParameter field="MEMO" name="COMMENT" value="This component created automatically to align schema by position between nearby components "/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <metadata connector="FLOW" name="row4">
+      <column key="false" length="4" name="STATE_TAX_ID" precision="0" sourceType="" type="id_Float"/>
+      <column key="false" length="27" name="COMPANY_NAME" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="20" name="ADDRESS1" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="6" name="ADDRESS2" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="13" name="CITY" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="2" name="STATE" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="7" name="POSTAL_CODE" precision="0" sourceType="" type="id_Float"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <outputTables name="row4" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="TypeConvert.Double2Float(in1.STATE_TAX_ID)" name="STATE_TAX_ID" type="id_Float"/>
         <mapperTableEntries expression="in1.COMPANY_NAME" name="COMPANY_NAME" type="id_String"/>
         <mapperTableEntries expression="in1.ADDRESS1" name="ADDRESS1" type="id_String"/>
@@ -368,150 +137,53 @@
         <mapperTableEntries expression="TypeConvert.Double2Float(in1.POSTAL_CODE)" name="POSTAL_CODE" type="id_Float"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="in1" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="" name="STATE_TAX_ID" type="id_Double"/>
-        <mapperTableEntries expression="" name="COMPANY_NAME" type="id_String"/>
         <mapperTableEntries expression="" name="ADDRESS1" type="id_String"/>
         <mapperTableEntries expression="" name="ADDRESS2" type="id_String"/>
         <mapperTableEntries expression="" name="CITY" type="id_String"/>
-        <mapperTableEntries expression="" name="STATE" type="id_String"/>
+        <mapperTableEntries expression="" name="COMPANY_NAME" type="id_String"/>
         <mapperTableEntries expression="" name="POSTAL_CODE" type="id_Double"/>
+        <mapperTableEntries expression="" name="STATE" type="id_String"/>
+        <mapperTableEntries expression="" name="STATE_TAX_ID" type="id_Double"/>
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tOracleOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="2464" posY="320">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tOracleOutput_2"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_IOdwME3oEeiSTvM_ARdNaw"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
-    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_OCI"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_11"/>
-    <elementParameter field="TEXT" name="RAC_URL" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;1521&quot;"/>
-    <elementParameter field="TEXT" name="TYPE" show="false" value="ORACLE_OCI"/>
-    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;Design:Oracle&quot;"/>
-    <elementParameter field="TEXT" name="TABLESCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE="/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;COMPANY_Target&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
-    <elementParameter field="LABEL" name="NOTE" show="false" value="Warning : this component configuration will automatically generate a commit before data insert/update/delete"/>
-    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
-    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
-    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="oracle_id"/>
-    <elementParameter field="TEXT" name="JDBC_URL" show="false" value="jdbc:oracle:oci:/@talend"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value=""/>
-    <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&quot; &quot;parameterName2=value2&quot;"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="ISO-8859-15"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
-    <elementParameter field="TABLE" name="ADD_COLS"/>
-    <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
-    <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="STATE_TAX_ID"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="COMPANY_NAME"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ADDRESS1"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ADDRESS2"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CITY"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="STATE"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="POSTAL_CODE"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="USE_HINT_OPTIONS" value="false"/>
-    <elementParameter field="TABLE" name="HINT_OPTIONS" show="false"/>
-    <elementParameter field="CHECK" name="CONVERT_COLUMN_TABLE_TO_UPPERCASE" value="false"/>
-    <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
-    <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
-    <elementParameter field="CHECK" name="USE_BATCH_AND_USE_CONN" show="false" value="false"/>
-    <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
-    <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
-    <elementParameter field="CHECK" name="USE_TIMESTAMP_FOR_DATE_TYPE" value="true"/>
-    <elementParameter field="CHECK" name="TRIM_CHAR" value="true"/>
+  <node componentName="tDBOutput" componentVersion="2.1" posX="2990" posY="335">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBOutput_4"/>
     <elementParameter field="TEXT" name="LABEL" value="COMAPNY_Updates"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tOracleOutput_2">
-      <column key="false" length="4" name="STATE_TAX_ID" nullable="false" precision="0" sourceType="FLOAT" type="id_Float" usefulColumn="true"/>
-      <column key="false" length="27" name="COMPANY_NAME" nullable="false" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="20" name="ADDRESS1" nullable="false" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="6" name="ADDRESS2" nullable="false" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="13" name="CITY" nullable="false" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="2" name="STATE" nullable="false" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="7" name="POSTAL_CODE" nullable="false" precision="0" sourceType="FLOAT" type="id_Float" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="REJECT" name="REJECT">
-      <column key="false" length="4" name="STATE_TAX_ID" nullable="false" precision="0" sourceType="FLOAT" type="id_Float" usefulColumn="true"/>
-      <column key="false" length="27" name="COMPANY_NAME" nullable="false" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="20" name="ADDRESS1" nullable="false" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="6" name="ADDRESS2" nullable="false" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="13" name="CITY" nullable="false" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="2" name="STATE" nullable="false" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="7" name="POSTAL_CODE" nullable="false" precision="0" sourceType="FLOAT" type="id_Float" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.COMAPNY_UpdatesWRITERConnection"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PASS" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;Table&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="$COMAPNY_Updates.WRITER.Query"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <metadata connector="FLOW" name="tDBOutput_4">
+      <column key="false" length="4" name="STATE_TAX_ID" precision="0" sourceType="NUMERIC" type="id_Float"/>
+      <column key="false" length="27" name="COMPANY_NAME" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column key="false" length="20" name="ADDRESS1" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column key="false" length="6" name="ADDRESS2" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column key="false" length="13" name="CITY" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column key="false" length="2" name="STATE" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column key="false" length="7" name="POSTAL_CODE" precision="0" sourceType="NUMERIC" type="id_Float"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="2208" posY="320">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_2"/>
-    <elementParameter field="EXTERNAL" name="MAP" value=""/>
-    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
-    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_IdXu5k3oEeiSTvM_ARdNaw-tMap_2-PREVIEW.bmp"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
-    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
-    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
-    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
-    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+  <node componentName="tMap" componentVersion="2.1" posX="2729" posY="335">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_3"/>
     <elementParameter field="TEXT" name="LABEL" value="COMAPNY_Updates.expression"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <elementParameter field="CHECK" name="INFORMATION" value="true"/>
     <elementParameter field="MEMO" name="COMMENT" value="This component created automatically to align schema by position between nearby components "/>
-    <metadata connector="FLOW" name="row5">
-      <column key="false" length="4" name="STATE_TAX_ID" nullable="false" precision="0" sourceType="" type="id_Float" usefulColumn="true"/>
-      <column key="false" length="27" name="COMPANY_NAME" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="20" name="ADDRESS1" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="6" name="ADDRESS2" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="13" name="CITY" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="2" name="STATE" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="7" name="POSTAL_CODE" nullable="false" precision="0" sourceType="" type="id_Float" usefulColumn="true"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <metadata connector="FLOW" name="row10">
+      <column key="false" length="4" name="STATE_TAX_ID" precision="0" sourceType="" type="id_Float"/>
+      <column key="false" length="27" name="COMPANY_NAME" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="20" name="ADDRESS1" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="6" name="ADDRESS2" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="13" name="CITY" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="2" name="STATE" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="7" name="POSTAL_CODE" precision="0" sourceType="" type="id_Float"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
-      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables name="row5" sizeState="INTERMEDIATE">
+      <outputTables name="row10" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="TypeConvert.Double2Float(in2.STATE_TAX_ID)" name="STATE_TAX_ID" type="id_Float"/>
         <mapperTableEntries expression="in2.COMPANY_NAME" name="COMPANY_NAME" type="id_String"/>
         <mapperTableEntries expression="in2.ADDRESS1" name="ADDRESS1" type="id_String"/>
@@ -521,304 +193,226 @@
         <mapperTableEntries expression="TypeConvert.Double2Float(in2.POSTAL_CODE)" name="POSTAL_CODE" type="id_Float"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="in2" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="" name="STATE_TAX_ID" type="id_Double"/>
-        <mapperTableEntries expression="" name="COMPANY_NAME" type="id_String"/>
         <mapperTableEntries expression="" name="ADDRESS1" type="id_String"/>
         <mapperTableEntries expression="" name="ADDRESS2" type="id_String"/>
         <mapperTableEntries expression="" name="CITY" type="id_String"/>
-        <mapperTableEntries expression="" name="STATE" type="id_String"/>
+        <mapperTableEntries expression="" name="COMPANY_NAME" type="id_String"/>
         <mapperTableEntries expression="" name="POSTAL_CODE" type="id_Double"/>
+        <mapperTableEntries expression="" name="STATE" type="id_String"/>
+        <mapperTableEntries expression="" name="STATE_TAX_ID" type="id_Double"/>
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tDBInput" offsetLabelX="0" offsetLabelY="0" posX="608" posY="224">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_2"/>
-    <metadata connector="FLOW" name="tDBInput_2">
-      <column key="false" length="4" name="STATE_TAX_ID" nullable="false" precision="0" sourceType="DECIMAL" type="id_Double" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="896" posY="288">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_3"/>
-    <elementParameter field="EXTERNAL" name="MAP" value=""/>
-    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
-    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_IdXu5k3oEeiSTvM_ARdNaw-tMap_3-PREVIEW.bmp"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
-    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
-    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
-    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
-    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+  <node componentName="tDBInput" componentVersion="2.1" posX="1126" posY="225">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_2"/>
     <elementParameter field="TEXT" name="LABEL" value="Lkp_CheckExistence"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <elementParameter field="CHECK" name="INFORMATION" value="true"/>
     <elementParameter field="MEMO" name="COMMENT" value="Check the target Nielsen table to see if the record already exists in the table (based on the State_Tax_ID).  If it exists, perform an update to the target.  If not found, perform an insert."/>
-    <metadata connector="FLOW" name="in6">
-      <column key="false" length="4" name="STATE_TAX_ID" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
-      <column key="false" length="4" name="STATE_TAX_ID1" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
-      <column key="false" length="4" name="lkp_StateTaxID" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
-      <column key="false" length="27" name="COMPANY_NAME" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="20" name="ADDRESS1" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="6" name="ADDRESS2" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="13" name="CITY" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="2" name="STATE" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="7" name="POSTAL_CODE" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.Lkp_CheckExistenceLOOKUPConnection"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PASS" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;Table&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="context.Lkp_CheckExistenceLOOKUPQuery"/>
+    <metadata connector="FLOW" name="tDBInput_2">
+      <column key="false" length="4" name="STATE_TAX_ID" precision="0" sourceType="DECIMAL" type="id_Double"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" posX="1406" posY="280">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_4"/>
+    <elementParameter field="TEXT" name="LABEL" value="Lkp_CheckExistence"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
+    <elementParameter field="MEMO" name="COMMENT" value="Check the target Nielsen table to see if the record already exists in the table (based on the State_Tax_ID).  If it exists, perform an update to the target.  If not found, perform an insert."/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <metadata connector="FLOW" name="in7">
+      <column key="false" length="4" name="STATE_TAX_ID" precision="0" sourceType="" type="id_Double"/>
+      <column key="false" length="4" name="lkp_StateTaxID" precision="0" sourceType="" type="id_Double"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
-      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables name="in6" sizeState="INTERMEDIATE">
+      <outputTables name="in7" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="DATA.STATE_TAX_ID" name="STATE_TAX_ID" type="id_Double"/>
-        <mapperTableEntries expression="CONTROL.STATE_TAX_ID" name="STATE_TAX_ID1" type="id_Double"/>
         <mapperTableEntries expression="CONTROL.lkp_StateTaxID" name="lkp_StateTaxID" type="id_Double"/>
-        <mapperTableEntries expression="CONTROL.COMPANY_NAME" name="COMPANY_NAME" type="id_String"/>
-        <mapperTableEntries expression="CONTROL.ADDRESS1" name="ADDRESS1" type="id_String"/>
-        <mapperTableEntries expression="CONTROL.ADDRESS2" name="ADDRESS2" type="id_String"/>
-        <mapperTableEntries expression="CONTROL.CITY" name="CITY" type="id_String"/>
-        <mapperTableEntries expression="CONTROL.STATE" name="STATE" type="id_String"/>
-        <mapperTableEntries expression="CONTROL.POSTAL_CODE" name="POSTAL_CODE" type="id_Double"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="CONTROL" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="" name="lkp_StateTaxID" type="id_Double"/>
-        <mapperTableEntries expression="" name="STATE_TAX_ID1" type="id_Double"/>
-        <mapperTableEntries expression="" name="COMPANY_NAME" type="id_String"/>
-        <mapperTableEntries expression="" name="ADDRESS1" type="id_String"/>
-        <mapperTableEntries expression="" name="ADDRESS2" type="id_String"/>
-        <mapperTableEntries expression="" name="CITY" type="id_String"/>
-        <mapperTableEntries expression="" name="STATE" type="id_String"/>
-        <mapperTableEntries expression="" name="POSTAL_CODE" type="id_Double"/>
       </inputTables>
-      <inputTables activateExpressionFilter="true" expressionFilter="MITI.equals(((String)globalMap.get(&quot;STATE_TAX_ID&quot;)), CONTROL.lkp_StateTaxID)" lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="DATA" sizeState="INTERMEDIATE">
+      <inputTables activateExpressionFilter="true" expressionFilter="MITI.equals(STATE_TAX_ID, CONTROL.lkp_StateTaxID)" lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="DATA" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="" name="STATE_TAX_ID" type="id_Double"/>
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="640" posY="320">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_4"/>
-    <elementParameter field="EXTERNAL" name="MAP" value=""/>
-    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
-    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_IdXu5k3oEeiSTvM_ARdNaw-tMap_4-PREVIEW.bmp"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
-    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
-    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
-    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
-    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+  <node componentName="tMap" componentVersion="2.1" posX="1136" posY="335">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_5"/>
     <elementParameter field="TEXT" name="LABEL" value="Lkp_CheckExistence.expression"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <elementParameter field="CHECK" name="INFORMATION" value="true"/>
     <elementParameter field="MEMO" name="COMMENT" value="This component created automatically to align schema between nearby components "/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
     <metadata connector="FLOW" name="CONTROL">
-      <column key="false" length="4" name="lkp_StateTaxID" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
-      <column key="false" length="4" name="STATE_TAX_ID1" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
-      <column key="false" length="27" name="COMPANY_NAME" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="20" name="ADDRESS1" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="6" name="ADDRESS2" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="13" name="CITY" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="2" name="STATE" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="7" name="POSTAL_CODE" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="4" name="lkp_StateTaxID" precision="0" sourceType="" type="id_Double"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
-      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="CONTROL" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="in4.STATE_TAX_ID" name="lkp_StateTaxID" type="id_Double"/>
-        <mapperTableEntries expression="in4.STATE_TAX_ID" name="STATE_TAX_ID1" type="id_Double"/>
-        <mapperTableEntries expression="in4.COMPANY_NAME" name="COMPANY_NAME" type="id_String"/>
-        <mapperTableEntries expression="in4.ADDRESS1" name="ADDRESS1" type="id_String"/>
-        <mapperTableEntries expression="in4.ADDRESS2" name="ADDRESS2" type="id_String"/>
-        <mapperTableEntries expression="in4.CITY" name="CITY" type="id_String"/>
-        <mapperTableEntries expression="in4.STATE" name="STATE" type="id_String"/>
-        <mapperTableEntries expression="in4.POSTAL_CODE" name="POSTAL_CODE" type="id_Double"/>
+        <mapperTableEntries expression="in3.STATE_TAX_ID" name="lkp_StateTaxID" type="id_Double"/>
       </outputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="in4" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="" name="STATE_TAX_ID" type="id_Double"/>
-        <mapperTableEntries expression="" name="COMPANY_NAME" type="id_String"/>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="in3" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="" name="ADDRESS1" type="id_String"/>
         <mapperTableEntries expression="" name="ADDRESS2" type="id_String"/>
         <mapperTableEntries expression="" name="CITY" type="id_String"/>
-        <mapperTableEntries expression="" name="STATE" type="id_String"/>
+        <mapperTableEntries expression="" name="COMPANY_NAME" type="id_String"/>
         <mapperTableEntries expression="" name="POSTAL_CODE" type="id_Double"/>
+        <mapperTableEntries expression="" name="STATE" type="id_String"/>
+        <mapperTableEntries expression="" name="STATE_TAX_ID" type="id_Double"/>
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1408" posY="288">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_5"/>
-    <elementParameter field="EXTERNAL" name="MAP" value=""/>
-    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
-    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_IdXu5k3oEeiSTvM_ARdNaw-tMap_5-PREVIEW.bmp"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
-    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
-    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
-    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
-    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+  <node componentName="tMap" componentVersion="2.1" posX="1928" posY="280">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_6"/>
     <elementParameter field="TEXT" name="LABEL" value="Rtr_DetermineDatabasePath"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <elementParameter field="CHECK" name="INFORMATION" value="true"/>
     <elementParameter field="MEMO" name="COMMENT" value="Determine if an insert or an update should be performed."/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
     <metadata connector="FLOW" name="DEFAULT">
-      <column key="false" length="4" name="lkp_STATE_TAX_ID2" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
-      <column key="false" length="4" name="STATE_TAX_ID2" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
-      <column key="false" length="27" name="COMPANY_NAME2" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="20" name="ADDRESS12" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="6" name="ADDRESS22" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="13" name="CITY2" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="2" name="STATE2" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="7" name="POSTAL_CODE2" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="4" name="lkp_STATE_TAX_ID2" precision="0" sourceType="" type="id_Double"/>
+      <column key="false" length="4" name="STATE_TAX_ID2" precision="0" sourceType="" type="id_Double"/>
+      <column key="false" length="27" name="COMPANY_NAME2" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="20" name="ADDRESS12" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="6" name="ADDRESS22" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="13" name="CITY2" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="2" name="STATE2" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="7" name="POSTAL_CODE2" precision="0" sourceType="" type="id_Double"/>
     </metadata>
-    <metadata connector="FLOW" name="in5">
-      <column key="false" length="4" name="lkp_STATE_TAX_ID1" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
-      <column key="false" length="4" name="STATE_TAX_ID1" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
-      <column key="false" length="27" name="COMPANY_NAME1" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="20" name="ADDRESS11" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="6" name="ADDRESS21" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="13" name="CITY1" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="2" name="STATE1" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="7" name="POSTAL_CODE1" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+    <metadata connector="FLOW" name="in6">
+      <column key="false" length="4" name="lkp_STATE_TAX_ID1" precision="0" sourceType="" type="id_Double"/>
+      <column key="false" length="4" name="STATE_TAX_ID1" precision="0" sourceType="" type="id_Double"/>
+      <column key="false" length="27" name="COMPANY_NAME1" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="20" name="ADDRESS11" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="6" name="ADDRESS21" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="13" name="CITY1" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="2" name="STATE1" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="7" name="POSTAL_CODE1" precision="0" sourceType="" type="id_Double"/>
     </metadata>
-    <metadata connector="FLOW" name="in3">
-      <column key="false" length="4" name="lkp_STATE_TAX_ID3" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
-      <column key="false" length="4" name="STATE_TAX_ID3" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
-      <column key="false" length="27" name="COMPANY_NAME3" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="20" name="ADDRESS13" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="6" name="ADDRESS23" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="13" name="CITY3" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="2" name="STATE3" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="7" name="POSTAL_CODE3" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+    <metadata connector="FLOW" name="in4">
+      <column key="false" length="4" name="lkp_STATE_TAX_ID3" precision="0" sourceType="" type="id_Double"/>
+      <column key="false" length="4" name="STATE_TAX_ID3" precision="0" sourceType="" type="id_Double"/>
+      <column key="false" length="27" name="COMPANY_NAME3" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="20" name="ADDRESS13" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="6" name="ADDRESS23" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="13" name="CITY3" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="2" name="STATE3" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="7" name="POSTAL_CODE3" precision="0" sourceType="" type="id_Double"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
-      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="DEFAULT" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="INPUT.lkp_STATE_TAX_ID" name="lkp_STATE_TAX_ID2" type="id_Double"/>
-        <mapperTableEntries expression="INPUT.STATE_TAX_ID" name="STATE_TAX_ID2" type="id_Double"/>
-        <mapperTableEntries expression="INPUT.COMPANY_NAME" name="COMPANY_NAME2" type="id_String"/>
         <mapperTableEntries expression="INPUT.ADDRESS1" name="ADDRESS12" type="id_String"/>
         <mapperTableEntries expression="INPUT.ADDRESS2" name="ADDRESS22" type="id_String"/>
         <mapperTableEntries expression="INPUT.CITY" name="CITY2" type="id_String"/>
-        <mapperTableEntries expression="INPUT.STATE" name="STATE2" type="id_String"/>
+        <mapperTableEntries expression="INPUT.COMPANY_NAME" name="COMPANY_NAME2" type="id_String"/>
         <mapperTableEntries expression="INPUT.POSTAL_CODE" name="POSTAL_CODE2" type="id_Double"/>
+        <mapperTableEntries expression="INPUT.STATE" name="STATE2" type="id_String"/>
+        <mapperTableEntries expression="INPUT.STATE_TAX_ID" name="STATE_TAX_ID2" type="id_Double"/>
+        <mapperTableEntries expression="INPUT.lkp_STATE_TAX_ID" name="lkp_STATE_TAX_ID2" type="id_Double"/>
       </outputTables>
-      <outputTables activateExpressionFilter="true" expressionFilter="((INPUT.lkp_STATE_TAX_ID )==null)" name="in5" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="INPUT.lkp_STATE_TAX_ID" name="lkp_STATE_TAX_ID1" type="id_Double"/>
-        <mapperTableEntries expression="INPUT.STATE_TAX_ID" name="STATE_TAX_ID1" type="id_Double"/>
-        <mapperTableEntries expression="INPUT.COMPANY_NAME" name="COMPANY_NAME1" type="id_String"/>
+      <outputTables activateExpressionFilter="true" expressionFilter="((INPUT.lkp_STATE_TAX_ID )==null)" name="in6" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="INPUT.ADDRESS1" name="ADDRESS11" type="id_String"/>
         <mapperTableEntries expression="INPUT.ADDRESS2" name="ADDRESS21" type="id_String"/>
         <mapperTableEntries expression="INPUT.CITY" name="CITY1" type="id_String"/>
-        <mapperTableEntries expression="INPUT.STATE" name="STATE1" type="id_String"/>
+        <mapperTableEntries expression="INPUT.COMPANY_NAME" name="COMPANY_NAME1" type="id_String"/>
         <mapperTableEntries expression="INPUT.POSTAL_CODE" name="POSTAL_CODE1" type="id_Double"/>
+        <mapperTableEntries expression="INPUT.STATE" name="STATE1" type="id_String"/>
+        <mapperTableEntries expression="INPUT.STATE_TAX_ID" name="STATE_TAX_ID1" type="id_Double"/>
+        <mapperTableEntries expression="INPUT.lkp_STATE_TAX_ID" name="lkp_STATE_TAX_ID1" type="id_Double"/>
       </outputTables>
-      <outputTables activateExpressionFilter="true" expressionFilter="MITI.equals(INPUT.lkp_STATE_TAX_ID, INPUT.STATE_TAX_ID)" name="in3" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="INPUT.lkp_STATE_TAX_ID" name="lkp_STATE_TAX_ID3" type="id_Double"/>
-        <mapperTableEntries expression="INPUT.STATE_TAX_ID" name="STATE_TAX_ID3" type="id_Double"/>
-        <mapperTableEntries expression="INPUT.COMPANY_NAME" name="COMPANY_NAME3" type="id_String"/>
+      <outputTables activateExpressionFilter="true" expressionFilter="MITI.equals(INPUT.lkp_STATE_TAX_ID, INPUT.STATE_TAX_ID)" name="in4" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="INPUT.ADDRESS1" name="ADDRESS13" type="id_String"/>
         <mapperTableEntries expression="INPUT.ADDRESS2" name="ADDRESS23" type="id_String"/>
         <mapperTableEntries expression="INPUT.CITY" name="CITY3" type="id_String"/>
-        <mapperTableEntries expression="INPUT.STATE" name="STATE3" type="id_String"/>
+        <mapperTableEntries expression="INPUT.COMPANY_NAME" name="COMPANY_NAME3" type="id_String"/>
         <mapperTableEntries expression="INPUT.POSTAL_CODE" name="POSTAL_CODE3" type="id_Double"/>
+        <mapperTableEntries expression="INPUT.STATE" name="STATE3" type="id_String"/>
+        <mapperTableEntries expression="INPUT.STATE_TAX_ID" name="STATE_TAX_ID3" type="id_Double"/>
+        <mapperTableEntries expression="INPUT.lkp_STATE_TAX_ID" name="lkp_STATE_TAX_ID3" type="id_Double"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="INPUT" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="" name="lkp_STATE_TAX_ID" type="id_Double"/>
-        <mapperTableEntries expression="" name="STATE_TAX_ID" type="id_Double"/>
-        <mapperTableEntries expression="" name="COMPANY_NAME" type="id_String"/>
         <mapperTableEntries expression="" name="ADDRESS1" type="id_String"/>
         <mapperTableEntries expression="" name="ADDRESS2" type="id_String"/>
         <mapperTableEntries expression="" name="CITY" type="id_String"/>
-        <mapperTableEntries expression="" name="STATE" type="id_String"/>
+        <mapperTableEntries expression="" name="COMPANY_NAME" type="id_String"/>
         <mapperTableEntries expression="" name="POSTAL_CODE" type="id_Double"/>
+        <mapperTableEntries expression="" name="STATE" type="id_String"/>
+        <mapperTableEntries expression="" name="STATE_TAX_ID" type="id_Double"/>
+        <mapperTableEntries expression="" name="lkp_STATE_TAX_ID" type="id_Double"/>
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1152" posY="288">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_6"/>
-    <elementParameter field="EXTERNAL" name="MAP" value=""/>
-    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
-    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_IdXu5k3oEeiSTvM_ARdNaw-tMap_6-PREVIEW.bmp"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
-    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
-    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
-    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
-    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+  <node componentName="tMap" componentVersion="2.1" posX="1667" posY="280">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_7"/>
     <elementParameter field="TEXT" name="LABEL" value="Rtr_DetermineDatabasePath.expression"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <elementParameter field="CHECK" name="INFORMATION" value="true"/>
     <elementParameter field="MEMO" name="COMMENT" value="This component created automatically to align schema between nearby components "/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
     <metadata connector="FLOW" name="INPUT">
-      <column key="false" length="4" name="lkp_STATE_TAX_ID" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
-      <column key="false" length="4" name="STATE_TAX_ID" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
-      <column key="false" length="27" name="COMPANY_NAME" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="20" name="ADDRESS1" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="6" name="ADDRESS2" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="13" name="CITY" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="2" name="STATE" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="7" name="POSTAL_CODE" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="4" name="lkp_STATE_TAX_ID" precision="0" sourceType="" type="id_Double"/>
+      <column key="false" length="4" name="STATE_TAX_ID" precision="0" sourceType="" type="id_Double"/>
+      <column key="false" length="27" name="COMPANY_NAME" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="20" name="ADDRESS1" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="6" name="ADDRESS2" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="13" name="CITY" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="2" name="STATE" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="7" name="POSTAL_CODE" precision="0" sourceType="" type="id_Double"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
-      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="INPUT" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="in6.STATE_TAX_ID" name="lkp_STATE_TAX_ID" type="id_Double"/>
-        <mapperTableEntries expression="in6.STATE_TAX_ID1" name="STATE_TAX_ID" type="id_Double"/>
-        <mapperTableEntries expression="in6.COMPANY_NAME" name="COMPANY_NAME" type="id_String"/>
-        <mapperTableEntries expression="in6.ADDRESS1" name="ADDRESS1" type="id_String"/>
-        <mapperTableEntries expression="in6.ADDRESS2" name="ADDRESS2" type="id_String"/>
-        <mapperTableEntries expression="in6.CITY" name="CITY" type="id_String"/>
-        <mapperTableEntries expression="in6.STATE" name="STATE" type="id_String"/>
-        <mapperTableEntries expression="in6.POSTAL_CODE" name="POSTAL_CODE" type="id_Double"/>
+        <mapperTableEntries expression="in7.STATE_TAX_ID" name="lkp_STATE_TAX_ID" type="id_Double"/>
+        <mapperTableEntries name="STATE_TAX_ID" type="id_Double"/>
+        <mapperTableEntries name="COMPANY_NAME" type="id_String"/>
+        <mapperTableEntries name="ADDRESS1" type="id_String"/>
+        <mapperTableEntries name="ADDRESS2" type="id_String"/>
+        <mapperTableEntries name="CITY" type="id_String"/>
+        <mapperTableEntries name="STATE" type="id_String"/>
+        <mapperTableEntries name="POSTAL_CODE" type="id_Double"/>
       </outputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="in6" sizeState="INTERMEDIATE">
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="in7" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="" name="STATE_TAX_ID" type="id_Double"/>
-        <mapperTableEntries expression="" name="STATE_TAX_ID1" type="id_Double"/>
         <mapperTableEntries expression="" name="lkp_StateTaxID" type="id_Double"/>
-        <mapperTableEntries expression="" name="COMPANY_NAME" type="id_String"/>
-        <mapperTableEntries expression="" name="ADDRESS1" type="id_String"/>
-        <mapperTableEntries expression="" name="ADDRESS2" type="id_String"/>
-        <mapperTableEntries expression="" name="CITY" type="id_String"/>
-        <mapperTableEntries expression="" name="STATE" type="id_String"/>
-        <mapperTableEntries expression="" name="POSTAL_CODE" type="id_Double"/>
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1952" posY="224">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_7"/>
-    <elementParameter field="EXTERNAL" name="MAP" value=""/>
-    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
-    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_IdXu5k3oEeiSTvM_ARdNaw-tMap_7-PREVIEW.bmp"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
-    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
-    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
-    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
-    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+  <node componentName="tDBInput" componentVersion="2.1" posX="0" posY="317">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_4"/>
+    <elementParameter field="TEXT" name="LABEL" value="SQ_NIELSEN"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
+    <elementParameter field="MEMO" name="COMMENT" value="This Source Qualifier object is used to retrieve data from the NIELSEN raw data table. The select statement orders the rows by STATE_TAX_ID (the group-by column in the Aggregator transformation), so that the &quot;Sorted Ports&quot; option can be used in the mapping."/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.SQ_NIELSENREADERConnection"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PASS" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;Table&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="context.SQ_NIELSENREADERQuery"/>
+    <metadata connector="FLOW" name="tDBInput_4">
+      <column key="false" length="4" name="STATE_TAX_ID" precision="0" sourceType="DECIMAL" type="id_Double"/>
+      <column key="false" length="27" name="COMPANY_NAME" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column key="false" length="20" name="ADDRESS1" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column key="false" length="6" name="ADDRESS2" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column key="false" length="13" name="CITY" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column key="false" length="2" name="STATE" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column key="false" length="7" name="POSTAL_CODE" precision="0" sourceType="DECIMAL" type="id_Double"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData"/>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" posX="2464" posY="225">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_8"/>
     <elementParameter field="TEXT" name="LABEL" value="Upd_InsertPath"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <elementParameter field="CHECK" name="INFORMATION" value="true"/>
     <elementParameter field="MEMO" name="COMMENT" value="Update Strategy Expression=dd_insert"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
     <metadata connector="FLOW" name="in1">
-      <column key="false" length="4" name="STATE_TAX_ID" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
-      <column key="false" length="27" name="COMPANY_NAME" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="20" name="ADDRESS1" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="6" name="ADDRESS2" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="13" name="CITY" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="2" name="STATE" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="7" name="POSTAL_CODE" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="4" name="STATE_TAX_ID" precision="0" sourceType="" type="id_Double"/>
+      <column key="false" length="27" name="COMPANY_NAME" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="20" name="ADDRESS1" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="6" name="ADDRESS2" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="13" name="CITY" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="2" name="STATE" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="7" name="POSTAL_CODE" precision="0" sourceType="" type="id_Double"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
-      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="in1" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="INPUT_1.STATE_TAX_ID" name="STATE_TAX_ID" type="id_Double"/>
         <mapperTableEntries expression="INPUT_1.COMPANY_NAME" name="COMPANY_NAME" type="id_String"/>
@@ -829,95 +423,69 @@
         <mapperTableEntries expression="INPUT_1.POSTAL_CODE" name="POSTAL_CODE" type="id_Double"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="INPUT_1" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="" name="STATE_TAX_ID" type="id_Double"/>
-        <mapperTableEntries expression="" name="COMPANY_NAME" type="id_String"/>
         <mapperTableEntries expression="" name="ADDRESS1" type="id_String"/>
         <mapperTableEntries expression="" name="ADDRESS2" type="id_String"/>
         <mapperTableEntries expression="" name="CITY" type="id_String"/>
-        <mapperTableEntries expression="" name="STATE" type="id_String"/>
+        <mapperTableEntries expression="" name="COMPANY_NAME" type="id_String"/>
         <mapperTableEntries expression="" name="POSTAL_CODE" type="id_Double"/>
+        <mapperTableEntries expression="" name="STATE" type="id_String"/>
+        <mapperTableEntries expression="" name="STATE_TAX_ID" type="id_Double"/>
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1696" posY="224">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_8"/>
-    <elementParameter field="EXTERNAL" name="MAP" value=""/>
-    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
-    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_IdXu5k3oEeiSTvM_ARdNaw-tMap_8-PREVIEW.bmp"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
-    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
-    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
-    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
-    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+  <node componentName="tMap" componentVersion="2.1" posX="2194" posY="225">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_9"/>
     <elementParameter field="TEXT" name="LABEL" value="Upd_InsertPath.expression"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <elementParameter field="CHECK" name="INFORMATION" value="true"/>
     <elementParameter field="MEMO" name="COMMENT" value="This component created automatically to align schema between nearby components "/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
     <metadata connector="FLOW" name="INPUT_1">
-      <column key="false" length="4" name="STATE_TAX_ID" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
-      <column key="false" length="27" name="COMPANY_NAME" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="20" name="ADDRESS1" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="6" name="ADDRESS2" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="13" name="CITY" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="2" name="STATE" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="7" name="POSTAL_CODE" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="4" name="STATE_TAX_ID" precision="0" sourceType="" type="id_Double"/>
+      <column key="false" length="27" name="COMPANY_NAME" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="20" name="ADDRESS1" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="6" name="ADDRESS2" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="13" name="CITY" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="2" name="STATE" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="7" name="POSTAL_CODE" precision="0" sourceType="" type="id_Double"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
-      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="INPUT_1" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="in5.STATE_TAX_ID1" name="STATE_TAX_ID" type="id_Double"/>
-        <mapperTableEntries expression="in5.COMPANY_NAME1" name="COMPANY_NAME" type="id_String"/>
-        <mapperTableEntries expression="in5.ADDRESS11" name="ADDRESS1" type="id_String"/>
-        <mapperTableEntries expression="in5.ADDRESS21" name="ADDRESS2" type="id_String"/>
-        <mapperTableEntries expression="in5.CITY1" name="CITY" type="id_String"/>
-        <mapperTableEntries expression="in5.STATE1" name="STATE" type="id_String"/>
-        <mapperTableEntries expression="in5.POSTAL_CODE1" name="POSTAL_CODE" type="id_Double"/>
+        <mapperTableEntries expression="in6.STATE_TAX_ID1" name="STATE_TAX_ID" type="id_Double"/>
+        <mapperTableEntries expression="in6.COMPANY_NAME1" name="COMPANY_NAME" type="id_String"/>
+        <mapperTableEntries expression="in6.ADDRESS11" name="ADDRESS1" type="id_String"/>
+        <mapperTableEntries expression="in6.ADDRESS21" name="ADDRESS2" type="id_String"/>
+        <mapperTableEntries expression="in6.CITY1" name="CITY" type="id_String"/>
+        <mapperTableEntries expression="in6.STATE1" name="STATE" type="id_String"/>
+        <mapperTableEntries expression="in6.POSTAL_CODE1" name="POSTAL_CODE" type="id_Double"/>
       </outputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="in5" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="" name="lkp_STATE_TAX_ID1" type="id_Double"/>
-        <mapperTableEntries expression="" name="STATE_TAX_ID1" type="id_Double"/>
-        <mapperTableEntries expression="" name="COMPANY_NAME1" type="id_String"/>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="in6" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="" name="ADDRESS11" type="id_String"/>
         <mapperTableEntries expression="" name="ADDRESS21" type="id_String"/>
         <mapperTableEntries expression="" name="CITY1" type="id_String"/>
-        <mapperTableEntries expression="" name="STATE1" type="id_String"/>
+        <mapperTableEntries expression="" name="COMPANY_NAME1" type="id_String"/>
         <mapperTableEntries expression="" name="POSTAL_CODE1" type="id_Double"/>
+        <mapperTableEntries expression="" name="STATE1" type="id_String"/>
+        <mapperTableEntries expression="" name="STATE_TAX_ID1" type="id_Double"/>
+        <mapperTableEntries expression="" name="lkp_STATE_TAX_ID1" type="id_Double"/>
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1952" posY="320">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_9"/>
-    <elementParameter field="EXTERNAL" name="MAP" value=""/>
-    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
-    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_IdXu5k3oEeiSTvM_ARdNaw-tMap_9-PREVIEW.bmp"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
-    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
-    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
-    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
-    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+  <node componentName="tMap" componentVersion="2.1" posX="2459" posY="335">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_10"/>
     <elementParameter field="TEXT" name="LABEL" value="Upd_UpdatePath"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <elementParameter field="CHECK" name="INFORMATION" value="true"/>
     <elementParameter field="MEMO" name="COMMENT" value="Update Strategy Expression=dd_update"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
     <metadata connector="FLOW" name="in2">
-      <column key="false" length="4" name="STATE_TAX_ID" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
-      <column key="false" length="27" name="COMPANY_NAME" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="20" name="ADDRESS1" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="6" name="ADDRESS2" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="13" name="CITY" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="2" name="STATE" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="7" name="POSTAL_CODE" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="4" name="STATE_TAX_ID" precision="0" sourceType="" type="id_Double"/>
+      <column key="false" length="27" name="COMPANY_NAME" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="20" name="ADDRESS1" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="6" name="ADDRESS2" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="13" name="CITY" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="2" name="STATE" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="7" name="POSTAL_CODE" precision="0" sourceType="" type="id_Double"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
-      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="in2" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="INPUT_2.STATE_TAX_ID" name="STATE_TAX_ID" type="id_Double"/>
         <mapperTableEntries expression="INPUT_2.COMPANY_NAME" name="COMPANY_NAME" type="id_String"/>
@@ -928,121 +496,123 @@
         <mapperTableEntries expression="INPUT_2.POSTAL_CODE" name="POSTAL_CODE" type="id_Double"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="INPUT_2" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="" name="STATE_TAX_ID" type="id_Double"/>
-        <mapperTableEntries expression="" name="COMPANY_NAME" type="id_String"/>
         <mapperTableEntries expression="" name="ADDRESS1" type="id_String"/>
         <mapperTableEntries expression="" name="ADDRESS2" type="id_String"/>
         <mapperTableEntries expression="" name="CITY" type="id_String"/>
-        <mapperTableEntries expression="" name="STATE" type="id_String"/>
+        <mapperTableEntries expression="" name="COMPANY_NAME" type="id_String"/>
         <mapperTableEntries expression="" name="POSTAL_CODE" type="id_Double"/>
+        <mapperTableEntries expression="" name="STATE" type="id_String"/>
+        <mapperTableEntries expression="" name="STATE_TAX_ID" type="id_Double"/>
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1664" posY="320">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_10"/>
-    <elementParameter field="EXTERNAL" name="MAP" value=""/>
-    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
-    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_IdXu5k3oEeiSTvM_ARdNaw-tMap_10-PREVIEW.bmp"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
-    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
-    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
-    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
-    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+  <node componentName="tMap" componentVersion="2.1" posX="2189" posY="335">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_11"/>
     <elementParameter field="TEXT" name="LABEL" value="Upd_UpdatePath.expression"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <elementParameter field="CHECK" name="INFORMATION" value="true"/>
     <elementParameter field="MEMO" name="COMMENT" value="This component created automatically to align schema between nearby components "/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
     <metadata connector="FLOW" name="INPUT_2">
-      <column key="false" length="4" name="STATE_TAX_ID" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
-      <column key="false" length="27" name="COMPANY_NAME" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="20" name="ADDRESS1" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="6" name="ADDRESS2" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="13" name="CITY" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="2" name="STATE" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="7" name="POSTAL_CODE" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="4" name="STATE_TAX_ID" precision="0" sourceType="" type="id_Double"/>
+      <column key="false" length="27" name="COMPANY_NAME" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="20" name="ADDRESS1" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="6" name="ADDRESS2" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="13" name="CITY" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="2" name="STATE" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="7" name="POSTAL_CODE" precision="0" sourceType="" type="id_Double"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
-      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="INPUT_2" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="in3.STATE_TAX_ID3" name="STATE_TAX_ID" type="id_Double"/>
-        <mapperTableEntries expression="in3.COMPANY_NAME3" name="COMPANY_NAME" type="id_String"/>
-        <mapperTableEntries expression="in3.ADDRESS13" name="ADDRESS1" type="id_String"/>
-        <mapperTableEntries expression="in3.ADDRESS23" name="ADDRESS2" type="id_String"/>
-        <mapperTableEntries expression="in3.CITY3" name="CITY" type="id_String"/>
-        <mapperTableEntries expression="in3.STATE3" name="STATE" type="id_String"/>
-        <mapperTableEntries expression="in3.POSTAL_CODE3" name="POSTAL_CODE" type="id_Double"/>
+        <mapperTableEntries expression="in4.STATE_TAX_ID3" name="STATE_TAX_ID" type="id_Double"/>
+        <mapperTableEntries expression="in4.COMPANY_NAME3" name="COMPANY_NAME" type="id_String"/>
+        <mapperTableEntries expression="in4.ADDRESS13" name="ADDRESS1" type="id_String"/>
+        <mapperTableEntries expression="in4.ADDRESS23" name="ADDRESS2" type="id_String"/>
+        <mapperTableEntries expression="in4.CITY3" name="CITY" type="id_String"/>
+        <mapperTableEntries expression="in4.STATE3" name="STATE" type="id_String"/>
+        <mapperTableEntries expression="in4.POSTAL_CODE3" name="POSTAL_CODE" type="id_Double"/>
       </outputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="in3" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="" name="lkp_STATE_TAX_ID3" type="id_Double"/>
-        <mapperTableEntries expression="" name="STATE_TAX_ID3" type="id_Double"/>
-        <mapperTableEntries expression="" name="COMPANY_NAME3" type="id_String"/>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="in4" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="" name="ADDRESS13" type="id_String"/>
         <mapperTableEntries expression="" name="ADDRESS23" type="id_String"/>
         <mapperTableEntries expression="" name="CITY3" type="id_String"/>
-        <mapperTableEntries expression="" name="STATE3" type="id_String"/>
+        <mapperTableEntries expression="" name="COMPANY_NAME3" type="id_String"/>
         <mapperTableEntries expression="" name="POSTAL_CODE3" type="id_Double"/>
+        <mapperTableEntries expression="" name="STATE3" type="id_String"/>
+        <mapperTableEntries expression="" name="STATE_TAX_ID3" type="id_Double"/>
+        <mapperTableEntries expression="" name="lkp_STATE_TAX_ID3" type="id_Double"/>
       </inputTables>
     </nodeData>
   </node>
-  <connection connectorName="FLOW" label="row13" lineStyle="0" metaname="tOracleInput_1" offsetLabelX="0" offsetLabelY="0" source="tOracleInput_1" target="tAggregateRow_1">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row13"/>
+  <node componentName="tMap" componentVersion="2.1" posX="280" posY="317">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_12"/>
+    <elementParameter field="TEXT" name="LABEL" value="leftAgg_RemoveDuplicateRecords_Expression"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <metadata connector="FLOW" name="in5">
+      <column key="false" length="4" name="STATE_TAX_ID" precision="0" sourceType="" type="id_Double"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <outputTables name="in5" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="input.STATE_TAX_ID" name="STATE_TAX_ID" type="id_Double"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="input" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="" name="ADDRESS1" type="id_String"/>
+        <mapperTableEntries expression="" name="ADDRESS2" type="id_String"/>
+        <mapperTableEntries expression="" name="CITY" type="id_String"/>
+        <mapperTableEntries expression="" name="COMPANY_NAME" type="id_String"/>
+        <mapperTableEntries expression="" name="POSTAL_CODE" type="id_Double"/>
+        <mapperTableEntries expression="" name="STATE" type="id_String"/>
+        <mapperTableEntries expression="" name="STATE_TAX_ID" type="id_Double"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <connection connectorName="FLOW" label="DATA" lineStyle="8" metaname="DATA" source="tDBInput_2" target="tMap_4">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1"/>
   </connection>
-  <connection connectorName="FLOW" label="in4" lineStyle="0" metaname="tAggregateRow_1" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_1" target="tMap_4">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="in4"/>
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="out" source="tMap_1" target="tAggregateRow_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2"/>
   </connection>
-  <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="row6" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tOracleOutput_1">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row6"/>
+  <connection connectorName="FLOW" label="in3" lineStyle="0" metaname="tAggregateRow_1" source="tAggregateRow_1" target="tMap_5">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3"/>
   </connection>
-  <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="row5" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tOracleOutput_2">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row5"/>
+  <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="out" source="tMap_2" target="tDBOutput_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row4"/>
   </connection>
-  <connection connectorName="FLOW" label="DATA" lineStyle="8" metaname="DATA" offsetLabelX="0" offsetLabelY="0" source="tDBInput_2" target="tMap_3">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="DATA"/>
+  <connection connectorName="FLOW" label="in7" lineStyle="0" metaname="OUTPUT" source="tMap_4" target="tMap_7">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row5"/>
   </connection>
-  <connection connectorName="FLOW" label="in6" lineStyle="0" metaname="in6" offsetLabelX="0" offsetLabelY="0" source="tMap_3" target="tMap_6">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="in6"/>
+  <connection connectorName="FLOW" label="CONTROL" lineStyle="0" metaname="out" source="tMap_5" target="tMap_4">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row6"/>
   </connection>
-  <connection connectorName="FLOW" label="CONTROL" lineStyle="0" metaname="CONTROL" offsetLabelX="0" offsetLabelY="0" source="tMap_4" target="tMap_3">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="CONTROL"/>
+  <connection connectorName="FLOW" label="in2" lineStyle="0" metaname="OUTPUT" source="tMap_10" target="tMap_3">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row7"/>
   </connection>
-  <connection connectorName="FLOW" label="in5" lineStyle="0" metaname="in5" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_5" target="tMap_8">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="in5"/>
+  <connection connectorName="FLOW" label="INPUT" lineStyle="0" metaname="out" source="tMap_7" target="tMap_6">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row8"/>
   </connection>
-  <connection connectorName="FLOW" label="in3" lineStyle="0" metaname="in3" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_5" target="tMap_10">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="in3"/>
+  <connection connectorName="FLOW" label="in6" lineStyle="0" metaname="InsertPath" source="tMap_6" target="tMap_9">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row9"/>
   </connection>
-  <connection connectorName="FLOW" label="INPUT" lineStyle="0" metaname="INPUT" offsetLabelX="0" offsetLabelY="0" source="tMap_6" target="tMap_5">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="INPUT"/>
+  <connection connectorName="FLOW" label="row10" lineStyle="0" metaname="out" source="tMap_3" target="tDBOutput_4">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row10"/>
   </connection>
-  <connection connectorName="FLOW" label="in1" lineStyle="0" metaname="in1" offsetLabelX="0" offsetLabelY="0" source="tMap_7" target="tMap_1">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="in1"/>
+  <connection connectorName="FLOW" label="input" lineStyle="0" metaname="tDBInput_4" source="tDBInput_4" target="tMap_12">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row11"/>
   </connection>
-  <connection connectorName="FLOW" label="INPUT_1" lineStyle="0" metaname="INPUT_1" offsetLabelX="0" offsetLabelY="0" source="tMap_8" target="tMap_7">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="INPUT_1"/>
+  <connection connectorName="FLOW" label="in5" lineStyle="0" metaname="output" source="tMap_12" target="tMap_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row12"/>
   </connection>
-  <connection connectorName="FLOW" label="in2" lineStyle="0" metaname="in2" offsetLabelX="0" offsetLabelY="0" source="tMap_9" target="tMap_2">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="in2"/>
+  <connection connectorName="FLOW" label="INPUT_1" lineStyle="0" metaname="out" source="tMap_9" target="tMap_8">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row13"/>
   </connection>
-  <connection connectorName="FLOW" label="INPUT_2" lineStyle="0" metaname="INPUT_2" offsetLabelX="0" offsetLabelY="0" source="tMap_10" target="tMap_9">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="INPUT_2"/>
+  <connection connectorName="FLOW" label="INPUT_2" lineStyle="0" metaname="out" source="tMap_11" target="tMap_10">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row14"/>
+  </connection>
+  <connection connectorName="FLOW" label="in1" lineStyle="0" metaname="OUTPUT" source="tMap_8" target="tMap_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row15"/>
+  </connection>
+  <connection connectorName="FLOW" label="in4" lineStyle="0" metaname="UpdatePath" source="tMap_6" target="tMap_11">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row16"/>
   </connection>
   <note opaque="true" posX="608" posY="32" sizeHeight="193" sizeWidth="545" text="COMAPNY_Inserts&#13;&#10;&#9;Check the 'Action on Data' property &#13;&#10;COMAPNY_Updates&#13;&#10;&#9;Check the 'Action on Data' property &#13;&#10;">
     <elementParameter field="RADIO" name="NOTETXT_LEFT" value="true"/>
@@ -1050,18 +620,13 @@
     <elementParameter field="RADIO" name="NOTELABEL_CENTER" value="false"/>
     <elementParameter field="RADIO" name="NOTETXT_TOP" value="true"/>
   </note>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tOracleInput_1"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_0b6ae45e-bef4-4a52-9698-5ffa64a51d96"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>aCi6G8fwJSygxS1JFwwEA/d2LPcI1YS8Qg0uPQLEUqLZ6pkfRlo/q8/P1J9eEs8oJ0f5bZZDFq3c
-7WT/pdEG1A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_129f8992-cc54-4cb7-8b04-8b1a00603c75"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>7AuSArR19MG8Nvcq4ZEWAmbOIRHacimwllDZc6i9mqmH2R8QUFrjuzo0NcJ1XNyUk9/ojhdZepKP
-PSuQDA1Jfw==</DigestValue></Reference></SignedInfo><SignatureValue>XXrgJCZryldcN13se7iMUEZr66LKjjsv9DxF3sw5ffvN55Snh9GUUd54xXOlIKJqUpr0Z+6F2To+
-NtLJypiNs2wy6wKlJptDTTPB40lZvoNp/Bn5/1gR7AiA3KZAIQeEOcTchh017koq/OkHBzkT/nH3
-5U6kbsAcY3vH01ohdpT68i2uiw0euHYJJ9/z/n9BJwTuJ2eiRBNBpgr3sIHHkO8s/S1KbQR8k4CM
-eS3X5I8kVnyraaf+kfmPvufM479uSCgE6QCvWw+/V/osfTnsX1+O7s5g4cv2LfxT2leov+fPM6jm
-U6J4xO7gkrDOhntViVw1W4nMbcFc1aJ23DebPQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_83c7fb49-9f04-4355-8e4c-64808307764a"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>90a2hsBRbtrlVwZETtHZ45yf6m45fhq4OhbMb/sprwApvqKdvA5HYZLxgSo3g+M14/vVOjn5R0on
+wmU6h/Fcmg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_1ded3e8c-884b-4dd3-9824-ab63724a4a49"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>pRJ5ysqX6EgLEfBfjBP+y5sRMyYI2xeesbNNVT5fNUafU/7bhicBg5Wx5PyqTJv7yKPBMuwdqu1Q
+bRUVz1y4+w==</DigestValue></Reference></SignedInfo><SignatureValue>o0uQczQGwOInJS/ERxjx0YUyv/uzjb+IwdPY9SU+LGNaMmuJlkG7jqnfdo3+5NbDoxT6wuMK6h3J
+nLZXOF0apbwe8VG6/WzLwOWn+tZJ7GClvTgtNyFm5Q+rSnm1P+GP+wMqX2eNy276rhf/uzAiGFhV
+bLwRw+E/kYu2puSWyJLzGKqqWq3SYY/4pzb5xRzH6zWTGEQ/O7ob4JV0KfQvBRjHQkHICx4QNHlf
+MKHAtVEAA6mrxE4r3cDIu6Oy2zV4vkNJ0c6FoOu1TNc7nhHX2hAFa/TPSm1HZN2VbP83n83DFKtf
+2SS+KlulLWlrl++g4D35PGE6BZh0+Wt9lxkvrA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -1085,4 +650,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_129f8992-cc54-4cb7-8b04-8b1a00603c75" Target="#_0b6ae45e-bef4-4a52-9698-5ffa64a51d96"><Timestamp>2019-01-24 09:01:06</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_1ded3e8c-884b-4dd3-9824-ab63724a4a49" Target="#_83c7fb49-9f04-4355-8e4c-64808307764a"><Timestamp>2019-01-31 09:24:51</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
