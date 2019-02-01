@@ -1,0 +1,153 @@
+SCRIPT_VERSION=4.2,
+JobType= Standard,
+DEFAULT_CONTEXT: Default,
+ContextType {
+	NAME: Default
+}
+addParameters {
+	addElementParameters {
+		SCREEN_OFFSET_X : "0",
+		SCREEN_OFFSET_Y : "0",,,,,,,,,,,,,,,,
+		IMPLICITCONTEXT_USE_PROJECT_SETTINGS : "true",
+		STATANDLOG_USE_PROJECT_SETTINGS : "true",
+		MULTI_THREAD_EXECATION : "false",
+		PARALLELIZE_UNIT_SIZE : "25000",
+		IMPLICIT_TCONTEXTLOAD : "false",
+		FROM_FILE_FLAG_IMPLICIT_CONTEXT : "false",
+		FROM_DATABASE_FLAG_IMPLICIT_CONTEXT : "false",
+		IMPLICIT_TCONTEXTLOAD_FILE : "\"\"",
+		FIELDSEPARATOR : "\"\"",,,
+		URL_IMPLICIT_CONTEXT : "\"\"",,
+		DRIVER_CLASS_IMPLICIT_CONTEXT : "\"\"",
+		HOST_IMPLICIT_CONTEXT : "\"\"",
+		PORT_IMPLICIT_CONTEXT : "\"\"",
+		DBNAME_IMPLICIT_CONTEXT : "\"\"",
+		LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT : "\"\"",
+		PROPERTIES_IMPLICIT_CONTEXT : "\"\"",
+		SCHEMA_DB_IMPLICIT_CONTEXT : "\"\"",
+		USER_IMPLICIT_CONTEXT : "\"\"",
+		PASS_IMPLICIT_CONTEXT : "0RMsyjmybrE=",
+		DBFILE_IMPLICIT_CONTEXT : "\"\"",
+		DBTABLE_IMPLICIT_CONTEXT : "\"\"",
+		QUERY_CONDITION_IMPLICIT_CONTEXT : "\"\"",
+		LOAD_NEW_VARIABLE : "Warning",
+		NOT_LOAD_OLD_VARIABLE : "Warning",
+		PRINT_OPERATIONS : "false",
+		DISABLE_ERROR : "false",
+		DISABLE_WARNINGS : "false",
+		DISABLE_INFO : "false",
+		ON_STATCATCHER_FLAG : "false",
+		ON_LOGCATCHER_FLAG : "false",
+		ON_METERCATCHER_FLAG : "false",
+		ON_CONSOLE_FLAG : "false",
+		ON_FILES_FLAG : "false",
+		FILE_PATH : "\"C:/Talend-Studio-20181026_1147-V7.1.1/workspace/.metadata\"",
+		FILENAME_STATS : "\"stats_file.txt\"",
+		FILENAME_LOGS : "\"logs_file.txt\"",
+		FILENAME_METTER : "\"meter_file.txt\"",
+		ENCODING : "ISO-8859-15",
+		ENCODING:ENCODING_TYPE : "ISO-8859-15",
+		ON_DATABASE_FLAG : "false",
+		DB_TYPE : "tJDBCOutput",
+		DB_VERSION : "ORACLE_12",
+		URL : "\"\"",,
+		DRIVER_CLASS : "\"\"",
+		HOST : "\"\"",
+		PORT : "\"\"",
+		DATASOURCE : "\"\"",
+		DBNAME : "\"\"",
+		LOCAL_SERVICE_NAME : "\"\"",
+		PROPERTIES : "\"\"",
+		SCHEMA_DB : "\"\"",
+		USER : "\"\"",
+		PASS : "0RMsyjmybrE=",
+		DBFILE : "\"\"",
+		TABLE_STATS : "\"\"",
+		TABLE_LOGS : "\"\"",
+		TABLE_METER : "\"\"",
+		CATCH_RUNTIME_ERRORS : "true",
+		CATCH_USER_ERRORS : "true",
+		CATCH_USER_WARNING : "true",
+		CATCH_REALTIME_STATS : "false",,
+		HEADER_ENABLED : "false",,,,,
+		FOOTER_ENABLED : "false",,,
+	}
+	addRoutinesParameters {
+		addRoutinesParameter {
+			NAME: "DQTechnical"
+		}
+		addRoutinesParameter {
+			NAME: "DataOperation"
+		}
+		addRoutinesParameter {
+			NAME: "DataQuality"
+		}
+		addRoutinesParameter {
+			NAME: "DqStringHandling"
+		}
+		addRoutinesParameter {
+			NAME: "MDM"
+		}
+		addRoutinesParameter {
+			NAME: "Mathematical"
+		}
+		addRoutinesParameter {
+			NAME: "Numeric"
+		}
+		addRoutinesParameter {
+			NAME: "Relational"
+		}
+		addRoutinesParameter {
+			NAME: "SQLike"
+		}
+		addRoutinesParameter {
+			NAME: "StringHandling"
+		}
+		addRoutinesParameter {
+			NAME: "TalendDataGenerator"
+		}
+		addRoutinesParameter {
+			NAME: "TalendDate"
+		}
+		addRoutinesParameter {
+			NAME: "TalendStringUtil"
+		}
+		addRoutinesParameter {
+			NAME: "TalendString"
+		}
+		addRoutinesParameter {
+			NAME: "DataMasking"
+		}
+		addRoutinesParameter {
+			NAME: "DataQualityDependencies"
+		}
+	}
+}
+addComponent {
+	setComponentDefinition {
+		TYPE: "tSystem",
+		NAME: "tSystem_1",
+		POSITION: 320, 96,
+		SIZE: 32, 32,
+		OFFSETLABEL: 0, 0
+	}
+	setSettings {
+		ROOTDIR : "true",
+		DIRECTORY : "\"F:/python-3.6.1-embed-amd64\"",
+		USE_SINGLE_COMMAND : "true",
+		COMMAND : "\"cmd /c python FirstOne.py\"",
+		USE_ARRAY_COMMAND : "false",,
+		OUTPUT : "OUTPUT_TO_CONSOLE",
+		ERROROUTPUT : "OUTPUT_TO_CONSOLE",,
+		CONNECTION_FORMAT : "row"
+	}
+	addSchema {
+		NAME: "tSystem_1",
+		CONNECTOR: "FLOW"
+	}
+}
+addSubjob {
+	NAME: "tSystem_1"
+	SUBJOB_TITLE_COLOR : "92;131;150",
+	SUBJOB_COLOR : "207;226;236"
+}
