@@ -27,8 +27,6 @@
     <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
     <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:PROPERTY_TYPE" show="false" value=""/>
-    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:REPOSITORY_PROPERTY_TYPE" show="false" value=""/>
     <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" show="false" value=""/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" show="false" value=""/>
     <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -56,7 +54,7 @@
     <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
     <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" show="false" value="false"/>
     <elementParameter field="CHECK" name="ON_FILES_FLAG" show="false" value="false"/>
-    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;F:/TalendPD/Talend-Studio-r110187-V5.4.1NB/workspace/.metadata&quot;"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;C:/Talend-Studio-20181026_1147-V7.1.1/workspace/.metadata&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_STATS" show="false" value="&quot;stats_file.txt&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_LOGS" show="false" value="&quot;logs_file.txt&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_METTER" show="false" value="&quot;meter_file.txt&quot;"/>
@@ -64,7 +62,7 @@
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="ON_DATABASE_FLAG" show="false" value="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_TYPE" show="false" value="tJDBCOutput"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="ORACLE_10"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="ORACLE_12"/>
     <elementParameter field="TEXT" name="URL" show="false" value="&quot;&quot;"/>
     <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
     <elementParameter field="TEXT" name="DRIVER_CLASS" show="false" value="&quot;&quot;"/>
@@ -111,6 +109,8 @@
     <routinesParameter id="_8qwkYFjNEdyj6eiqDt60Og" name="DemoRoutines"/>
     <routinesParameter id="_HKXfQGIZEd26GZmhFZLTPA" name="GetRandomPhoneNum"/>
     <routinesParameter id="_E-aMEHBqEeeKTP4K-BQYLw" name="TalendStringUtil"/>
+    <routinesParameter id="_rQRpwB-1EemtwtEDadxD9Q" name="DataMasking"/>
+    <routinesParameter id="_rUmJEB-1EemtwtEDadxD9Q" name="DataQualityDependencies"/>
   </parameters>
   <node componentName="tMysqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMysqlConnection_1"/>
@@ -160,7 +160,7 @@
     <elementParameter field="RADIO" name="USE_INLINECONTENT" value="true"/>
     <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
     <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;"/>
-    <elementParameter field="MEMO" name="INLINECONTENT" value="4;16102;Tony Watson;600 Parkway Street;New Jones Road;NewJersey;NewJersey;000000&#13;&#10;5;16103;Susan Cissel;785 Avenue; Johson Street;NewJersey;NewJersey;000000&#13;&#10;6;16104;Trinna McIntosh;896 Avenue; Johson Street;Utah;Texas;000000&#13;&#10;6;16104;Trinna McIntosh;456 New Avenue; 221B Baker Street;Pune;Pune;000000&#13;&#10;7;16105;Josh McIntosh;896 Avenue; Johson Street;Mumbai;Maharashtra;000000&#13;&#10;7;16105;Josh McIntosh;456 New Avenue; Baker Street;London;London;000000&#13;&#10;8;16106;Josh Wills;651 Parkway; Baker Street;NewJersey;NewJersey;000000&#13;&#10;9;16107;Tina Wills;221 Baker Street; New Street;London;London;000000&#13;&#10;10;16108;Steve Rogers;221 Baker Street; New Street;NewJersey;NewJersey;000000&#13;&#10;11;16109;Tchai ;221 Palace; New Street;Wakanda;Wakanda;000000"/>
+    <elementParameter field="MEMO" name="INLINECONTENT" value="4;16102;Tony Watson;600 Parkway Street;New Jones Road;NewJersey;NewJersey;000000&#13;&#10;5;16103;Susan Cissel;785 Avenue; Johson Street;NewJersey;NewJersey;000000&#13;&#10;6;16104;Trinna McIntosh;896 Avenue; Johson Street;Utah;Texas;000000&#13;&#10;6;16104;Trinna McIntosh;456 New Avenue; 221B Baker Street;Pune;Pune;000000&#13;&#10;7;16105;Josh McIntosh;896 Avenue; Johson Street;Mumbai;Maharashtra;000000&#13;&#10;7;16105;Josh McIntosh;456 New Avenue; Baker Street;London;London;000000&#13;&#10;8;16106;Josh Wills;651 Parkway; Baker Street;NewJersey;NewJersey;000000&#13;&#10;9;16107;Tina Wills;221 Baker Street; New Street;London;London;000000&#13;&#10;10;16108;Steve Rogers;221 Baker Street; New Street;NewYork;NewYork;000000&#13;&#10;11;16109;Tchai ;221 Palace; New Street;Mumbai;Maharashtra;000000"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFixedFlowInput_1">
       <column comment="" defaultValue="" key="false" length="11" name="skey" nullable="false" pattern="" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
@@ -343,13 +343,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_32188cbe-2302-405f-96f4-d0e75e146ebc"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>0xin6RGiJzoD3e74z+d98Wbnugy5LdNk/scqzNPDfbUQqzxOi1CKn4byVgvktLmpOTrt2slhfgsz
-mJE3R7001w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_709c7ba6-eba8-49ef-a33b-56cac0a63b98"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>F72zoPrkBczmufcyj+LsgGy26o3Gpt6uSrYuKnZUkAQGeMSTaZ8CVjFJ0o5z0uiiO2SXS2KlIjRX
-WFStaRJmvQ==</DigestValue></Reference></SignedInfo><SignatureValue>ByZxysHbmYhW5FiSq70XXMOz+2fHFAA2YBTgwm42P9IG0Y885zxIWffescHLW11NLFx+4Nej7+4C
-E5AWxSSPQ+dkf8sQ0Oe4p13X1FVlRPPvqSyp8sOtzXUAtU3H0AbKV6ugehVAzlvLkQXFKA24g5+3
-sSUbs+7WR9LO9GKsLo99hEUDxa7owz0h6CFGf+rCQb3dH6cBZxg+BYNI+7sKSL51HrYt202usqo/
-YUkGjWkDFZEQ+1bHSwt2J8Uk330tCDYMG+OWg/JBzV3ANnhRVgqgV7YxwyFTuIF7FErfKvMB5VgD
-A60SX/yjv8XE8woOQKo4IGMkvVh8lbWfRSNskw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_2889c77b-bcd0-4f6e-95a4-323461e92d23"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>/i5KtcjJS2j7/7Cimq+F/llLQVzP5C+kJiKHNoEE9Bmt89k7yNwpGE4g2z8K9j3dH7oR0R7vmUVw
+CG3heR+q5A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_a3d60754-e8ba-45dd-bae0-e8bcccbcf181"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>pI5lgnfAqIfLRtXazng51AoXkiUdqxTNznVnQ6f3yA1Npc41OxCJd8QMp878KPqXKeCeSeATLbXt
+0bW2XxBRPA==</DigestValue></Reference></SignedInfo><SignatureValue>1Fam6Ro58dpVxNiIOfPMhfVaRx4unzunTz7cWdkP7tJCQSHQVauS2NeAgQigjA0OrZAZoMoZ4bfv
+xZGz4tEbA0o5Q3S4HUtF4JU9Gd8xdgGMRoUlSOCUnmspR8peD6yoxMaKAqY/pGO4XLSihAtRksZy
+UpH9CcPyMfBT4mUGxW91sIO0JUu0I2duMFSwrFjIK2LbpVLVEBMuomqdUNuyd+kkyXWGhsJ1bz0P
+l2DZyqsWLFA3mzL4U2dzAIImQvvNfHggK4nvp+rXRhU2hToEpgSOtqGnHJt2Lq1jtb+QKGrrf4BA
+EkCc/sQF16gisi0P6nGrq2CHWr35LqlxjZTC6w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -373,4 +373,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_709c7ba6-eba8-49ef-a33b-56cac0a63b98" Target="#_32188cbe-2302-405f-96f4-d0e75e146ebc"><Timestamp>2019-01-24 08:59:51</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_a3d60754-e8ba-45dd-bae0-e8bcccbcf181" Target="#_2889c77b-bcd0-4f6e-95a4-323461e92d23"><Timestamp>2019-02-02 10:18:06</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
