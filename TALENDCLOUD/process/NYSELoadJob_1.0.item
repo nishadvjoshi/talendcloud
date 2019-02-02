@@ -113,7 +113,7 @@
     <routinesParameter id="_rQRpwB-1EemtwtEDadxD9Q" name="DataMasking"/>
     <routinesParameter id="_rUmJEB-1EemtwtEDadxD9Q" name="DataQualityDependencies"/>
   </parameters>
-  <node componentName="tMysqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="96">
+  <node componentName="tMysqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBConnection_1"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_8"/>
     <elementParameter field="TEXT" name="HOST" value="&quot;localhost&quot;"/>
@@ -134,7 +134,29 @@
     <elementParameter field="TEXT" name="LABEL" value="conMySQLWorld"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tMysqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="96">
+  <node componentName="tMysqlClose" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBClose_1"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tFileInputFullRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputFullRow_1"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;F:/Trainings/CITI/SampleFiles/MySQLStageStudent.sql&quot;"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;;&quot;"/>
+    <elementParameter field="TEXT" name="HEADER" value=""/>
+    <elementParameter field="TEXT" name="FOOTER" value=""/>
+    <elementParameter field="TEXT" name="LIMIT" value=""/>
+    <elementParameter field="CHECK" name="REMOVE_EMPTY_ROW" value="true"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="RANDOM" value="false"/>
+    <elementParameter field="TEXT" name="NB_RANDOM" show="false" value="10"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileInputFullRow_1">
+      <column defaultValue="" key="false" length="255" name="line" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMysqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="448" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBRow_1"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="MYSQL_8"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
@@ -149,7 +171,7 @@
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;DROP Table if Exists `world`.`student`;&#13;&#10;CREATE TABLE `world`.`student` &#13;&#10;(`studentid` INT NOT NULL,`studentname` VARCHAR(100) NULL,`studentrollno` INT NULL, &#13;&#10;PRIMARY KEY (`studentid`));&#13;&#10;INSERT INTO world.student VALUES (1,'Bob',16025);&#13;&#10;INSERT INTO world.student VALUES (2,'Venkat',16029);&#13;&#10;INSERT INTO world.student VALUES (3,'Trisha',16035);&#13;&#10;INSERT INTO world.student VALUES(4,'John',16044);&#13;&#10;INSERT INTO world.student VALUES(5,'Walli',16056);&#13;&#10;INSERT INTO world.student VALUES(6,'Andrew',16057);&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="row1.line"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -169,8 +191,15 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBConnection_1" offsetLabelX="0" offsetLabelY="0" source="tDBConnection_1" target="tDBRow_1">
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBConnection_1" offsetLabelX="0" offsetLabelY="0" source="tDBConnection_1" target="tFileInputFullRow_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
+  </connection>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileInputFullRow_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputFullRow_1" target="tDBRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputFullRow_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputFullRow_1" target="tDBClose_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBConnection_1"/>
@@ -178,17 +207,22 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBRow_1"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBClose_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_004205c5-8ec0-4a8c-860f-a420ab684bed"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>TZtcXmGsJ0Jw5acB0HBPN8J/NWDFm6AmtWEae4fbJ6T/WD0R0VZYK6xDjl92tUFqYME9riBxUYl4
-4nzCljES9Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_4ea09522-e5ab-4f1d-97cb-33c7daf02096"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>7hvB+WZ+07hS1blCm85xsmJyh/NxYggfn+v5H3KuLmffX9KWCfY0TYw7U7F01Jc7mMAT0b5lWcwO
-VajTY3270w==</DigestValue></Reference></SignedInfo><SignatureValue>m8HwrH5QFslj+b4i2YujroV9zgxFAVA4zHo+af9vaMlvzY3zJBg69F8uVG7qtLdMwj2J5tWKfxEQ
-bU+PMEo0e5CKIHK9dwpA0A25AuDg3LAfDrCpHFjoW0IT9bD47bHSOW6g+qgvxOXnV6OTSNVBMiNr
-2R/ziUQz6igtXE7DksbncSiaGLkHID3UcmwuD2Xtlf0m7S94UNYtHknz3EgCin3PNfkfDel/k+iF
-wnJgftxuuVLJCNGZ+HMbhETpy24XlBoi/tdA6PFO/kGKATHoZkZW32Vev7K1wWmUu/hgn+kekrcx
-3mWGqtJVMC+PiAj+XnmHC84WnNGfAeicqqACDw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputFullRow_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e3cfd0d7-449c-4e90-a7ec-5b9a01f8a9cf"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>26kFGFWF0koU3vKi5QE4guOi74iSHdvugQPAH1RyZ3LuGjwxh6Xwcftjc0fSwiTHSwWTli22Pyn+
+zGXJ4w9QIg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_cc77bb0d-0dcf-41c3-bdce-acfbe7f6ff6f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>MTZzUL6X0YXmZoJfJ/18YI2OdPCtieWsi5Ubk+1l82bRUbBxNil9ycxVY0h4Vv2Ov4ZVjQnSlm80
+mNUd7L2ePA==</DigestValue></Reference></SignedInfo><SignatureValue>XLDE2QJPE+rD/xa0UtihJECKyIAd5Alb11jp+QZq1tHlzSAKN4UvecjkxHlh9JfWFHIunfkNriu0
+wS1MmpQc7PP1iCvZfguqSpKNM98THGAlVDKqBed0Zo6tam48to79R9XAfd77k8FZCJoDF+2aMvNp
+yZcJT10AVa0utIlebkUDuIgezaGr4rvJ7ana9L2XzabX+obPMsZCPaPKMySCxMWmi3kYOO7/mO4J
+bYArR6WVsc8LI28e9PeKO/u9cHuT8ya3ZuyKYytmIwEGAW/odUF7ogqZEbdzCDdQtw6kYA4Zvnm6
+GB9hmkeSPx0ij68cZzYyOQyERw5C06gT2UzsUw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -212,4 +246,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_4ea09522-e5ab-4f1d-97cb-33c7daf02096" Target="#_004205c5-8ec0-4a8c-860f-a420ab684bed"><Timestamp>2019-02-02 06:22:27</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_cc77bb0d-0dcf-41c3-bdce-acfbe7f6ff6f" Target="#_e3cfd0d7-449c-4e90-a7ec-5b9a01f8a9cf"><Timestamp>2019-02-02 06:29:06</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
