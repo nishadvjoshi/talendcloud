@@ -6,12 +6,12 @@
     <groupId>org.example.talendclould</groupId>
     <artifactId>code.Master</artifactId>
     <version>7.1.1</version>
-    <relativePath>../../../../</relativePath>
+    <relativePath>../../../../../</relativePath>
   </parent>
   <groupId>org.example.talendclould.job</groupId>
-  <artifactId>m_LoadData_RemoveDuplicates</artifactId>
+  <artifactId>ComponentRow</artifactId>
   <version>0.1.0</version>
-  <name>TALENDCLOULD m_LoadData_RemoveDuplicates-0.1.0 (0.1,Job Designs)</name>
+  <name>TALENDCLOULD ComponentRow-0.1.0 (0.1,Job Designs)</name>
   <properties>
     <output.resources.dir>${talend.job.name}/src/main/resources</output.resources.dir>
     <talend.job.applyContextToChildren>false</talend.job.applyContextToChildren>
@@ -19,12 +19,12 @@
     <current.int-resources.dir>${basedir}/src/main/resources</current.int-resources.dir>
     <talend.job.version>0.1</talend.job.version>
     <talend.project.name.lowercase>talendclould</talend.project.name.lowercase>
-    <talend.job.path>talendclould/m_loaddata_removeduplicates_0_1</talend.job.path>
+    <talend.job.path>talendclould/componentrow_0_1</talend.job.path>
     <project.distribution-management.repository.id>${project.distributionManagement.repository.id}</project.distribution-management.repository.id>
     <maven.build.timestamp.format>yyyy-MM-dd HHmmssSSS</maven.build.timestamp.format>
     <talend.project.name>TALENDCLOULD</talend.project.name>
     <talend.product.version>7.1.1.20181026_1147</talend.product.version>
-    <talend.job.finalName>m_loaddata_removeduplicates_0_1</talend.job.finalName>
+    <talend.job.finalName>componentrow_0_1</talend.job.finalName>
     <talend.pigudf.groupid>org.example.talendclould.pigudf</talend.pigudf.groupid>
     <talend.routine.groupid>org.example.talendclould.code</talend.routine.groupid>
     <current.bundle.resources.dir>${basedir}/src/main/bundle-resources</current.bundle.resources.dir>
@@ -33,39 +33,24 @@
     <talend.job.stat>true</talend.job.stat>
     <talend.job.date>${maven.build.timestamp}</talend.job.date>
     <current.resources.dir>${basedir}/src/main/ext-resources</current.resources.dir>
-    <talend.job.name>m_LoadData_RemoveDuplicates</talend.job.name>
-    <talend.job.id>_IdXu5k3oEeiSTvM_ARdNaw</talend.job.id>
+    <talend.job.name>ComponentRow</talend.job.name>
+    <talend.job.id>_dDA20OgMEduQrK0t1cU9cw</talend.job.id>
     <talend.project.id>0</talend.project.id>
     <project.distribution-management.repository.url>${project.distributionManagement.repository.url}</project.distribution-management.repository.url>
     <talend.job.framework></talend.job.framework>
-    <talend.job.folder>mappings/</talend.job.folder>
+    <talend.job.folder>t01_compo/databases/</talend.job.folder>
     <talend.job.type>Standard</talend.job.type>
   </properties>
   <dependencies>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>advancedPersistentLookupLib-1.2</artifactId>
-      <version>6.0.0</version>
-    </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
       <artifactId>antlr-runtime-3.5.2</artifactId>
       <version>6.0.0</version>
     </dependency>
     <dependency>
-      <groupId>commons-collections</groupId>
-      <artifactId>commons-collections</artifactId>
-      <version>3.2.2</version>
-    </dependency>
-    <dependency>
       <groupId>dom4j</groupId>
       <artifactId>dom4j</artifactId>
       <version>1.6.1</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>jboss-serialization</artifactId>
-      <version>6.0.0</version>
     </dependency>
     <dependency>
       <groupId>log4j</groupId>
@@ -74,7 +59,7 @@
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>ojdbc6</artifactId>
+      <artifactId>mysql-connector-java-5.1.30-bin</artifactId>
       <version>6.0.0</version>
     </dependency>
     <dependency>
@@ -84,17 +69,7 @@
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>talend-oracle-timestamptz</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
       <artifactId>talend_file_enhanced_20070724</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>trove</artifactId>
       <version>6.0.0</version>
     </dependency>
     <dependency>
