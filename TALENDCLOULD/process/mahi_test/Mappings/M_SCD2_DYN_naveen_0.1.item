@@ -1,0 +1,1798 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" jobType="Standard" xmi:version="2.0">
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" name="Target" prompt="" promptNeeded="false" type="id_String" value="&quot;&quot;"/>
+  </context>
+  <parameters>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="32"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" show="false" value=""/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="TEXT" name="PARALLELIZE_UNIT_SIZE" value="25000"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" show="false" value="&quot;F:/Talend-Tools-Studio-20170623_1246-V6.4.1/workspace/in.csv&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" show="false" value="ORACLE_11"/>
+    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="0RMsyjmybrE="/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" show="false" value="Warning"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" show="false" value="Warning"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" show="false" value="true"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" show="false" value="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;F:/Talend-Tools-Studio-20170623_1246-V6.4.1/workspace/.metadata&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" show="false" value="&quot;stats_file.txt&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" show="false" value="&quot;logs_file.txt&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" show="false" value="&quot;meter_file.txt&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" show="false" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" show="false" value="tJDBCOutput"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="ORACLE_11"/>
+    <elementParameter field="TEXT" name="URL" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DATASOURCE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="0RMsyjmybrE="/>
+    <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" show="false" value=""/>
+    <elementParameter field="CHECK" name="HEADER_ENABLED" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HEADER_LIBRARY" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADER_CODE" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADER_IMPORT" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" show="false" value=""/>
+    <elementParameter field="CHECK" name="FOOTER_ENABLED" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FOOTER_LIBRARY" show="false" value=""/>
+    <elementParameter field="TEXT" name="FOOTER_CODE" show="false" value=""/>
+    <elementParameter field="TEXT" name="FOOTER_IMPORT" show="false" value=""/>
+    <routinesParameter id="_dbJKkDMXEeOTIuq5eWZPow" name="DQTechnical"/>
+    <routinesParameter id="_dZp80DMXEeOTIuq5eWZPow" name="DataOperation"/>
+    <routinesParameter id="_dbCc4DMXEeOTIuq5eWZPow" name="DataQuality"/>
+    <routinesParameter id="_dbFgMDMXEeOTIuq5eWZPow" name="DqStringHandling"/>
+    <routinesParameter id="_da9kYDMXEeOTIuq5eWZPow" name="MDM"/>
+    <routinesParameter id="_dajUsDMXEeOTIuq5eWZPow" name="Mathematical"/>
+    <routinesParameter id="_dam_EDMXEeOTIuq5eWZPow" name="Numeric"/>
+    <routinesParameter id="_daqCYDMXEeOTIuq5eWZPow" name="Relational"/>
+    <routinesParameter id="_dbM08DMXEeOTIuq5eWZPow" name="SQLike"/>
+    <routinesParameter id="_datFsDMXEeOTIuq5eWZPow" name="StringHandling"/>
+    <routinesParameter id="_dawwEDMXEeOTIuq5eWZPow" name="TalendDataGenerator"/>
+    <routinesParameter id="_da0acDMXEeOTIuq5eWZPow" name="TalendDate"/>
+    <routinesParameter id="_E-aMEHBqEeeKTP4K-BQYLw" name="TalendStringUtil"/>
+    <routinesParameter id="_da5S8DMXEeOTIuq5eWZPow" name="TalendString"/>
+  </parameters>
+  <node componentName="tOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="0" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tOracleInput_1"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_O-sfwv0IEeeDFvkGkY7BdA"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_OCI"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_11"/>
+    <elementParameter field="TEXT" name="RAC_URL" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="ORACLE_OCI"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;1521&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;Design:Oracle-mahi&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;HR&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE="/>
+    <elementParameter field="TEXT" name="JDBC_URL" show="false" value="jdbc:oracle:oci:/@talend"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;SOURCE_EMP&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value=""/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT COMM,DEPTNO,EMPNO,ENAME,HIREDATE,JOB,MGR,SAL  FROM \&quot;SOURCE_EMP\&quot;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value=""/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="oracle_id"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value=""/>
+    <elementParameter field="LABEL" name="NOTE" value=""/>
+    <elementParameter field="CHECK" name="IS_CONVERT_XMLTYPE" value="false"/>
+    <elementParameter field="TABLE" name="CONVERT_XMLTYPE" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_CURSOR" value="false"/>
+    <elementParameter field="TEXT" name="CURSOR_SIZE" show="false" value="1000"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="EMPNO"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ENAME"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="JOB"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MGR"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="HIREDATE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SAL"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="COMM"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DEPTNO"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="NO_NULL_VALUES" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="SQ_mahi"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tOracleInput_1">
+      <column key="false" length="4" name="EMPNO" nullable="false" precision="0" sourceType="DOUBLE PRECISION" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="10" name="ENAME" nullable="false" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column key="false" length="9" name="JOB" nullable="false" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column key="false" length="4" name="MGR" nullable="false" precision="0" sourceType="DOUBLE PRECISION" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="29" name="HIREDATE" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="9" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true"/>
+      <column key="false" length="7" name="SAL" nullable="false" precision="2" sourceType="DOUBLE PRECISION" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="7" name="COMM" nullable="false" precision="2" sourceType="DOUBLE PRECISION" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="2" name="DEPTNO" nullable="false" precision="0" sourceType="DOUBLE PRECISION" type="id_Double" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tDBInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="2176" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_2"/>
+    <elementParameter field="CLOSED_LIST" name="TYPE" show="false" value="undef;sun.jdbc.odbc.JdbcOdbcDriver"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.Target"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;END_DATE = to_Date('2099/12/12','yyyy/mm/dd')&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT COMM,DEPTNO,EMPNO,ENAME,HIREDATE,JOB,NewLookupRow,SAL,S_EMPNO  FROM \&quot;END_DATE = to_Date('2099/12/12','yyyy/mm/dd')\&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional ODBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="NewLookupRow"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="S_EMPNO"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="EMPNO"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ENAME"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="JOB"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="HIREDATE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SAL"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="COMM"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DEPTNO"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="DLKP_GetData"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBInput_2">
+      <column comment="Default port for Dynamic Lookup" key="false" length="10" name="NewLookupRow" nullable="false" precision="0" sourceType="NUMERIC" type="id_Float" usefulColumn="true"/>
+      <column key="false" length="19" name="S_EMPNO" nullable="false" precision="0" sourceType="BIGINT" type="id_Long" usefulColumn="true"/>
+      <column key="false" length="4" name="EMPNO" nullable="false" precision="0" sourceType="DECIMAL" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="10" name="ENAME" nullable="false" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column key="false" length="9" name="JOB" nullable="false" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column key="false" length="29" name="HIREDATE" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="9" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true"/>
+      <column key="false" length="7" name="SAL" nullable="false" precision="2" sourceType="DECIMAL" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="7" name="COMM" nullable="false" precision="2" sourceType="DECIMAL" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="2" name="DEPTNO" nullable="false" precision="0" sourceType="DECIMAL" type="id_Double" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="2464" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_PTQenv0IEeeDFvkGkY7BdA-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="DLKP_GetData"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="INPUT">
+      <column comment="Default port for Dynamic Lookup" key="false" length="10" name="NewLookupRow" nullable="false" precision="0" sourceType="" type="id_Float" usefulColumn="true"/>
+      <column key="false" length="19" name="NEXTVAL" nullable="false" precision="0" sourceType="" type="id_Long" usefulColumn="true"/>
+      <column key="false" length="19" name="S_EMPNO" nullable="false" precision="0" sourceType="" type="id_Long" usefulColumn="true"/>
+      <column key="false" length="4" name="EMPNO" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="10" name="ENAME" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="9" name="JOB" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="29" name="HIREDATE" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="9" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column key="false" length="7" name="SAL" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="7" name="COMM" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="2" name="DEPTNO" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="4" name="EMPNO_IN" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="10" name="ENAME_IN" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="9" name="JOB_IN" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="4" name="JOB1_IN" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="29" name="HIREDATE_IN" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="9" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column key="false" length="7" name="SAL_IN" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="7" name="COMM_IN" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="2" name="DEPTNO_IN" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables name="INPUT" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="DATA.NewLookupRow" name="NewLookupRow" type="id_Float"/>
+        <mapperTableEntries expression="CONTROL.NEXTVAL" name="NEXTVAL" type="id_Long"/>
+        <mapperTableEntries expression="DATA.S_EMPNO" name="S_EMPNO" type="id_Long"/>
+        <mapperTableEntries expression="DATA.EMPNO" name="EMPNO" type="id_Double"/>
+        <mapperTableEntries expression="DATA.ENAME" name="ENAME" type="id_String"/>
+        <mapperTableEntries expression="DATA.JOB" name="JOB" type="id_String"/>
+        <mapperTableEntries expression="DATA.HIREDATE" name="HIREDATE" type="id_Date"/>
+        <mapperTableEntries expression="DATA.SAL" name="SAL" type="id_Double"/>
+        <mapperTableEntries expression="DATA.COMM" name="COMM" type="id_Double"/>
+        <mapperTableEntries expression="DATA.DEPTNO" name="DEPTNO" type="id_Double"/>
+        <mapperTableEntries expression="CONTROL.EMPNO_IN" name="EMPNO_IN" type="id_Double"/>
+        <mapperTableEntries expression="CONTROL.ENAME_IN" name="ENAME_IN" type="id_String"/>
+        <mapperTableEntries expression="CONTROL.JOB_IN" name="JOB_IN" type="id_String"/>
+        <mapperTableEntries expression="CONTROL.JOB1_IN" name="JOB1_IN" type="id_Double"/>
+        <mapperTableEntries expression="CONTROL.HIREDATE_IN" name="HIREDATE_IN" type="id_Date"/>
+        <mapperTableEntries expression="CONTROL.SAL_IN" name="SAL_IN" type="id_Double"/>
+        <mapperTableEntries expression="CONTROL.COMM_IN" name="COMM_IN" type="id_Double"/>
+        <mapperTableEntries expression="CONTROL.DEPTNO_IN" name="DEPTNO_IN" type="id_Double"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="CONTROL" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="" name="NEXTVAL" type="id_Long"/>
+        <mapperTableEntries expression="" name="EMPNO_IN" type="id_Double"/>
+        <mapperTableEntries expression="" name="ENAME_IN" type="id_String"/>
+        <mapperTableEntries expression="" name="JOB_IN" type="id_String"/>
+        <mapperTableEntries expression="" name="JOB1_IN" type="id_Double"/>
+        <mapperTableEntries expression="" name="HIREDATE_IN" type="id_Date"/>
+        <mapperTableEntries expression="" name="SAL_IN" type="id_Double"/>
+        <mapperTableEntries expression="" name="COMM_IN" type="id_Double"/>
+        <mapperTableEntries expression="" name="EMPNO" type="id_Double"/>
+        <mapperTableEntries expression="" name="DEPTNO_IN" type="id_Double"/>
+      </inputTables>
+      <inputTables activateExpressionFilter="true" expressionFilter="MITI.equals(CONTROL.EMPNO, CONTROL.EMPNO_IN)" lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="DATA" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="NewLookupRow" type="id_Float"/>
+        <mapperTableEntries name="S_EMPNO" type="id_Long"/>
+        <mapperTableEntries name="EMPNO" type="id_Double"/>
+        <mapperTableEntries name="ENAME" type="id_String"/>
+        <mapperTableEntries name="JOB" type="id_String"/>
+        <mapperTableEntries name="HIREDATE" type="id_Date"/>
+        <mapperTableEntries name="SAL" type="id_Double"/>
+        <mapperTableEntries name="COMM" type="id_Double"/>
+        <mapperTableEntries name="DEPTNO" type="id_Double"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="2176" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_2"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_PTQenv0IEeeDFvkGkY7BdA-tMap_2-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="DLKP_GetData.CONTROL.Sequence"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
+    <elementParameter field="MEMO" name="COMMENT" value="This component created to represent sequence generators"/>
+    <metadata connector="FLOW" name="CONTROL">
+      <column key="false" length="19" name="NEXTVAL" nullable="false" precision="0" sourceType="" type="id_Long" usefulColumn="true"/>
+      <column key="false" length="4" name="EMPNO_IN" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="10" name="ENAME_IN" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="9" name="JOB_IN" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="4" name="JOB1_IN" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="29" name="HIREDATE_IN" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="9" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column key="false" length="7" name="SAL_IN" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="7" name="COMM_IN" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="4" name="EMPNO" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="2" name="DEPTNO_IN" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables name="CONTROL" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="Numeric.sequence(&quot;mahi_test@Mappings@M_SCD2_DYN_naveen@SEQ_GenerateKeys&quot;,0,1)" name="NEXTVAL" type="id_Long"/>
+        <mapperTableEntries expression="INPUT_4.EMPNO_IN" name="EMPNO_IN" type="id_Double"/>
+        <mapperTableEntries expression="INPUT_4.ENAME_IN" name="ENAME_IN" type="id_String"/>
+        <mapperTableEntries expression="INPUT_4.JOB_IN" name="JOB_IN" type="id_String"/>
+        <mapperTableEntries expression="INPUT_4.JOB1_IN" name="JOB1_IN" type="id_Double"/>
+        <mapperTableEntries expression="INPUT_4.HIREDATE_IN" name="HIREDATE_IN" type="id_Date"/>
+        <mapperTableEntries expression="INPUT_4.SAL_IN" name="SAL_IN" type="id_Double"/>
+        <mapperTableEntries expression="INPUT_4.COMM_IN" name="COMM_IN" type="id_Double"/>
+        <mapperTableEntries expression="INPUT_4.EMPNO" name="EMPNO" type="id_Double"/>
+        <mapperTableEntries expression="INPUT_4.DEPTNO_IN" name="DEPTNO_IN" type="id_Double"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="INPUT_4" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="" name="EMPNO_IN" type="id_Double"/>
+        <mapperTableEntries expression="" name="ENAME_IN" type="id_String"/>
+        <mapperTableEntries expression="" name="JOB_IN" type="id_String"/>
+        <mapperTableEntries expression="" name="JOB1_IN" type="id_Double"/>
+        <mapperTableEntries expression="" name="HIREDATE_IN" type="id_Date"/>
+        <mapperTableEntries expression="" name="SAL_IN" type="id_Double"/>
+        <mapperTableEntries expression="" name="COMM_IN" type="id_Double"/>
+        <mapperTableEntries expression="" name="EMPNO" type="id_Double"/>
+        <mapperTableEntries expression="" name="DEPTNO_IN" type="id_Double"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1920" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_3"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_PTQenv0IEeeDFvkGkY7BdA-tMap_3-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="DLKP_GetData.CONTROL.Sequence.expression"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
+    <elementParameter field="MEMO" name="COMMENT" value="This component created automatically to align schema between nearby components "/>
+    <metadata connector="FLOW" name="INPUT_4">
+      <column key="false" length="4" name="EMPNO_IN" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="10" name="ENAME_IN" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="9" name="JOB_IN" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="4" name="JOB1_IN" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="29" name="HIREDATE_IN" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="9" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column key="false" length="7" name="SAL_IN" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="7" name="COMM_IN" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="4" name="EMPNO" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="2" name="DEPTNO_IN" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables name="INPUT_4" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="in8.EMPNO" name="EMPNO_IN" type="id_Double"/>
+        <mapperTableEntries expression="in8.ENAME" name="ENAME_IN" type="id_String"/>
+        <mapperTableEntries expression="in8.JOB" name="JOB_IN" type="id_String"/>
+        <mapperTableEntries expression="in8.MGR" name="JOB1_IN" type="id_Double"/>
+        <mapperTableEntries expression="in8.HIREDATE" name="HIREDATE_IN" type="id_Date"/>
+        <mapperTableEntries expression="in8.SAL" name="SAL_IN" type="id_Double"/>
+        <mapperTableEntries expression="in8.COMM" name="COMM_IN" type="id_Double"/>
+        <mapperTableEntries expression="in8.EMPNO" name="EMPNO" type="id_Double"/>
+        <mapperTableEntries expression="in8.DEPTNO" name="DEPTNO_IN" type="id_Double"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="in8" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="" name="EMPNO" type="id_Double"/>
+        <mapperTableEntries expression="" name="ENAME" type="id_String"/>
+        <mapperTableEntries expression="" name="JOB" type="id_String"/>
+        <mapperTableEntries expression="" name="MGR" type="id_Double"/>
+        <mapperTableEntries expression="" name="HIREDATE" type="id_Date"/>
+        <mapperTableEntries expression="" name="SAL" type="id_Double"/>
+        <mapperTableEntries expression="" name="COMM" type="id_Double"/>
+        <mapperTableEntries expression="" name="DEPTNO" type="id_Double"/>
+        <mapperTableEntries expression="" name="V_CHK" type="id_Double"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1120" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_4"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_PTQenv0IEeeDFvkGkY7BdA-tMap_4-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="EXPTRANS"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="in7">
+      <column key="false" length="4" name="EMPNO" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="10" name="ENAME" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="9" name="JOB" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="4" name="MGR" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="29" name="HIREDATE" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="9" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column key="false" length="7" name="SAL" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="7" name="COMM" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="2" name="DEPTNO" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="4" name="EMPNO1" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="10" name="ENAME1" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="9" name="JOB1" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="4" name="MGR1" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="29" name="HIREDATE1" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="9" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column key="false" length="7" name="SAL1" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="7" name="COMM1" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="2" name="DEPTNO1" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="10" name="O_CHK" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables name="Var" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="MITI.IIF(MITI.equals(INPUT_5.EMPNO, INPUT_5.EMPNO1) &amp;&amp; MITI.equals(INPUT_5.ENAME, INPUT_5.ENAME1) &amp;&amp; MITI.equals(INPUT_5.JOB, INPUT_5.JOB1) &amp;&amp; MITI.equals(INPUT_5.MGR, INPUT_5.MGR1) &amp;&amp; MITI.equals(INPUT_5.HIREDATE, INPUT_5.HIREDATE1) &amp;&amp; MITI.equals(INPUT_5.SAL, INPUT_5.SAL1) &amp;&amp; MITI.equals(INPUT_5.COMM, INPUT_5.COMM1) &amp;&amp; MITI.equals(INPUT_5.DEPTNO, INPUT_5.DEPTNO1), 2, 3)" name="V_CHK" type="id_Double"/>
+      </varTables>
+      <outputTables name="in7" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="INPUT_5.EMPNO" name="EMPNO" type="id_Double"/>
+        <mapperTableEntries expression="INPUT_5.ENAME" name="ENAME" type="id_String"/>
+        <mapperTableEntries expression="INPUT_5.JOB" name="JOB" type="id_String"/>
+        <mapperTableEntries expression="INPUT_5.MGR" name="MGR" type="id_Double"/>
+        <mapperTableEntries expression="INPUT_5.HIREDATE" name="HIREDATE" type="id_Date"/>
+        <mapperTableEntries expression="INPUT_5.SAL" name="SAL" type="id_Double"/>
+        <mapperTableEntries expression="INPUT_5.COMM" name="COMM" type="id_Double"/>
+        <mapperTableEntries expression="INPUT_5.DEPTNO" name="DEPTNO" type="id_Double"/>
+        <mapperTableEntries expression="INPUT_5.EMPNO1" name="EMPNO1" type="id_Double"/>
+        <mapperTableEntries expression="INPUT_5.ENAME1" name="ENAME1" type="id_String"/>
+        <mapperTableEntries expression="INPUT_5.JOB1" name="JOB1" type="id_String"/>
+        <mapperTableEntries expression="INPUT_5.MGR1" name="MGR1" type="id_Double"/>
+        <mapperTableEntries expression="INPUT_5.HIREDATE1" name="HIREDATE1" type="id_Date"/>
+        <mapperTableEntries expression="INPUT_5.SAL1" name="SAL1" type="id_Double"/>
+        <mapperTableEntries expression="INPUT_5.COMM1" name="COMM1" type="id_Double"/>
+        <mapperTableEntries expression="INPUT_5.DEPTNO1" name="DEPTNO1" type="id_Double"/>
+        <mapperTableEntries expression="VARIABLES.V_CHK" name="O_CHK" type="id_Double"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="INPUT_5" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="" name="EMPNO" type="id_Double"/>
+        <mapperTableEntries expression="" name="ENAME" type="id_String"/>
+        <mapperTableEntries expression="" name="JOB" type="id_String"/>
+        <mapperTableEntries expression="" name="MGR" type="id_Double"/>
+        <mapperTableEntries expression="" name="HIREDATE" type="id_Date"/>
+        <mapperTableEntries expression="" name="SAL" type="id_Double"/>
+        <mapperTableEntries expression="" name="COMM" type="id_Double"/>
+        <mapperTableEntries expression="" name="DEPTNO" type="id_Double"/>
+        <mapperTableEntries expression="" name="EMPNO1" type="id_Double"/>
+        <mapperTableEntries expression="" name="ENAME1" type="id_String"/>
+        <mapperTableEntries expression="" name="JOB1" type="id_String"/>
+        <mapperTableEntries expression="" name="MGR1" type="id_Double"/>
+        <mapperTableEntries expression="" name="HIREDATE1" type="id_Date"/>
+        <mapperTableEntries expression="" name="SAL1" type="id_Double"/>
+        <mapperTableEntries expression="" name="COMM1" type="id_Double"/>
+        <mapperTableEntries expression="" name="DEPTNO1" type="id_Double"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="864" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_5"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_PTQenv0IEeeDFvkGkY7BdA-tMap_5-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="EXPTRANS.expression"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
+    <elementParameter field="MEMO" name="COMMENT" value="This component created automatically to align schema between nearby components "/>
+    <metadata connector="FLOW" name="INPUT_5">
+      <column key="false" length="4" name="EMPNO" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="10" name="ENAME" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="9" name="JOB" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="4" name="MGR" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="29" name="HIREDATE" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="9" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column key="false" length="7" name="SAL" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="7" name="COMM" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="2" name="DEPTNO" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="4" name="EMPNO1" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="10" name="ENAME1" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="9" name="JOB1" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="4" name="MGR1" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="29" name="HIREDATE1" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="9" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column key="false" length="7" name="SAL1" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="7" name="COMM1" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="2" name="DEPTNO1" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables name="INPUT_5" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="in5.EMPNO1" name="EMPNO" type="id_Double"/>
+        <mapperTableEntries expression="in5.ENAME1" name="ENAME" type="id_String"/>
+        <mapperTableEntries expression="in5.JOB1" name="JOB" type="id_String"/>
+        <mapperTableEntries expression="in5.MGR1" name="MGR" type="id_Double"/>
+        <mapperTableEntries expression="in5.HIREDATE1" name="HIREDATE" type="id_Date"/>
+        <mapperTableEntries expression="in5.SAL1" name="SAL" type="id_Double"/>
+        <mapperTableEntries expression="in5.COMM1" name="COMM" type="id_Double"/>
+        <mapperTableEntries expression="in5.DEPTNO1" name="DEPTNO" type="id_Double"/>
+        <mapperTableEntries expression="in5.EMPNO" name="EMPNO1" type="id_Double"/>
+        <mapperTableEntries expression="in5.ENAME" name="ENAME1" type="id_String"/>
+        <mapperTableEntries expression="in5.JOB" name="JOB1" type="id_String"/>
+        <mapperTableEntries expression="in5.MGR" name="MGR1" type="id_Double"/>
+        <mapperTableEntries expression="in5.HIREDATE" name="HIREDATE1" type="id_Date"/>
+        <mapperTableEntries expression="in5.SAL" name="SAL1" type="id_Double"/>
+        <mapperTableEntries expression="in5.COMM" name="COMM1" type="id_Double"/>
+        <mapperTableEntries expression="in5.DEPTNO" name="DEPTNO1" type="id_Double"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="in5" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="" name="S_EMPNO" type="id_Double"/>
+        <mapperTableEntries expression="" name="EMPNO" type="id_Double"/>
+        <mapperTableEntries expression="" name="ENAME1" type="id_String"/>
+        <mapperTableEntries expression="" name="ENAME" type="id_String"/>
+        <mapperTableEntries expression="" name="JOB1" type="id_String"/>
+        <mapperTableEntries expression="" name="JOB" type="id_String"/>
+        <mapperTableEntries expression="" name="MGR1" type="id_Double"/>
+        <mapperTableEntries expression="" name="HIREDATE1" type="id_Date"/>
+        <mapperTableEntries expression="" name="MGR" type="id_Double"/>
+        <mapperTableEntries expression="" name="HIREDATE" type="id_Date"/>
+        <mapperTableEntries expression="" name="SAL1" type="id_Double"/>
+        <mapperTableEntries expression="" name="COMM1" type="id_Double"/>
+        <mapperTableEntries expression="" name="SAL" type="id_Double"/>
+        <mapperTableEntries expression="" name="COMM" type="id_Double"/>
+        <mapperTableEntries expression="" name="DEPTNO1" type="id_Double"/>
+        <mapperTableEntries expression="" name="DEPTNO" type="id_Double"/>
+        <mapperTableEntries expression="" name="START_DATE" type="id_Date"/>
+        <mapperTableEntries expression="" name="END_DATE" type="id_Date"/>
+        <mapperTableEntries expression="" name="EMPNO1" type="id_Double"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="3232" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_6"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_PTQenv0IEeeDFvkGkY7BdA-tMap_6-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="EXP_SetEffectiveDates"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="INPUT_2">
+      <column key="false" length="4" name="EMPNO" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="10" name="ENAME" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="9" name="JOB" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="4" name="JOB1" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="29" name="HIREDATE" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="9" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column key="false" length="7" name="SAL" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="7" name="COMM" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="2" name="DEPTNO" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="19" name="S_EMPNO" nullable="false" precision="0" sourceType="" type="id_Long" usefulColumn="true"/>
+      <column key="false" length="29" name="START_DATE" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="9" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column key="false" length="29" name="END_DATE" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="9" sourceType="" type="id_Date" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables name="INPUT_2" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="INPUT_6.EMPNO" name="EMPNO" type="id_Double"/>
+        <mapperTableEntries expression="INPUT_6.ENAME" name="ENAME" type="id_String"/>
+        <mapperTableEntries expression="INPUT_6.JOB" name="JOB" type="id_String"/>
+        <mapperTableEntries expression="INPUT_6.JOB1" name="JOB1" type="id_Double"/>
+        <mapperTableEntries expression="INPUT_6.HIREDATE" name="HIREDATE" type="id_Date"/>
+        <mapperTableEntries expression="INPUT_6.SAL" name="SAL" type="id_Double"/>
+        <mapperTableEntries expression="INPUT_6.COMM" name="COMM" type="id_Double"/>
+        <mapperTableEntries expression="INPUT_6.DEPTNO" name="DEPTNO" type="id_Double"/>
+        <mapperTableEntries expression="INPUT_6.S_EMPNO" name="S_EMPNO" type="id_Long"/>
+        <mapperTableEntries expression="&quot;2011-01-01&quot;" name="START_DATE" type="id_Date"/>
+        <mapperTableEntries expression="MITI.to_Date(&quot;2099/12/12&quot;, &quot;yyyy/mm/dd&quot;)" name="END_DATE" type="id_Date"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="INPUT_6" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="" name="EMPNO" type="id_Double"/>
+        <mapperTableEntries expression="" name="ENAME" type="id_String"/>
+        <mapperTableEntries expression="" name="JOB" type="id_String"/>
+        <mapperTableEntries expression="" name="JOB1" type="id_Double"/>
+        <mapperTableEntries expression="" name="HIREDATE" type="id_Date"/>
+        <mapperTableEntries expression="" name="SAL" type="id_Double"/>
+        <mapperTableEntries expression="" name="COMM" type="id_Double"/>
+        <mapperTableEntries expression="" name="DEPTNO" type="id_Double"/>
+        <mapperTableEntries expression="" name="S_EMPNO" type="id_Long"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="2976" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_7"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_PTQenv0IEeeDFvkGkY7BdA-tMap_7-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="EXP_SetEffectiveDates.expression"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
+    <elementParameter field="MEMO" name="COMMENT" value="This component created automatically to align schema between nearby components "/>
+    <metadata connector="FLOW" name="INPUT_6">
+      <column key="false" length="4" name="EMPNO" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="10" name="ENAME" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="9" name="JOB" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="4" name="JOB1" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="29" name="HIREDATE" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="9" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column key="false" length="7" name="SAL" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="7" name="COMM" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="2" name="DEPTNO" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="19" name="S_EMPNO" nullable="false" precision="0" sourceType="" type="id_Long" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables name="INPUT_6" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="in6.EMPNO_IN1" name="EMPNO" type="id_Double"/>
+        <mapperTableEntries expression="in6.ENAME_IN1" name="ENAME" type="id_String"/>
+        <mapperTableEntries expression="in6.JOB_IN1" name="JOB" type="id_String"/>
+        <mapperTableEntries expression="in6.JOB1_IN1" name="JOB1" type="id_Double"/>
+        <mapperTableEntries expression="in6.HIREDATE_IN1" name="HIREDATE" type="id_Date"/>
+        <mapperTableEntries expression="in6.SAL_IN1" name="SAL" type="id_Double"/>
+        <mapperTableEntries expression="in6.COMM_IN1" name="COMM" type="id_Double"/>
+        <mapperTableEntries expression="in6.DEPTNO_IN1" name="DEPTNO" type="id_Double"/>
+        <mapperTableEntries expression="in6.NEXTVAL1" name="S_EMPNO" type="id_Long"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="in6" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="" name="NewLookupRow1" type="id_Float"/>
+        <mapperTableEntries expression="" name="NEXTVAL1" type="id_Long"/>
+        <mapperTableEntries expression="" name="S_EMPNO1" type="id_Long"/>
+        <mapperTableEntries expression="" name="EMPNO1" type="id_Double"/>
+        <mapperTableEntries expression="" name="ENAME1" type="id_String"/>
+        <mapperTableEntries expression="" name="JOB1" type="id_String"/>
+        <mapperTableEntries expression="" name="HIREDATE1" type="id_Date"/>
+        <mapperTableEntries expression="" name="SAL1" type="id_Double"/>
+        <mapperTableEntries expression="" name="COMM1" type="id_Double"/>
+        <mapperTableEntries expression="" name="DEPTNO1" type="id_Double"/>
+        <mapperTableEntries expression="" name="EMPNO_IN1" type="id_Double"/>
+        <mapperTableEntries expression="" name="ENAME_IN1" type="id_String"/>
+        <mapperTableEntries expression="" name="JOB_IN1" type="id_String"/>
+        <mapperTableEntries expression="" name="JOB1_IN1" type="id_Double"/>
+        <mapperTableEntries expression="" name="HIREDATE_IN1" type="id_Date"/>
+        <mapperTableEntries expression="" name="SAL_IN1" type="id_Double"/>
+        <mapperTableEntries expression="" name="COMM_IN1" type="id_Double"/>
+        <mapperTableEntries expression="" name="DEPTNO_IN1" type="id_Double"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="3232" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_8"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_PTQenv0IEeeDFvkGkY7BdA-tMap_8-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="EXP_SetEndDate"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="INPUT_3">
+      <column key="false" length="19" name="S_EMPNO" nullable="false" precision="0" sourceType="" type="id_Long" usefulColumn="true"/>
+      <column key="false" length="29" name="END_DATE" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="9" sourceType="" type="id_Date" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables name="INPUT_3" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="INPUT_7.S_EMPNO" name="S_EMPNO" type="id_Long"/>
+        <mapperTableEntries expression="&quot;2011-01-01&quot;" name="END_DATE" type="id_Date"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="INPUT_7" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="" name="S_EMPNO" type="id_Long"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="2976" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_9"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_PTQenv0IEeeDFvkGkY7BdA-tMap_9-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="EXP_SetEndDate.expression"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
+    <elementParameter field="MEMO" name="COMMENT" value="This component created automatically to align schema between nearby components "/>
+    <metadata connector="FLOW" name="INPUT_7">
+      <column key="false" length="19" name="S_EMPNO" nullable="false" precision="0" sourceType="" type="id_Long" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables name="INPUT_7" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="in4.S_EMPNO3" name="S_EMPNO" type="id_Long"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="in4" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="" name="NewLookupRow3" type="id_Float"/>
+        <mapperTableEntries expression="" name="NEXTVAL3" type="id_Long"/>
+        <mapperTableEntries expression="" name="S_EMPNO3" type="id_Long"/>
+        <mapperTableEntries expression="" name="EMPNO3" type="id_Double"/>
+        <mapperTableEntries expression="" name="ENAME3" type="id_String"/>
+        <mapperTableEntries expression="" name="JOB3" type="id_String"/>
+        <mapperTableEntries expression="" name="HIREDATE3" type="id_Date"/>
+        <mapperTableEntries expression="" name="SAL3" type="id_Double"/>
+        <mapperTableEntries expression="" name="COMM3" type="id_Double"/>
+        <mapperTableEntries expression="" name="DEPTNO3" type="id_Double"/>
+        <mapperTableEntries expression="" name="EMPNO_IN3" type="id_Double"/>
+        <mapperTableEntries expression="" name="ENAME_IN3" type="id_String"/>
+        <mapperTableEntries expression="" name="JOB_IN3" type="id_String"/>
+        <mapperTableEntries expression="" name="JOB1_IN3" type="id_Double"/>
+        <mapperTableEntries expression="" name="HIREDATE_IN3" type="id_Date"/>
+        <mapperTableEntries expression="" name="SAL_IN3" type="id_Double"/>
+        <mapperTableEntries expression="" name="COMM_IN3" type="id_Double"/>
+        <mapperTableEntries expression="" name="DEPTNO_IN3" type="id_Double"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1632" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_10"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_PTQenv0IEeeDFvkGkY7BdA-tMap_10-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="FILTRANS"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="in8">
+      <column key="false" length="4" name="EMPNO" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="10" name="ENAME" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="9" name="JOB" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="4" name="MGR" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="29" name="HIREDATE" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="9" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column key="false" length="7" name="SAL" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="7" name="COMM" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="2" name="DEPTNO" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="10" name="V_CHK" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables activateExpressionFilter="true" expressionFilter="MITI.equals(INPUT_1.V_CHK, 3)" name="in8" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="INPUT_1.EMPNO" name="EMPNO" type="id_Double"/>
+        <mapperTableEntries expression="INPUT_1.ENAME" name="ENAME" type="id_String"/>
+        <mapperTableEntries expression="INPUT_1.JOB" name="JOB" type="id_String"/>
+        <mapperTableEntries expression="INPUT_1.MGR" name="MGR" type="id_Double"/>
+        <mapperTableEntries expression="INPUT_1.HIREDATE" name="HIREDATE" type="id_Date"/>
+        <mapperTableEntries expression="INPUT_1.SAL" name="SAL" type="id_Double"/>
+        <mapperTableEntries expression="INPUT_1.COMM" name="COMM" type="id_Double"/>
+        <mapperTableEntries expression="INPUT_1.DEPTNO" name="DEPTNO" type="id_Double"/>
+        <mapperTableEntries expression="INPUT_1.V_CHK" name="V_CHK" type="id_Double"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="INPUT_1" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="" name="EMPNO" type="id_Double"/>
+        <mapperTableEntries expression="" name="ENAME" type="id_String"/>
+        <mapperTableEntries expression="" name="JOB" type="id_String"/>
+        <mapperTableEntries expression="" name="MGR" type="id_Double"/>
+        <mapperTableEntries expression="" name="HIREDATE" type="id_Date"/>
+        <mapperTableEntries expression="" name="SAL" type="id_Double"/>
+        <mapperTableEntries expression="" name="COMM" type="id_Double"/>
+        <mapperTableEntries expression="" name="DEPTNO" type="id_Double"/>
+        <mapperTableEntries expression="" name="V_CHK" type="id_Double"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1376" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_11"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_PTQenv0IEeeDFvkGkY7BdA-tMap_11-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="FILTRANS.expression"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
+    <elementParameter field="MEMO" name="COMMENT" value="This component created automatically to align schema between nearby components "/>
+    <metadata connector="FLOW" name="INPUT_1">
+      <column key="false" length="4" name="EMPNO" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="10" name="ENAME" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="9" name="JOB" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="4" name="MGR" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="29" name="HIREDATE" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="9" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column key="false" length="7" name="SAL" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="7" name="COMM" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="2" name="DEPTNO" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="10" name="V_CHK" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables name="INPUT_1" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="in7.EMPNO" name="EMPNO" type="id_Double"/>
+        <mapperTableEntries expression="in7.ENAME" name="ENAME" type="id_String"/>
+        <mapperTableEntries expression="in7.JOB" name="JOB" type="id_String"/>
+        <mapperTableEntries expression="in7.MGR" name="MGR" type="id_Double"/>
+        <mapperTableEntries expression="in7.HIREDATE" name="HIREDATE" type="id_Date"/>
+        <mapperTableEntries expression="in7.SAL" name="SAL" type="id_Double"/>
+        <mapperTableEntries expression="in7.COMM" name="COMM" type="id_Double"/>
+        <mapperTableEntries expression="in7.DEPTNO" name="DEPTNO" type="id_Double"/>
+        <mapperTableEntries expression="in7.O_CHK" name="V_CHK" type="id_Double"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="in7" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="" name="EMPNO" type="id_Double"/>
+        <mapperTableEntries expression="" name="ENAME" type="id_String"/>
+        <mapperTableEntries expression="" name="JOB" type="id_String"/>
+        <mapperTableEntries expression="" name="MGR" type="id_Double"/>
+        <mapperTableEntries expression="" name="HIREDATE" type="id_Date"/>
+        <mapperTableEntries expression="" name="SAL" type="id_Double"/>
+        <mapperTableEntries expression="" name="COMM" type="id_Double"/>
+        <mapperTableEntries expression="" name="DEPTNO" type="id_Double"/>
+        <mapperTableEntries expression="" name="EMPNO1" type="id_Double"/>
+        <mapperTableEntries expression="" name="ENAME1" type="id_String"/>
+        <mapperTableEntries expression="" name="JOB1" type="id_String"/>
+        <mapperTableEntries expression="" name="MGR1" type="id_Double"/>
+        <mapperTableEntries expression="" name="HIREDATE1" type="id_Date"/>
+        <mapperTableEntries expression="" name="SAL1" type="id_Double"/>
+        <mapperTableEntries expression="" name="COMM1" type="id_Double"/>
+        <mapperTableEntries expression="" name="DEPTNO1" type="id_Double"/>
+        <mapperTableEntries expression="" name="O_CHK" type="id_Double"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tDBInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_4"/>
+    <elementParameter field="CLOSED_LIST" name="TYPE" show="false" value="undef;sun.jdbc.odbc.JdbcOdbcDriver"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.Target"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;TARG_EMP&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT COMM,DEPTNO,EMPNO,ENAME,END_DATE,HIREDATE,JOB,MGR,SAL,START_DATE,S_EMPNO  FROM \&quot;TARG_EMP\&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional ODBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="S_EMPNO"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="EMPNO"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ENAME"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="JOB"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MGR"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="HIREDATE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SAL"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="COMM"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DEPTNO"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="START_DATE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="END_DATE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="LKPTRANS"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBInput_4">
+      <column key="false" length="3" name="S_EMPNO" nullable="false" precision="0" sourceType="DECIMAL" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="4" name="EMPNO" nullable="false" precision="0" sourceType="DECIMAL" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="10" name="ENAME" nullable="false" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column key="false" length="9" name="JOB" nullable="false" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column key="false" length="4" name="MGR" nullable="false" precision="0" sourceType="DECIMAL" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="29" name="HIREDATE" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="9" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true"/>
+      <column key="false" length="7" name="SAL" nullable="false" precision="2" sourceType="DECIMAL" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="7" name="COMM" nullable="false" precision="2" sourceType="DECIMAL" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="2" name="DEPTNO" nullable="false" precision="0" sourceType="DECIMAL" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="29" name="START_DATE" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="9" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true"/>
+      <column key="false" length="29" name="END_DATE" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="9" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="576" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_12"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_PTQenv0IEeeDFvkGkY7BdA-tMap_12-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="LKPTRANS"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="in5">
+      <column key="false" length="3" name="S_EMPNO" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="4" name="EMPNO" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="10" name="ENAME1" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="10" name="ENAME" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="9" name="JOB1" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="9" name="JOB" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="4" name="MGR1" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="29" name="HIREDATE1" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="9" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column key="false" length="4" name="MGR" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="29" name="HIREDATE" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="9" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column key="false" length="7" name="SAL1" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="7" name="COMM1" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="7" name="SAL" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="7" name="COMM" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="2" name="DEPTNO1" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="2" name="DEPTNO" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="29" name="START_DATE" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="9" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column key="false" length="29" name="END_DATE" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="9" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column key="false" length="4" name="EMPNO1" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables name="in5" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="DATA1.S_EMPNO" name="S_EMPNO" type="id_Double"/>
+        <mapperTableEntries expression="DATA1.EMPNO" name="EMPNO" type="id_Double"/>
+        <mapperTableEntries expression="CONTROL_8.ENAME" name="ENAME1" type="id_String"/>
+        <mapperTableEntries expression="DATA1.ENAME" name="ENAME" type="id_String"/>
+        <mapperTableEntries expression="CONTROL_8.JOB" name="JOB1" type="id_String"/>
+        <mapperTableEntries expression="DATA1.JOB" name="JOB" type="id_String"/>
+        <mapperTableEntries expression="CONTROL_8.MGR" name="MGR1" type="id_Double"/>
+        <mapperTableEntries expression="CONTROL_8.HIREDATE" name="HIREDATE1" type="id_Date"/>
+        <mapperTableEntries expression="DATA1.MGR" name="MGR" type="id_Double"/>
+        <mapperTableEntries expression="DATA1.HIREDATE" name="HIREDATE" type="id_Date"/>
+        <mapperTableEntries expression="CONTROL_8.SAL" name="SAL1" type="id_Double"/>
+        <mapperTableEntries expression="CONTROL_8.COMM" name="COMM1" type="id_Double"/>
+        <mapperTableEntries expression="DATA1.SAL" name="SAL" type="id_Double"/>
+        <mapperTableEntries expression="DATA1.COMM" name="COMM" type="id_Double"/>
+        <mapperTableEntries expression="CONTROL_8.DEPTNO" name="DEPTNO1" type="id_Double"/>
+        <mapperTableEntries expression="DATA1.DEPTNO" name="DEPTNO" type="id_Double"/>
+        <mapperTableEntries expression="DATA1.START_DATE" name="START_DATE" type="id_Date"/>
+        <mapperTableEntries expression="DATA1.END_DATE" name="END_DATE" type="id_Date"/>
+        <mapperTableEntries expression="CONTROL_8.EMPNO1" name="EMPNO1" type="id_Double"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="CONTROL_8" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="" name="EMPNO1" type="id_Double"/>
+        <mapperTableEntries expression="" name="ENAME1" type="id_String"/>
+        <mapperTableEntries expression="" name="JOB1" type="id_String"/>
+        <mapperTableEntries expression="" name="MGR1" type="id_Double"/>
+        <mapperTableEntries expression="" name="HIREDATE1" type="id_Date"/>
+        <mapperTableEntries expression="" name="SAL1" type="id_Double"/>
+        <mapperTableEntries expression="" name="COMM1" type="id_Double"/>
+        <mapperTableEntries expression="" name="DEPTNO1" type="id_Double"/>
+      </inputTables>
+      <inputTables activateExpressionFilter="true" expressionFilter="MITI.equals(((String)globalMap.get(&quot;EMPNO&quot;)), CONTROL_8.EMPNO1)" lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" minimized="true" name="DATA1" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="" name="S_EMPNO" type="id_Double"/>
+        <mapperTableEntries expression="" name="EMPNO" type="id_Double"/>
+        <mapperTableEntries expression="" name="ENAME" type="id_String"/>
+        <mapperTableEntries expression="" name="JOB" type="id_String"/>
+        <mapperTableEntries expression="" name="MGR" type="id_Double"/>
+        <mapperTableEntries expression="" name="HIREDATE" type="id_Date"/>
+        <mapperTableEntries expression="" name="SAL" type="id_Double"/>
+        <mapperTableEntries expression="" name="COMM" type="id_Double"/>
+        <mapperTableEntries expression="" name="DEPTNO" type="id_Double"/>
+        <mapperTableEntries expression="" name="START_DATE" type="id_Date"/>
+        <mapperTableEntries expression="" name="END_DATE" type="id_Date"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="320" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_13"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_PTQenv0IEeeDFvkGkY7BdA-tMap_13-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="LKPTRANS.expression"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
+    <elementParameter field="MEMO" name="COMMENT" value="This component created automatically to align schema by position between nearby components "/>
+    <metadata connector="FLOW" name="CONTROL_8">
+      <column key="false" length="4" name="EMPNO1" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="10" name="ENAME1" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="9" name="JOB1" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="4" name="MGR1" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="29" name="HIREDATE1" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="9" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column key="false" length="7" name="SAL1" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="7" name="COMM1" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="2" name="DEPTNO1" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables name="CONTROL_8" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="in3.EMPNO" name="EMPNO1" type="id_Double"/>
+        <mapperTableEntries expression="in3.ENAME" name="ENAME1" type="id_String"/>
+        <mapperTableEntries expression="in3.JOB" name="JOB1" type="id_String"/>
+        <mapperTableEntries expression="in3.MGR" name="MGR1" type="id_Double"/>
+        <mapperTableEntries expression="in3.HIREDATE" name="HIREDATE1" type="id_Date"/>
+        <mapperTableEntries expression="in3.SAL" name="SAL1" type="id_Double"/>
+        <mapperTableEntries expression="in3.COMM" name="COMM1" type="id_Double"/>
+        <mapperTableEntries expression="in3.DEPTNO" name="DEPTNO1" type="id_Double"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="in3" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="" name="EMPNO" type="id_Double"/>
+        <mapperTableEntries expression="" name="ENAME" type="id_String"/>
+        <mapperTableEntries expression="" name="JOB" type="id_String"/>
+        <mapperTableEntries expression="" name="MGR" type="id_Double"/>
+        <mapperTableEntries expression="" name="HIREDATE" type="id_Date"/>
+        <mapperTableEntries expression="" name="SAL" type="id_Double"/>
+        <mapperTableEntries expression="" name="COMM" type="id_Double"/>
+        <mapperTableEntries expression="" name="DEPTNO" type="id_Double"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="2720" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_14"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_PTQenv0IEeeDFvkGkY7BdA-tMap_14-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="RTR_RouteInsertUpdate"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="DEFAULT1">
+      <column comment="Default port for Dynamic Lookup" key="false" length="10" name="NewLookupRow2" nullable="false" precision="0" sourceType="" type="id_Float" usefulColumn="true"/>
+      <column key="false" length="19" name="NEXTVAL2" nullable="false" precision="0" sourceType="" type="id_Long" usefulColumn="true"/>
+      <column key="false" length="19" name="S_EMPNO2" nullable="false" precision="0" sourceType="" type="id_Long" usefulColumn="true"/>
+      <column key="false" length="4" name="EMPNO2" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="10" name="ENAME2" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="9" name="JOB2" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="29" name="HIREDATE2" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="9" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column key="false" length="7" name="SAL2" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="7" name="COMM2" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="2" name="DEPTNO2" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="4" name="EMPNO_IN2" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="10" name="ENAME_IN2" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="9" name="JOB_IN2" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="4" name="JOB1_IN2" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="29" name="HIREDATE_IN2" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="9" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column key="false" length="7" name="SAL_IN2" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="7" name="COMM_IN2" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="2" name="DEPTNO_IN2" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="FLOW" name="in6">
+      <column comment="Default port for Dynamic Lookup" key="false" length="10" name="NewLookupRow1" nullable="false" precision="0" sourceType="" type="id_Float" usefulColumn="true"/>
+      <column key="false" length="19" name="NEXTVAL1" nullable="false" precision="0" sourceType="" type="id_Long" usefulColumn="true"/>
+      <column key="false" length="19" name="S_EMPNO1" nullable="false" precision="0" sourceType="" type="id_Long" usefulColumn="true"/>
+      <column key="false" length="4" name="EMPNO1" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="10" name="ENAME1" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="9" name="JOB1" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="29" name="HIREDATE1" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="9" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column key="false" length="7" name="SAL1" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="7" name="COMM1" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="2" name="DEPTNO1" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="4" name="EMPNO_IN1" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="10" name="ENAME_IN1" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="9" name="JOB_IN1" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="4" name="JOB1_IN1" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="29" name="HIREDATE_IN1" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="9" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column key="false" length="7" name="SAL_IN1" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="7" name="COMM_IN1" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="2" name="DEPTNO_IN1" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="FLOW" name="in4">
+      <column comment="Default port for Dynamic Lookup" key="false" length="10" name="NewLookupRow3" nullable="false" precision="0" sourceType="" type="id_Float" usefulColumn="true"/>
+      <column key="false" length="19" name="NEXTVAL3" nullable="false" precision="0" sourceType="" type="id_Long" usefulColumn="true"/>
+      <column key="false" length="19" name="S_EMPNO3" nullable="false" precision="0" sourceType="" type="id_Long" usefulColumn="true"/>
+      <column key="false" length="4" name="EMPNO3" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="10" name="ENAME3" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="9" name="JOB3" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="29" name="HIREDATE3" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="9" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column key="false" length="7" name="SAL3" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="7" name="COMM3" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="2" name="DEPTNO3" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="4" name="EMPNO_IN3" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="10" name="ENAME_IN3" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="9" name="JOB_IN3" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="4" name="JOB1_IN3" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="29" name="HIREDATE_IN3" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="9" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column key="false" length="7" name="SAL_IN3" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="7" name="COMM_IN3" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="2" name="DEPTNO_IN3" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables name="DEFAULT1" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="INPUT.NewLookupRow" name="NewLookupRow2" type="id_Float"/>
+        <mapperTableEntries expression="INPUT.NEXTVAL" name="NEXTVAL2" type="id_Long"/>
+        <mapperTableEntries expression="INPUT.S_EMPNO" name="S_EMPNO2" type="id_Long"/>
+        <mapperTableEntries expression="INPUT.EMPNO" name="EMPNO2" type="id_Double"/>
+        <mapperTableEntries expression="INPUT.ENAME" name="ENAME2" type="id_String"/>
+        <mapperTableEntries expression="INPUT.JOB" name="JOB2" type="id_String"/>
+        <mapperTableEntries expression="INPUT.HIREDATE" name="HIREDATE2" type="id_Date"/>
+        <mapperTableEntries expression="INPUT.SAL" name="SAL2" type="id_Double"/>
+        <mapperTableEntries expression="INPUT.COMM" name="COMM2" type="id_Double"/>
+        <mapperTableEntries expression="INPUT.DEPTNO" name="DEPTNO2" type="id_Double"/>
+        <mapperTableEntries expression="INPUT.EMPNO_IN" name="EMPNO_IN2" type="id_Double"/>
+        <mapperTableEntries expression="INPUT.ENAME_IN" name="ENAME_IN2" type="id_String"/>
+        <mapperTableEntries expression="INPUT.JOB_IN" name="JOB_IN2" type="id_String"/>
+        <mapperTableEntries expression="INPUT.JOB1_IN" name="JOB1_IN2" type="id_Double"/>
+        <mapperTableEntries expression="INPUT.HIREDATE_IN" name="HIREDATE_IN2" type="id_Date"/>
+        <mapperTableEntries expression="INPUT.SAL_IN" name="SAL_IN2" type="id_Double"/>
+        <mapperTableEntries expression="INPUT.COMM_IN" name="COMM_IN2" type="id_Double"/>
+        <mapperTableEntries expression="INPUT.DEPTNO_IN" name="DEPTNO_IN2" type="id_Double"/>
+      </outputTables>
+      <outputTables activateExpressionFilter="true" expressionFilter="MITI.IIF(MITI.equals(INPUT.NewLookupRow, 1) || MITI.equals(INPUT.NewLookupRow, 2), True, False)" name="in6" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="INPUT.NewLookupRow" name="NewLookupRow1" type="id_Float"/>
+        <mapperTableEntries expression="INPUT.NEXTVAL" name="NEXTVAL1" type="id_Long"/>
+        <mapperTableEntries expression="INPUT.S_EMPNO" name="S_EMPNO1" type="id_Long"/>
+        <mapperTableEntries expression="INPUT.EMPNO" name="EMPNO1" type="id_Double"/>
+        <mapperTableEntries expression="INPUT.ENAME" name="ENAME1" type="id_String"/>
+        <mapperTableEntries expression="INPUT.JOB" name="JOB1" type="id_String"/>
+        <mapperTableEntries expression="INPUT.HIREDATE" name="HIREDATE1" type="id_Date"/>
+        <mapperTableEntries expression="INPUT.SAL" name="SAL1" type="id_Double"/>
+        <mapperTableEntries expression="INPUT.COMM" name="COMM1" type="id_Double"/>
+        <mapperTableEntries expression="INPUT.DEPTNO" name="DEPTNO1" type="id_Double"/>
+        <mapperTableEntries expression="INPUT.EMPNO_IN" name="EMPNO_IN1" type="id_Double"/>
+        <mapperTableEntries expression="INPUT.ENAME_IN" name="ENAME_IN1" type="id_String"/>
+        <mapperTableEntries expression="INPUT.JOB_IN" name="JOB_IN1" type="id_String"/>
+        <mapperTableEntries expression="INPUT.JOB1_IN" name="JOB1_IN1" type="id_Double"/>
+        <mapperTableEntries expression="INPUT.HIREDATE_IN" name="HIREDATE_IN1" type="id_Date"/>
+        <mapperTableEntries expression="INPUT.SAL_IN" name="SAL_IN1" type="id_Double"/>
+        <mapperTableEntries expression="INPUT.COMM_IN" name="COMM_IN1" type="id_Double"/>
+        <mapperTableEntries expression="INPUT.DEPTNO_IN" name="DEPTNO_IN1" type="id_Double"/>
+      </outputTables>
+      <outputTables activateExpressionFilter="true" expressionFilter="MITI.IIF(MITI.equals(INPUT.NewLookupRow, 2), True, False)" name="in4" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="INPUT.NewLookupRow" name="NewLookupRow3" type="id_Float"/>
+        <mapperTableEntries expression="INPUT.NEXTVAL" name="NEXTVAL3" type="id_Long"/>
+        <mapperTableEntries expression="INPUT.S_EMPNO" name="S_EMPNO3" type="id_Long"/>
+        <mapperTableEntries expression="INPUT.EMPNO" name="EMPNO3" type="id_Double"/>
+        <mapperTableEntries expression="INPUT.ENAME" name="ENAME3" type="id_String"/>
+        <mapperTableEntries expression="INPUT.JOB" name="JOB3" type="id_String"/>
+        <mapperTableEntries expression="INPUT.HIREDATE" name="HIREDATE3" type="id_Date"/>
+        <mapperTableEntries expression="INPUT.SAL" name="SAL3" type="id_Double"/>
+        <mapperTableEntries expression="INPUT.COMM" name="COMM3" type="id_Double"/>
+        <mapperTableEntries expression="INPUT.DEPTNO" name="DEPTNO3" type="id_Double"/>
+        <mapperTableEntries expression="INPUT.EMPNO_IN" name="EMPNO_IN3" type="id_Double"/>
+        <mapperTableEntries expression="INPUT.ENAME_IN" name="ENAME_IN3" type="id_String"/>
+        <mapperTableEntries expression="INPUT.JOB_IN" name="JOB_IN3" type="id_String"/>
+        <mapperTableEntries expression="INPUT.JOB1_IN" name="JOB1_IN3" type="id_Double"/>
+        <mapperTableEntries expression="INPUT.HIREDATE_IN" name="HIREDATE_IN3" type="id_Date"/>
+        <mapperTableEntries expression="INPUT.SAL_IN" name="SAL_IN3" type="id_Double"/>
+        <mapperTableEntries expression="INPUT.COMM_IN" name="COMM_IN3" type="id_Double"/>
+        <mapperTableEntries expression="INPUT.DEPTNO_IN" name="DEPTNO_IN3" type="id_Double"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="INPUT" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="" name="NewLookupRow" type="id_Float"/>
+        <mapperTableEntries expression="" name="NEXTVAL" type="id_Long"/>
+        <mapperTableEntries expression="" name="S_EMPNO" type="id_Long"/>
+        <mapperTableEntries expression="" name="EMPNO" type="id_Double"/>
+        <mapperTableEntries expression="" name="ENAME" type="id_String"/>
+        <mapperTableEntries expression="" name="JOB" type="id_String"/>
+        <mapperTableEntries expression="" name="HIREDATE" type="id_Date"/>
+        <mapperTableEntries expression="" name="SAL" type="id_Double"/>
+        <mapperTableEntries expression="" name="COMM" type="id_Double"/>
+        <mapperTableEntries expression="" name="DEPTNO" type="id_Double"/>
+        <mapperTableEntries expression="" name="EMPNO_IN" type="id_Double"/>
+        <mapperTableEntries expression="" name="ENAME_IN" type="id_String"/>
+        <mapperTableEntries expression="" name="JOB_IN" type="id_String"/>
+        <mapperTableEntries expression="" name="JOB1_IN" type="id_Double"/>
+        <mapperTableEntries expression="" name="HIREDATE_IN" type="id_Date"/>
+        <mapperTableEntries expression="" name="SAL_IN" type="id_Double"/>
+        <mapperTableEntries expression="" name="COMM_IN" type="id_Double"/>
+        <mapperTableEntries expression="" name="DEPTNO_IN" type="id_Double"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tOracleOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="4032" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tOracleOutput_1"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_O-2Qwv0IEeeDFvkGkY7BdA"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_OCI"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_11"/>
+    <elementParameter field="TEXT" name="RAC_URL" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;1521&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="ORACLE_OCI"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;Design:Oracle&quot;"/>
+    <elementParameter field="TEXT" name="TABLESCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;TARG_EMP&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="Warning : this component configuration will automatically generate a commit before data insert/update/delete"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="oracle_id"/>
+    <elementParameter field="TEXT" name="JDBC_URL" show="false" value="jdbc:oracle:oci:/@talend"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value=""/>
+    <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&quot; &quot;parameterName2=value2&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TABLE" name="ADD_COLS"/>
+    <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="S_EMPNO"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="EMPNO"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ENAME"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="JOB"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MGR"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="HIREDATE"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SAL"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="COMM"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DEPTNO"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="START_DATE"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="END_DATE"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="USE_HINT_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="HINT_OPTIONS" show="false"/>
+    <elementParameter field="CHECK" name="CONVERT_COLUMN_TABLE_TO_UPPERCASE" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
+    <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
+    <elementParameter field="CHECK" name="USE_BATCH_AND_USE_CONN" show="false" value="false"/>
+    <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
+    <elementParameter field="CHECK" name="USE_TIMESTAMP_FOR_DATE_TYPE" value="true"/>
+    <elementParameter field="CHECK" name="TRIM_CHAR" value="true"/>
+    <elementParameter field="TEXT" name="LABEL" value="TARG_EMP1"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tOracleOutput_1">
+      <column key="false" length="3" name="S_EMPNO" nullable="false" precision="0" sourceType="FLOAT" type="id_Float" usefulColumn="true"/>
+      <column key="false" length="4" name="EMPNO" nullable="false" precision="0" sourceType="FLOAT" type="id_Float" usefulColumn="true"/>
+      <column key="false" length="10" name="ENAME" nullable="false" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column key="false" length="9" name="JOB" nullable="false" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column key="false" length="4" name="MGR" nullable="false" precision="0" sourceType="FLOAT" type="id_Float" usefulColumn="true"/>
+      <column key="false" length="19" name="HIREDATE" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true"/>
+      <column key="false" length="7" name="SAL" nullable="false" precision="2" sourceType="FLOAT" type="id_Float" usefulColumn="true"/>
+      <column key="false" length="7" name="COMM" nullable="false" precision="2" sourceType="FLOAT" type="id_Float" usefulColumn="true"/>
+      <column key="false" length="2" name="DEPTNO" nullable="false" precision="0" sourceType="FLOAT" type="id_Float" usefulColumn="true"/>
+      <column key="false" length="19" name="START_DATE" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true"/>
+      <column key="false" length="19" name="END_DATE" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="3776" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_15"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_PTQenv0IEeeDFvkGkY7BdA-tMap_15-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="TARG_EMP1.expression"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
+    <elementParameter field="MEMO" name="COMMENT" value="This component created automatically to align schema by position between nearby components "/>
+    <metadata connector="FLOW" name="row16">
+      <column key="false" length="3" name="S_EMPNO" nullable="false" precision="0" sourceType="" type="id_Float" usefulColumn="true"/>
+      <column key="false" length="4" name="EMPNO" nullable="false" precision="0" sourceType="" type="id_Float" usefulColumn="true"/>
+      <column key="false" length="10" name="ENAME" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="9" name="JOB" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="4" name="MGR" nullable="false" precision="0" sourceType="" type="id_Float" usefulColumn="true"/>
+      <column key="false" length="19" name="HIREDATE" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column key="false" length="7" name="SAL" nullable="false" precision="2" sourceType="" type="id_Float" usefulColumn="true"/>
+      <column key="false" length="7" name="COMM" nullable="false" precision="2" sourceType="" type="id_Float" usefulColumn="true"/>
+      <column key="false" length="2" name="DEPTNO" nullable="false" precision="0" sourceType="" type="id_Float" usefulColumn="true"/>
+      <column key="false" length="19" name="START_DATE" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column key="false" length="19" name="END_DATE" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables name="row16" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="TypeConvert.Long2Float(in1.S_EMPNO)" name="S_EMPNO" type="id_Float"/>
+        <mapperTableEntries expression="TypeConvert.Double2Float(in1.EMPNO)" name="EMPNO" type="id_Float"/>
+        <mapperTableEntries expression="in1.ENAME" name="ENAME" type="id_String"/>
+        <mapperTableEntries expression="in1.JOB" name="JOB" type="id_String"/>
+        <mapperTableEntries expression="TypeConvert.Double2Float(in1.JOB1)" name="MGR" type="id_Float"/>
+        <mapperTableEntries expression="in1.HIREDATE" name="HIREDATE" type="id_Date"/>
+        <mapperTableEntries expression="TypeConvert.Double2Float(in1.SAL)" name="SAL" type="id_Float"/>
+        <mapperTableEntries expression="TypeConvert.Double2Float(in1.COMM)" name="COMM" type="id_Float"/>
+        <mapperTableEntries expression="TypeConvert.Double2Float(in1.DEPTNO)" name="DEPTNO" type="id_Float"/>
+        <mapperTableEntries expression="in1.START_DATE" name="START_DATE" type="id_Date"/>
+        <mapperTableEntries expression="in1.END_DATE" name="END_DATE" type="id_Date"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="in1" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="" name="EMPNO" type="id_Double"/>
+        <mapperTableEntries expression="" name="ENAME" type="id_String"/>
+        <mapperTableEntries expression="" name="JOB" type="id_String"/>
+        <mapperTableEntries expression="" name="JOB1" type="id_Double"/>
+        <mapperTableEntries expression="" name="HIREDATE" type="id_Date"/>
+        <mapperTableEntries expression="" name="SAL" type="id_Double"/>
+        <mapperTableEntries expression="" name="COMM" type="id_Double"/>
+        <mapperTableEntries expression="" name="DEPTNO" type="id_Double"/>
+        <mapperTableEntries expression="" name="S_EMPNO" type="id_Long"/>
+        <mapperTableEntries expression="" name="START_DATE" type="id_Date"/>
+        <mapperTableEntries expression="" name="END_DATE" type="id_Date"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tOracleOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="4032" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tOracleOutput_2"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_O-2Qwv0IEeeDFvkGkY7BdA"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_OCI"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_11"/>
+    <elementParameter field="TEXT" name="RAC_URL" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;1521&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="ORACLE_OCI"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;Design:Oracle&quot;"/>
+    <elementParameter field="TEXT" name="TABLESCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;TARG_EMP&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="Warning : this component configuration will automatically generate a commit before data insert/update/delete"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="UPDATE"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="oracle_id"/>
+    <elementParameter field="TEXT" name="JDBC_URL" show="false" value="jdbc:oracle:oci:/@talend"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value=""/>
+    <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&quot; &quot;parameterName2=value2&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TABLE" name="ADD_COLS"/>
+    <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="S_EMPNO"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="EMPNO"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ENAME"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="JOB"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MGR"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="HIREDATE"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SAL"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="COMM"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DEPTNO"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="START_DATE"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="END_DATE"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="USE_HINT_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="HINT_OPTIONS" show="false"/>
+    <elementParameter field="CHECK" name="CONVERT_COLUMN_TABLE_TO_UPPERCASE" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
+    <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
+    <elementParameter field="CHECK" name="USE_BATCH_AND_USE_CONN" show="false" value="false"/>
+    <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
+    <elementParameter field="CHECK" name="USE_TIMESTAMP_FOR_DATE_TYPE" value="true"/>
+    <elementParameter field="CHECK" name="TRIM_CHAR" value="true"/>
+    <elementParameter field="TEXT" name="LABEL" value="TARG_EMP2"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tOracleOutput_2">
+      <column key="false" length="3" name="S_EMPNO" nullable="false" precision="0" sourceType="FLOAT" type="id_Float" usefulColumn="true"/>
+      <column key="false" length="4" name="EMPNO" nullable="false" precision="0" sourceType="FLOAT" type="id_Float" usefulColumn="true"/>
+      <column key="false" length="10" name="ENAME" nullable="false" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column key="false" length="9" name="JOB" nullable="false" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column key="false" length="4" name="MGR" nullable="false" precision="0" sourceType="FLOAT" type="id_Float" usefulColumn="true"/>
+      <column key="false" length="19" name="HIREDATE" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true"/>
+      <column key="false" length="7" name="SAL" nullable="false" precision="2" sourceType="FLOAT" type="id_Float" usefulColumn="true"/>
+      <column key="false" length="7" name="COMM" nullable="false" precision="2" sourceType="FLOAT" type="id_Float" usefulColumn="true"/>
+      <column key="false" length="2" name="DEPTNO" nullable="false" precision="0" sourceType="FLOAT" type="id_Float" usefulColumn="true"/>
+      <column key="false" length="19" name="START_DATE" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true"/>
+      <column key="false" length="19" name="END_DATE" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="3776" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_16"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_PTQenv0IEeeDFvkGkY7BdA-tMap_16-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="TARG_EMP2.expression"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
+    <elementParameter field="MEMO" name="COMMENT" value="This component created automatically to align schema by position between nearby components "/>
+    <metadata connector="FLOW" name="row9">
+      <column key="false" length="3" name="S_EMPNO" nullable="false" precision="0" sourceType="" type="id_Float" usefulColumn="true"/>
+      <column key="false" length="4" name="EMPNO" nullable="false" precision="0" sourceType="" type="id_Float" usefulColumn="true"/>
+      <column key="false" length="10" name="ENAME" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="9" name="JOB" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="4" name="MGR" nullable="false" precision="0" sourceType="" type="id_Float" usefulColumn="true"/>
+      <column key="false" length="19" name="HIREDATE" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column key="false" length="7" name="SAL" nullable="false" precision="2" sourceType="" type="id_Float" usefulColumn="true"/>
+      <column key="false" length="7" name="COMM" nullable="false" precision="2" sourceType="" type="id_Float" usefulColumn="true"/>
+      <column key="false" length="2" name="DEPTNO" nullable="false" precision="0" sourceType="" type="id_Float" usefulColumn="true"/>
+      <column key="false" length="19" name="START_DATE" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column key="false" length="19" name="END_DATE" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables name="row9" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="TypeConvert.Long2Float(in2.S_EMPNO)" name="S_EMPNO" type="id_Float"/>
+        <mapperTableEntries name="EMPNO" type="id_Float"/>
+        <mapperTableEntries name="ENAME" type="id_String"/>
+        <mapperTableEntries name="JOB" type="id_String"/>
+        <mapperTableEntries name="MGR" type="id_Float"/>
+        <mapperTableEntries name="HIREDATE" type="id_Date"/>
+        <mapperTableEntries name="SAL" type="id_Float"/>
+        <mapperTableEntries name="COMM" type="id_Float"/>
+        <mapperTableEntries name="DEPTNO" type="id_Float"/>
+        <mapperTableEntries name="START_DATE" type="id_Date"/>
+        <mapperTableEntries expression="in2.END_DATE" name="END_DATE" type="id_Date"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="in2" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="" name="S_EMPNO" type="id_Long"/>
+        <mapperTableEntries expression="" name="END_DATE" type="id_Date"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="3520" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_17"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_PTQenv0IEeeDFvkGkY7BdA-tMap_17-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="UPD_InsertNewAndChangedRows"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
+    <elementParameter field="MEMO" name="COMMENT" value="Update Strategy Expression=DD_INSERT"/>
+    <metadata connector="FLOW" name="in1">
+      <column key="false" length="4" name="EMPNO" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="10" name="ENAME" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="9" name="JOB" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="4" name="JOB1" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="29" name="HIREDATE" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="9" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column key="false" length="7" name="SAL" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="7" name="COMM" nullable="false" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="2" name="DEPTNO" nullable="false" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="19" name="S_EMPNO" nullable="false" precision="0" sourceType="" type="id_Long" usefulColumn="true"/>
+      <column key="false" length="29" name="START_DATE" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="9" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column key="false" length="29" name="END_DATE" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="9" sourceType="" type="id_Date" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables name="in1" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="INPUT_2.EMPNO" name="EMPNO" type="id_Double"/>
+        <mapperTableEntries expression="INPUT_2.ENAME" name="ENAME" type="id_String"/>
+        <mapperTableEntries expression="INPUT_2.JOB" name="JOB" type="id_String"/>
+        <mapperTableEntries expression="INPUT_2.JOB1" name="JOB1" type="id_Double"/>
+        <mapperTableEntries expression="INPUT_2.HIREDATE" name="HIREDATE" type="id_Date"/>
+        <mapperTableEntries expression="INPUT_2.SAL" name="SAL" type="id_Double"/>
+        <mapperTableEntries expression="INPUT_2.COMM" name="COMM" type="id_Double"/>
+        <mapperTableEntries expression="INPUT_2.DEPTNO" name="DEPTNO" type="id_Double"/>
+        <mapperTableEntries expression="INPUT_2.S_EMPNO" name="S_EMPNO" type="id_Long"/>
+        <mapperTableEntries expression="INPUT_2.START_DATE" name="START_DATE" type="id_Date"/>
+        <mapperTableEntries expression="INPUT_2.END_DATE" name="END_DATE" type="id_Date"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="INPUT_2" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="" name="EMPNO" type="id_Double"/>
+        <mapperTableEntries expression="" name="ENAME" type="id_String"/>
+        <mapperTableEntries expression="" name="JOB" type="id_String"/>
+        <mapperTableEntries expression="" name="JOB1" type="id_Double"/>
+        <mapperTableEntries expression="" name="HIREDATE" type="id_Date"/>
+        <mapperTableEntries expression="" name="SAL" type="id_Double"/>
+        <mapperTableEntries expression="" name="COMM" type="id_Double"/>
+        <mapperTableEntries expression="" name="DEPTNO" type="id_Double"/>
+        <mapperTableEntries expression="" name="S_EMPNO" type="id_Long"/>
+        <mapperTableEntries expression="" name="START_DATE" type="id_Date"/>
+        <mapperTableEntries expression="" name="END_DATE" type="id_Date"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="3520" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_18"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_PTQenv0IEeeDFvkGkY7BdA-tMap_18-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="UPD_UpdateChangedRows"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
+    <elementParameter field="MEMO" name="COMMENT" value="Update Strategy Expression=DD_UPDATE"/>
+    <metadata connector="FLOW" name="in2">
+      <column key="false" length="19" name="S_EMPNO" nullable="false" precision="0" sourceType="" type="id_Long" usefulColumn="true"/>
+      <column key="false" length="29" name="END_DATE" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="9" sourceType="" type="id_Date" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables name="in2" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="INPUT_3.S_EMPNO" name="S_EMPNO" type="id_Long"/>
+        <mapperTableEntries expression="INPUT_3.END_DATE" name="END_DATE" type="id_Date"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="INPUT_3" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="" name="S_EMPNO" type="id_Long"/>
+        <mapperTableEntries expression="" name="END_DATE" type="id_Date"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <connection connectorName="FLOW" label="in3" lineStyle="0" metaname="tOracleInput_1" offsetLabelX="0" offsetLabelY="0" source="tOracleInput_1" target="tMap_13">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="in3"/>
+  </connection>
+  <connection connectorName="FLOW" label="DATA" lineStyle="8" metaname="DATA" offsetLabelX="0" offsetLabelY="0" source="tDBInput_2" target="tMap_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="DATA"/>
+  </connection>
+  <connection connectorName="FLOW" label="INPUT" lineStyle="0" metaname="INPUT" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tMap_14">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="INPUT"/>
+  </connection>
+  <connection connectorName="FLOW" label="CONTROL" lineStyle="0" metaname="CONTROL" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tMap_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="CONTROL"/>
+  </connection>
+  <connection connectorName="FLOW" label="INPUT_4" lineStyle="0" metaname="INPUT_4" offsetLabelX="0" offsetLabelY="0" source="tMap_3" target="tMap_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="INPUT_4"/>
+  </connection>
+  <connection connectorName="FLOW" label="in7" lineStyle="0" metaname="in7" offsetLabelX="0" offsetLabelY="0" source="tMap_4" target="tMap_11">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="in7"/>
+  </connection>
+  <connection connectorName="FLOW" label="INPUT_5" lineStyle="0" metaname="INPUT_5" offsetLabelX="0" offsetLabelY="0" source="tMap_5" target="tMap_4">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="INPUT_5"/>
+  </connection>
+  <connection connectorName="FLOW" label="INPUT_2" lineStyle="0" metaname="INPUT_2" offsetLabelX="0" offsetLabelY="0" source="tMap_6" target="tMap_17">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="INPUT_2"/>
+  </connection>
+  <connection connectorName="FLOW" label="INPUT_6" lineStyle="0" metaname="INPUT_6" offsetLabelX="0" offsetLabelY="0" source="tMap_7" target="tMap_6">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="INPUT_6"/>
+  </connection>
+  <connection connectorName="FLOW" label="INPUT_3" lineStyle="0" metaname="INPUT_3" offsetLabelX="0" offsetLabelY="0" source="tMap_8" target="tMap_18">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="INPUT_3"/>
+  </connection>
+  <connection connectorName="FLOW" label="INPUT_7" lineStyle="0" metaname="INPUT_7" offsetLabelX="0" offsetLabelY="0" source="tMap_9" target="tMap_8">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="INPUT_7"/>
+  </connection>
+  <connection connectorName="FLOW" label="in8" lineStyle="0" metaname="in8" offsetLabelX="0" offsetLabelY="0" source="tMap_10" target="tMap_3">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="in8"/>
+  </connection>
+  <connection connectorName="FLOW" label="INPUT_1" lineStyle="0" metaname="INPUT_1" offsetLabelX="0" offsetLabelY="0" source="tMap_11" target="tMap_10">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="INPUT_1"/>
+  </connection>
+  <connection connectorName="FLOW" label="DATA1" lineStyle="8" metaname="DATA" offsetLabelX="0" offsetLabelY="0" source="tDBInput_4" target="tMap_12">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="DATA1"/>
+  </connection>
+  <connection connectorName="FLOW" label="in5" lineStyle="0" metaname="in5" offsetLabelX="0" offsetLabelY="0" source="tMap_12" target="tMap_5">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="in5"/>
+  </connection>
+  <connection connectorName="FLOW" label="CONTROL_8" lineStyle="0" metaname="CONTROL_8" offsetLabelX="0" offsetLabelY="0" source="tMap_13" target="tMap_12">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="CONTROL_8"/>
+  </connection>
+  <connection connectorName="FLOW" label="in6" lineStyle="0" metaname="in6" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_14" target="tMap_7">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="in6"/>
+  </connection>
+  <connection connectorName="FLOW" label="in4" lineStyle="0" metaname="in4" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_14" target="tMap_9">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="in4"/>
+  </connection>
+  <connection connectorName="FLOW" label="row16" lineStyle="0" metaname="row16" offsetLabelX="0" offsetLabelY="0" source="tMap_15" target="tOracleOutput_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row16"/>
+  </connection>
+  <connection connectorName="FLOW" label="row9" lineStyle="0" metaname="row9" offsetLabelX="0" offsetLabelY="0" source="tMap_16" target="tOracleOutput_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row9"/>
+  </connection>
+  <connection connectorName="FLOW" label="in1" lineStyle="0" metaname="in1" offsetLabelX="0" offsetLabelY="0" source="tMap_17" target="tMap_15">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="in1"/>
+  </connection>
+  <connection connectorName="FLOW" label="in2" lineStyle="0" metaname="in2" offsetLabelX="0" offsetLabelY="0" source="tMap_18" target="tMap_16">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="in2"/>
+  </connection>
+  <note opaque="true" posX="608" posY="32" sizeHeight="193" sizeWidth="545" text="UPD_InsertNewAndChangedRows&#13;&#10;&#9;Column HIREDATE uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;&#9;Column START_DATE uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;&#9;Column END_DATE uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;TARG_EMP1&#13;&#10;&#9;Check the 'Action on Data' property &#13;&#10;&#9;Column HIREDATE uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;&#9;Column START_DATE uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;&#9;Column END_DATE uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;UPD_UpdateChangedRows&#13;&#10;&#9;Column END_DATE uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;DLKP_GetData.CONTROL.Sequence.expression&#13;&#10;&#9;Column HIREDATE_IN uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;TARG_EMP1.expression&#13;&#10;&#9;Column HIREDATE uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;&#9;Column START_DATE uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;&#9;Column END_DATE uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;TARG_EMP2&#13;&#10;&#9;Column HIREDATE uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;&#9;Column START_DATE uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;&#9;Column END_DATE uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;DLKP_GetData.CONTROL.Sequence&#13;&#10;&#9;Column HIREDATE_IN uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;EXP_SetEffectiveDates&#13;&#10;&#9;Column HIREDATE uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;&#9;Column START_DATE uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;&#9;Column END_DATE uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;LKPTRANS.expression&#13;&#10;&#9;Column HIREDATE uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;RTR_RouteInsertUpdate&#13;&#10;&#9;Column HIREDATE2 uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;&#9;Column HIREDATE_IN2 uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;&#9;Column HIREDATE1 uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;&#9;Column HIREDATE_IN1 uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;&#9;Column HIREDATE3 uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;&#9;Column HIREDATE_IN3 uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;EXP_SetEffectiveDates.expression&#13;&#10;&#9;Column HIREDATE uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;DLKP_GetData&#13;&#10;&#9;Column HIREDATE uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;&#9;Column HIREDATE uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;&#9;Column HIREDATE_IN uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;SQ_mahi&#13;&#10;&#9;Column HIREDATE uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;TARG_EMP2.expression&#13;&#10;&#9;Column HIREDATE uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;&#9;Column START_DATE uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;&#9;Column END_DATE uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;FILTRANS.expression&#13;&#10;&#9;Column HIREDATE uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;EXPTRANS&#13;&#10;&#9;Column HIREDATE uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;&#9;Column HIREDATE1 uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;FILTRANS&#13;&#10;&#9;Column HIREDATE uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;EXP_SetEndDate&#13;&#10;&#9;Column END_DATE uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;LKPTRANS&#13;&#10;&#9;Column HIREDATE uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;&#9;Column START_DATE uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;&#9;Column END_DATE uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;&#9;Column HIREDATE uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;&#9;Column HIREDATE uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;&#9;Column START_DATE uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;&#9;Column END_DATE uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;EXPTRANS.expression&#13;&#10;&#9;Column HIREDATE uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;&#9;Column HIREDATE1 uses default date pattern &quot;dd-MM-yyyy&quot;&#13;&#10;">
+    <elementParameter field="RADIO" name="NOTETXT_LEFT" value="true"/>
+    <elementParameter field="RADIO" name="NOTETXT_CENTER" value="false"/>
+    <elementParameter field="RADIO" name="NOTELABEL_CENTER" value="false"/>
+    <elementParameter field="RADIO" name="NOTETXT_TOP" value="true"/>
+  </note>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tOracleInput_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_692cf375-8c75-4124-8046-085e006ecce2"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>rJqV9JEe5rLNMfiWGb5EAIpwe55EJ2CAPEhw/SiB9q06vYO7GdGltehYZvW+FrQ/g9LQsJG2qQ2V
+p3kPLE2R2w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_805a809d-a564-4034-bf5b-f0db87e79122"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>D5fKsF2YfMS5konoVRRjSlHND7OX4DYdaxJJ1O4ecc49E1wUBIHqyNT1HxcgfNG+XVSVEf7twntk
+GCLD+BjRtg==</DigestValue></Reference></SignedInfo><SignatureValue>G8phUJphWT5HtJ7THZw4xRMZb8wrA2c7uZZ3AKINl+t5lv37BEwKUqL8NH0s0xmElKAe5UXKIi/Z
+swX05j0eLsnEdsoJ2whLwUejIPgHmX19aCeXZ+AyJcSL+f0q+imnNUObdq8VR783MpNFGWTm3s1G
+PyZNjjWdTsNXkoC9BfH3cUR5p5tT6lb87+/YXEPjn0m1d7aYJ8BKeRgA9Q0Wgkz0b3SogNdHLu9Y
+rlmCt4J8t4W0LK3lgArwIjIO7q5x60ka6mewlhAvHd9LKxz5HDEVluNc+6DcM2xBDa+xJCpT91lr
+PkU9kVWBM+NRJrDKV9WgNP+vcCHV9WfqI0R3JQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
+RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
+LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
+VQQIDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1ImRDEpMCcGA1UEAwwg
+RGVmYXVsdCBjb2RlLXNpZ25pbmcgY2VydGlmaWNhdGUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQDiCz1II/o6hDUWu/ygxTCT2o/fYxVzPW23AoONQC/Vuiqh0COyLIgaMTjBPmQdTQFq
+rmM5tD64gi4TEQF+Z3iYt3daLdQUfaW9SzaMlY+XVNz5xnMBVDuiSHJSFE9lKnhgbKAHvOeoJo46
+UgWwb1za0WpRckDtjKcntwEK1orZCgrcIo1nDvFXyB5n0KfpLyktEOa0bSHde50MPbvQeB66XlEb
+lhjfs5S9WnAUja9RgqdwqZoI0ss+x/pjkQygDT8f17MktM21HOtg09lJlhMGJckhgD7jUF5tfYGM
+sv/O27g5CToFhxOnutDtsrDw7AkEQIml8KJp97bQLAFlLnh1AgMBAAGjge0wgeowHQYDVR0OBBYE
+FFzdy6ZfpUX8JwkM/SUrqkwLNqWAMB8GA1UdIwQYMBaAFOd9C3L8tYGZxoAr2SzsgnMytaj3MAsG
+A1UdDwQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAJBgNVHRMEAjAAMHsGCWCGSAGG+EIBDQRu
+FmxEZWZhdWx0IHRoaXJkIHBhcnR5IGNvZGUtc2lnbmluZyBjZXJ0aWZpY2F0ZS4gTm8gY29tbWl0
+bWVudCBpcyBtYWRlIG9uIHRoZSBjb250ZW50IHNpZ25lZCBieSB0aGUgdGhpcmQgcGFydHkwDQYJ
+KoZIhvcNAQELBQADggIBAKzYdnzoFgrRtDLSSzWtwuOrGo5+1RPoDHm/1dlbVnB7oZzUwfRGwZT5
+ser0V7OZyt9wWR8iQ2ka30fHWrNAosNtlIkF88s5YZw7OOIMxR+qYA99BnWLa79DZVIuukI2f5qJ
+Cr9nw6Oygo8CWeNMWhtXcvV4gqROhb2QMBrvWBw9QvNK1XMdtPShfWiXwyPzzRKgwqrN2meXtOY3
+S+MXu6u+RUD9EYeElp9M+9Yp+zRySl5/s+0sbvo7qz369dlsw8XhKXT+s4YQQe3Sx14Kg3SDFXKn
+QcVgycaZMOw4YUxOeP2hKOHnNuOMORfu3qlYkN/0RMGjn6r4PU4+yL276TiWI5b8J06y4leng2as
+r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
+EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
+BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
+6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_805a809d-a564-4034-bf5b-f0db87e79122" Target="#_692cf375-8c75-4124-8046-085e006ecce2"><Timestamp>2019-03-09 18:42:17</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

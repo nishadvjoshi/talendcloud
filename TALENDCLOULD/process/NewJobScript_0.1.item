@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="Default" jobType="Standard" xmi:version="2.0">
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" name="varFolderName" prompt="varFolderName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="varMergeFileName" prompt="varMergeFileName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="varDedupFileName" prompt="varDedupFileName?" promptNeeded="false" type="id_String" value=""/>
+  </context>
+  <parameters>
+    <elementParameter name="JOB_RUN_VM_ARGUMENTS" value="{&quot;JOB_RUN_VM_ARGUMENTS&quot;:[&quot;-Xms256M&quot;,&quot;-Xmx5024M&quot;]}"/>
+    <elementParameter name="JOB_RUN_VM_ARGUMENTS_OPTION" value="true"/>
+    <elementParameter name="SCREEN_OFFSET_X" value="0"/>
+    <elementParameter name="SCREEN_OFFSET_Y" value="0"/>
+    <elementParameter name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true"/>
+    <elementParameter name="STATANDLOG_USE_PROJECT_SETTINGS" value="true"/>
+    <elementParameter name="MULTI_THREAD_EXECATION" value="true"/>
+    <elementParameter name="PARALLELIZE_UNIT_SIZE" value="25000"/>
+    <elementParameter name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" value="true"/>
+    <elementParameter name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false"/>
+    <elementParameter name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;"/>
+    <elementParameter name="FIELDSEPARATOR" value="&quot;&quot;"/>
+    <elementParameter name="URL_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter name="DRIVER_CLASS_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter name="HOST_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter name="PORT_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter name="DBNAME_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter name="PASS_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter name="LOAD_NEW_VARIABLE" value="Warning"/>
+    <elementParameter name="NOT_LOAD_OLD_VARIABLE" value="Warning"/>
+    <elementParameter name="PRINT_OPERATIONS" value="false"/>
+    <elementParameter name="DISABLE_ERROR" value="false"/>
+    <elementParameter name="DISABLE_WARNINGS" value="false"/>
+    <elementParameter name="DISABLE_INFO" value="false"/>
+    <elementParameter name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter name="ON_LOGCATCHER_FLAG" value="false"/>
+    <elementParameter name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter name="ON_CONSOLE_FLAG" value="false"/>
+    <elementParameter name="ON_FILES_FLAG" value="false"/>
+    <elementParameter name="FILE_PATH" value="&quot;F:/TalendPD/Talend-Studio-r110187-V5.4.1NB/workspace/.metadata&quot;"/>
+    <elementParameter name="FILENAME_STATS" value="&quot;stats_file.txt&quot;"/>
+    <elementParameter name="FILENAME_LOGS" value="&quot;logs_file.txt&quot;"/>
+    <elementParameter name="FILENAME_METTER" value="&quot;meter_file.txt&quot;"/>
+    <elementParameter name="ENCODING" value="ISO-8859-15"/>
+    <elementParameter name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter name="ON_DATABASE_FLAG" value="false"/>
+    <elementParameter name="DB_TYPE" value="tJDBCOutput"/>
+    <elementParameter name="DB_VERSION" value="ORACLE_10"/>
+    <elementParameter name="URL" value="&quot;&quot;"/>
+    <elementParameter name="DRIVER_CLASS" value="&quot;&quot;"/>
+    <elementParameter name="HOST" value="&quot;&quot;"/>
+    <elementParameter name="PORT" value="&quot;&quot;"/>
+    <elementParameter name="DATASOURCE" value="&quot;&quot;"/>
+    <elementParameter name="DBNAME" value="&quot;&quot;"/>
+    <elementParameter name="LOCAL_SERVICE_NAME" value="&quot;&quot;"/>
+    <elementParameter name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter name="SCHEMA_DB" value="&quot;&quot;"/>
+    <elementParameter name="USER" value="&quot;&quot;"/>
+    <elementParameter name="PASS" value="&quot;&quot;"/>
+    <elementParameter name="DBFILE" value="&quot;&quot;"/>
+    <elementParameter name="TABLE_STATS" value="&quot;&quot;"/>
+    <elementParameter name="TABLE_LOGS" value="&quot;&quot;"/>
+    <elementParameter name="TABLE_METER" value="&quot;&quot;"/>
+    <elementParameter name="CATCH_RUNTIME_ERRORS" value="true"/>
+    <elementParameter name="CATCH_USER_ERRORS" value="true"/>
+    <elementParameter name="CATCH_USER_WARNING" value="true"/>
+    <elementParameter name="CATCH_REALTIME_STATS" value="false"/>
+    <elementParameter name="HEADER_ENABLED" value="false"/>
+    <elementParameter name="FOOTER_ENABLED" value="false"/>
+    <routinesParameter id="_dbJKkDMXEeOTIuq5eWZPow" name="DQTechnical"/>
+    <routinesParameter id="_dZp80DMXEeOTIuq5eWZPow" name="DataOperation"/>
+    <routinesParameter id="_dbCc4DMXEeOTIuq5eWZPow" name="DataQuality"/>
+    <routinesParameter id="_dbFgMDMXEeOTIuq5eWZPow" name="DqStringHandling"/>
+    <routinesParameter id="_da9kYDMXEeOTIuq5eWZPow" name="MDM"/>
+    <routinesParameter id="_dajUsDMXEeOTIuq5eWZPow" name="Mathematical"/>
+    <routinesParameter id="_dam_EDMXEeOTIuq5eWZPow" name="Numeric"/>
+    <routinesParameter id="_daqCYDMXEeOTIuq5eWZPow" name="Relational"/>
+    <routinesParameter id="_dbM08DMXEeOTIuq5eWZPow" name="SQLike"/>
+    <routinesParameter id="_datFsDMXEeOTIuq5eWZPow" name="StringHandling"/>
+    <routinesParameter id="_dawwEDMXEeOTIuq5eWZPow" name="TalendDataGenerator"/>
+    <routinesParameter id="_da0acDMXEeOTIuq5eWZPow" name="TalendDate"/>
+    <routinesParameter id="_da5S8DMXEeOTIuq5eWZPow" name="TalendString"/>
+    <routinesParameter id="_8qwkYFjNEdyj6eiqDt60Og" name="DemoRoutines"/>
+    <routinesParameter id="_HKXfQGIZEd26GZmhFZLTPA" name="GetRandomPhoneNum"/>
+    <routinesParameter id="_E-aMEHBqEeeKTP4K-BQYLw" name="TalendStringUtil"/>
+  </parameters>
+  <node componentName="tFileInputDelimited" offsetLabelX="0" offsetLabelY="0" posX="224" posY="64" sizeX="32" sizeY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputDelimited_3"/>
+    <elementParameter name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
+    <elementParameter name="FILENAME" value="&quot;F:/Trainings/CITI/SampleFiles/NYSE_daily_prices_A.csv&quot;"/>
+    <elementParameter name="CSV_OPTION" value="false"/>
+    <elementParameter name="ROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter name="CSVROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter name="FIELDSEPARATOR" value="&quot;,&quot;"/>
+    <elementParameter name="ESCAPE_CHAR" value="&quot;&quot;&quot;"/>
+    <elementParameter name="TEXT_ENCLOSURE" value="&quot;&quot;&quot;"/>
+    <elementParameter name="HEADER" value="1"/>
+    <elementParameter name="FOOTER" value="0"/>
+    <elementParameter name="REMOVE_EMPTY_ROW" value="false"/>
+    <elementParameter name="UNCOMPRESS" value="false"/>
+    <elementParameter name="DIE_ON_ERROR" value="false"/>
+    <elementParameter name="SCHEMA_REJECT:SCHEMA_TYPE" value="REPOSITORY"/>
+    <elementParameter name="SCHEMA_REJECT:REPOSITORY_SCHEMA_TYPE" value="_PNy3MP_aEeanw8u3K46Wzw - metadata"/>
+    <elementParameter name="TEMP_DIR" value="&quot;D:/Talend-Tools-Studio-20161216_1026-V6.3.1/workspace&quot;"/>
+    <elementParameter name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter name="THOUSANDS_SEPARATOR" value="&quot;,&quot;"/>
+    <elementParameter name="DECIMAL_SEPARATOR" value="&quot;.&quot;"/>
+    <elementParameter name="RANDOM" value="false"/>
+    <elementParameter name="NB_RANDOM" value="10"/>
+    <elementParameter name="TRIMALL" value="false"/>
+    <elementParameter name="TRIMSELECT">
+      <elementValue elementRef="SCHEMA_COLUMN" value="exchange"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="stock_symbol"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="date"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="stock_price_open"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="stock_price_high"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="stock_price_low"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="stock_price_close"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="stock_volume"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="stock_price_adj_close"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter name="CHECK_FIELDS_NUM" value="false"/>
+    <elementParameter name="CHECK_DATE" value="false"/>
+    <elementParameter name="ENCODING" value="&quot;US-ASCII&quot;"/>
+    <elementParameter name="ENCODING:ENCODING_TYPE" value="CUSTOM"/>
+    <elementParameter name="SPLITRECORD" value="false"/>
+    <elementParameter name="ENABLE_DECODE" value="false"/>
+    <elementParameter name="DECODE_COLS">
+      <elementValue elementRef="SCHEMA_COLUMN" value="exchange"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="stock_symbol"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="date"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="stock_price_open"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="stock_price_high"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="stock_price_low"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="stock_price_close"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="stock_volume"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="stock_price_adj_close"/>
+      <elementValue elementRef="DECODE" value="false"/>
+    </elementParameter>
+    <elementParameter name="SCHEMA_OPT_NUM" value="100"/>
+    <elementParameter name="LABEL" value="SampleNYSE"/>
+    <elementParameter name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="tFileInputDelimited_3">
+      <column comment="" key="false" length="4" name="exchange" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="3" name="stock_symbol" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="10" name="date" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="4" name="stock_price_open" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" defaultValue="" key="false" length="4" name="stock_price_high" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Float"/>
+      <column comment="" defaultValue="" key="false" length="4" name="stock_price_low" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Float"/>
+      <column comment="" defaultValue="" key="false" length="4" name="stock_price_close" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Float"/>
+      <column comment="" key="false" length="7" name="stock_volume" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" defaultValue="" key="false" length="4" name="stock_price_adj_close" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Float"/>
+    </metadata>
+    <metadata connector="REJECT" label="metadata" name="REJECT">
+      <column comment="" defaultValue="" key="false" length="4" name="exchange" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" defaultValue="" key="false" length="3" name="stock_symbol" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" defaultValue="" key="false" length="10" name="date" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" defaultValue="" key="false" length="4" name="stock_price_open" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" defaultValue="" key="false" length="4" name="stock_price_high" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Float"/>
+      <column comment="" defaultValue="" key="false" length="4" name="stock_price_low" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Float"/>
+      <column comment="" defaultValue="" key="false" length="4" name="stock_price_close" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Float"/>
+      <column comment="" defaultValue="" key="false" length="7" name="stock_volume" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" defaultValue="" key="false" length="4" name="stock_price_adj_close" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Float"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String"/>
+    </metadata>
+  </node>
+  <node componentName="tFileOutputDelimited" offsetLabelX="0" offsetLabelY="0" posX="416" posY="64" sizeX="32" sizeY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputDelimited_1"/>
+    <elementParameter name="USESTREAM" value="false"/>
+    <elementParameter name="STREAMNAME" value="outputStream"/>
+    <elementParameter name="FILENAME" value="&quot;F:/Talend-Tools-Studio-20170623_1246-V6.4.1/workspace/out.csv&quot;"/>
+    <elementParameter name="ROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter name="OS_LINE_SEPARATOR_AS_ROW_SEPARATOR" value="true"/>
+    <elementParameter name="CSVROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter name="FIELDSEPARATOR" value="&quot;;&quot;"/>
+    <elementParameter name="APPEND" value="false"/>
+    <elementParameter name="INCLUDEHEADER" value="true"/>
+    <elementParameter name="COMPRESS" value="false"/>
+    <elementParameter name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter name="THOUSANDS_SEPARATOR" value="&quot;,&quot;"/>
+    <elementParameter name="DECIMAL_SEPARATOR" value="&quot;.&quot;"/>
+    <elementParameter name="CSV_OPTION" value="false"/>
+    <elementParameter name="ESCAPE_CHAR" value="&quot;&quot;&quot;"/>
+    <elementParameter name="TEXT_ENCLOSURE" value="&quot;&quot;&quot;"/>
+    <elementParameter name="CREATE" value="true"/>
+    <elementParameter name="SPLIT" value="false"/>
+    <elementParameter name="SPLIT_EVERY" value="1000"/>
+    <elementParameter name="FLUSHONROW" value="false"/>
+    <elementParameter name="FLUSHONROW_NUM" value="1"/>
+    <elementParameter name="ROW_MODE" value="false"/>
+    <elementParameter name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter name="DELETE_EMPTYFILE" value="false"/>
+    <elementParameter name="FILE_EXIST_EXCEPTION" value="true"/>
+    <elementParameter name="SCHEMA_OPT_NUM" value="90"/>
+    <elementParameter name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="tFileOutputDelimited_1">
+      <column comment="" key="false" length="4" name="exchange" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="3" name="stock_symbol" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="10" name="date" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="4" name="stock_price_open" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" defaultValue="" key="false" length="4" name="stock_price_high" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Float"/>
+      <column comment="" defaultValue="" key="false" length="4" name="stock_price_low" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Float"/>
+      <column comment="" defaultValue="" key="false" length="4" name="stock_price_close" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Float"/>
+      <column comment="" key="false" length="7" name="stock_volume" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" defaultValue="" key="false" length="4" name="stock_price_adj_close" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Float"/>
+    </metadata>
+  </node>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" mergeOrder="0" metaname="tFileInputDelimited_3" offsetLabelX="0" offsetLabelY="0" outputId="0" source="tFileInputDelimited_3" target="tFileOutputDelimited_1">
+    <elementParameter/>
+    <elementParameter name="MONITOR_CONNECTION" value="false"/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="This is sub-job"/>
+    <elementParameter name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
+    <elementParameter name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_eec6e54a-915b-4af4-8e19-ebed07705400"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ksz9kZcdmS5S3k5gkoH8qB6x9HKlsZ6B9ad891niRqNwB2LpBhw+tSTNIqwVbI2TQHZWXlBbm1L/
+EBZED+WqXw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_1b08518f-f3ba-4c24-a095-0268fdb105e4"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>oIccrZgPHh0jUtgqYT+iEIXUlsxKF7kvWgNXE0ddd7eZOJ+lRkS3v4AfZ2SwLmcAMU1LwLboadI5
+OMYttZFecA==</DigestValue></Reference></SignedInfo><SignatureValue>f6+NhCfon9o6DTrfuMSJOK8ieSPVe4/l/YAFMK7938ZC3rMBUlasNdtkaWSbuWbgV2ycsf/LtjXm
+3urhEpzYti4dkvLy68UscDDD3Dc6IyQFBa/ehxlysc0cGRdzem6PKKUDD3aJhsB9L8u7zw3e9ced
+DV5b1PILX1ecuD4GYwUr8lgYYKlYvFJI1UuFtDgzZgHF7SO5n7Jpim2ntirA+sYcW2zakjgMZcZx
+vMhasyIrg+Svw+FyoEggqMrohrngbYZ78rjL6Lu9rWAHuk/q6JmZma9pjBsUaXeAO84gEocla9Za
+bImR/UuYVg08M5smZMgdNk63SqZmkBh67ihg7Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
+RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
+LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
+VQQIDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1ImRDEpMCcGA1UEAwwg
+RGVmYXVsdCBjb2RlLXNpZ25pbmcgY2VydGlmaWNhdGUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQDiCz1II/o6hDUWu/ygxTCT2o/fYxVzPW23AoONQC/Vuiqh0COyLIgaMTjBPmQdTQFq
+rmM5tD64gi4TEQF+Z3iYt3daLdQUfaW9SzaMlY+XVNz5xnMBVDuiSHJSFE9lKnhgbKAHvOeoJo46
+UgWwb1za0WpRckDtjKcntwEK1orZCgrcIo1nDvFXyB5n0KfpLyktEOa0bSHde50MPbvQeB66XlEb
+lhjfs5S9WnAUja9RgqdwqZoI0ss+x/pjkQygDT8f17MktM21HOtg09lJlhMGJckhgD7jUF5tfYGM
+sv/O27g5CToFhxOnutDtsrDw7AkEQIml8KJp97bQLAFlLnh1AgMBAAGjge0wgeowHQYDVR0OBBYE
+FFzdy6ZfpUX8JwkM/SUrqkwLNqWAMB8GA1UdIwQYMBaAFOd9C3L8tYGZxoAr2SzsgnMytaj3MAsG
+A1UdDwQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAJBgNVHRMEAjAAMHsGCWCGSAGG+EIBDQRu
+FmxEZWZhdWx0IHRoaXJkIHBhcnR5IGNvZGUtc2lnbmluZyBjZXJ0aWZpY2F0ZS4gTm8gY29tbWl0
+bWVudCBpcyBtYWRlIG9uIHRoZSBjb250ZW50IHNpZ25lZCBieSB0aGUgdGhpcmQgcGFydHkwDQYJ
+KoZIhvcNAQELBQADggIBAKzYdnzoFgrRtDLSSzWtwuOrGo5+1RPoDHm/1dlbVnB7oZzUwfRGwZT5
+ser0V7OZyt9wWR8iQ2ka30fHWrNAosNtlIkF88s5YZw7OOIMxR+qYA99BnWLa79DZVIuukI2f5qJ
+Cr9nw6Oygo8CWeNMWhtXcvV4gqROhb2QMBrvWBw9QvNK1XMdtPShfWiXwyPzzRKgwqrN2meXtOY3
+S+MXu6u+RUD9EYeElp9M+9Yp+zRySl5/s+0sbvo7qz369dlsw8XhKXT+s4YQQe3Sx14Kg3SDFXKn
+QcVgycaZMOw4YUxOeP2hKOHnNuOMORfu3qlYkN/0RMGjn6r4PU4+yL276TiWI5b8J06y4leng2as
+r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
+EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
+BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
+6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_1b08518f-f3ba-4c24-a095-0268fdb105e4" Target="#_eec6e54a-915b-4af4-8e19-ebed07705400"><Timestamp>2019-03-09 18:42:14</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
