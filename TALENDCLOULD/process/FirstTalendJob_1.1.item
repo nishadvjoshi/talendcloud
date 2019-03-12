@@ -538,6 +538,17 @@
       <column comment="" key="false" length="7" name="stock_volume" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="4" name="stock_price_adj_close" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Float" usefulColumn="true"/>
     </metadata>
+    <metadata connector="FLOW" label="metadata" name="wff">
+      <column comment="" key="false" length="4" name="exchange" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="3" name="stock_symbol" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="date" nullable="true" pattern="&quot;MM/dd/yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="stock_price_open" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="stock_price_high" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Float" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="stock_price_low" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Float" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="stock_price_close" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Float" usefulColumn="true"/>
+      <column comment="" key="false" length="7" name="stock_volume" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="stock_price_adj_close" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Float" usefulColumn="true"/>
+    </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
@@ -562,6 +573,17 @@
         <mapperTableEntries expression="row4.stock_price_close" name="stock_price_close" nullable="true" type="id_Float"/>
         <mapperTableEntries expression="row4.stock_volume" name="stock_volume" nullable="true" type="id_Integer"/>
         <mapperTableEntries expression="row4.stock_price_adj_close" name="stock_price_adj_close" nullable="true" type="id_Float"/>
+      </outputTables>
+      <outputTables name="wff" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="exchange" nullable="true" type="id_String"/>
+        <mapperTableEntries name="stock_symbol" nullable="true" type="id_String"/>
+        <mapperTableEntries name="date" nullable="true" type="id_String"/>
+        <mapperTableEntries name="stock_price_open" nullable="true" type="id_String"/>
+        <mapperTableEntries name="stock_price_high" nullable="true" type="id_Float"/>
+        <mapperTableEntries name="stock_price_low" nullable="true" type="id_Float"/>
+        <mapperTableEntries name="stock_price_close" nullable="true" type="id_Float"/>
+        <mapperTableEntries name="stock_volume" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="stock_price_adj_close" nullable="true" type="id_Float"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row4" sizeState="INTERMEDIATE">
         <mapperTableEntries name="exchange" nullable="true" type="id_String"/>
@@ -709,13 +731,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_2b93ee88-9b9e-4803-8605-b3ea957caf30"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>1DwWwJH7/g1e+HPkodbeWtaV43hJoMZe78HcHLe9y1nDe8WVwTuXD91Ehk7g7mTRVaqHaAH2eBGk
-2N8A3/aBSQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_b2265625-fe7a-49ff-950d-f9d73571fcf0"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>J6w00tIRhiTa9/6gbRzvPsuOdsqfc2zrisoNgBqn8gR7ToTAxtQNXchVOpsd0dHIggdTJV2d6fPj
-DsoX9Sy3dw==</DigestValue></Reference></SignedInfo><SignatureValue>o7EPPA3mr7/AgmFvX0VbDTiBF+l+FofjuHkq3dnWefY2PKuGkjOtzb7spQL40yLS82YzZDS1VLAX
-CNtcxkqg3QRRUUQfb2BtuxEo0amDISi6ZDDdT7291WMBMmPRelYySnk3X85agvwIaXG5RDtjEHDe
-76xbkfHZsMhv2MnVh8vjysG1bHwbV1Vk9mLnGLphQAUeYuE4OvlSB1A+poYfXI10pMzrQY7X4Wrz
-wNoNwdfD2Rad2w5N0IRxdYOteP3QKSYcvDJi/+mx6pN3E7fPay+bAvCOdEvFlyI3wIpDyeJv+IFJ
-ug6OdM0YmQRz65YAhFCbwCgu6sP5soaWXKQX5w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b6af0682-cb34-4f36-9bdb-21742f92cf24"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>eJtFolQayjDqT1soC63Mu8fR2TRc4eqUrlYqvJB+sa5jr9fb3uDXqVEpgK+LFdMFS4WwS4BvOqWo
+j0Gy9YkfHQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5adaf907-ffad-4645-a1d8-982373ac3395"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>q8M5/+u6Wpu7EoMpXIRX3UNebDtSOlETGphhIo0ymy+d6swYO7Kfhn15LXaIV2HOgVFGYZoOkqm7
+NFkE5PrZSQ==</DigestValue></Reference></SignedInfo><SignatureValue>AKzuQRD3BLuRFV2XeuwLMjtTqSUbYCvk/JQ4K2uhOMIz1D50rZ61GzAaY7zDAYA6MiXCv7xHk4zq
+PmhQs+Bl/AmzyO1dydZl2bb5p/ragYIY6A2wBYUjg5gg7W2QFEWJbt78a7rIsxMB6q7TKqjoQAAm
+c1Rg1Pj1eEXIfKsK00J58z/J7YG8LJLgWv3772Uo7+K/tgCWegSyODWlQzwZsoqL2iooOMEZxw7F
+4oXbVM5Weis4bf7MLBwfgAclNQRA0HvHaP8rWWmJkap0dMLuKcdZ7aFid9YO63CzDf4EtmAR0op0
+UDRyGGcO3Qjt8EAzTkCim+jIR8ftgYKnH54Fcg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -739,4 +761,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_b2265625-fe7a-49ff-950d-f9d73571fcf0" Target="#_2b93ee88-9b9e-4803-8605-b3ea957caf30"><Timestamp>2019-03-12 05:42:35</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5adaf907-ffad-4645-a1d8-982373ac3395" Target="#_b6af0682-cb34-4f36-9bdb-21742f92cf24"><Timestamp>2019-03-12 05:46:39</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
