@@ -216,7 +216,7 @@
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_DaVEACvSEeaNvf-GvgW0zA-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_ee7x8FK9EemS2LQtxApQcQ-tMap_1-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
     <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
@@ -228,7 +228,7 @@
     <metadata connector="FLOW" label="sdfsd" name="sdfsd">
       <column comment="" key="false" length="4" name="exchange" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="3" name="stock_symbol" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="date" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="date" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="4" name="stock_price_open" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="4" name="stock_price_high" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Float" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="4" name="stock_price_low" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Float" usefulColumn="true"/>
@@ -244,7 +244,7 @@
       <outputTables name="sdfsd" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row2.exchange " name="exchange" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row2.stock_symbol " name="stock_symbol" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="Var.var1 " name="date" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="Var.var1 " name="date" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="row2.stock_price_open " name="stock_price_open" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row2.stock_price_high " name="stock_price_high" nullable="true" type="id_Float"/>
         <mapperTableEntries expression="row2.stock_price_low " name="stock_price_low" nullable="true" type="id_Float"/>
@@ -304,7 +304,7 @@
     <metadata connector="FLOW" label="sdfsd" name="tLogRow_1">
       <column comment="" key="false" length="4" name="exchange" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="3" name="stock_symbol" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="date" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="date" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="4" name="stock_price_open" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="4" name="stock_price_high" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Float" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="4" name="stock_price_low" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Float" usefulColumn="true"/>
@@ -326,13 +326,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_6e797073-3674-4e53-9f28-96ac4cbd0d96"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>m75efYV4v5nl9kQVSHkorrWk17S8o392GYA6T1TnDvBNLU9LfMwldL7BSqRT69a+HuXsUU0LGSAy
-JoBdP5bSqg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_18560b69-e2e0-4b67-99ca-116d5927c9e3"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>8WPlTDLV2AtzEKtW/X/4t/WOp+2qL3guVfIx5vPeW9RUos6vpzFb8aXKHlMjFY5wgdP/R3YXPiTS
-OXbwoX0zig==</DigestValue></Reference></SignedInfo><SignatureValue>EH1TkYKOzrcM11IXNIUCuIk+rdUWgvey4GLHl3H54Kcwvl1OCK9MXaGRVh/vlJECwDcoWB1166Ve
-cEPXdTcEWbS0WTUTySrj5FrD6NfoRaYyshM/cfhca7smicWpE+r3W3pAXCg5cRZyT4Oc+fZg7xGY
-NAmEGPW/OpyArEvqMvXt8Xq54r23O6LnXueGx02BuxwmVT3CtYd7TbLE0dhZaVhTA0Nsqzt6hlJW
-MbaL9Jf17sSwbnxaBzaoYiSJdwPNZsUYlXEVf5mdyFiG3KfrezYCWCkDAdqyA/VcKXMWHxknTc3R
-aOhsdAgNYedYnSqJRiXS8E3FWM6Z760AbDTOUg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_4f2ce575-5c95-41eb-b0d8-1a6288fd8174"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>+fYqryE/nr071dADoB5TMpEhKUbR3y6zNF2Zn86OuNGgN+EVvL0cXHswvpW0+GOQOC3cAaPkujHd
+QZRoBLOJgw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d33fbded-e2b4-499b-960a-ae18d31130cb"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>g83lkDYL3k9ywUYcO0HqRBnujMOpMUzDCGSVssX8lPyOOHY9HsC43gnspZffWoE2DQUpcHF5kvC9
+DugFPnWUtw==</DigestValue></Reference></SignedInfo><SignatureValue>Yx2tVp6sZm4TysQPuj2yM4ntSwRD0DOf7CtQyComrcL6SjsP1BcyiQjuAL67NxvYMaOxbSLgPuMd
+UKO1lVAu2t4pCz/ZFJDI5j5joPnvUgfMAmRMgQ1VyhVcat9uYDp750pgoEKM33ukNaLkUjgCMdwT
+hb/MtDKCbhZrkRe2MZRiVnpmi5xqFOq1KJnd0qPDvr63XpdY1HjyeyLZdkF6yZxpNETcd0KfdoBA
+AgWIvW0JhzMEVSJeo4k0y74IngBhyGjNBBLp88D5ZZhV3ewsnQSv2QUUjLLgutsyJxOkKgfC1xL0
+JVol+P+4vzYBIgSnaWUv5tPY6lbX/+jQqJ+kRw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -356,4 +356,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_18560b69-e2e0-4b67-99ca-116d5927c9e3" Target="#_6e797073-3674-4e53-9f28-96ac4cbd0d96"><Timestamp>2019-03-30 07:31:30</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d33fbded-e2b4-499b-960a-ae18d31130cb" Target="#_4f2ce575-5c95-41eb-b0d8-1a6288fd8174"><Timestamp>2019-03-30 07:31:49</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
