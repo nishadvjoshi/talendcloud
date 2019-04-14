@@ -950,6 +950,13 @@
       <column comment="" key="false" length="7" name="Population" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="37" name="Name_1" nullable="true" originalDbColumnName="Name" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
+    <metadata connector="FLOW" name="out2">
+      <column comment="" key="false" length="2" name="ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="19" name="Name" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="3" name="CountryCode" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="District" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="7" name="Population" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+    </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
@@ -961,6 +968,13 @@
         <mapperTableEntries expression="row9.Population " name="Population" nullable="true" type="id_Integer"/>
         <mapperTableEntries expression="row10.Name " name="Name_1" nullable="true" type="id_String"/>
       </outputTables>
+      <outputTables activateCondensedTool="true" name="out2" rejectInnerJoin="true" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="row9.ID " name="ID" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="row9.Name " name="Name" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row9.CountryCode " name="CountryCode" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row9.District " name="District" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row9.Population " name="Population" nullable="true" type="id_Integer"/>
+      </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row9" sizeState="INTERMEDIATE">
         <mapperTableEntries name="ID" nullable="true" type="id_Integer"/>
         <mapperTableEntries name="Name" nullable="true" type="id_String"/>
@@ -968,7 +982,7 @@
         <mapperTableEntries name="District" nullable="true" type="id_String"/>
         <mapperTableEntries name="Population" nullable="true" type="id_Integer"/>
       </inputTables>
-      <inputTables activateCondensedTool="true" lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row10" sizeState="INTERMEDIATE">
+      <inputTables activateCondensedTool="true" innerJoin="true" lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row10" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row9.CountryCode " name="Code" nullable="true" operator="=" type="id_String"/>
         <mapperTableEntries name="Name" nullable="true" type="id_String"/>
         <mapperTableEntries name="Continent" nullable="true" type="id_String"/>
@@ -1166,6 +1180,42 @@
       <column comment="" key="false" length="37" name="Name_1" nullable="true" originalDbColumnName="Name" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="576" posY="928">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_6"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="ID"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Name"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CountryCode"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="District"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Population"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tLogRow_6">
+      <column comment="" key="false" length="2" name="ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="19" name="Name" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="3" name="CountryCode" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="District" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="7" name="Population" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+  </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tFileOutputExcel_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
@@ -1210,9 +1260,13 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row9"/>
   </connection>
-  <connection connectorName="FLOW" label="out1" lineStyle="0" metaname="out1" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tLogRow_5">
+  <connection connectorName="FLOW" label="out1" lineStyle="0" metaname="out1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_1" target="tLogRow_5">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out1"/>
+  </connection>
+  <connection connectorName="FLOW" label="out2" lineStyle="0" metaname="out2" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_1" target="tLogRow_6">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out2"/>
   </connection>
   <connection connectorName="FLOW" label="row10" lineStyle="8" metaname="tFileInputDelimited_6" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_6" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -1249,13 +1303,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_53199d49-52c0-49fa-bbd8-287fa47c2fa3"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>PXZpoveOwk60HhUtN/IIbeprPbLJG2omftx+X1I+48UBF2LP2tlB2YMX/VgsRNB8RFLuQkBGCACt
-jJmD1D0gvw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ae72c7da-ef7d-4806-9410-3436fc89ccf8"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>BItguG/+ygir9Y8m4AXANssIijw2e+QeEaGHqoGVuL5iq56AetSw7g0ASQWkD6CJoKQh+MMxIyHP
-LZ5DuSSYZQ==</DigestValue></Reference></SignedInfo><SignatureValue>GdeHnJCWFHO8ODkUTvHZcj0P7cBW50iBVT6F28DQODHtRzyY5wB3hMemS4wdLj04EAgUEYzS+N/0
-fEWwsOLGUs/UT4dn6h9gxzAAfm/DgTVkc1EHgiXh5eEEA9ilyfKxAIi/eR1RmmyJ8nawNzSyMRsl
-mEcPKzlB7KbSD4/wBtGCgaGJGWYsMfLcstk54eaNdtyW9L+Uf5tDq5MtiCgAnPozwgHxK8kk7BHe
-mE1D9OybbrPXsTrX0IzX7OMg9Zl1CNO/b8zvge55H7nR7a5lfrac1SzWy2VrVZATDqJi8qdzJxRe
-ubbx3T5pBlblM+JB7vw7G3KVWm0dQGIXExnCQQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f77dc9af-c7b2-425c-bade-4d4921f201dd"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>IAWJ1rmZOVF82bAQH4xiMLiFjl/q3wZXQra2eq1Z363QPXySah5CXqW0zLlh7ErOT9jScJPVpPQP
+4ki9Df3kiA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_eb07945b-09d7-4c77-b5cd-80a1a2e24df4"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>dPQ7Bei3aUKHU8RApDgThMNyWVFeOrkX3A3X8z2Tv7M/KbIdIhp8toSIr2nQLSlhFfmHBTG70qq7
+5A+BW0+joQ==</DigestValue></Reference></SignedInfo><SignatureValue>oP+bahI6zXwLgmp3JFnDCURk0lHtpVf32wx0f+SfC63U2WTLsc1YfgxkdgNYUA1NA14nC2iwm4+f
+cVdu4baCUMzdBD9ErusqhkMXACCQ7TStcTj26WaBAmODBrzZHLMF/wcyOxleBFpty3QsDeLpeH+V
+1edTe0ehhvH0Y6UZKWISXSW4CeGl+ThIcn8ANoq9fRe/MYyJQbO5vR5MmH/Q13zpA/1jllaRr7bR
+khIxqUJaOyyVSeF/glAFcYIhjdRnJk+7rlq8sRhSU9BEO4d7T5aZ9ri2SZ9UAMF261b+W6waT6Rz
+FVnVwogrwibyNOaFECxKD7Uxnr5rKIWlc8z7fw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -1279,4 +1333,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ae72c7da-ef7d-4806-9410-3436fc89ccf8" Target="#_53199d49-52c0-49fa-bbd8-287fa47c2fa3"><Timestamp>2019-04-14 05:36:18</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_eb07945b-09d7-4c77-b5cd-80a1a2e24df4" Target="#_f77dc9af-c7b2-425c-bade-4d4921f201dd"><Timestamp>2019-04-14 05:38:05</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
