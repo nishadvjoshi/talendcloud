@@ -240,16 +240,20 @@
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
-      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <varTables name="Var" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="Relational.ISNULL(row1.date) || row1.date.isEmpty() &#13;&#10;? TalendDate.parseDate(&quot;MM/dd/yyyy&quot;,&quot;12/31/2100&quot;)&#13;&#10;: TalendDate.parseDate(&quot;MM/dd/yyyy&quot;,row1.date) " name="stockdate" type="id_Date"/>
+        <mapperTableEntries expression="Relational.ISNULL(row1.stock_price_open) || row1.stock_price_open.isEmpty()&#13;&#10;? Float.parseFloat(&quot;0.0&quot;)&#13;&#10;: Float.parseFloat(row1.stock_price_open) " name="stockprice" type="id_Float"/>
+        <mapperTableEntries expression="Relational.ISNULL(row1.stock_volume) || row1.stock_volume.isEmpty()&#13;&#10;? Integer.parseInt(&quot;0&quot;)&#13;&#10;: Integer.parseInt(row1.stock_volume) " name="stockvolume" type="id_Integer"/>
+      </varTables>
       <outputTables name="nyse" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row1.exchange " name="exchange" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row1.stock_symbol " name="stock_symbol" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.date" name="date" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="row1.stock_price_open" name="stock_price_open" nullable="true" type="id_Float"/>
+        <mapperTableEntries expression="Var.stockdate " name="date" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="Var.stockprice " name="stock_price_open" nullable="true" type="id_Float"/>
         <mapperTableEntries expression="row1.stock_price_high" name="stock_price_high" nullable="true" type="id_Float"/>
         <mapperTableEntries expression="row1.stock_price_low" name="stock_price_low" nullable="true" type="id_Float"/>
         <mapperTableEntries expression="row1.stock_price_close" name="stock_price_close" nullable="true" type="id_Float"/>
-        <mapperTableEntries expression="row1.stock_volume" name="stock_volume" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="Var.stockvolume " name="stock_volume" nullable="true" type="id_Integer"/>
         <mapperTableEntries expression="row1.stock_price_adj_close" name="stock_price_adj_close" nullable="true" type="id_Float"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row1" sizeState="INTERMEDIATE">
@@ -338,13 +342,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_11fd3b1a-1680-42c8-b2aa-dccf722b3a91"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>NB8udVzWoUeEC6kXyLLjVVsVF9uu5nUsqb3TKZwAu61ACBBvXyPSU0lbW5JgSW3MJXSCMcgEKFE5
-AKebfYghOg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_f43268f8-10c9-4bed-b753-9411e66b7f1e"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>fvdS9icqqsTw7BlA/NR/Em+igjr+3i1iPmxKc/iW5xWN0MUq4kENf+bRBBy6Zv4AhpymdePb6g94
-509UbieGmg==</DigestValue></Reference></SignedInfo><SignatureValue>AFJ2GyLwC8d1zS7B0IaKRylTNx3Bkx5ZPKS5SoNfnpBk0uF1dp+wSNntNYKkm6lLmAq3kRsfyzDO
-w5/2vgbpcptr+nne91NUYJoebHmmYaDbmGkWDtoen0o+2MVOGZJbEkbwomZKIenY/DZNWA2moWgS
-hXhc9Kd9JdIYo57twC1zoAn+Y5FQVw3vS4kVOxeqrrIO7WasEm8ebeF8SQg6LFajynQIsV/5bPTV
-dNFmXl6rhiuXpyKbpgh82vOXMKE5DRHUw39wAOeBpP307yaWSaf78q7wIyxG8/1F136ERWwzLB9K
-8fK11zchyiCeJ90EcYeXfumJhmdxOtVs2hLncg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f2807492-9e0b-4fb5-8d06-0b2d3b7f11ab"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>bvnhla5dqHrPod74tN0WM6vnOK7EVXapshA8daPgq2njshESkTRJo/0QdJbue45l7hDOuzJAQGT7
+jCnL8e3dNw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_8573daf7-6fe6-4fbb-ae8b-fe944eaa57bb"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>S7AssRkvhYMJTxHWr0YM0t8VNHSqVbryaTwP6VBF3a/ajJl+pz1HblIvYdZi9n4gion1cWNzRe5C
+OEakkya+Cw==</DigestValue></Reference></SignedInfo><SignatureValue>I4Pj+U/Tv6BpXSrDyjNZpPRtyeA5U9gWXqS/oLn6MAiJY6kSQFbhcpd1SRECSqzB0WiGvconbR0s
+NrMp//4UUgt+SBffulTw0zzrGE6FyS3WUA1Nz5J4M5jbA1CSU1+p9dfOdtE28+IizCRnCCqSkgUh
+uBWReYW1jGDYVfQFCRj5KnVrikFVpALxbIbd5vk2DRvDEDRvaJDMmmvn1PDTj19tG8Ouokl6B5YU
+WzSxNXfmOA2Md9VUbdkjrgE3q8z3j3muTn6BdLSYZXCd2cfrucqcOSI6kPTP3KxsjdaSrwhQrdoL
+DFzwxaNDSjHgJBXbV0gTSGKAf6vZKMLb5q5aXg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -368,4 +372,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_f43268f8-10c9-4bed-b753-9411e66b7f1e" Target="#_11fd3b1a-1680-42c8-b2aa-dccf722b3a91"><Timestamp>2019-04-15 06:54:10</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_8573daf7-6fe6-4fbb-ae8b-fe944eaa57bb" Target="#_f2807492-9e0b-4fb5-8d06-0b2d3b7f11ab"><Timestamp>2019-04-15 07:07:15</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
