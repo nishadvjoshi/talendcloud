@@ -121,7 +121,7 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;world&quot;"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;AllowMutiQueries=true&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;root&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="6Hmi2I5VIahFaJ689vKX4Q=="/>
+    <elementParameter field="PASSWORD" name="PASS" value="FXYS/SRxHYKIph/ImzK7aQ=="/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
@@ -173,32 +173,32 @@
   </node>
   <node componentName="tMysqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="672" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMysqlRow_2"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value="tMysqlConnection_1"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;localhost&quot;"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;world&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="MYSQL_5"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMysqlConnection_1"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;localhost&quot;"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;3306&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;world&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MYSQL"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;root&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="6Hmi2I5VIahFaJ689vKX4Q=="/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;root&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="6Hmi2I5VIahFaJ689vKX4Q=="/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;INSERT INTO world.student VALUES (1,'Bob',16025);&#13;&#10;INSERT INTO world.student VALUES (2,'Venkat',16029);&#13;&#10;INSERT INTO `world`.`student` VALUES (3,'Trisha',16035);&#13;&#10;INSERT INTO `world`.`student` VALUES (4,'John',16044);&#13;&#10;INSERT INTO `world`.`student` VALUES (5,'Walli',16056);&#13;&#10;INSERT INTO `world`.`student` VALUES (6,'Ben',16052);&quot;"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;allowMultiQueries=true&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;allowMultiQueries=true&quot;"/>
     <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
     <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" show="false" value=""/>
     <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
     <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS" show="false"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" show="false" value="10000"/>
     <elementParameter field="TEXT" name="LABEL" value="MySQL56World"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tMysqlRow_2"/>
@@ -274,13 +274,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_835ccd42-e638-45c9-8b43-578e22081420"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>SMRU0JCzlrP31Ed3v8PA9oJ/KXRExjd2UixpHnGNlIaflI4tZ6ln7W5mqCXQlsTfLQaISo92MEOe
-k2qDramCfA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d0c3ecde-e16b-4e25-a660-d7585f26707d"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>e1K8nvgfgSdaZItRuuEQaPrID2Pb2EXBNcY2rToWc3IR0IZ9j4oASFYuwA7ZFutgzGQC8boE61+t
-rjKDzX3LAQ==</DigestValue></Reference></SignedInfo><SignatureValue>HMBLlirppCuSpkAYayR/Adls422TkvOdei+FutQxkScFwCJkOW0cqaYmjZ/Do6mP+fLk2aekklah
-Ff8YuWyZ0F11qwZCVogj+FEykQelbye4tsJJeNGNhKy0egeQPaHvGdm/tha7MUBigriGDEbD0X9Q
-paTxeAws5oyH02sm5aVAWEx/4LVwS4Cm9XPCAonsSx1LgQQunX7eqcDC9qguYsxUWcPDCnFx1Nnu
-bQHHt3p/PzjkjVrfQvSorpiMDdQVPSUffAHc4JdtZm4YmH+FtcCezeOTpNLYKfTDgBHzGK+6ACqt
-DGrcK0QU7bDV2QuL+Y2Hgo5tRU1tXZt9rE9RRg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_396aab0a-aa90-48fe-8c47-e3be81b61663"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>jtapSRn1kUa3iv1HSsT4p4IibR26a5548+RupaZb6/Sx09w82eE0EY7SlJoDcS5Q048/3JcOidwo
+l3RzeofhiA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_6bcad159-8b29-4769-94af-68d563a2040c"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>XAW+Gun6eR2bboJdtYb420VD0G8c70NiCZ6jHr2J6uEhaMCTSflB8pcBXxer8NqjhUI5pztyEkwX
+D2p8iXKf5Q==</DigestValue></Reference></SignedInfo><SignatureValue>c+0COdKzOsFF6fvPCxsbGnSVWEN45VTIOG2iklgl5gRZDK7wjuTACHhFRCHGTBGsuF/qBLXoIXdo
+uimQVLrlAMul9R8aGavsLCmqBGS+OAmVKg2Be5fAt85z5VJdmglsdP4UK46S1tFfP/787S+qL9dy
+pM8lhNA3nEXpfLPz3EiISpAnfJL9kMiuIwfqmzcuHXSOi2DDH6t+IzclW0EAFk2hKVa3wsBW2fDE
+itVmJe09HTbbtCmVzQdU4mRhcORm2F7OBQdvBJeS2z4mCfaGb7qIZpeTEVPUL6BTj7V0FVo/juYG
+jZdctvcEcls3OZQ0DWxgqz2dMoIo9pMk1vEA8A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -304,4 +304,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d0c3ecde-e16b-4e25-a660-d7585f26707d" Target="#_835ccd42-e638-45c9-8b43-578e22081420"><Timestamp>2019-04-16 06:32:25</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_6bcad159-8b29-4769-94af-68d563a2040c" Target="#_396aab0a-aa90-48fe-8c47-e3be81b61663"><Timestamp>2019-04-16 06:33:10</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
