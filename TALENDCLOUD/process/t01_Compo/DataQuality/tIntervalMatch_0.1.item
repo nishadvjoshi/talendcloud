@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="demo" xmi:version="2.0">
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="demo">
   <context confirmationNeeded="false" name="demo">
     <contextParameter comment="This var is just used on t04_Context/repositoryContext" name="sampleInt" prompt="please define an sample int:" promptNeeded="false" type="id_Integer" value="100"/>
     <contextParameter comment="" name="root" prompt="Set the path of the dir to store the example files folder:" promptNeeded="false" repositoryContextId="_dn7XwGT9Edyrh8knyihGHw" type="id_String" value="C:\TalendDemoFiles\"/>
@@ -288,7 +289,7 @@
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="references"/>
   </connection>
-  <note opaque="true" posX="96" posY="32" sizeHeight="64" sizeWidth="609" text="tIntervalMatch receives a main flow and aggregates it based on a join to a lookup flow.&#13;&#10;Then it matches a specified value to a range of values and returns related information.">
+  <note opaque="true" posX="96" posY="32" sizeHeight="64" sizeWidth="609" text="tIntervalMatch receives a main flow and aggregates it based on a join to a lookup flow.&#xD;&#xA;Then it matches a specified value to a range of values and returns related information.">
     <elementParameter field="COLOR" name="NOTE_COLOR" value="255;255;203"/>
     <elementParameter field="COLOR" name="NOTETXT_COLOR" value="0;0;0"/>
     <elementParameter field="RADIO" name="NOTETXT_LEFT" value="false"/>
@@ -308,34 +309,4 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="50;50;250"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_71dc6275-f3b9-4c52-a35a-8c1d15edb8c9"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>akVW8LxcUHJp0Wqdd0uWxwemQeeuJBColnmLQOJbbFvwBm7wWc2wVeH/M5gcMrn4IecDaT46sSPN
-pL51NLDhTw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_1fb06929-6a6e-424a-a179-1177245dd836"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>AcddWLCdiO7WKwgw6iC0dx4eiuOruTkPDr9MUk5Zq/1TfwdOYI/9wHZlAW63Hbj8l2CPWK3xaBNT
-KPwRBvCLXw==</DigestValue></Reference></SignedInfo><SignatureValue>Zyp28JQ4oArXrhqg6RvsiDEkjmv4aIg0gaQBgo9+XuYdNCcEVp/VR4jI8WRBpy2roTejQnbRVSwI
-wKrAAABU+GhMiepBZnTMcMzd/9CbcEv6TPg7FYjL/8YVCZciT56NDZgfnNZWfoypW9V81OCgA0Nu
-GgwLMac1fhnk3t/vGSSMx2DesBbkfdX2i984S2gGMeeZdtsoWBjYDGUfcvlczJWRDT6kf/TwAKzB
-faN3zP+s+UmL1RsF58+fynC45EOx9Q1XzgyvNk5QEmKf3QQZNfGpHkTFfiNh5A14ZylfebsQKV+N
-gAOuPlhg2QPf+URoF0QwrsLyYU4ejcoQro/czw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
-BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
-RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
-LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
-VQQIDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1ImRDEpMCcGA1UEAwwg
-RGVmYXVsdCBjb2RlLXNpZ25pbmcgY2VydGlmaWNhdGUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
-ggEKAoIBAQDiCz1II/o6hDUWu/ygxTCT2o/fYxVzPW23AoONQC/Vuiqh0COyLIgaMTjBPmQdTQFq
-rmM5tD64gi4TEQF+Z3iYt3daLdQUfaW9SzaMlY+XVNz5xnMBVDuiSHJSFE9lKnhgbKAHvOeoJo46
-UgWwb1za0WpRckDtjKcntwEK1orZCgrcIo1nDvFXyB5n0KfpLyktEOa0bSHde50MPbvQeB66XlEb
-lhjfs5S9WnAUja9RgqdwqZoI0ss+x/pjkQygDT8f17MktM21HOtg09lJlhMGJckhgD7jUF5tfYGM
-sv/O27g5CToFhxOnutDtsrDw7AkEQIml8KJp97bQLAFlLnh1AgMBAAGjge0wgeowHQYDVR0OBBYE
-FFzdy6ZfpUX8JwkM/SUrqkwLNqWAMB8GA1UdIwQYMBaAFOd9C3L8tYGZxoAr2SzsgnMytaj3MAsG
-A1UdDwQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAJBgNVHRMEAjAAMHsGCWCGSAGG+EIBDQRu
-FmxEZWZhdWx0IHRoaXJkIHBhcnR5IGNvZGUtc2lnbmluZyBjZXJ0aWZpY2F0ZS4gTm8gY29tbWl0
-bWVudCBpcyBtYWRlIG9uIHRoZSBjb250ZW50IHNpZ25lZCBieSB0aGUgdGhpcmQgcGFydHkwDQYJ
-KoZIhvcNAQELBQADggIBAKzYdnzoFgrRtDLSSzWtwuOrGo5+1RPoDHm/1dlbVnB7oZzUwfRGwZT5
-ser0V7OZyt9wWR8iQ2ka30fHWrNAosNtlIkF88s5YZw7OOIMxR+qYA99BnWLa79DZVIuukI2f5qJ
-Cr9nw6Oygo8CWeNMWhtXcvV4gqROhb2QMBrvWBw9QvNK1XMdtPShfWiXwyPzzRKgwqrN2meXtOY3
-S+MXu6u+RUD9EYeElp9M+9Yp+zRySl5/s+0sbvo7qz369dlsw8XhKXT+s4YQQe3Sx14Kg3SDFXKn
-QcVgycaZMOw4YUxOeP2hKOHnNuOMORfu3qlYkN/0RMGjn6r4PU4+yL276TiWI5b8J06y4leng2as
-r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
-EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
-BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
-6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_1fb06929-6a6e-424a-a179-1177245dd836" Target="#_71dc6275-f3b9-4c52-a35a-8c1d15edb8c9"><Timestamp>2019-01-24 09:00:24</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+</talendfile:ProcessType>

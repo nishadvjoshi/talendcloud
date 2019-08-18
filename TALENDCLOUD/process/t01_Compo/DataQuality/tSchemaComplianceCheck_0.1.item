@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="demo" xmi:version="2.0">
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="demo">
   <context confirmationNeeded="false" name="demo">
     <contextParameter comment="" name="root" prompt="Set the path of the dir to store the example files folder:" promptNeeded="false" repositoryContextId="_dn7XwGT9Edyrh8knyihGHw" type="id_String" value="C:\TalendDemoFiles\"/>
   </context>
@@ -174,10 +175,10 @@
       <elementValue elementRef="MAX_LENGTH" value="true"/>
     </elementParameter>
     <elementParameter field="CHECK" name="SUB_STRING" value="false"/>
-    <elementParameter field="LABEL" name="NOTE_CUSTOMER" value="Please note: &#10;(1) Nullable setting in this table is more preferential than the default schema.&#10;(2) Length checking is base on the value of the default schema, if exceed, either trim the field when above option checked or reject the row."/>
+    <elementParameter field="LABEL" name="NOTE_CUSTOMER" value="Please note: &#xA;(1) Nullable setting in this table is more preferential than the default schema.&#xA;(2) Length checking is base on the value of the default schema, if exceed, either trim the field when above option checked or reject the row."/>
     <elementParameter field="RADIO" name="CHECK_ANOTHER" value="false"/>
     <elementParameter field="LABEL" name="NOTE_CHECK_ANOTHER" value="Please note: only index matching, for example, the second column of checking schema is correspond to the second of input schema"/>
-    <elementParameter field="LABEL" name="INFO" value="The errCode value is a summation of all error code:&#10;(1) Type discrepancy (include wrong date pattern): 2&#10;(2) Empty or NULL: 4&#10;(3) Length Error: 8"/>
+    <elementParameter field="LABEL" name="INFO" value="The errCode value is a summation of all error code:&#xA;(1) Type discrepancy (include wrong date pattern): 2&#xA;(2) Empty or NULL: 4&#xA;(3) Length Error: 8"/>
     <elementParameter field="CHECK" name="FAST_DATE_CHECK" value="false"/>
     <elementParameter field="LABEL" name="NOTE" value="(Not compatible with multi-threaded jobs)"/>
     <elementParameter field="CHECK" name="EMPTY_IS_NULL" value="false"/>
@@ -350,7 +351,7 @@
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="Rejects"/>
   </connection>
-  <note opaque="true" posX="96" posY="32" sizeHeight="161" sizeWidth="577" text="Validates all input rows against a reference schema or checks type, nullability,&#13;&#10; length of rows against reference values. The validation can be carried out in full or partly&#13;&#10;&#13;&#10;For this demo, the example file include some errors:&#13;&#10;&#13;&#10;id=7         =&gt; number:exceed max length&#13;&#10;id=8         =&gt; value:exceed max length">
+  <note opaque="true" posX="96" posY="32" sizeHeight="161" sizeWidth="577" text="Validates all input rows against a reference schema or checks type, nullability,&#xD;&#xA; length of rows against reference values. The validation can be carried out in full or partly&#xD;&#xA;&#xD;&#xA;For this demo, the example file include some errors:&#xD;&#xA;&#xD;&#xA;id=7         => number:exceed max length&#xD;&#xA;id=8         => value:exceed max length">
     <elementParameter field="COLOR" name="NOTE_COLOR" value="255;255;203"/>
     <elementParameter field="COLOR" name="NOTETXT_COLOR" value="0;0;0"/>
     <elementParameter field="RADIO" name="NOTETXT_LEFT" value="false"/>
@@ -370,34 +371,4 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="50;50;250"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_8ebc3b07-17d1-4835-8e68-5af1332b842a"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>bBR3m+gyGhaeGw6rFWi2solBLBG2Fw880kRo0R6udZ1jcRBUDjo+ky4dSRO7JuVAHGDNhtZgccVR
-a6tWzTP3pA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_bb607a9a-8943-4c57-9c89-dfbce7cf1469"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>jE/dMTewSgy55Nm4AWi6jCog28qjhuVBE5l0ovRQqbUiF1Ly/N13yzuCEItwkxI4iZfQa7hqnTp6
-wyRACepDxA==</DigestValue></Reference></SignedInfo><SignatureValue>FqNN23b2pI2AQkgQlyBIf7Ppn2lD01io+lVsR81eK6Z0/ZDPomOoHD1ykIyrEN+x8khtl1lLKMva
-Q8KK4MfRG4fqJ+wDJoJ7IRpU59rv6efd59guJe4U3Q5UBZ2+lspTv3rvu4BLJ+SiMo2zfAwdd8k7
-rVsVGuKoXXy+lRJ4BW8X6iNT3ecWSQEtukekFDONJjWjlQppFSX19w/lFXNgTmncx+99b82rzUW7
-9TPnr3b49IK6mnUwcNEAZSgm9KUwbLE2aYC1ro7yZa5rCxXD0X9Vp/hMawZYY+wU9X8GuWnuMZ6g
-5WlD4+HP8eAWbRWi5wtuO+ksSVjWbVY8Aq7aXA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
-BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
-RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
-LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
-VQQIDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1ImRDEpMCcGA1UEAwwg
-RGVmYXVsdCBjb2RlLXNpZ25pbmcgY2VydGlmaWNhdGUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
-ggEKAoIBAQDiCz1II/o6hDUWu/ygxTCT2o/fYxVzPW23AoONQC/Vuiqh0COyLIgaMTjBPmQdTQFq
-rmM5tD64gi4TEQF+Z3iYt3daLdQUfaW9SzaMlY+XVNz5xnMBVDuiSHJSFE9lKnhgbKAHvOeoJo46
-UgWwb1za0WpRckDtjKcntwEK1orZCgrcIo1nDvFXyB5n0KfpLyktEOa0bSHde50MPbvQeB66XlEb
-lhjfs5S9WnAUja9RgqdwqZoI0ss+x/pjkQygDT8f17MktM21HOtg09lJlhMGJckhgD7jUF5tfYGM
-sv/O27g5CToFhxOnutDtsrDw7AkEQIml8KJp97bQLAFlLnh1AgMBAAGjge0wgeowHQYDVR0OBBYE
-FFzdy6ZfpUX8JwkM/SUrqkwLNqWAMB8GA1UdIwQYMBaAFOd9C3L8tYGZxoAr2SzsgnMytaj3MAsG
-A1UdDwQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAJBgNVHRMEAjAAMHsGCWCGSAGG+EIBDQRu
-FmxEZWZhdWx0IHRoaXJkIHBhcnR5IGNvZGUtc2lnbmluZyBjZXJ0aWZpY2F0ZS4gTm8gY29tbWl0
-bWVudCBpcyBtYWRlIG9uIHRoZSBjb250ZW50IHNpZ25lZCBieSB0aGUgdGhpcmQgcGFydHkwDQYJ
-KoZIhvcNAQELBQADggIBAKzYdnzoFgrRtDLSSzWtwuOrGo5+1RPoDHm/1dlbVnB7oZzUwfRGwZT5
-ser0V7OZyt9wWR8iQ2ka30fHWrNAosNtlIkF88s5YZw7OOIMxR+qYA99BnWLa79DZVIuukI2f5qJ
-Cr9nw6Oygo8CWeNMWhtXcvV4gqROhb2QMBrvWBw9QvNK1XMdtPShfWiXwyPzzRKgwqrN2meXtOY3
-S+MXu6u+RUD9EYeElp9M+9Yp+zRySl5/s+0sbvo7qz369dlsw8XhKXT+s4YQQe3Sx14Kg3SDFXKn
-QcVgycaZMOw4YUxOeP2hKOHnNuOMORfu3qlYkN/0RMGjn6r4PU4+yL276TiWI5b8J06y4leng2as
-r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
-EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
-BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
-6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_bb607a9a-8943-4c57-9c89-dfbce7cf1469" Target="#_8ebc3b07-17d1-4835-8e68-5af1332b842a"><Timestamp>2019-01-24 09:00:24</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+</talendfile:ProcessType>
