@@ -395,31 +395,31 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tUniqRow_1"/>
     <elementParameter field="TABLE" name="UNIQUE_KEY">
       <elementValue elementRef="SCHEMA_COLUMN" value="exchange"/>
-      <elementValue elementRef="KEY_ATTRIBUTE" value="false"/>
+      <elementValue elementRef="KEY_ATTRIBUTE" value="true"/>
       <elementValue elementRef="CASE_SENSITIVE" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="stock_symbol"/>
-      <elementValue elementRef="KEY_ATTRIBUTE" value="false"/>
+      <elementValue elementRef="KEY_ATTRIBUTE" value="true"/>
       <elementValue elementRef="CASE_SENSITIVE" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="date"/>
-      <elementValue elementRef="KEY_ATTRIBUTE" value="false"/>
+      <elementValue elementRef="KEY_ATTRIBUTE" value="true"/>
       <elementValue elementRef="CASE_SENSITIVE" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="stock_price_open"/>
-      <elementValue elementRef="KEY_ATTRIBUTE" value="false"/>
+      <elementValue elementRef="KEY_ATTRIBUTE" value="true"/>
       <elementValue elementRef="CASE_SENSITIVE" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="stock_price_high"/>
-      <elementValue elementRef="KEY_ATTRIBUTE" value="false"/>
+      <elementValue elementRef="KEY_ATTRIBUTE" value="true"/>
       <elementValue elementRef="CASE_SENSITIVE" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="stock_price_low"/>
-      <elementValue elementRef="KEY_ATTRIBUTE" value="false"/>
+      <elementValue elementRef="KEY_ATTRIBUTE" value="true"/>
       <elementValue elementRef="CASE_SENSITIVE" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="stock_price_close"/>
-      <elementValue elementRef="KEY_ATTRIBUTE" value="false"/>
+      <elementValue elementRef="KEY_ATTRIBUTE" value="true"/>
       <elementValue elementRef="CASE_SENSITIVE" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="stock_volume"/>
-      <elementValue elementRef="KEY_ATTRIBUTE" value="false"/>
+      <elementValue elementRef="KEY_ATTRIBUTE" value="true"/>
       <elementValue elementRef="CASE_SENSITIVE" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="stock_price_adj_close"/>
-      <elementValue elementRef="KEY_ATTRIBUTE" value="false"/>
+      <elementValue elementRef="KEY_ATTRIBUTE" value="true"/>
       <elementValue elementRef="CASE_SENSITIVE" value="false"/>
     </elementParameter>
     <elementParameter field="CHECK" name="ONLY_ONCE_EACH_DUPLICATED_KEY" value="false"/>
@@ -462,7 +462,7 @@
       <column comment="" key="false" length="4" name="stock_price_adj_close" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Float" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="448" posY="192">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_2"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
@@ -510,7 +510,7 @@
       <column comment="" key="false" length="4" name="stock_price_adj_close" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Float" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="448" posY="320">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="512" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_3"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
@@ -590,13 +590,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_9e2be4fc-90c5-4f7f-a0ce-aca623d91299"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>73OA8R3kc1Zrip3yh92TBFgNa49BOVkggJ+fd/RUE6SrGh2IMjqVfFcfM5ottbOa1Xiy6GBCjj0Y
-ly88250rVA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_3a3cbc41-19dc-48d1-aa97-742c45e0e9f3"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>5YRPRGc815y+LPeVCWg/+NCMk6XEoeOlJKFVBr2UTjHEqjfH6o2Oc2nNqMIduRmXa7C3cFGrLjeR
-CrKHyK5+QQ==</DigestValue></Reference></SignedInfo><SignatureValue>HE+QOisoZfi1+YHYPTMFU/EPNNC43iQBAJhBT3kdxbWv5Jzd1mcIIweoNuibNOSzGuM0evWkRIGD
-Ozasdgmr3FPDAvuXwXZf6xFXIfCK4tdhNB2fgDSv7/24nSj39WGdl3+0vkKHJm3/6ina4WbztY+V
-F7wfR/lndK9IPaiFFpxyTqkrpJIEXT8EN0zt+ljHPpa5J24N4j7/tkKDhUdcVNIs6dLUwJIoMqct
-9crpqNDsHJ5f89o/oN8ee7JLItqoOYib5KiIUQITAPLKv7Q/OJDxMmSmozcgEpcRjXkQNILaV5Ww
-5cQ+Z2g0enKVjNlhk8ZZw2JbC9Yd2aTfm8y24A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b4aca201-7b6d-45c8-8c9d-115604399026"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>gFU1P/dOXsAAzopHx0g9D3Sj0c+AI2XGjfIpO+EvuOrs+Lfd00W79xYtwfQnOs3t/BpHIoX5Tt2Z
+Kr/nNODQ/Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_c1b5325c-2d83-44fc-bd9e-7ac4944e65c4"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>vEu4uZitNSh7IhRX5KHVSHLcADLNC2VtV9+5rIjHVahePrLXlQWTJpYD1JUz+AK9fOz0jEXl4FgZ
+z8QXnERbUQ==</DigestValue></Reference></SignedInfo><SignatureValue>nY1qSubtdMNS+KciESm9+BodZQTqYLoJjcYHju23n/R1TfKQlqG5a09eiBkb5Ue78nU21CzTmTPu
+WBXjqfDUH3vxp9ujPtGD4852hGFXmfioVAv9i8wHlAxIYSxbOZ5cigoxE8jntpBlb2dXlWAowXI1
+Yu3adMPKIhM9XAtlzA8SRHgXk8T+IcLCq4faFthy5xBDldYPIrqXeXfHGBOBlipZzXVDDhd//DcA
+Rj+6ubEs2ZiUTupdD7LoCqnCU6hGW+rXY4WVamnxOknuiWodv5crDlp1OmIbXw2JqO5eNX85aFu8
+lCQf3Bqlvoz4mNAalBPltdaLxWiUb6VYHlvebQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -618,4 +618,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_3a3cbc41-19dc-48d1-aa97-742c45e0e9f3" Target="#_9e2be4fc-90c5-4f7f-a0ce-aca623d91299"><Timestamp>2019-11-19 05:04:34</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_c1b5325c-2d83-44fc-bd9e-7ac4944e65c4" Target="#_b4aca201-7b6d-45c8-8c9d-115604399026"><Timestamp>2019-11-19 05:05:37</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
