@@ -432,26 +432,36 @@
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="out1">
+    <metadata name="out1">
+      <column comment="" key="false" length="4" name="exchange" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="3" name="stock_symbol" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Date" usefulColumn="true"/>
       <column comment="" defaultValue="0.0" key="false" length="-1" name="stock_price_open" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Double" usefulColumn="true"/>
       <column comment="" defaultValue="0.0" key="false" length="-1" name="stock_price_high" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Double" usefulColumn="true"/>
+      <column comment="" defaultValue="0.0" key="false" length="-1" name="stock_price_low" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Double" usefulColumn="true"/>
       <column comment="" defaultValue="0.0" key="false" length="-1" name="stock_price_close" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Double" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="7" name="stock_volume" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="0.0" key="false" length="-1" name="stock_price_adj_close" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="FileName" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="stockMonth" nullable="true" originalLength="-1" pattern="&quot;MMM&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="StockYear" nullable="true" originalLength="-1" pattern="&quot;yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="stockYear" nullable="true" originalLength="-1" pattern="&quot;yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="out1" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="row2.exchange " name="exchange" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row2.stock_symbol " name="stock_symbol" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row2.date " name="date" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="row2.stock_price_open " name="stock_price_open" nullable="true" type="id_Double"/>
         <mapperTableEntries expression="row2.stock_price_high " name="stock_price_high" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="row2.stock_price_low " name="stock_price_low" nullable="true" type="id_Double"/>
         <mapperTableEntries expression="row2.stock_price_close " name="stock_price_close" nullable="true" type="id_Double"/>
-        <mapperTableEntries expression="row2.date " name="stockMonth" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="row2.date " name="StockYear" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="row2.stock_volume " name="stock_volume" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="row2.stock_price_adj_close " name="stock_price_adj_close" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="row2.FileName  " name="FileName" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.date" name="stockMonth" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="row2.date" name="stockYear" nullable="true" type="id_Date"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row2" sizeState="INTERMEDIATE">
         <mapperTableEntries name="exchange" nullable="true" type="id_String"/>
@@ -559,6 +569,26 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
   <connection connectorName="FLOW" label="out1" lineStyle="0" metaname="out1" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tAggregateRow_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="stock_price_adj_close"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="stockYear"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="stock_volume"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="FileName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="exchange"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="stock_price_low"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out1"/>
   </connection>
@@ -580,13 +610,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_9f4af026-5d70-45fd-8563-0e0300519e65"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>1PamAYpPQusGlsoMmpQ0fm+VG0Kf/siQCmLnHYwsgqQ0xE+RnMKeqeDJimxo+tOcYlWqqsOd4tik
-P1j+1pEXrQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_42319d1a-d7fe-4ac1-861e-f5c0ba3e2a49"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>g0keCnzTWa/uRuECqSE28aisaIT12PGTA9Go9xWXliHDaP7ij97Bqrdt6Hb1g1M9dKuNdGO5BZOJ
-bWDAr7MUoQ==</DigestValue></Reference></SignedInfo><SignatureValue>C+ybddRA4tn2I01ISLwmmIXtadE7uUv85Mmm/8uYpVhKgR56SAGkCt707JB/J0q7uPXwrlkmpVGi
-2F8N04YXlQNpMuSRYaNtd2DGMnujnpY7C40yMJs3gFpHCIb3rOA1UsnUM/SnTjczPLpzy178GCLj
-jCJ0QY365UxOWkjWrDcnIgFWtOO4WDFBv0xsy7FjCKmQB86IAXhD24rh/6/fYzrb1zu+/bCuDAYL
-wdwBHfTKshKaWJSgxGLKFrRCvo+xEheCre/qZNJurxlS49QvSPlIQYVoQYLjjjvwqfUiCD4b2sUE
-e+CuxmlD9KAQO+T5TJDsBIfPUWGMxfGrZcTXug==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b9775732-8b4d-4db0-8a25-19d3827663c5"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>6GLUnA4hwiOSqeYMz/yRoVAl8gr9OCUa57lif74koMEIqnWEzXCieqJ9sSQI2IJDlF41uI7ubq33
+71mFrSQ65Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_1314bdb2-d0ea-4b89-a4a6-13b57ea79f18"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>UqQVsbc2av/TABJnxdW9308yMNWJNvwdwIQCExWzmjX3XSwXDrnqeEyb0O9KfGbtmOFvkdX+kq1G
+JAlzX24Otw==</DigestValue></Reference></SignedInfo><SignatureValue>iH5FnNeJ7021RfvcEZCKrCCIcTndIuEEhdGhgg+XKJaLigg7nxKJI3qQkkMyn+cut+/aRj24hmof
+lHast1YjBoj61jQDDsL/gpfc08wO7D09+K7w+19S/RlNWkQHG0cTK+btLi0DJvHxuVu6PssKKlQE
+d7cT+YIr+A+1tIVvyJb1ZLLcNsdVjidAdYqtc5dk2UXsQAGiN+AlmTfFqnvF/nTyhs7/YRea2D8q
+Gh9krDuKVGeQ8wG/XTbo07HNOevTdQJ7WilEopakBWgeBE4SGVDIPEti3hsAo5VUn/HCRJ0dMXBv
+SsNGMGZEUFZ8UCD12N+vpiShPGml4g2x+/YOYQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -608,4 +638,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_42319d1a-d7fe-4ac1-861e-f5c0ba3e2a49" Target="#_9f4af026-5d70-45fd-8563-0e0300519e65"><Timestamp>2019-11-19 11:27:29</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_1314bdb2-d0ea-4b89-a4a6-13b57ea79f18" Target="#_b9775732-8b4d-4db0-8a25-19d3827663c5"><Timestamp>2019-11-19 11:29:38</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
