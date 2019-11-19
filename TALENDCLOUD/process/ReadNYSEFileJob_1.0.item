@@ -509,16 +509,10 @@
     <elementParameter field="CHECK" name="CHECK_ULP" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tAggregateRow_1">
-      <column comment="" key="false" length="4" name="exchange" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="3" name="stock_symbol" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Date" usefulColumn="true"/>
       <column comment="" defaultValue="0.0" key="false" length="-1" name="stock_price_open" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Double" usefulColumn="true"/>
       <column comment="" defaultValue="0.0" key="false" length="-1" name="stock_price_high" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="0.0" key="false" length="-1" name="stock_price_low" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Double" usefulColumn="true"/>
       <column comment="" defaultValue="0.0" key="false" length="-1" name="stock_price_close" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="0" key="false" length="7" name="stock_volume" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" defaultValue="0.0" key="false" length="-1" name="stock_price_adj_close" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="FileName" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="stockMonth" nullable="true" originalLength="-1" pattern="&quot;MMM&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="stockYear" nullable="true" originalLength="-1" pattern="&quot;yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
     </metadata>
@@ -554,16 +548,10 @@
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="90"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileOutputDelimited_2">
-      <column comment="" key="false" length="4" name="exchange" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="3" name="stock_symbol" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Date" usefulColumn="true"/>
       <column comment="" defaultValue="0.0" key="false" length="-1" name="stock_price_open" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Double" usefulColumn="true"/>
       <column comment="" defaultValue="0.0" key="false" length="-1" name="stock_price_high" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="0.0" key="false" length="-1" name="stock_price_low" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Double" usefulColumn="true"/>
       <column comment="" defaultValue="0.0" key="false" length="-1" name="stock_price_close" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="0" key="false" length="7" name="stock_volume" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" defaultValue="0.0" key="false" length="-1" name="stock_price_adj_close" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="FileName" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="stockMonth" nullable="true" originalLength="-1" pattern="&quot;MMM&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="stockYear" nullable="true" originalLength="-1" pattern="&quot;yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
     </metadata>
@@ -624,13 +612,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e5f2af13-1e12-4959-8d7c-ee4996925fab"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>8FXqTV/1+LKIKYRKPUtJjj/UEkvm/7viY/yxRZpdGz4Iw1ovuVtPUFQvlHjGy6bMM7MFz27cMTa4
-VCORwDscwA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_16070229-662f-4cd0-84e1-85f28ebfd31d"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>4ok+CXHQM9SCUgucdUGTo45O47pDnaofO61PCX4Xo/AovaqTzY7LByU6sRWpNJCQnNik2cdYs/Ue
-aYwBGD8Gvw==</DigestValue></Reference></SignedInfo><SignatureValue>ao/+a6sX90qlIF1kra5dRuPESACc1giKTPGhO2MeoplBUptQ9f8uVJPq74cZHUx+ZE3WT4ErSx3V
-XtjmRqO87znu+7rfWPdbr4Sg4Y/MK6ifRUyHaKzm4Y3SW1Qz+Iya3Muzl6hAAy1NvUPwJxJaPMGt
-37/dUFrZnZRU4JLWOqalXPzCma1oS/hrkIgdwwP1O6uiFL14c3EYRGzO8OmwzEL1Een21jXlsMU8
-NIYcanIVyj2RuEVXcMPq6SX1dA197ehsF2is08VulGM5QXNN28IKVMVSVZf2+bediF5OCua+CnaV
-TfxudSaNRKVPQtO3G+8W8J3jZ0kgXD7i2XLJ0Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_63f9c8eb-8b55-4890-be7e-3e67a87236ab"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ieRn8JXXwr3m2QyTc07skB+ICtAC5FHWof76Nz07RxTGgqE8Kr35cmH54I6Ic24FZZYaoY+LR2FG
+F8Qqy8umsg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_31398e17-918c-4f74-9e87-3eed280452ea"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>KbL3Afz0Fug9M0QUAiFsQJ9Ya1Jfku5flfZoC/sEQ/tVPoG5CCi1kNGTtyIOC2M9Exf6axVJ32k4
+uEN1aXVWmg==</DigestValue></Reference></SignedInfo><SignatureValue>fHHJF7XCBOb4ltzu/avJBjmWM6M+F8uKgsptPYerBqAFU4x5XnKfmkFMKlBv0mAwXeXbgA3/dXPp
+6f3JV838P2EK66elW8/g0amxL3eXQbUj5oAkJ5RqSAAsJf83JFC2zg9jo73No4jJBMKBV7gA0iDz
+etpbdI9/vD2/FvXFCz7hMD17w9evdEWNcquoFY8KjNF+usqBdN+bCAjlG8JYb0FWYRIJTpNyXrdi
+2ZlI+N+HtD6ILPOkbdE94ccH0uL3hhZBqXO7nHoEI8LbDqdy7fraw7+H9YJ/yb7cw7McRzs3ptiX
+OIZYheTrUTJGKqepCDX+VCVf51ysXXZiAMdsfw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -652,4 +640,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_16070229-662f-4cd0-84e1-85f28ebfd31d" Target="#_e5f2af13-1e12-4959-8d7c-ee4996925fab"><Timestamp>2019-11-19 11:35:16</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_31398e17-918c-4f74-9e87-3eed280452ea" Target="#_63f9c8eb-8b55-4890-be7e-3e67a87236ab"><Timestamp>2019-11-19 11:37:47</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
