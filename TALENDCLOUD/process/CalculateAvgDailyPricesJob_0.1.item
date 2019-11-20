@@ -111,7 +111,7 @@
     <routinesParameter id="_rZ0nUB-1EemtwtEDadxD9Q" name="TalendStringUtil"/>
     <routinesParameter id="_rZRNsB-1EemtwtEDadxD9Q" name="TalendString"/>
   </parameters>
-  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="384" posY="128">
+  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputDelimited_1"/>
     <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
     <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Talend-Studio-20190620_1446-V7.2.1/Talend-Studio-20190620_1446-V7.2.1/workspace/NYSEDailyMerge.txt&quot;"/>
@@ -214,7 +214,29 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="576" posY="128">
+  <node componentName="tFlowMeter" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="512" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFlowMeter_4"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" show="false" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" show="false" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="TEXT" name="LABEL" value="TotalMergeRecords"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFlowMeter_4">
+      <column comment="" key="false" length="4" name="exchange" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="3" name="stock_symbol" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="date" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="0.0" key="false" length="-1" name="stock_price_open" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Double" usefulColumn="true"/>
+      <column comment="" defaultValue="0.0" key="false" length="-1" name="stock_price_high" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Double" usefulColumn="true"/>
+      <column comment="" defaultValue="0.0" key="false" length="-1" name="stock_price_low" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Double" usefulColumn="true"/>
+      <column comment="" defaultValue="0.0" key="false" length="-1" name="stock_price_close" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Double" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="7" name="stock_volume" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="0.0" key="false" length="-1" name="stock_price_adj_close" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="FileName" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="672" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -246,18 +268,18 @@
       <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="out1" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="row1.exchange " name="exchange" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.stock_symbol " name="stock_symbol" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.date " name="date" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="row1.stock_price_open " name="stock_price_open" nullable="true" type="id_Double"/>
-        <mapperTableEntries expression="row1.stock_price_high " name="stock_price_high" nullable="true" type="id_Double"/>
-        <mapperTableEntries expression="row1.stock_price_low " name="stock_price_low" nullable="true" type="id_Double"/>
-        <mapperTableEntries expression="row1.stock_price_close " name="stock_price_close" nullable="true" type="id_Double"/>
-        <mapperTableEntries expression="row1.stock_volume " name="stock_volume" nullable="true" type="id_Integer"/>
-        <mapperTableEntries expression="row1.stock_price_adj_close " name="stock_price_adj_close" nullable="true" type="id_Double"/>
-        <mapperTableEntries expression="row1.FileName " name="FileName" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.date " name="stockMonth" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="row1.date " name="stockYear" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="TotelMergeRecords.exchange " name="exchange" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="TotelMergeRecords.stock_symbol " name="stock_symbol" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="TotelMergeRecords.date " name="date" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="TotelMergeRecords.stock_price_open " name="stock_price_open" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="TotelMergeRecords.stock_price_high " name="stock_price_high" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="TotelMergeRecords.stock_price_low " name="stock_price_low" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="TotelMergeRecords.stock_price_close " name="stock_price_close" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="TotelMergeRecords.stock_volume " name="stock_volume" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="TotelMergeRecords.stock_price_adj_close " name="stock_price_adj_close" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="TotelMergeRecords.FileName " name="FileName" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="TotelMergeRecords.date " name="stockMonth" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="TotelMergeRecords.date " name="stockYear" nullable="true" type="id_Date"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row1" sizeState="INTERMEDIATE">
         <mapperTableEntries name="exchange" nullable="true" type="id_String"/>
@@ -273,7 +295,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="768" posY="128">
+  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="864" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tAggregateRow_1"/>
     <elementParameter field="TABLE" name="GROUPBYS">
       <elementValue elementRef="OUTPUT_COLUMN" value="stock_symbol"/>
@@ -311,7 +333,25 @@
       <column comment="" key="false" length="-1" name="stockYear" nullable="true" originalLength="-1" pattern="&quot;yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1024" posY="128">
+  <node componentName="tFlowMeter" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1024" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFlowMeter_6"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" show="false" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" show="false" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="TEXT" name="LABEL" value="FinalSummaryCount"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFlowMeter_6">
+      <column comment="" key="false" length="3" name="stock_symbol" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="0.0" key="false" length="-1" name="stock_price_open" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Double" usefulColumn="true"/>
+      <column comment="" defaultValue="0.0" key="false" length="-1" name="stock_price_high" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Double" usefulColumn="true"/>
+      <column comment="" defaultValue="0.0" key="false" length="-1" name="stock_price_close" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="stockMonth" nullable="true" originalLength="-1" pattern="&quot;MMM&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="stockYear" nullable="true" originalLength="-1" pattern="&quot;yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1216" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputDelimited_1"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
     <elementParameter field="TEXT" name="STREAMNAME" show="false" value="outputStream"/>
@@ -350,7 +390,32 @@
       <column comment="" key="false" length="-1" name="stockYear" nullable="true" originalLength="-1" pattern="&quot;yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
     </metadata>
   </node>
-  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tMap_1">
+  <node componentName="tFlowMeterCatcher" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="896" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFlowMeterCatcher_1"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFlowMeterCatcher_1">
+      <column defaultValue="" key="false" length="0" name="moment" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="pid" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="father_pid" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="root_pid" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="8" name="system_pid" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Long" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="50" name="project" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="job" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="job_repository_id" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="job_version" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="50" name="context" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="origin" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="label" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="3" name="count" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="3" name="reference" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="thresholds" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <connection connectorName="FLOW" label="TotelMergeRecords" lineStyle="0" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tFlowMeter_4">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="TotelMergeRecords"/>
+  </connection>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFlowMeter_4" offsetLabelX="0" offsetLabelY="0" source="tFlowMeter_4" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
@@ -366,22 +431,33 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out1"/>
   </connection>
-  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tAggregateRow_1" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_1" target="tFileOutputDelimited_1">
+  <connection connectorName="FLOW" label="FinalSummaryCount" lineStyle="0" metaname="tAggregateRow_1" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_1" target="tFlowMeter_6">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="FinalSummaryCount"/>
+  </connection>
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tFlowMeter_6" offsetLabelX="0" offsetLabelY="0" source="tFlowMeter_6" target="tFileOutputDelimited_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
   <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputDelimited_1"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="Calculate AVG Open, High &amp; Close Price"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFlowMeterCatcher_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_a3fce6a4-a2d0-43a2-9840-c67e07eb4cae"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>LGu90LTo+Zx7lQ5dgo5nhWNGMQ3zHDD3cyhpEi26QoDhktQg0NqsF2FSjhz0y0ja+ciXOxohX4F3
-5I00gOM+DA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_58035a10-7d1f-468b-bc19-3b49c992d4f6"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>q2FrMqSxPy87xZ1xF9qf+SGlqiINDwT5PjHoycb3D4bwcPJENjIaBzUcYg2En+bVv6ANW9jg8Cfe
-Mcoh2XsvzA==</DigestValue></Reference></SignedInfo><SignatureValue>N3mZaPD26zF40fLcjyvkQlioMATBqqGygPkMCQ876g8ksAAv4bOe5q6J/ezMZExkj43Fc8sSgggP
-g03XzXbqL/RJUyhLkHqDTQrfulSu0BQzfVYXDBulMSzvl5V8a1fSAt0Qn1hDVLPO5DidT6efQ/s5
-rPpsQWK4eoTeqTaNY4+pvglZ4MOF7Kpf7mVBrV2VJqWZu00y77AJ4LL6W8FWCXMvdeBxOL4CVEhx
-4yGVwTQWVfdrrTDcw6tEqhDy/Vhx/5I+r9i7f8tDilBMITwbru1S8N5MysbtFMUmfzw0bJtnNN6E
-Rr4X7ZyeNkxVGD+gf0diN2kfgAVlp38N6D+ySA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_12da14b1-b840-4819-b785-7fc1db632eb4"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>CRV6O0PnGlz4H6PcM9Y9elg3YzTc2Kjlzp2VlhOUf5MeiZiGUYhydpbzs+7ASpocFBQRkYLK9jF3
+MWkkS6L6Kg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_95bf8f5d-9128-4619-b0e9-935517dccc94"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>cGI4zjcsWXupgcTZG6YBiDaMloUBs5jC9aFSIIUw83WM/4rNkjP6Wg0Az7V/xHjokfW90NZM9i+O
+qzgZ0h65aQ==</DigestValue></Reference></SignedInfo><SignatureValue>aIuLhuMtlakCvOzFvTqiLaBFnp/6e+1Cz864zByVgMz2G3HAoBrQh3UdPCxUWkw3vN5h+KRGmx4z
+13pof7fy4oX/JPiga4S4b/P3hrkG73WZNtO4UmGTYQ86PVMOToo5w4dB5tzsMy09InRdPPXN2QTF
+CBqk8wLu4Px2wpz2ciDJXBUAy5cSBeRjHz/e2JXGU2A3999pmr0G7JLa43TgYMbYC61wHFpCtO4r
+rKZ/mQiKJPCs4RbYZaawvY6Vnk1CjykPvKrgkJVSTyeDN0OhIqMKTagGw80dxxf2uo4gULwYKGIk
+VQnXI10KwsI+xw9G9KKFlluWKuecd579mGW0YQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -403,4 +479,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_58035a10-7d1f-468b-bc19-3b49c992d4f6" Target="#_a3fce6a4-a2d0-43a2-9840-c67e07eb4cae"><Timestamp>2019-11-20 06:19:55</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_95bf8f5d-9128-4619-b0e9-935517dccc94" Target="#_12da14b1-b840-4819-b785-7fc1db632eb4"><Timestamp>2019-11-20 06:25:56</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
