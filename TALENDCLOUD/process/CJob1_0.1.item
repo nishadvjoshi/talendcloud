@@ -125,30 +125,30 @@
     <routinesParameter id="_rUmJEB-1EemtwtEDadxD9Q" name="DataQualityDependencies"/>
     <routinesParameter id="_UyyP0BD2Eeq0AKClKpfsbA" name="IBMRoutine"/>
   </parameters>
-  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="160">
+  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" show="false" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_zXZhUBD5Eeq0AKClKpfsbA"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_8"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;localhost&quot;"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;world&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="MYSQL_8"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;localhost&quot;"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;3306&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;world&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MYSQL"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;root&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="FXYS/SRxHYKIph/ImzK7aQ=="/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;root&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="FXYS/SRxHYKIph/ImzK7aQ=="/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;city&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
     <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#10;  `city`.`ID`, &#10;  `city`.`Name`, &#10;  `city`.`CountryCode`, &#10;  `city`.`District`, &#10;  `city`.`Population`&#10;FROM `city`&quot;"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="mysql_id"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;noDatetimeStringSync=true&quot;"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="ENABLE_STREAM" value="false"/>
@@ -186,7 +186,7 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="416" posY="160">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="416" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
@@ -233,7 +233,7 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
-  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="288">
+  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputDelimited_1"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="__5PlsBp0Eeapzb1It14fig - metadata"/>
@@ -311,30 +311,30 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="448" posY="288">
+  <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="448" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_1"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" show="false" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_zXZhUBD5Eeq0AKClKpfsbA"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_8"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="MYSQL_8"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MYSQL"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;localhost&quot;"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;world&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;root&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="FXYS/SRxHYKIph/ImzK7aQ=="/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;localhost&quot;"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;3306&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;world&quot;"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;root&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="FXYS/SRxHYKIph/ImzK7aQ=="/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;citytab_bak&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
     <elementParameter field="TECHNICAL" name="SCHEMA_FLOW:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="SCHEMA_FLOW:REPOSITORY_SCHEMA_TYPE" show="false" value="_zXZhUBD5Eeq0AKClKpfsbA - citytab_bak"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="mysql_id"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;noDatetimeStringSync=true&quot;"/>
     <elementParameter field="CHECK" name="EXTENDINSERT" value="true"/>
     <elementParameter field="LABEL" name="NOTE" value="(Not compatible with reject links)"/>
     <elementParameter field="TEXT" name="NB_ROWS_PER_INSERT" value="100"/>
@@ -342,7 +342,7 @@
     <elementParameter field="TEXT" name="BATCH_SIZE" show="false" value="10000"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" show="false" value="10000"/>
     <elementParameter field="TABLE" name="ADD_COLS"/>
     <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
     <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
@@ -419,6 +419,29 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
+  <node componentName="tMysqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBConnection_1"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_zXZhUBD5Eeq0AKClKpfsbA"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_8"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;localhost&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MYSQL"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;world&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;root&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="FXYS/SRxHYKIph/ImzK7aQ=="/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="SHARED_CONNECTION_NAME" show="false" value=""/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="AUTO_COMMIT" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="cnWorldDB"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tLogRow_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
@@ -430,6 +453,9 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBConnection_1" offsetLabelX="0" offsetLabelY="0" source="tDBConnection_1" target="tDBInput_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk2"/>
+  </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
@@ -440,13 +466,18 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_91eed03a-cc2b-42a1-b52a-33da65e2376d"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>VgAkhLENnOIvzpwOlem6ZWYL10349PBBRQ309CDVAXA4PuMqfGGKjxTLeKywkjRx/3+7T2DqU8gh
-50BPChouLQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_7ca3e3c7-057f-4f4d-aa00-8825f3582c94"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Ag5RpINxKV7/3vVaUEorIrC1ofaMKS1W7geBAgetW70TIqK/6PTGswLNVgDOQGaGQ6qNW8MjQUHX
-rMZKYAC+Fg==</DigestValue></Reference></SignedInfo><SignatureValue>LuXrsi3X0c1X7yzRra94cneEMZz37gJurrf145XA0T/wpyDSkT9OP2kJ1PDdUBSikKU+65qjFpHi
-1sWSfMdQmd1Cl07oTXBYQgCDCObycGbFtRtFmUsYiRJl9vikKdBFGN49I3yo5q1m6kqgygdNSUWY
-TT3U5uiOk6M1jwtHT5vy7zausm5W1EqKyNw0G2ZL2UcjUn6PXDvZkJ34BiG4FYK5753jATv/vGSD
-4ElKct8MMyPHR+sMR2cbtWjDoP862g9Q6NQqlzgEZhMDTq7w6VtQI7RCruUtjltsE55o0aurzwnU
-+Q2PdwbusgUFROGdv32WVIDA4bkR01+9X66pOA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBConnection_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_a929ef1f-2d9d-4447-a64c-d31db30558e8"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>aZSJqpUmyd7XtIYb31fD12QXR5UhRXno6SWPLM5YwWmmUphHd4Kwz9iL9XQZvjQt3/gsGPcB2Inf
+t5R6JCmZTA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_fb762c49-0188-4b44-8f46-b3c87a1397ff"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>cMABFRPB8/kFrltB45xqp+gyG73OV3Epx4DtifLFw6ZULdyxk3AdjvQekiYtY4L0k7bityXldItJ
++OEI/cz7yw==</DigestValue></Reference></SignedInfo><SignatureValue>m02vLGhsaWP/lnsr/aMCCJfV7eDNPT28vp+ZODn+5heGNycOgwfUY2cWObWlu4KfBWhW8yRuNac9
+jwdnQM/iZYlIaUvGQnKc1K8GytlrN3UjPPCr3ibiLnbmIO7z4Uynjw0CbAHPJuFPL4p8tANG7LfM
+HHfevMvS1B9k6he8aLcnlidImLSgfQ0nmEU3SavgBbnW4dPToBG25RCWqv3e4Y8WpM8pcFQYiyPi
+PyCkNnWC0z//Mv1EwGd87e4D9vLH4wUHBda3K30+HdEk8/SmQxK+4qAAlHUr10nvrgQUWdchhXud
+qdLTzCL2UbVNbvyltSpKRGz8OTj1rfhEg+fzGA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -468,4 +499,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_7ca3e3c7-057f-4f4d-aa00-8825f3582c94" Target="#_91eed03a-cc2b-42a1-b52a-33da65e2376d"><Timestamp>2019-11-27 10:01:59</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_fb762c49-0188-4b44-8f46-b3c87a1397ff" Target="#_a929ef1f-2d9d-4447-a64c-d31db30558e8"><Timestamp>2019-11-27 10:04:08</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
