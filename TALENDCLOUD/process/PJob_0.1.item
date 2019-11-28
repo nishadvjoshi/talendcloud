@@ -122,17 +122,13 @@
     <routinesParameter id="_rQRpwB-1EemtwtEDadxD9Q" name="DataMasking"/>
     <routinesParameter id="_rUmJEB-1EemtwtEDadxD9Q" name="DataQualityDependencies"/>
   </parameters>
-  <node componentName="tLoop" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="128">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLoop_1"/>
-    <elementParameter field="RADIO" name="FORLOOP" value="true"/>
-    <elementParameter field="RADIO" name="WHILELOOP" value="false"/>
-    <elementParameter field="TEXT" name="FROM" value="1"/>
-    <elementParameter field="TEXT" name="TO" value="10"/>
-    <elementParameter field="TEXT" name="STEP" value="2"/>
-    <elementParameter field="CHECK" name="INCREASE" value="true"/>
-    <elementParameter field="TEXT" name="DECLARATION" show="false" value="int i=0"/>
-    <elementParameter field="TEXT" name="CONDITION" show="false" value="i&lt;10"/>
-    <elementParameter field="TEXT" name="ITERATION" show="false" value="i++"/>
+  <node componentName="tForeach" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tForeach_1"/>
+    <elementParameter field="TABLE" name="VALUES">
+      <elementValue elementRef="VALUE" value="&quot;city&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;country&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;citynew&quot;"/>
+    </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
   <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="128">
@@ -151,7 +147,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;Select * from &quot; + context.TableName"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;Select * from &quot; + ((String)globalMap.get(&quot;tForeach_1_CURRENT_VALUE&quot;))"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -182,7 +178,7 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;neworld&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;root&quot;"/>
     <elementParameter field="PASSWORD" name="PASS" value="FXYS/SRxHYKIph/ImzK7aQ=="/>
-    <elementParameter field="DBTABLE" name="TABLE" value=" context.TableName + &quot;_BAK&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value=" ((String)globalMap.get(&quot;tForeach_1_CURRENT_VALUE&quot;))+ &quot;_BAK&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="DROP_IF_EXISTS_AND_CREATE"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
@@ -225,7 +221,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tLoop_1" offsetLabelX="0" offsetLabelY="0" source="tLoop_1" target="tDBInput_2">
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tForeach_1" offsetLabelX="0" offsetLabelY="0" source="tForeach_1" target="tDBInput_2">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" show="false" value="2"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="iterate1"/>
@@ -235,17 +231,17 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLoop_1"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tForeach_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f1982788-f384-4aab-b3ea-b53a738a473f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>gIygxOSxvShBHFrLZY61GB5CCnoPsbpagQ3tmnJsiIOMUjBNvHQMCABumO9zROF2cVcnHNyPf/1D
-nRcEia9c3A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ca58b831-d45b-48ed-b137-d97c418e72be"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>IyEez6NNYaKnCjhdI6RynJMKBwMyeD+K2FBpL1CFYeMdsY5gKRXKC3fijNGo8zKC9qCyNSuohlE2
-fVLU1Ez78Q==</DigestValue></Reference></SignedInfo><SignatureValue>aUNIJsmy6CAUmcsP3IWatYMkuwPgf5u6MVXwLFN/l+gQACBZ7U3p+3QFtuNvkWR+w90dXvxpr7xu
-vFILNW3kdjNKGtNBshQPZV0N6Q8fhgt+ThDDRnv2WN9wfevUjvy5vTAAhCxl210/sb/CuA8EqQ8x
-RSuCpzMbUs8oME0636PO5EO1DhygSbNpW+A07EOl1o0Wtd1e3hZ/d0jZij38GkORIoTSyH6UJZtC
-3QAQqjQMQS7x4WXj4nVqW4Oj8x/4EJf5WarvHnOMEtIP0lGAT6yKo/jGb0N0JyAHMeWG6KmM7Q/p
-P1u/aJyprpl69OUkUMXQGO3YVxrolid4j0qZOQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f5159b2c-176b-4613-ad94-d85bbddfcba1"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>zcYqlaGbx/8hSkU47JkHWZr/y6RSN9/uDugDY44yXXpT+k57XdyNpvPfMvbYATI8wgTXKyDBp7th
+ihTQ2d6MGg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5256950b-153c-4314-8c3f-db53412dc5f1"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>LeQ4wvZAkDqYX1u3un1CWh0ieAqINUoKkkCiDRQ3gf48piPj+IKpYJg7VoZ2YNUgYz/Sz/YlvhhY
+ZWbTwXDjGg==</DigestValue></Reference></SignedInfo><SignatureValue>pdRUefdrHh5VJD97vw8/4FP2JxiDhk7NWBWy+wxkhm1Dw1WGxpvQ1ba2bXthdThHCOVGm8RA69qy
+GlpW4qX0kAlxLdH0rx/5Hd3seM0VEUnh9dEhWwxcKwbuf9RVMscjfkCpc/DhkC6OiexhMZ4lO3Ru
+nPuWnKZ52s6jA8ugLRPiY7yS7rTyD+0U3JJFhEqcNWpHqNf8c9gtfrfIAXCRuIWgf8OsAC0pBY+r
+m6PRflcdURHNGuqOcQ0Z/CwpChQtbYTVqsweCtkYRofuHHZt/nLVXc3a/DakSDjMAuhPvDpKdD8c
+++wLlh/MdaB3v3pX0DeMfK36FImf81Am7wyHZw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -267,4 +263,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ca58b831-d45b-48ed-b137-d97c418e72be" Target="#_f1982788-f384-4aab-b3ea-b53a738a473f"><Timestamp>2019-11-28 06:40:47</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5256950b-153c-4314-8c3f-db53412dc5f1" Target="#_f5159b2c-176b-4613-ad94-d85bbddfcba1"><Timestamp>2019-11-28 06:43:40</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
