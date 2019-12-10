@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root t='150' id='1' V150='13' creationTimestamp='0x16eedfe4ea4' V1='4' name='CUST-RECORD-REF' incarnation='24'>
+  <rootElem t='167' id='2' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='CUST-RECORD-REF'>
+    <structNode t='150' idref='1'/>
+    <child t='167' id='3' V167='21' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='3' maxSize='3' dataType='22' dataFormat='200' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='CUST-ID' description='9(5)'>
+      <structNode t='150' idref='1'/>
+    </child>
+    <child t='167' id='4' V167='21' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='CUST-NAME'>
+      <structNode t='150' idref='1'/>
+      <child t='167' id='5' V167='21' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='15' maxSize='15' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='CUST-LAST-NAME' description='X(15)'>
+        <structNode t='150' idref='1'/>
+      </child>
+      <child t='167' id='6' V167='21' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='10' maxSize='10' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='CUST-FIRST-NAME' description='X(10)'>
+        <structNode t='150' idref='1'/>
+      </child>
+    </child>
+    <child t='167' id='7' V167='21' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='20' maxSize='20' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='STREET-ADDRESS' description='X(20)'>
+      <structNode t='150' idref='1'/>
+    </child>
+    <child t='167' id='8' V167='21' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='20' maxSize='20' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='CITY' description='X(20)'>
+      <structNode t='150' idref='1'/>
+    </child>
+    <child t='167' id='9' V167='21' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='2' maxSize='2' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='US-STATE' description='X(02)'>
+      <structNode t='150' idref='1'/>
+    </child>
+    <child t='167' id='10' V167='21' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='20' maxSize='20' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='OTHER-STATE-PROVINCE' description='X(20)'>
+      <structNode t='150' idref='1'/>
+    </child>
+    <child t='167' id='11' V167='21' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='3' maxSize='3' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='COUNTRY-CODE' description='X(3)'>
+      <structNode t='150' idref='1'/>
+    </child>
+    <child t='167' id='12' V167='21' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='10' maxSize='10' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='POSTAL-CODE' description='X(10)'>
+      <structNode t='150' idref='1'/>
+    </child>
+    <child t='167' id='13' V167='21' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='40' maxSize='40' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='NOTES' description='X(40)'>
+      <structNode t='150' idref='1'/>
+    </child>
+  </rootElem>
+  <defaultRep t='180' id='14' V180='2' V170='10' V703='2' byteOrder='BIG_ENDIAN' largeOccursErrorThreshold='1000' V690='1' encoding='IBM037' trimInput='true' ignoreExcluded='true' fixInvalidCharacters='true' V1='4' name='Cobol'>
+  </defaultRep>
+  <child t='162' id='15' V1='4' name='Representations'>
+    <child t='180' idref='14'/>
+    <child t='173' id='16' V170='10' V693='1' delimiter=',' physicalEncoding='1' numberEncoding='1' positional='true' padOccurs='true' V690='1' padOutput='true' encoding='IBM037' trimInput='true' ignoreExcluded='true' fixInvalidCharacters='true' V1='4' name='Flat'>
+    </child>
+    <child t='172' id='17' V172='6' autoFixNamespaceMismatch='true' V170='10' V692='1' V690='1' ignoreExcluded='true' fixInvalidCharacters='true' V1='4' name='XML'>
+    </child>
+    <child t='179' id='18' V179='1' V170='10' V699='1' V690='1' ignoreExcluded='true' fixInvalidCharacters='true' V1='4' name='AVRO'>
+    </child>
+  </child>
+  <child t='165' id='19' V1='4' name='Document Bindings'>
+  </child>
+</root>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root t='150' id='1' V150='13' creationTimestamp='0x16eedfe4e98' V1='4' name='CUST-RECORD' incarnation='16'>
+  <rootElem t='167' id='2' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='CUST-RECORD'>
+    <structNode t='150' idref='1'/>
+    <child t='167' id='3' V167='21' inheritsFromIncarnation='23' inheritsFromTimestamp='0x16eedfe4ea4' inheritsInThisStruct='true' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='Structures/sample-customer-copybook/Reference/CUST-RECORD-REF.xml' V281='13' V1='4' name='Record' checksumValid='true' checksum='L92A/rZCGoDqREda0vhqy0RrHbI='>
+      <structNode t='150' idref='1'/>
+      <savedDerivedCopy t='167' id='4' V167='21' needInheritInit='true' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='Structures/sample-customer-copybook/Reference/CUST-RECORD-REF.xml' V281='13' V1='4' name='Record'>
+      </savedDerivedCopy>
+      <savedOrigCopyAtInheritsFrom t='167' id='5' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='CUST-RECORD-REF'>
+      </savedOrigCopyAtInheritsFrom>
+    </child>
+  </rootElem>
+  <defaultRep t='180' id='6' V180='2' V170='10' V703='2' byteOrder='BIG_ENDIAN' largeOccursErrorThreshold='1000' V690='1' encoding='IBM037' trimInput='true' ignoreExcluded='true' fixInvalidCharacters='true' V1='4' name='Cobol'>
+  </defaultRep>
+  <rowElem t='167' idref='3'/>
+  <child t='162' id='7' V1='4' name='Representations'>
+    <child t='180' idref='6'/>
+    <child t='173' id='8' V170='10' V693='1' delimiter=',' physicalEncoding='1' numberEncoding='1' positional='true' padOccurs='true' V690='1' padOutput='true' encoding='IBM037' trimInput='true' ignoreExcluded='true' fixInvalidCharacters='true' V1='4' name='Flat'>
+    </child>
+    <child t='172' id='9' V172='6' autoFixNamespaceMismatch='true' V170='10' V692='1' V690='1' ignoreExcluded='true' fixInvalidCharacters='true' V1='4' name='XML'>
+    </child>
+    <child t='179' id='10' V179='1' V170='10' V699='1' V690='1' ignoreExcluded='true' fixInvalidCharacters='true' V1='4' name='AVRO'>
+    </child>
+  </child>
+  <child t='165' id='11' V1='4' name='Document Bindings'>
+  </child>
+</root>
