@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root t='150' id='1' V150='13' creationTimestamp='0x16eef5727ab' V1='4' name='CUST-RECORD' incarnation='25'>
+<root t='150' id='1' V150='13' creationTimestamp='0x16eef5727ab' V1='4' name='CUST-RECORD' incarnation='41'>
   <rootElem t='167' id='2' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='CUST-RECORD'>
     <structNode t='150' idref='1'/>
-    <child t='167' id='3' V167='21' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='Record' checksumValid='true' checksum='r7+WhV37oKtt25srQ32dC09T/P0='>
+    <child t='167' id='3' V167='21' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='Record' checksumValid='true' checksum='bDq9x4NUPn+gZvZyKxLSjXaXvww='>
       <structNode t='150' idref='1'/>
-      <child t='167' id='4' V167='21' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='3' maxSize='3' dataType='22' dataFormat='200' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='CUST-ID' description='9(5)'>
+      <child t='167' id='4' V167='21' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='3' maxSize='3' dataType='22' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='CUST-ID' description='9(5)'>
         <structNode t='150' idref='1'/>
       </child>
       <child t='167' id='5' V167='21' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='CUST-NAME'>
@@ -44,7 +44,7 @@
   <rowElem t='167' idref='3'/>
   <child t='162' id='16' V1='4' name='Representations'>
     <child t='180' idref='15'/>
-    <child t='173' id='17' V170='10' V693='1' delimiter=',' physicalEncoding='1' numberEncoding='1' positional='true' padOccurs='true' V690='1' padOutput='true' encoding='IBM037' trimInput='true' ignoreExcluded='true' fixInvalidCharacters='true' V1='4' name='Flat'>
+    <child t='173' id='17' V170='10' V693='1' delimiter=',' physicalEncoding='1' numberEncoding='1' positional='true' padOccurs='true' structName='Structures/sample-customer-copybook/CUST-RECORD.xml' V690='1' padOutput='true' encoding='IBM037' trimInput='true' ignoreExcluded='true' fixInvalidCharacters='true' V1='4' name='Flat'>
     </child>
     <child t='172' id='18' V172='6' autoFixNamespaceMismatch='true' V170='10' V692='1' V690='1' ignoreExcluded='true' fixInvalidCharacters='true' V1='4' name='XML'>
     </child>
@@ -52,5 +52,8 @@
     </child>
   </child>
   <child t='165' id='20' V1='4' name='Document Bindings'>
+    <child t='166' id='21' V166='5' docType='1' docReposPath='/TALENDCLOUD/Sample Data/sample-customer-copybook/CUST-RECORD/sample-customer-data.ebcdic' V1='4' name='/CUST-RECORD'>
+      <elemNode t='167' idref='2'/>
+    </child>
   </child>
 </root>
