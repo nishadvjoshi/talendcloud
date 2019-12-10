@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root t='150' id='1' V150='13' creationTimestamp='0x16eee058211' V1='4' name='sample-customer-text' incarnation='24'>
+  <rootElem t='167' id='2' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='csv'>
+    <structNode t='150' idref='1'/>
+    <child t='167' id='3' V167='21' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='row' checksumValid='true' checksum='ptlUj9azK9acHu3XKMo7h7+rC6M='>
+      <structNode t='150' idref='1'/>
+      <child t='167' id='4' V167='21' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='Builtin:Structures/Representation Handlers/OptionalQuotes.xml' visible='true' inheritsFrom='' V281='13' V1='4' name='custId'>
+        <structNode t='150' idref='1'/>
+        <delimTerminator>|</delimTerminator>
+      </child>
+      <child t='167' id='5' V167='21' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='Builtin:Structures/Representation Handlers/OptionalQuotes.xml' visible='true' inheritsFrom='' V281='13' V1='4' name='custFirstName'>
+        <structNode t='150' idref='1'/>
+        <delimTerminator>|</delimTerminator>
+      </child>
+      <child t='167' id='6' V167='21' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='Builtin:Structures/Representation Handlers/OptionalQuotes.xml' visible='true' inheritsFrom='' V281='13' V1='4' name='custLastName'>
+        <structNode t='150' idref='1'/>
+        <delimTerminator>|</delimTerminator>
+      </child>
+      <child t='167' id='7' V167='21' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='Builtin:Structures/Representation Handlers/OptionalQuotes.xml' visible='true' inheritsFrom='' V281='13' V1='4' name='streetAddress'>
+        <structNode t='150' idref='1'/>
+        <delimTerminator>|</delimTerminator>
+      </child>
+      <child t='167' id='8' V167='21' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='Builtin:Structures/Representation Handlers/OptionalQuotes.xml' visible='true' inheritsFrom='' V281='13' V1='4' name='city'>
+        <structNode t='150' idref='1'/>
+        <delimTerminator>|</delimTerminator>
+      </child>
+      <child t='167' id='9' V167='21' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='Builtin:Structures/Representation Handlers/OptionalQuotes.xml' visible='true' inheritsFrom='' V281='13' V1='4' name='usState'>
+        <structNode t='150' idref='1'/>
+        <delimTerminator>|</delimTerminator>
+      </child>
+      <child t='167' id='10' V167='21' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='Builtin:Structures/Representation Handlers/OptionalQuotes.xml' visible='true' inheritsFrom='' V281='13' V1='4' name='otherStateProvince'>
+        <structNode t='150' idref='1'/>
+        <delimTerminator>|</delimTerminator>
+      </child>
+      <child t='167' id='11' V167='21' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='Builtin:Structures/Representation Handlers/OptionalQuotes.xml' visible='true' inheritsFrom='' V281='13' V1='4' name='countryCode'>
+        <structNode t='150' idref='1'/>
+        <delimTerminator>|</delimTerminator>
+      </child>
+      <child t='167' id='12' V167='21' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='Builtin:Structures/Representation Handlers/OptionalQuotes.xml' visible='true' inheritsFrom='' V281='13' V1='4' name='postalCode'>
+        <structNode t='150' idref='1'/>
+        <delimTerminator>|</delimTerminator>
+      </child>
+      <child t='167' id='13' V167='21' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='Builtin:Structures/Representation Handlers/OptionalQuotes.xml' visible='true' inheritsFrom='' V281='13' V1='4' name='notes'>
+        <structNode t='150' idref='1'/>
+      </child>
+      <child t='167' id='14' V167='21' V283='2' occurMaxTimes='1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='__osdtTerminator'>
+        <structNode t='150' idref='1'/>
+        <delimInitiator>\n</delimInitiator>
+      </child>
+    </child>
+  </rootElem>
+  <defaultRep t='183' id='15' V183='1' V170='10' V706='1' skipHeaderReading='true' defaultHeader='Col' delimiter='|' quoteCharacter='"' quoteMode='4' newLineType='2' newLine='&#xD;&#xA;' V690='1' encoding='UTF-8' importDate='Tue Dec 10 09:46:27 IST 2019' importFile='file:/C:/Users/Admin/Downloads/sample-customer-text.txt' ignoreExcluded='true' fixInvalidCharacters='true' V1='4' name='CSV'>
+  </defaultRep>
+  <rowElem t='167' idref='3'/>
+  <child t='162' id='16' V1='4' name='Representations'>
+    <child t='183' idref='15'/>
+    <child t='172' id='17' V172='6' autoFixNamespaceMismatch='true' V170='10' V692='1' V690='1' ignoreExcluded='true' fixInvalidCharacters='true' V1='4' name='XML'>
+    </child>
+  </child>
+  <child t='165' id='18' V1='4' name='Document Bindings'>
+  </child>
+</root>
