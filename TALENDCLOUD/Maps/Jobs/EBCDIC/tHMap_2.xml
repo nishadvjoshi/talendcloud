@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root t='190' id='1' V190='11' inStruct='Structures/sample-customer-copybook/CUST-RECORD.xml' outStruct='Structures/Jobs/EBCDIC/tHMap_2/zf.xml' inputRep='180' outputRep='178' nextMap='' inputStructUserName='CUST-RECORD' outputStructUserName='zf' V1='4' name='tHMap_2' incarnation='151'>
+  <inputMapElem t='200' id='2' V200='8' input='true' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='CUST-RECORD'>
+    <mapNode t='190' idref='1'/>
+    <child t='200' id='3' V200='8' input='true' rowElem='true' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='Record'>
+      <mapNode t='190' idref='1'/>
+      <child t='200' id='4' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='3' maxSize='3' dataType='22' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='CUST-ID' description='9(5)'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='5' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='CUST-NAME'>
+        <mapNode t='190' idref='1'/>
+        <child t='200' id='6' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='15' maxSize='15' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='CUST-LAST-NAME' description='X(15)'>
+          <mapNode t='190' idref='1'/>
+        </child>
+        <child t='200' id='7' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='10' maxSize='10' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='CUST-FIRST-NAME' description='X(10)'>
+          <mapNode t='190' idref='1'/>
+        </child>
+      </child>
+      <child t='200' id='8' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='20' maxSize='20' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='STREET-ADDRESS' description='X(20)'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='9' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='20' maxSize='20' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='CITY' description='X(20)'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='10' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='2' maxSize='2' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='US-STATE' description='X(02)'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='11' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='20' maxSize='20' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='OTHER-STATE-PROVINCE' description='X(20)'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='12' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='3' maxSize='3' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='COUNTRY-CODE' description='X(3)'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='13' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='10' maxSize='10' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='POSTAL-CODE' description='X(10)'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='14' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='40' maxSize='40' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='NOTES' description='X(40)'>
+        <mapNode t='190' idref='1'/>
+      </child>
+    </child>
+  </inputMapElem>
+  <outputMapElem t='200' id='15' V200='8' structElemExists='true' usedCount='4' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_loop='true' V1='4' name='root'>
+    <mapNode t='190' idref='1'/>
+    <loop>SimpleLoop([autoAdded="true"],in$/CUST-RECORD,{Filter},{Sort Keys},{Contexts})</loop>
+  </outputMapElem>
+  <inputRepRuntime t='703' id='16' V703='2' byteOrder='BIG_ENDIAN' largeOccursErrorThreshold='1000' V690='1' encoding='IBM037' trimInput='true'>
+  </inputRepRuntime>
+  <outputRepRuntime t='698' id='17' V698='1' V690='1' padOutput='true'>
+  </outputRepRuntime>
+  <valueSets></valueSets>
+  <inputXmlRepRuntime t='692' id='18' V692='1' V690='1'>
+  </inputXmlRepRuntime>
+  <child t='165' id='19' V1='4' name='Document Bindings'>
+    <child t='166' id='20' V166='5' docType='1' docReposPath='/TALENDCLOUD/Sample Data/sample-customer-copybook/CUST-RECORD/sample-customer-data.ebcdic' V1='4' name='in$/CUST-RECORD'>
+      <elemNode t='200' idref='2'/>
+    </child>
+    <child t='166' id='21' V166='5' docType='2' V1='4' name='out$/root'>
+      <elemNode t='200' idref='15'/>
+    </child>
+  </child>
+  <child t='201' id='22' V1='4' name='Inherits From'>
+  </child>
+</root>
