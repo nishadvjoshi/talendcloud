@@ -111,7 +111,7 @@
   </parameters>
   <node componentName="tFileInputRaw" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="192" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputRaw_1"/>
-    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/Admin/Downloads/data.ebcdic&quot;"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/Admin/Downloads/sample-customer-data.ebcdic&quot;"/>
     <elementParameter field="RADIO" name="AS_STRING" value="true"/>
     <elementParameter field="RADIO" name="AS_BYTEARRAY" value="false"/>
     <elementParameter field="RADIO" name="AS_INPUTSTREAM" value="false"/>
@@ -123,7 +123,7 @@
       <column defaultValue="" key="false" length="0" name="content" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Object" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tHMap" componentVersion="1.0" offsetLabelX="0" offsetLabelY="0" posX="384" posY="320">
+  <node componentName="tHMap" componentVersion="1.0" offsetLabelX="0" offsetLabelY="0" posX="352" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHMap_1"/>
     <elementParameter field="LABEL" name="MAPPATH_HELP" value=""/>
     <elementParameter field="EXTERNAL" name="MAP_EDITOR" value=""/>
@@ -152,11 +152,11 @@
     <elementParameter field="RADIO" name="OUTCONNECTIONS_SYNCED" show="false" value="true"/>
     <elementParameter field="TEXT" name="HMAP_VAR_PATH" value="&quot;&quot;"/>
     <elementParameter field="HMAP_VAR_USED_MAPS" name="HMAP_VAR_USED_MAPS" value="&quot;&quot;"/>
-    <elementParameter field="CHECK" name="MAP_ROW_BY_ROW" value="false"/>
+    <elementParameter field="CHECK" name="MAP_ROW_BY_ROW" value="true"/>
     <elementParameter field="CLOSED_LIST" name="LOG" value="infrequent"/>
     <elementParameter field="CLOSED_LIST" name="EXCEPTION" value="64"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="er">
+    <metadata connector="FLOW" label="kk" name="kk">
       <column defaultValue="" key="false" length="0" name="content" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Object" usefulColumn="true"/>
     </metadata>
   </node>
@@ -175,22 +175,27 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
-  <connection connectorName="FLOW" label="er" lineStyle="0" metaname="er" offsetLabelX="0" offsetLabelY="0" source="tHMap_1" target="tFileOutputRaw_1">
+  <connection connectorName="FLOW" label="kk" lineStyle="0" metaname="kk" offsetLabelX="0" offsetLabelY="0" source="tHMap_1" target="tFileOutputRaw_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="content"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="er"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="kk"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputRaw_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_a6ae4900-443f-44f5-beb1-a0a8de7f8ecb"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>JEdydAj2IpX/KUdSmzLeTJ819OakQ4ObKwRi1ddxBEcH90gC7sOyMmMTpyYtdo76tOWhWE1SFWI1
-PyRo0Jk5kA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_314214d1-8171-4b9a-8e4a-ef464952f024"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>G7qZdnzDfCTS7QCEjOh8oOI99pUP1jULgddkT3IXUt6YeWX9cFVjDPzY2ut//qtkJF4ZgQ9D7lNV
-SBblXtcRlA==</DigestValue></Reference></SignedInfo><SignatureValue>HAZ9VDKpYO9X+LSeG1myI4ceeU3DKGA++s/59bgA4UVJIsxUcsJ1DTtAJNPGHlFqQ6vkt6QQYHlT
-QoEpdmnWDRMKLx7vabERvbGcyRtB8omMa2D9g7Urls9vaOjten52BGto59xFFJWdbK9ejnOHaTLG
-yFKha0/VOj/nebU5titbL6ZDLf6MGPJatG/XY1nbLQq4oDdxKeF7LPjLrEHkqUVfUBhx7ld4TUql
-l1p32XT+XuBk9Z/gCLdM4nTaTj0B6KVRxiDVQ1TUNnUTwcPPZu+tSfVqRv4UVX8KB7RKP6IL+MP6
-d1yRnabYxlEaOnIp7N+7yxtrWoxxrb2APtsvdA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_137d16bd-c6e8-4d23-a779-588bab9df7ad"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>tz4Kj4lKVlNl5eY/8KYDfcebq9+HD0ICTNUo8JX1xhaJh9z8JnKw75dimM3PXyUqriAneJivV5kp
+YaYmUZOdLg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_419c075b-0028-4c9a-9373-19263836c566"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ceWKHKTZ3dIFTxbGHPSh/4uKs3fAjJGZqA2Ar0sJdMwgwozLRAW/dApjwVgaODxy8rvtkLYjKkTB
+9uo1nkd4Dg==</DigestValue></Reference></SignedInfo><SignatureValue>YAJUPx/fufNsLH0T2NPOr5djmdB+d7VisYLSZ7wwcaOXqmDH5tJZESU6HTX36NczYnzUuzExjsIs
+TGPQPkCDNSUpUiXOcYZk+xqYI7gkHAd1bHpVILdRw0vCmw9cpXlPChb3jQgnOc2d3sd4XjLvLFXb
+EZNiEPU6hf5UzsH+7ADvpbOjy7nKORm9AeT0GjbZ6lF4P2r0UM3zWNJ4emw56jw9X2KPhoO0MPx2
+A1r+gpmpdc/HREZhKhlxpqzYhh4Bkv1UcLlcMon5VM+VXxXOKcSpO0iaoc7APWni8FDalVmbEJ8M
+FuAoqYtt7wt/+iHme+P8DkZS0Yf5U/gM4A/zcA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -212,4 +217,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_314214d1-8171-4b9a-8e4a-ef464952f024" Target="#_a6ae4900-443f-44f5-beb1-a0a8de7f8ecb"><Timestamp>2019-12-10 08:19:49</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_419c075b-0028-4c9a-9373-19263836c566" Target="#_137d16bd-c6e8-4d23-a779-588bab9df7ad"><Timestamp>2019-12-10 09:12:08</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
