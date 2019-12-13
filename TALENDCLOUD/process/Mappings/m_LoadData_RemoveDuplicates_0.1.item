@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" xmi:version="2.0">
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default">
   <context name="Default"/>
-  <node componentName="tAggregateRow" componentVersion="2.1" posX="813" posY="326">
+  <node componentName="tAggregateRow" componentVersion="2.1" posX="813" posY="390">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAggregateRow_1"/>
     <elementParameter field="TEXT" name="LABEL" value="Agg_RemoveDuplicateRecords"/>
     <elementParameter field="MEMO" name="COMMENT" value=""/>
@@ -28,44 +29,7 @@
       <elementValue elementRef="FUNCTION" value="last"/>
       <elementValue elementRef="INPUT_COLUMN" value="STATE"/>
     </elementParameter>
-    <metadata connector="FLOW" name="in3">
-      <column key="false" length="20" name="ADDRESS1" precision="0" sourceType="" type="id_String"/>
-      <column key="false" length="6" name="ADDRESS2" precision="0" sourceType="" type="id_String"/>
-      <column key="false" length="13" name="CITY" precision="0" sourceType="" type="id_String"/>
-      <column key="false" length="27" name="COMPANY_NAME" precision="0" sourceType="" type="id_String"/>
-      <column key="false" length="7" name="POSTAL_CODE" precision="0" sourceType="" type="id_Double"/>
-      <column key="false" length="2" name="STATE" precision="0" sourceType="" type="id_String"/>
-      <column key="false" length="4" name="STATE_TAX_ID" precision="0" sourceType="" type="id_Double"/>
-    </metadata>
-    <nodeData xsi:type="TalendMapper:MapperData">
-      <outputTables name="output" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="last(input_5.ADDRESS1)" name="ADDRESS1" type="id_String"/>
-        <mapperTableEntries expression="last(input_5.ADDRESS2)" name="ADDRESS2" type="id_String"/>
-        <mapperTableEntries expression="last(input_5.CITY)" name="CITY" type="id_String"/>
-        <mapperTableEntries expression="last(input_5.COMPANY_NAME)" name="COMPANY_NAME" type="id_String"/>
-        <mapperTableEntries expression="last(input_5.POSTAL_CODE)" name="POSTAL_CODE" type="id_Double"/>
-        <mapperTableEntries expression="last(input_5.STATE)" name="STATE" type="id_String"/>
-        <mapperTableEntries expression="input_5.STATE_TAX_ID1" name="STATE_TAX_ID" type="id_Double"/>
-      </outputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="input_5" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="" name="ADDRESS1" type="id_String"/>
-        <mapperTableEntries expression="" name="ADDRESS2" type="id_String"/>
-        <mapperTableEntries expression="" name="CITY" type="id_String"/>
-        <mapperTableEntries expression="" name="COMPANY_NAME" type="id_String"/>
-        <mapperTableEntries expression="" name="POSTAL_CODE" type="id_Double"/>
-        <mapperTableEntries expression="" name="STATE" type="id_String"/>
-        <mapperTableEntries expression="" name="STATE_TAX_ID" type="id_Double"/>
-        <mapperTableEntries expression="" name="STATE_TAX_ID1" type="id_Double"/>
-      </inputTables>
-    </nodeData>
-  </node>
-  <node componentName="tMap" componentVersion="2.1" posX="550" posY="320">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1"/>
-    <elementParameter field="TEXT" name="LABEL" value="Agg_RemoveDuplicateRecords.expression"/>
-    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
-    <elementParameter field="MEMO" name="COMMENT" value="This component created automatically to align schema between nearby components "/>
-    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
-    <metadata connector="FLOW" name="row2">
+    <metadata connector="FLOW" name="in4">
       <column key="false" length="20" name="ADDRESS1" precision="0" sourceType="" type="id_String"/>
       <column key="false" length="6" name="ADDRESS2" precision="0" sourceType="" type="id_String"/>
       <column key="false" length="13" name="CITY" precision="0" sourceType="" type="id_String"/>
@@ -76,7 +40,46 @@
       <column key="false" length="4" name="STATE_TAX_ID1" precision="0" sourceType="" type="id_Double"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <outputTables name="row2" sizeState="INTERMEDIATE">
+      <outputTables sizeState="INTERMEDIATE" name="output">
+        <mapperTableEntries name="ADDRESS1" expression="last(input_5.ADDRESS1)" type="id_String"/>
+        <mapperTableEntries name="ADDRESS2" expression="last(input_5.ADDRESS2)" type="id_String"/>
+        <mapperTableEntries name="CITY" expression="last(input_5.CITY)" type="id_String"/>
+        <mapperTableEntries name="COMPANY_NAME" expression="last(input_5.COMPANY_NAME)" type="id_String"/>
+        <mapperTableEntries name="POSTAL_CODE" expression="last(input_5.POSTAL_CODE)" type="id_Double"/>
+        <mapperTableEntries name="STATE" expression="last(input_5.STATE)" type="id_String"/>
+        <mapperTableEntries name="STATE_TAX_ID" expression="input_5.STATE_TAX_ID1" type="id_Double"/>
+        <mapperTableEntries name="STATE_TAX_ID1" type="id_Double"/>
+      </outputTables>
+      <inputTables sizeState="INTERMEDIATE" name="input_5" minimized="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="ADDRESS1" expression="" type="id_String"/>
+        <mapperTableEntries name="ADDRESS2" expression="" type="id_String"/>
+        <mapperTableEntries name="CITY" expression="" type="id_String"/>
+        <mapperTableEntries name="COMPANY_NAME" expression="" type="id_String"/>
+        <mapperTableEntries name="POSTAL_CODE" expression="" type="id_Double"/>
+        <mapperTableEntries name="STATE" expression="" type="id_String"/>
+        <mapperTableEntries name="STATE_TAX_ID" expression="" type="id_Double"/>
+        <mapperTableEntries name="STATE_TAX_ID1" expression="" type="id_Double"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" posX="550" posY="390">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1"/>
+    <elementParameter field="TEXT" name="LABEL" value="Agg_RemoveDuplicateRecords.expression"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
+    <elementParameter field="MEMO" name="COMMENT" value="This component created automatically to align schema between nearby components "/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <metadata connector="FLOW" name="row8">
+      <column key="false" length="20" name="ADDRESS1" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="6" name="ADDRESS2" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="13" name="CITY" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="27" name="COMPANY_NAME" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="7" name="POSTAL_CODE" precision="0" sourceType="" type="id_Double"/>
+      <column key="false" length="2" name="STATE" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="4" name="STATE_TAX_ID" precision="0" sourceType="" type="id_Double"/>
+      <column key="false" length="4" name="STATE_TAX_ID1" precision="0" sourceType="" type="id_Double"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <outputTables sizeState="INTERMEDIATE" name="row8">
         <mapperTableEntries name="ADDRESS1" type="id_String"/>
         <mapperTableEntries name="ADDRESS2" type="id_String"/>
         <mapperTableEntries name="CITY" type="id_String"/>
@@ -84,14 +87,14 @@
         <mapperTableEntries name="POSTAL_CODE" type="id_Double"/>
         <mapperTableEntries name="STATE" type="id_String"/>
         <mapperTableEntries name="STATE_TAX_ID" type="id_Double"/>
-        <mapperTableEntries expression="in5.STATE_TAX_ID" name="STATE_TAX_ID1" type="id_Double"/>
+        <mapperTableEntries name="STATE_TAX_ID1" expression="in3.STATE_TAX_ID" type="id_Double"/>
       </outputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="in5" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="" name="STATE_TAX_ID" type="id_Double"/>
+      <inputTables sizeState="INTERMEDIATE" name="in3" minimized="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="STATE_TAX_ID" expression="" type="id_Double"/>
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tDBOutput" componentVersion="2.1" posX="2990" posY="225">
+  <node componentName="tDBOutput" componentVersion="2.1" posX="2440" posY="335">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBOutput_2"/>
     <elementParameter field="TEXT" name="LABEL" value="COMAPNY_Inserts"/>
     <elementParameter field="MEMO" name="COMMENT" value=""/>
@@ -111,13 +114,13 @@
       <column key="false" length="7" name="POSTAL_CODE" precision="0" sourceType="NUMERIC" type="id_Float"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" posX="2729" posY="225">
+  <node componentName="tMap" componentVersion="2.1" posX="2179" posY="335">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_2"/>
     <elementParameter field="TEXT" name="LABEL" value="COMAPNY_Inserts.expression"/>
     <elementParameter field="CHECK" name="INFORMATION" value="true"/>
     <elementParameter field="MEMO" name="COMMENT" value="This component created automatically to align schema by position between nearby components "/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
-    <metadata connector="FLOW" name="row4">
+    <metadata connector="FLOW" name="row14">
       <column key="false" length="4" name="STATE_TAX_ID" precision="0" sourceType="" type="id_Float"/>
       <column key="false" length="27" name="COMPANY_NAME" precision="0" sourceType="" type="id_String"/>
       <column key="false" length="20" name="ADDRESS1" precision="0" sourceType="" type="id_String"/>
@@ -127,27 +130,27 @@
       <column key="false" length="7" name="POSTAL_CODE" precision="0" sourceType="" type="id_Float"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <outputTables name="row4" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="TypeConvert.Double2Float(in1.STATE_TAX_ID)" name="STATE_TAX_ID" type="id_Float"/>
-        <mapperTableEntries expression="in1.COMPANY_NAME" name="COMPANY_NAME" type="id_String"/>
-        <mapperTableEntries expression="in1.ADDRESS1" name="ADDRESS1" type="id_String"/>
-        <mapperTableEntries expression="in1.ADDRESS2" name="ADDRESS2" type="id_String"/>
-        <mapperTableEntries expression="in1.CITY" name="CITY" type="id_String"/>
-        <mapperTableEntries expression="in1.STATE" name="STATE" type="id_String"/>
-        <mapperTableEntries expression="TypeConvert.Double2Float(in1.POSTAL_CODE)" name="POSTAL_CODE" type="id_Float"/>
+      <outputTables sizeState="INTERMEDIATE" name="row14">
+        <mapperTableEntries name="STATE_TAX_ID" expression="TypeConvert.Double2Float(in2.STATE_TAX_ID)" type="id_Float"/>
+        <mapperTableEntries name="COMPANY_NAME" expression="in2.COMPANY_NAME" type="id_String"/>
+        <mapperTableEntries name="ADDRESS1" expression="in2.ADDRESS1" type="id_String"/>
+        <mapperTableEntries name="ADDRESS2" expression="in2.ADDRESS2" type="id_String"/>
+        <mapperTableEntries name="CITY" expression="in2.CITY" type="id_String"/>
+        <mapperTableEntries name="STATE" expression="in2.STATE" type="id_String"/>
+        <mapperTableEntries name="POSTAL_CODE" expression="TypeConvert.Double2Float(in2.POSTAL_CODE)" type="id_Float"/>
       </outputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="in1" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="" name="ADDRESS1" type="id_String"/>
-        <mapperTableEntries expression="" name="ADDRESS2" type="id_String"/>
-        <mapperTableEntries expression="" name="CITY" type="id_String"/>
-        <mapperTableEntries expression="" name="COMPANY_NAME" type="id_String"/>
-        <mapperTableEntries expression="" name="POSTAL_CODE" type="id_Double"/>
-        <mapperTableEntries expression="" name="STATE" type="id_String"/>
-        <mapperTableEntries expression="" name="STATE_TAX_ID" type="id_Double"/>
+      <inputTables sizeState="INTERMEDIATE" name="in2" minimized="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="ADDRESS1" expression="" type="id_String"/>
+        <mapperTableEntries name="ADDRESS2" expression="" type="id_String"/>
+        <mapperTableEntries name="CITY" expression="" type="id_String"/>
+        <mapperTableEntries name="COMPANY_NAME" expression="" type="id_String"/>
+        <mapperTableEntries name="POSTAL_CODE" expression="" type="id_Double"/>
+        <mapperTableEntries name="STATE" expression="" type="id_String"/>
+        <mapperTableEntries name="STATE_TAX_ID" expression="" type="id_Double"/>
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tDBOutput" componentVersion="2.1" posX="2990" posY="335">
+  <node componentName="tDBOutput" componentVersion="2.1" posX="2440" posY="445">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBOutput_4"/>
     <elementParameter field="TEXT" name="LABEL" value="COMAPNY_Updates"/>
     <elementParameter field="MEMO" name="COMMENT" value=""/>
@@ -167,13 +170,13 @@
       <column key="false" length="7" name="POSTAL_CODE" precision="0" sourceType="NUMERIC" type="id_Float"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" posX="2729" posY="335">
+  <node componentName="tMap" componentVersion="2.1" posX="2179" posY="445">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_3"/>
     <elementParameter field="TEXT" name="LABEL" value="COMAPNY_Updates.expression"/>
     <elementParameter field="CHECK" name="INFORMATION" value="true"/>
     <elementParameter field="MEMO" name="COMMENT" value="This component created automatically to align schema by position between nearby components "/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
-    <metadata connector="FLOW" name="row10">
+    <metadata connector="FLOW" name="row7">
       <column key="false" length="4" name="STATE_TAX_ID" precision="0" sourceType="" type="id_Float"/>
       <column key="false" length="27" name="COMPANY_NAME" precision="0" sourceType="" type="id_String"/>
       <column key="false" length="20" name="ADDRESS1" precision="0" sourceType="" type="id_String"/>
@@ -183,27 +186,27 @@
       <column key="false" length="7" name="POSTAL_CODE" precision="0" sourceType="" type="id_Float"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <outputTables name="row10" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="TypeConvert.Double2Float(in2.STATE_TAX_ID)" name="STATE_TAX_ID" type="id_Float"/>
-        <mapperTableEntries expression="in2.COMPANY_NAME" name="COMPANY_NAME" type="id_String"/>
-        <mapperTableEntries expression="in2.ADDRESS1" name="ADDRESS1" type="id_String"/>
-        <mapperTableEntries expression="in2.ADDRESS2" name="ADDRESS2" type="id_String"/>
-        <mapperTableEntries expression="in2.CITY" name="CITY" type="id_String"/>
-        <mapperTableEntries expression="in2.STATE" name="STATE" type="id_String"/>
-        <mapperTableEntries expression="TypeConvert.Double2Float(in2.POSTAL_CODE)" name="POSTAL_CODE" type="id_Float"/>
+      <outputTables sizeState="INTERMEDIATE" name="row7">
+        <mapperTableEntries name="STATE_TAX_ID" expression="TypeConvert.Double2Float(in1.STATE_TAX_ID)" type="id_Float"/>
+        <mapperTableEntries name="COMPANY_NAME" expression="in1.COMPANY_NAME" type="id_String"/>
+        <mapperTableEntries name="ADDRESS1" expression="in1.ADDRESS1" type="id_String"/>
+        <mapperTableEntries name="ADDRESS2" expression="in1.ADDRESS2" type="id_String"/>
+        <mapperTableEntries name="CITY" expression="in1.CITY" type="id_String"/>
+        <mapperTableEntries name="STATE" expression="in1.STATE" type="id_String"/>
+        <mapperTableEntries name="POSTAL_CODE" expression="TypeConvert.Double2Float(in1.POSTAL_CODE)" type="id_Float"/>
       </outputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="in2" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="" name="ADDRESS1" type="id_String"/>
-        <mapperTableEntries expression="" name="ADDRESS2" type="id_String"/>
-        <mapperTableEntries expression="" name="CITY" type="id_String"/>
-        <mapperTableEntries expression="" name="COMPANY_NAME" type="id_String"/>
-        <mapperTableEntries expression="" name="POSTAL_CODE" type="id_Double"/>
-        <mapperTableEntries expression="" name="STATE" type="id_String"/>
-        <mapperTableEntries expression="" name="STATE_TAX_ID" type="id_Double"/>
+      <inputTables sizeState="INTERMEDIATE" name="in1" minimized="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="ADDRESS1" expression="" type="id_String"/>
+        <mapperTableEntries name="ADDRESS2" expression="" type="id_String"/>
+        <mapperTableEntries name="CITY" expression="" type="id_String"/>
+        <mapperTableEntries name="COMPANY_NAME" expression="" type="id_String"/>
+        <mapperTableEntries name="POSTAL_CODE" expression="" type="id_Double"/>
+        <mapperTableEntries name="STATE" expression="" type="id_String"/>
+        <mapperTableEntries name="STATE_TAX_ID" expression="" type="id_Double"/>
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tDBInput" componentVersion="2.1" posX="1126" posY="225">
+  <node componentName="tDBInput" componentVersion="2.1" posX="0" posY="225">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_2"/>
     <elementParameter field="TEXT" name="LABEL" value="Lkp_CheckExistence"/>
     <elementParameter field="CHECK" name="INFORMATION" value="true"/>
@@ -217,55 +220,31 @@
       <column key="false" length="4" name="STATE_TAX_ID" precision="0" sourceType="DECIMAL" type="id_Double"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" posX="1406" posY="280">
+  <node componentName="tMap" componentVersion="2.1" posX="280" posY="225">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_4"/>
     <elementParameter field="TEXT" name="LABEL" value="Lkp_CheckExistence"/>
     <elementParameter field="CHECK" name="INFORMATION" value="true"/>
     <elementParameter field="MEMO" name="COMMENT" value="Check the target Nielsen table to see if the record already exists in the table (based on the State_Tax_ID).  If it exists, perform an update to the target.  If not found, perform an insert."/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
-    <metadata connector="FLOW" name="in7">
+    <metadata connector="FLOW" name="OUTPUT">
       <column key="false" length="4" name="STATE_TAX_ID" precision="0" sourceType="" type="id_Double"/>
       <column key="false" length="4" name="lkp_StateTaxID" precision="0" sourceType="" type="id_Double"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <outputTables name="in7" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="DATA.STATE_TAX_ID" name="STATE_TAX_ID" type="id_Double"/>
-        <mapperTableEntries expression="CONTROL.lkp_StateTaxID" name="lkp_StateTaxID" type="id_Double"/>
+      <outputTables sizeState="INTERMEDIATE" name="OUTPUT">
+        <mapperTableEntries name="STATE_TAX_ID" expression="DATA.STATE_TAX_ID" type="id_Double"/>
+        <mapperTableEntries name="lkp_StateTaxID" expression="CONTROL.lkp_StateTaxID" type="id_Double"/>
       </outputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="CONTROL" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="" name="lkp_StateTaxID" type="id_Double"/>
+      <inputTables sizeState="INTERMEDIATE" name="CONTROL" minimized="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="lkp_StateTaxID" expression="" type="id_Double"/>
       </inputTables>
-      <inputTables activateExpressionFilter="true" expressionFilter="MITI.equals(STATE_TAX_ID, CONTROL.lkp_StateTaxID)" lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="DATA" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="" name="STATE_TAX_ID" type="id_Double"/>
+      <inputTables sizeState="INTERMEDIATE" name="DATA" minimized="true" expressionFilter="MITI.equals(STATE_TAX_ID, CONTROL.lkp_StateTaxID)" activateExpressionFilter="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="STATE_TAX_ID" expression="" type="id_Double"/>
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMap" componentVersion="2.1" posX="1136" posY="335">
+  <node componentName="tMap" componentVersion="2.1" posX="1387" posY="390">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_5"/>
-    <elementParameter field="TEXT" name="LABEL" value="Lkp_CheckExistence.expression"/>
-    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
-    <elementParameter field="MEMO" name="COMMENT" value="This component created automatically to align schema between nearby components "/>
-    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
-    <metadata connector="FLOW" name="CONTROL">
-      <column key="false" length="4" name="lkp_StateTaxID" precision="0" sourceType="" type="id_Double"/>
-    </metadata>
-    <nodeData xsi:type="TalendMapper:MapperData">
-      <outputTables name="CONTROL" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="in3.STATE_TAX_ID" name="lkp_StateTaxID" type="id_Double"/>
-      </outputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="in3" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="" name="ADDRESS1" type="id_String"/>
-        <mapperTableEntries expression="" name="ADDRESS2" type="id_String"/>
-        <mapperTableEntries expression="" name="CITY" type="id_String"/>
-        <mapperTableEntries expression="" name="COMPANY_NAME" type="id_String"/>
-        <mapperTableEntries expression="" name="POSTAL_CODE" type="id_Double"/>
-        <mapperTableEntries expression="" name="STATE" type="id_String"/>
-        <mapperTableEntries expression="" name="STATE_TAX_ID" type="id_Double"/>
-      </inputTables>
-    </nodeData>
-  </node>
-  <node componentName="tMap" componentVersion="2.1" posX="1928" posY="280">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_6"/>
     <elementParameter field="TEXT" name="LABEL" value="Rtr_DetermineDatabasePath"/>
     <elementParameter field="CHECK" name="INFORMATION" value="true"/>
     <elementParameter field="MEMO" name="COMMENT" value="Determine if an insert or an update should be performed."/>
@@ -280,7 +259,7 @@
       <column key="false" length="2" name="STATE2" precision="0" sourceType="" type="id_String"/>
       <column key="false" length="7" name="POSTAL_CODE2" precision="0" sourceType="" type="id_Double"/>
     </metadata>
-    <metadata connector="FLOW" name="in6">
+    <metadata connector="FLOW" name="in5">
       <column key="false" length="4" name="lkp_STATE_TAX_ID1" precision="0" sourceType="" type="id_Double"/>
       <column key="false" length="4" name="STATE_TAX_ID1" precision="0" sourceType="" type="id_Double"/>
       <column key="false" length="27" name="COMPANY_NAME1" precision="0" sourceType="" type="id_String"/>
@@ -290,7 +269,7 @@
       <column key="false" length="2" name="STATE1" precision="0" sourceType="" type="id_String"/>
       <column key="false" length="7" name="POSTAL_CODE1" precision="0" sourceType="" type="id_Double"/>
     </metadata>
-    <metadata connector="FLOW" name="in4">
+    <metadata connector="FLOW" name="in6">
       <column key="false" length="4" name="lkp_STATE_TAX_ID3" precision="0" sourceType="" type="id_Double"/>
       <column key="false" length="4" name="STATE_TAX_ID3" precision="0" sourceType="" type="id_Double"/>
       <column key="false" length="27" name="COMPANY_NAME3" precision="0" sourceType="" type="id_String"/>
@@ -301,50 +280,50 @@
       <column key="false" length="7" name="POSTAL_CODE3" precision="0" sourceType="" type="id_Double"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <outputTables name="DEFAULT" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="INPUT.ADDRESS1" name="ADDRESS12" type="id_String"/>
-        <mapperTableEntries expression="INPUT.ADDRESS2" name="ADDRESS22" type="id_String"/>
-        <mapperTableEntries expression="INPUT.CITY" name="CITY2" type="id_String"/>
-        <mapperTableEntries expression="INPUT.COMPANY_NAME" name="COMPANY_NAME2" type="id_String"/>
-        <mapperTableEntries expression="INPUT.POSTAL_CODE" name="POSTAL_CODE2" type="id_Double"/>
-        <mapperTableEntries expression="INPUT.STATE" name="STATE2" type="id_String"/>
-        <mapperTableEntries expression="INPUT.STATE_TAX_ID" name="STATE_TAX_ID2" type="id_Double"/>
-        <mapperTableEntries expression="INPUT.lkp_STATE_TAX_ID" name="lkp_STATE_TAX_ID2" type="id_Double"/>
+      <outputTables sizeState="INTERMEDIATE" name="DEFAULT">
+        <mapperTableEntries name="ADDRESS12" expression="INPUT.ADDRESS1" type="id_String"/>
+        <mapperTableEntries name="ADDRESS22" expression="INPUT.ADDRESS2" type="id_String"/>
+        <mapperTableEntries name="CITY2" expression="INPUT.CITY" type="id_String"/>
+        <mapperTableEntries name="COMPANY_NAME2" expression="INPUT.COMPANY_NAME" type="id_String"/>
+        <mapperTableEntries name="POSTAL_CODE2" expression="INPUT.POSTAL_CODE" type="id_Double"/>
+        <mapperTableEntries name="STATE2" expression="INPUT.STATE" type="id_String"/>
+        <mapperTableEntries name="STATE_TAX_ID2" expression="INPUT.STATE_TAX_ID" type="id_Double"/>
+        <mapperTableEntries name="lkp_STATE_TAX_ID2" expression="INPUT.lkp_STATE_TAX_ID" type="id_Double"/>
       </outputTables>
-      <outputTables activateExpressionFilter="true" expressionFilter="((INPUT.lkp_STATE_TAX_ID )==null)" name="in6" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="INPUT.ADDRESS1" name="ADDRESS11" type="id_String"/>
-        <mapperTableEntries expression="INPUT.ADDRESS2" name="ADDRESS21" type="id_String"/>
-        <mapperTableEntries expression="INPUT.CITY" name="CITY1" type="id_String"/>
-        <mapperTableEntries expression="INPUT.COMPANY_NAME" name="COMPANY_NAME1" type="id_String"/>
-        <mapperTableEntries expression="INPUT.POSTAL_CODE" name="POSTAL_CODE1" type="id_Double"/>
-        <mapperTableEntries expression="INPUT.STATE" name="STATE1" type="id_String"/>
-        <mapperTableEntries expression="INPUT.STATE_TAX_ID" name="STATE_TAX_ID1" type="id_Double"/>
-        <mapperTableEntries expression="INPUT.lkp_STATE_TAX_ID" name="lkp_STATE_TAX_ID1" type="id_Double"/>
+      <outputTables sizeState="INTERMEDIATE" name="in5" expressionFilter="((INPUT.lkp_STATE_TAX_ID )==null)" activateExpressionFilter="true">
+        <mapperTableEntries name="ADDRESS11" expression="INPUT.ADDRESS1" type="id_String"/>
+        <mapperTableEntries name="ADDRESS21" expression="INPUT.ADDRESS2" type="id_String"/>
+        <mapperTableEntries name="CITY1" expression="INPUT.CITY" type="id_String"/>
+        <mapperTableEntries name="COMPANY_NAME1" expression="INPUT.COMPANY_NAME" type="id_String"/>
+        <mapperTableEntries name="POSTAL_CODE1" expression="INPUT.POSTAL_CODE" type="id_Double"/>
+        <mapperTableEntries name="STATE1" expression="INPUT.STATE" type="id_String"/>
+        <mapperTableEntries name="STATE_TAX_ID1" expression="INPUT.STATE_TAX_ID" type="id_Double"/>
+        <mapperTableEntries name="lkp_STATE_TAX_ID1" expression="INPUT.lkp_STATE_TAX_ID" type="id_Double"/>
       </outputTables>
-      <outputTables activateExpressionFilter="true" expressionFilter="MITI.equals(INPUT.lkp_STATE_TAX_ID, INPUT.STATE_TAX_ID)" name="in4" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="INPUT.ADDRESS1" name="ADDRESS13" type="id_String"/>
-        <mapperTableEntries expression="INPUT.ADDRESS2" name="ADDRESS23" type="id_String"/>
-        <mapperTableEntries expression="INPUT.CITY" name="CITY3" type="id_String"/>
-        <mapperTableEntries expression="INPUT.COMPANY_NAME" name="COMPANY_NAME3" type="id_String"/>
-        <mapperTableEntries expression="INPUT.POSTAL_CODE" name="POSTAL_CODE3" type="id_Double"/>
-        <mapperTableEntries expression="INPUT.STATE" name="STATE3" type="id_String"/>
-        <mapperTableEntries expression="INPUT.STATE_TAX_ID" name="STATE_TAX_ID3" type="id_Double"/>
-        <mapperTableEntries expression="INPUT.lkp_STATE_TAX_ID" name="lkp_STATE_TAX_ID3" type="id_Double"/>
+      <outputTables sizeState="INTERMEDIATE" name="in6" expressionFilter="MITI.equals(INPUT.lkp_STATE_TAX_ID, INPUT.STATE_TAX_ID)" activateExpressionFilter="true">
+        <mapperTableEntries name="ADDRESS13" expression="INPUT.ADDRESS1" type="id_String"/>
+        <mapperTableEntries name="ADDRESS23" expression="INPUT.ADDRESS2" type="id_String"/>
+        <mapperTableEntries name="CITY3" expression="INPUT.CITY" type="id_String"/>
+        <mapperTableEntries name="COMPANY_NAME3" expression="INPUT.COMPANY_NAME" type="id_String"/>
+        <mapperTableEntries name="POSTAL_CODE3" expression="INPUT.POSTAL_CODE" type="id_Double"/>
+        <mapperTableEntries name="STATE3" expression="INPUT.STATE" type="id_String"/>
+        <mapperTableEntries name="STATE_TAX_ID3" expression="INPUT.STATE_TAX_ID" type="id_Double"/>
+        <mapperTableEntries name="lkp_STATE_TAX_ID3" expression="INPUT.lkp_STATE_TAX_ID" type="id_Double"/>
       </outputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="INPUT" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="" name="ADDRESS1" type="id_String"/>
-        <mapperTableEntries expression="" name="ADDRESS2" type="id_String"/>
-        <mapperTableEntries expression="" name="CITY" type="id_String"/>
-        <mapperTableEntries expression="" name="COMPANY_NAME" type="id_String"/>
-        <mapperTableEntries expression="" name="POSTAL_CODE" type="id_Double"/>
-        <mapperTableEntries expression="" name="STATE" type="id_String"/>
-        <mapperTableEntries expression="" name="STATE_TAX_ID" type="id_Double"/>
-        <mapperTableEntries expression="" name="lkp_STATE_TAX_ID" type="id_Double"/>
+      <inputTables sizeState="INTERMEDIATE" name="INPUT" minimized="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="ADDRESS1" expression="" type="id_String"/>
+        <mapperTableEntries name="ADDRESS2" expression="" type="id_String"/>
+        <mapperTableEntries name="CITY" expression="" type="id_String"/>
+        <mapperTableEntries name="COMPANY_NAME" expression="" type="id_String"/>
+        <mapperTableEntries name="POSTAL_CODE" expression="" type="id_Double"/>
+        <mapperTableEntries name="STATE" expression="" type="id_String"/>
+        <mapperTableEntries name="STATE_TAX_ID" expression="" type="id_Double"/>
+        <mapperTableEntries name="lkp_STATE_TAX_ID" expression="" type="id_Double"/>
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMap" componentVersion="2.1" posX="1667" posY="280">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_7"/>
+  <node componentName="tMap" componentVersion="2.1" posX="1126" posY="390">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_6"/>
     <elementParameter field="TEXT" name="LABEL" value="Rtr_DetermineDatabasePath.expression"/>
     <elementParameter field="CHECK" name="INFORMATION" value="true"/>
     <elementParameter field="MEMO" name="COMMENT" value="This component created automatically to align schema between nearby components "/>
@@ -360,23 +339,29 @@
       <column key="false" length="7" name="POSTAL_CODE" precision="0" sourceType="" type="id_Double"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <outputTables name="INPUT" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="in7.STATE_TAX_ID" name="lkp_STATE_TAX_ID" type="id_Double"/>
-        <mapperTableEntries name="STATE_TAX_ID" type="id_Double"/>
-        <mapperTableEntries name="COMPANY_NAME" type="id_String"/>
-        <mapperTableEntries name="ADDRESS1" type="id_String"/>
-        <mapperTableEntries name="ADDRESS2" type="id_String"/>
-        <mapperTableEntries name="CITY" type="id_String"/>
-        <mapperTableEntries name="STATE" type="id_String"/>
-        <mapperTableEntries name="POSTAL_CODE" type="id_Double"/>
+      <outputTables sizeState="INTERMEDIATE" name="INPUT">
+        <mapperTableEntries name="lkp_STATE_TAX_ID" expression="in4.STATE_TAX_ID1" type="id_Double"/>
+        <mapperTableEntries name="STATE_TAX_ID" expression="in4.STATE_TAX_ID" type="id_Double"/>
+        <mapperTableEntries name="COMPANY_NAME" expression="in4.COMPANY_NAME" type="id_String"/>
+        <mapperTableEntries name="ADDRESS1" expression="in4.ADDRESS1" type="id_String"/>
+        <mapperTableEntries name="ADDRESS2" expression="in4.ADDRESS2" type="id_String"/>
+        <mapperTableEntries name="CITY" expression="in4.CITY" type="id_String"/>
+        <mapperTableEntries name="STATE" expression="in4.STATE" type="id_String"/>
+        <mapperTableEntries name="POSTAL_CODE" expression="in4.POSTAL_CODE" type="id_Double"/>
       </outputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="in7" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="" name="STATE_TAX_ID" type="id_Double"/>
-        <mapperTableEntries expression="" name="lkp_StateTaxID" type="id_Double"/>
+      <inputTables sizeState="INTERMEDIATE" name="in4" minimized="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="ADDRESS1" expression="" type="id_String"/>
+        <mapperTableEntries name="ADDRESS2" expression="" type="id_String"/>
+        <mapperTableEntries name="CITY" expression="" type="id_String"/>
+        <mapperTableEntries name="COMPANY_NAME" expression="" type="id_String"/>
+        <mapperTableEntries name="POSTAL_CODE" expression="" type="id_Double"/>
+        <mapperTableEntries name="STATE" expression="" type="id_String"/>
+        <mapperTableEntries name="STATE_TAX_ID" expression="" type="id_Double"/>
+        <mapperTableEntries name="STATE_TAX_ID1" expression="" type="id_Double"/>
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tDBInput" componentVersion="2.1" posX="0" posY="317">
+  <node componentName="tDBInput" componentVersion="2.1" posX="0" posY="390">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_4"/>
     <elementParameter field="TEXT" name="LABEL" value="SQ_NIELSEN"/>
     <elementParameter field="CHECK" name="INFORMATION" value="true"/>
@@ -397,13 +382,13 @@
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData"/>
   </node>
-  <node componentName="tMap" componentVersion="2.1" posX="2464" posY="225">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_8"/>
+  <node componentName="tMap" componentVersion="2.1" posX="1918" posY="335">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_7"/>
     <elementParameter field="TEXT" name="LABEL" value="Upd_InsertPath"/>
     <elementParameter field="CHECK" name="INFORMATION" value="true"/>
     <elementParameter field="MEMO" name="COMMENT" value="Update Strategy Expression=dd_insert"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
-    <metadata connector="FLOW" name="in1">
+    <metadata connector="FLOW" name="in2">
       <column key="false" length="4" name="STATE_TAX_ID" precision="0" sourceType="" type="id_Double"/>
       <column key="false" length="27" name="COMPANY_NAME" precision="0" sourceType="" type="id_String"/>
       <column key="false" length="20" name="ADDRESS1" precision="0" sourceType="" type="id_String"/>
@@ -413,28 +398,28 @@
       <column key="false" length="7" name="POSTAL_CODE" precision="0" sourceType="" type="id_Double"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <outputTables name="in1" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="INPUT_1.STATE_TAX_ID" name="STATE_TAX_ID" type="id_Double"/>
-        <mapperTableEntries expression="INPUT_1.COMPANY_NAME" name="COMPANY_NAME" type="id_String"/>
-        <mapperTableEntries expression="INPUT_1.ADDRESS1" name="ADDRESS1" type="id_String"/>
-        <mapperTableEntries expression="INPUT_1.ADDRESS2" name="ADDRESS2" type="id_String"/>
-        <mapperTableEntries expression="INPUT_1.CITY" name="CITY" type="id_String"/>
-        <mapperTableEntries expression="INPUT_1.STATE" name="STATE" type="id_String"/>
-        <mapperTableEntries expression="INPUT_1.POSTAL_CODE" name="POSTAL_CODE" type="id_Double"/>
+      <outputTables sizeState="INTERMEDIATE" name="in2">
+        <mapperTableEntries name="STATE_TAX_ID" expression="INPUT_1.STATE_TAX_ID" type="id_Double"/>
+        <mapperTableEntries name="COMPANY_NAME" expression="INPUT_1.COMPANY_NAME" type="id_String"/>
+        <mapperTableEntries name="ADDRESS1" expression="INPUT_1.ADDRESS1" type="id_String"/>
+        <mapperTableEntries name="ADDRESS2" expression="INPUT_1.ADDRESS2" type="id_String"/>
+        <mapperTableEntries name="CITY" expression="INPUT_1.CITY" type="id_String"/>
+        <mapperTableEntries name="STATE" expression="INPUT_1.STATE" type="id_String"/>
+        <mapperTableEntries name="POSTAL_CODE" expression="INPUT_1.POSTAL_CODE" type="id_Double"/>
       </outputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="INPUT_1" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="" name="ADDRESS1" type="id_String"/>
-        <mapperTableEntries expression="" name="ADDRESS2" type="id_String"/>
-        <mapperTableEntries expression="" name="CITY" type="id_String"/>
-        <mapperTableEntries expression="" name="COMPANY_NAME" type="id_String"/>
-        <mapperTableEntries expression="" name="POSTAL_CODE" type="id_Double"/>
-        <mapperTableEntries expression="" name="STATE" type="id_String"/>
-        <mapperTableEntries expression="" name="STATE_TAX_ID" type="id_Double"/>
+      <inputTables sizeState="INTERMEDIATE" name="INPUT_1" minimized="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="ADDRESS1" expression="" type="id_String"/>
+        <mapperTableEntries name="ADDRESS2" expression="" type="id_String"/>
+        <mapperTableEntries name="CITY" expression="" type="id_String"/>
+        <mapperTableEntries name="COMPANY_NAME" expression="" type="id_String"/>
+        <mapperTableEntries name="POSTAL_CODE" expression="" type="id_Double"/>
+        <mapperTableEntries name="STATE" expression="" type="id_String"/>
+        <mapperTableEntries name="STATE_TAX_ID" expression="" type="id_Double"/>
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMap" componentVersion="2.1" posX="2194" posY="225">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_9"/>
+  <node componentName="tMap" componentVersion="2.1" posX="1653" posY="335">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_8"/>
     <elementParameter field="TEXT" name="LABEL" value="Upd_InsertPath.expression"/>
     <elementParameter field="CHECK" name="INFORMATION" value="true"/>
     <elementParameter field="MEMO" name="COMMENT" value="This component created automatically to align schema between nearby components "/>
@@ -449,34 +434,34 @@
       <column key="false" length="7" name="POSTAL_CODE" precision="0" sourceType="" type="id_Double"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <outputTables name="INPUT_1" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="in6.STATE_TAX_ID1" name="STATE_TAX_ID" type="id_Double"/>
-        <mapperTableEntries expression="in6.COMPANY_NAME1" name="COMPANY_NAME" type="id_String"/>
-        <mapperTableEntries expression="in6.ADDRESS11" name="ADDRESS1" type="id_String"/>
-        <mapperTableEntries expression="in6.ADDRESS21" name="ADDRESS2" type="id_String"/>
-        <mapperTableEntries expression="in6.CITY1" name="CITY" type="id_String"/>
-        <mapperTableEntries expression="in6.STATE1" name="STATE" type="id_String"/>
-        <mapperTableEntries expression="in6.POSTAL_CODE1" name="POSTAL_CODE" type="id_Double"/>
+      <outputTables sizeState="INTERMEDIATE" name="INPUT_1">
+        <mapperTableEntries name="STATE_TAX_ID" expression="in5.STATE_TAX_ID1" type="id_Double"/>
+        <mapperTableEntries name="COMPANY_NAME" expression="in5.COMPANY_NAME1" type="id_String"/>
+        <mapperTableEntries name="ADDRESS1" expression="in5.ADDRESS11" type="id_String"/>
+        <mapperTableEntries name="ADDRESS2" expression="in5.ADDRESS21" type="id_String"/>
+        <mapperTableEntries name="CITY" expression="in5.CITY1" type="id_String"/>
+        <mapperTableEntries name="STATE" expression="in5.STATE1" type="id_String"/>
+        <mapperTableEntries name="POSTAL_CODE" expression="in5.POSTAL_CODE1" type="id_Double"/>
       </outputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="in6" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="" name="ADDRESS11" type="id_String"/>
-        <mapperTableEntries expression="" name="ADDRESS21" type="id_String"/>
-        <mapperTableEntries expression="" name="CITY1" type="id_String"/>
-        <mapperTableEntries expression="" name="COMPANY_NAME1" type="id_String"/>
-        <mapperTableEntries expression="" name="POSTAL_CODE1" type="id_Double"/>
-        <mapperTableEntries expression="" name="STATE1" type="id_String"/>
-        <mapperTableEntries expression="" name="STATE_TAX_ID1" type="id_Double"/>
-        <mapperTableEntries expression="" name="lkp_STATE_TAX_ID1" type="id_Double"/>
+      <inputTables sizeState="INTERMEDIATE" name="in5" minimized="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="ADDRESS11" expression="" type="id_String"/>
+        <mapperTableEntries name="ADDRESS21" expression="" type="id_String"/>
+        <mapperTableEntries name="CITY1" expression="" type="id_String"/>
+        <mapperTableEntries name="COMPANY_NAME1" expression="" type="id_String"/>
+        <mapperTableEntries name="POSTAL_CODE1" expression="" type="id_Double"/>
+        <mapperTableEntries name="STATE1" expression="" type="id_String"/>
+        <mapperTableEntries name="STATE_TAX_ID1" expression="" type="id_Double"/>
+        <mapperTableEntries name="lkp_STATE_TAX_ID1" expression="" type="id_Double"/>
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMap" componentVersion="2.1" posX="2459" posY="335">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_10"/>
+  <node componentName="tMap" componentVersion="2.1" posX="1918" posY="445">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_9"/>
     <elementParameter field="TEXT" name="LABEL" value="Upd_UpdatePath"/>
     <elementParameter field="CHECK" name="INFORMATION" value="true"/>
     <elementParameter field="MEMO" name="COMMENT" value="Update Strategy Expression=dd_update"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
-    <metadata connector="FLOW" name="in2">
+    <metadata connector="FLOW" name="in1">
       <column key="false" length="4" name="STATE_TAX_ID" precision="0" sourceType="" type="id_Double"/>
       <column key="false" length="27" name="COMPANY_NAME" precision="0" sourceType="" type="id_String"/>
       <column key="false" length="20" name="ADDRESS1" precision="0" sourceType="" type="id_String"/>
@@ -486,28 +471,28 @@
       <column key="false" length="7" name="POSTAL_CODE" precision="0" sourceType="" type="id_Double"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <outputTables name="in2" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="INPUT_2.STATE_TAX_ID" name="STATE_TAX_ID" type="id_Double"/>
-        <mapperTableEntries expression="INPUT_2.COMPANY_NAME" name="COMPANY_NAME" type="id_String"/>
-        <mapperTableEntries expression="INPUT_2.ADDRESS1" name="ADDRESS1" type="id_String"/>
-        <mapperTableEntries expression="INPUT_2.ADDRESS2" name="ADDRESS2" type="id_String"/>
-        <mapperTableEntries expression="INPUT_2.CITY" name="CITY" type="id_String"/>
-        <mapperTableEntries expression="INPUT_2.STATE" name="STATE" type="id_String"/>
-        <mapperTableEntries expression="INPUT_2.POSTAL_CODE" name="POSTAL_CODE" type="id_Double"/>
+      <outputTables sizeState="INTERMEDIATE" name="in1">
+        <mapperTableEntries name="STATE_TAX_ID" expression="INPUT_2.STATE_TAX_ID" type="id_Double"/>
+        <mapperTableEntries name="COMPANY_NAME" expression="INPUT_2.COMPANY_NAME" type="id_String"/>
+        <mapperTableEntries name="ADDRESS1" expression="INPUT_2.ADDRESS1" type="id_String"/>
+        <mapperTableEntries name="ADDRESS2" expression="INPUT_2.ADDRESS2" type="id_String"/>
+        <mapperTableEntries name="CITY" expression="INPUT_2.CITY" type="id_String"/>
+        <mapperTableEntries name="STATE" expression="INPUT_2.STATE" type="id_String"/>
+        <mapperTableEntries name="POSTAL_CODE" expression="INPUT_2.POSTAL_CODE" type="id_Double"/>
       </outputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="INPUT_2" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="" name="ADDRESS1" type="id_String"/>
-        <mapperTableEntries expression="" name="ADDRESS2" type="id_String"/>
-        <mapperTableEntries expression="" name="CITY" type="id_String"/>
-        <mapperTableEntries expression="" name="COMPANY_NAME" type="id_String"/>
-        <mapperTableEntries expression="" name="POSTAL_CODE" type="id_Double"/>
-        <mapperTableEntries expression="" name="STATE" type="id_String"/>
-        <mapperTableEntries expression="" name="STATE_TAX_ID" type="id_Double"/>
+      <inputTables sizeState="INTERMEDIATE" name="INPUT_2" minimized="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="ADDRESS1" expression="" type="id_String"/>
+        <mapperTableEntries name="ADDRESS2" expression="" type="id_String"/>
+        <mapperTableEntries name="CITY" expression="" type="id_String"/>
+        <mapperTableEntries name="COMPANY_NAME" expression="" type="id_String"/>
+        <mapperTableEntries name="POSTAL_CODE" expression="" type="id_Double"/>
+        <mapperTableEntries name="STATE" expression="" type="id_String"/>
+        <mapperTableEntries name="STATE_TAX_ID" expression="" type="id_Double"/>
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMap" componentVersion="2.1" posX="2189" posY="335">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_11"/>
+  <node componentName="tMap" componentVersion="2.1" posX="1648" posY="445">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_10"/>
     <elementParameter field="TEXT" name="LABEL" value="Upd_UpdatePath.expression"/>
     <elementParameter field="CHECK" name="INFORMATION" value="true"/>
     <elementParameter field="MEMO" name="COMMENT" value="This component created automatically to align schema between nearby components "/>
@@ -522,132 +507,96 @@
       <column key="false" length="7" name="POSTAL_CODE" precision="0" sourceType="" type="id_Double"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <outputTables name="INPUT_2" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="in4.STATE_TAX_ID3" name="STATE_TAX_ID" type="id_Double"/>
-        <mapperTableEntries expression="in4.COMPANY_NAME3" name="COMPANY_NAME" type="id_String"/>
-        <mapperTableEntries expression="in4.ADDRESS13" name="ADDRESS1" type="id_String"/>
-        <mapperTableEntries expression="in4.ADDRESS23" name="ADDRESS2" type="id_String"/>
-        <mapperTableEntries expression="in4.CITY3" name="CITY" type="id_String"/>
-        <mapperTableEntries expression="in4.STATE3" name="STATE" type="id_String"/>
-        <mapperTableEntries expression="in4.POSTAL_CODE3" name="POSTAL_CODE" type="id_Double"/>
+      <outputTables sizeState="INTERMEDIATE" name="INPUT_2">
+        <mapperTableEntries name="STATE_TAX_ID" expression="in6.STATE_TAX_ID3" type="id_Double"/>
+        <mapperTableEntries name="COMPANY_NAME" expression="in6.COMPANY_NAME3" type="id_String"/>
+        <mapperTableEntries name="ADDRESS1" expression="in6.ADDRESS13" type="id_String"/>
+        <mapperTableEntries name="ADDRESS2" expression="in6.ADDRESS23" type="id_String"/>
+        <mapperTableEntries name="CITY" expression="in6.CITY3" type="id_String"/>
+        <mapperTableEntries name="STATE" expression="in6.STATE3" type="id_String"/>
+        <mapperTableEntries name="POSTAL_CODE" expression="in6.POSTAL_CODE3" type="id_Double"/>
       </outputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="in4" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="" name="ADDRESS13" type="id_String"/>
-        <mapperTableEntries expression="" name="ADDRESS23" type="id_String"/>
-        <mapperTableEntries expression="" name="CITY3" type="id_String"/>
-        <mapperTableEntries expression="" name="COMPANY_NAME3" type="id_String"/>
-        <mapperTableEntries expression="" name="POSTAL_CODE3" type="id_Double"/>
-        <mapperTableEntries expression="" name="STATE3" type="id_String"/>
-        <mapperTableEntries expression="" name="STATE_TAX_ID3" type="id_Double"/>
-        <mapperTableEntries expression="" name="lkp_STATE_TAX_ID3" type="id_Double"/>
+      <inputTables sizeState="INTERMEDIATE" name="in6" minimized="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="ADDRESS13" expression="" type="id_String"/>
+        <mapperTableEntries name="ADDRESS23" expression="" type="id_String"/>
+        <mapperTableEntries name="CITY3" expression="" type="id_String"/>
+        <mapperTableEntries name="COMPANY_NAME3" expression="" type="id_String"/>
+        <mapperTableEntries name="POSTAL_CODE3" expression="" type="id_Double"/>
+        <mapperTableEntries name="STATE3" expression="" type="id_String"/>
+        <mapperTableEntries name="STATE_TAX_ID3" expression="" type="id_Double"/>
+        <mapperTableEntries name="lkp_STATE_TAX_ID3" expression="" type="id_Double"/>
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMap" componentVersion="2.1" posX="280" posY="317">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_12"/>
+  <node componentName="tMap" componentVersion="2.1" posX="280" posY="390">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_11"/>
     <elementParameter field="TEXT" name="LABEL" value="leftAgg_RemoveDuplicateRecords_Expression"/>
     <elementParameter field="MEMO" name="COMMENT" value=""/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
-    <metadata connector="FLOW" name="in5">
+    <metadata connector="FLOW" name="in3">
       <column key="false" length="4" name="STATE_TAX_ID" precision="0" sourceType="" type="id_Double"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <outputTables name="in5" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="input.STATE_TAX_ID" name="STATE_TAX_ID" type="id_Double"/>
+      <outputTables sizeState="INTERMEDIATE" name="in3">
+        <mapperTableEntries name="STATE_TAX_ID" expression="input.STATE_TAX_ID" type="id_Double"/>
       </outputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="input" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="" name="ADDRESS1" type="id_String"/>
-        <mapperTableEntries expression="" name="ADDRESS2" type="id_String"/>
-        <mapperTableEntries expression="" name="CITY" type="id_String"/>
-        <mapperTableEntries expression="" name="COMPANY_NAME" type="id_String"/>
-        <mapperTableEntries expression="" name="POSTAL_CODE" type="id_Double"/>
-        <mapperTableEntries expression="" name="STATE" type="id_String"/>
-        <mapperTableEntries expression="" name="STATE_TAX_ID" type="id_Double"/>
+      <inputTables sizeState="INTERMEDIATE" name="input" minimized="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="ADDRESS1" expression="" type="id_String"/>
+        <mapperTableEntries name="ADDRESS2" expression="" type="id_String"/>
+        <mapperTableEntries name="CITY" expression="" type="id_String"/>
+        <mapperTableEntries name="COMPANY_NAME" expression="" type="id_String"/>
+        <mapperTableEntries name="POSTAL_CODE" expression="" type="id_Double"/>
+        <mapperTableEntries name="STATE" expression="" type="id_String"/>
+        <mapperTableEntries name="STATE_TAX_ID" expression="" type="id_Double"/>
       </inputTables>
     </nodeData>
   </node>
   <connection connectorName="FLOW" label="DATA" lineStyle="8" metaname="DATA" source="tDBInput_2" target="tMap_4">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1"/>
   </connection>
-  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="out" source="tMap_1" target="tAggregateRow_1">
+  <connection connectorName="FLOW" label="INPUT" lineStyle="0" metaname="out" source="tMap_6" target="tMap_5">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2"/>
   </connection>
-  <connection connectorName="FLOW" label="in3" lineStyle="0" metaname="tAggregateRow_1" source="tAggregateRow_1" target="tMap_5">
+  <connection connectorName="FLOW" label="INPUT_1" lineStyle="0" metaname="out" source="tMap_8" target="tMap_7">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3"/>
   </connection>
-  <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="out" source="tMap_2" target="tDBOutput_2">
+  <connection connectorName="FLOW" label="in5" lineStyle="0" metaname="InsertPath" source="tMap_5" target="tMap_8">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row4"/>
   </connection>
-  <connection connectorName="FLOW" label="in7" lineStyle="0" metaname="OUTPUT" source="tMap_4" target="tMap_7">
+  <connection connectorName="FLOW" label="in4" lineStyle="0" metaname="tAggregateRow_1" source="tAggregateRow_1" target="tMap_6">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row5"/>
   </connection>
-  <connection connectorName="FLOW" label="CONTROL" lineStyle="0" metaname="out" source="tMap_5" target="tMap_4">
+  <connection connectorName="FLOW" label="input" lineStyle="0" metaname="tDBInput_4" source="tDBInput_4" target="tMap_11">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row6"/>
   </connection>
-  <connection connectorName="FLOW" label="in2" lineStyle="0" metaname="OUTPUT" source="tMap_10" target="tMap_3">
+  <connection connectorName="FLOW" label="row7" lineStyle="0" metaname="out" source="tMap_3" target="tDBOutput_4">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row7"/>
   </connection>
-  <connection connectorName="FLOW" label="INPUT" lineStyle="0" metaname="out" source="tMap_7" target="tMap_6">
+  <connection connectorName="FLOW" label="row8" lineStyle="0" metaname="out" source="tMap_1" target="tAggregateRow_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row8"/>
   </connection>
-  <connection connectorName="FLOW" label="in6" lineStyle="0" metaname="InsertPath" source="tMap_6" target="tMap_9">
+  <connection connectorName="FLOW" label="in3" lineStyle="0" metaname="output" source="tMap_11" target="tMap_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row9"/>
   </connection>
-  <connection connectorName="FLOW" label="row10" lineStyle="0" metaname="out" source="tMap_3" target="tDBOutput_4">
+  <connection connectorName="FLOW" label="in2" lineStyle="0" metaname="OUTPUT" source="tMap_7" target="tMap_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row10"/>
   </connection>
-  <connection connectorName="FLOW" label="input" lineStyle="0" metaname="tDBInput_4" source="tDBInput_4" target="tMap_12">
+  <connection connectorName="FLOW" label="in1" lineStyle="0" metaname="OUTPUT" source="tMap_9" target="tMap_3">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row11"/>
   </connection>
-  <connection connectorName="FLOW" label="in5" lineStyle="0" metaname="output" source="tMap_12" target="tMap_1">
+  <connection connectorName="FLOW" label="in6" lineStyle="0" metaname="UpdatePath" source="tMap_5" target="tMap_10">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row12"/>
   </connection>
-  <connection connectorName="FLOW" label="INPUT_1" lineStyle="0" metaname="out" source="tMap_9" target="tMap_8">
+  <connection connectorName="FLOW" label="INPUT_2" lineStyle="0" metaname="out" source="tMap_10" target="tMap_9">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row13"/>
   </connection>
-  <connection connectorName="FLOW" label="INPUT_2" lineStyle="0" metaname="out" source="tMap_11" target="tMap_10">
+  <connection connectorName="FLOW" label="row14" lineStyle="0" metaname="out" source="tMap_2" target="tDBOutput_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row14"/>
   </connection>
-  <connection connectorName="FLOW" label="in1" lineStyle="0" metaname="OUTPUT" source="tMap_8" target="tMap_2">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row15"/>
-  </connection>
-  <connection connectorName="FLOW" label="in4" lineStyle="0" metaname="UpdatePath" source="tMap_6" target="tMap_11">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row16"/>
-  </connection>
-  <note opaque="true" posX="608" posY="32" sizeHeight="193" sizeWidth="545" text="COMAPNY_Inserts&#13;&#10;&#9;Check the 'Action on Data' property &#13;&#10;COMAPNY_Updates&#13;&#10;&#9;Check the 'Action on Data' property &#13;&#10;">
+  <note opaque="true" posX="608" posY="32" sizeHeight="193" sizeWidth="545" text="COMAPNY_Updates&#xD;&#xA;&#x9;Check the 'Action on Data' property &#xD;&#xA;COMAPNY_Inserts&#xD;&#xA;&#x9;Check the 'Action on Data' property &#xD;&#xA;">
     <elementParameter field="RADIO" name="NOTETXT_LEFT" value="true"/>
     <elementParameter field="RADIO" name="NOTETXT_CENTER" value="false"/>
     <elementParameter field="RADIO" name="NOTELABEL_CENTER" value="false"/>
     <elementParameter field="RADIO" name="NOTETXT_TOP" value="true"/>
   </note>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_83c7fb49-9f04-4355-8e4c-64808307764a"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>90a2hsBRbtrlVwZETtHZ45yf6m45fhq4OhbMb/sprwApvqKdvA5HYZLxgSo3g+M14/vVOjn5R0on
-wmU6h/Fcmg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_1ded3e8c-884b-4dd3-9824-ab63724a4a49"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>pRJ5ysqX6EgLEfBfjBP+y5sRMyYI2xeesbNNVT5fNUafU/7bhicBg5Wx5PyqTJv7yKPBMuwdqu1Q
-bRUVz1y4+w==</DigestValue></Reference></SignedInfo><SignatureValue>o0uQczQGwOInJS/ERxjx0YUyv/uzjb+IwdPY9SU+LGNaMmuJlkG7jqnfdo3+5NbDoxT6wuMK6h3J
-nLZXOF0apbwe8VG6/WzLwOWn+tZJ7GClvTgtNyFm5Q+rSnm1P+GP+wMqX2eNy276rhf/uzAiGFhV
-bLwRw+E/kYu2puSWyJLzGKqqWq3SYY/4pzb5xRzH6zWTGEQ/O7ob4JV0KfQvBRjHQkHICx4QNHlf
-MKHAtVEAA6mrxE4r3cDIu6Oy2zV4vkNJ0c6FoOu1TNc7nhHX2hAFa/TPSm1HZN2VbP83n83DFKtf
-2SS+KlulLWlrl++g4D35PGE6BZh0+Wt9lxkvrA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
-BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
-RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
-LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
-VQQIDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1ImRDEpMCcGA1UEAwwg
-RGVmYXVsdCBjb2RlLXNpZ25pbmcgY2VydGlmaWNhdGUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
-ggEKAoIBAQDiCz1II/o6hDUWu/ygxTCT2o/fYxVzPW23AoONQC/Vuiqh0COyLIgaMTjBPmQdTQFq
-rmM5tD64gi4TEQF+Z3iYt3daLdQUfaW9SzaMlY+XVNz5xnMBVDuiSHJSFE9lKnhgbKAHvOeoJo46
-UgWwb1za0WpRckDtjKcntwEK1orZCgrcIo1nDvFXyB5n0KfpLyktEOa0bSHde50MPbvQeB66XlEb
-lhjfs5S9WnAUja9RgqdwqZoI0ss+x/pjkQygDT8f17MktM21HOtg09lJlhMGJckhgD7jUF5tfYGM
-sv/O27g5CToFhxOnutDtsrDw7AkEQIml8KJp97bQLAFlLnh1AgMBAAGjge0wgeowHQYDVR0OBBYE
-FFzdy6ZfpUX8JwkM/SUrqkwLNqWAMB8GA1UdIwQYMBaAFOd9C3L8tYGZxoAr2SzsgnMytaj3MAsG
-A1UdDwQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAJBgNVHRMEAjAAMHsGCWCGSAGG+EIBDQRu
-FmxEZWZhdWx0IHRoaXJkIHBhcnR5IGNvZGUtc2lnbmluZyBjZXJ0aWZpY2F0ZS4gTm8gY29tbWl0
-bWVudCBpcyBtYWRlIG9uIHRoZSBjb250ZW50IHNpZ25lZCBieSB0aGUgdGhpcmQgcGFydHkwDQYJ
-KoZIhvcNAQELBQADggIBAKzYdnzoFgrRtDLSSzWtwuOrGo5+1RPoDHm/1dlbVnB7oZzUwfRGwZT5
-ser0V7OZyt9wWR8iQ2ka30fHWrNAosNtlIkF88s5YZw7OOIMxR+qYA99BnWLa79DZVIuukI2f5qJ
-Cr9nw6Oygo8CWeNMWhtXcvV4gqROhb2QMBrvWBw9QvNK1XMdtPShfWiXwyPzzRKgwqrN2meXtOY3
-S+MXu6u+RUD9EYeElp9M+9Yp+zRySl5/s+0sbvo7qz369dlsw8XhKXT+s4YQQe3Sx14Kg3SDFXKn
-QcVgycaZMOw4YUxOeP2hKOHnNuOMORfu3qlYkN/0RMGjn6r4PU4+yL276TiWI5b8J06y4leng2as
-r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
-EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
-BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
-6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_1ded3e8c-884b-4dd3-9824-ab63724a4a49" Target="#_83c7fb49-9f04-4355-8e4c-64808307764a"><Timestamp>2019-01-31 09:24:51</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+</talendfile:ProcessType>
