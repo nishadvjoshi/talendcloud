@@ -78,7 +78,7 @@
       <routinesParameter id="_rZ0nUB-1EemtwtEDadxD9Q" name="TalendStringUtil"/>
       <routinesParameter id="_rZRNsB-1EemtwtEDadxD9Q" name="TalendString"/>
     </parameters>
-    <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="128">
+    <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="256">
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputDelimited_1"/>
       <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
       <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
@@ -182,7 +182,7 @@
         <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       </metadata>
     </node>
-    <node componentName="tFlowMeter" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="128">
+    <node componentName="tFlowMeter" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="512" posY="256">
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFlowMeter_4"/>
       <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
       <elementParameter field="TEXT" name="METTERLABEL" show="false" value="&quot;MyLabel&quot;"/>
@@ -204,12 +204,12 @@
         <column comment="" key="false" length="-1" name="FileName" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       </metadata>
     </node>
-    <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="640" posY="128">
+    <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="672" posY="256">
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
       <elementParameter field="EXTERNAL" name="MAP" value=""/>
       <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
       <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-      <elementParameter field="IMAGE" name="PREVIEW" value="_JrUPYAtUEeqLrOmYbRYcmg-tMap_1-PREVIEW.bmp"/>
+      <elementParameter field="IMAGE" name="PREVIEW" value="_ZgYTsDd_Eeql-6wdTODT1Q-tMap_1-PREVIEW.bmp"/>
       <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
       <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
       <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
@@ -263,7 +263,7 @@
         </inputTables>
       </nodeData>
     </node>
-    <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="832" posY="128">
+    <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="864" posY="256">
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tAggregateRow_1"/>
       <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
       <elementParameter field="TABLE" name="GROUPBYS">
@@ -302,7 +302,7 @@
         <column comment="" key="false" length="-1" name="stockYear" nullable="true" originalLength="-1" pattern="&quot;yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
       </metadata>
     </node>
-    <node componentName="tFlowMeter" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="992" posY="128">
+    <node componentName="tFlowMeter" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1024" posY="256">
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFlowMeter_6"/>
       <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
       <elementParameter field="TEXT" name="METTERLABEL" show="false" value="&quot;MyLabel&quot;"/>
@@ -320,7 +320,7 @@
         <column comment="" key="false" length="-1" name="stockYear" nullable="true" originalLength="-1" pattern="&quot;yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
       </metadata>
     </node>
-    <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1184" posY="128">
+    <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1216" posY="256">
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputDelimited_1"/>
       <elementParameter field="CHECK" name="USESTREAM" value="false"/>
       <elementParameter field="TEXT" name="STREAMNAME" show="false" value="outputStream"/>
@@ -399,6 +399,9 @@
       <elementParameter field="TEXT" name="DEPART_QUEUE_SIZE" show="false" value="10000"/>
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
     </connection>
+    <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="TRIGGER_INPUT_1" offsetLabelX="0" offsetLabelY="0" source="TRIGGER_INPUT_1" target="tFileInputDelimited_1">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
+    </connection>
     <subjob>
       <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputDelimited_1"/>
@@ -406,15 +409,29 @@
       <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
       <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
     </subjob>
+    <subjob>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="TRIGGER_INPUT_1"/>
+      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+    </subjob>
+    <jobletNodes componentName="TRIGGER_INPUT" componentVersion="0.1" input="true" offsetLabelX="0" offsetLabelY="0" posX="192" posY="64" trigger="true">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="TRIGGER_INPUT_1"/>
+      <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+      <elementParameter field="CHECK" name="START" show="false" value="true"/>
+      <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__"/>
+      <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+      <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+      <elementParameter field="MEMO" name="COMMENT" value=""/>
+    </jobletNodes>
   </model:JobletProcess>
   <TalendProperties:ByteArray/>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_cbde2983-d3cd-4a5c-afe2-b440124cfea9"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>RIrRHdfBg4xdOBhGRi9PJQZY4H+mG4yHB1bNC8NbD4BTBxTFgDWU7sKKUXRET6hdJ5krAIx9A4sy
-gEohRcozzQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d19dddef-8588-4c06-b720-10fed49d715e"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>NWarL4lI+NDvXwv/XwU0FiTfQYNFbkq6RJSHJzjjUueDzjTY0CyiL0DT0hg2zPkoQOEkigEQi1OH
-scS6uqkrHw==</DigestValue></Reference></SignedInfo><SignatureValue>fOk/wksjrMDob6alA57C48tTh7m1co4wRlm62LbKxeldlFPSUqjWq9+bE4xc+KfdcSZQS650jzvo
-+tlsqakzsZhV6tBfyi2MHYTR3QBnoAHGev/pJoOAcazeZtjHgO2vkLOhET+a43PZciFeYowKP6WZ
-NWH4g3WH5NqANlrRB11Sxu+muJp7lKKBbZbEmyhNBboEn2SAzXKzzWHJtErYw/Qeo+lqmeoI24cO
-WPWTnXNEZeei8hzH7uaLb8sxfMPVLAJlfCwi9ScLVmzPNQ+5qEz63ZNHV9zP/LQGt/PBHuO115cz
-5jpjLyCLFqEOv8CePyCx9pjz19stKP8o66kjrg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b83a24ee-2424-4aa6-b109-54d8b7062141"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>BLiQzmoAh1y20+l6+wF9AF63lvg8Cx8eVVT2THOr954t7CA2Hm9kNQrmTR1A0gKTZcwB2o3jeMwG
+ee0mw9Ju7g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e3b8fafd-9a37-41ea-908a-0e2bf70abfb9"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>tKtBMrUVh5CiS6mUfhE1H9e0IoaaaGDLBQpf0qe3diHpdKLWUrnMbkGOcNn3Ollvc6vtx2th2w3h
+I2CC4RMLfg==</DigestValue></Reference></SignedInfo><SignatureValue>IUbCDJnkv3piPJmRtUU66HUig+BRM/Sgc8tcUPUM8JdQN0aE/xiTITHdQ0A5KHu0Y2gFpPAoex0n
+s7Vz2O1mNPgEu5l4yJcB3ENe0gOxqK76nc75fCIQYi76ae+mkJOfZVVnb4Hfc4sPDcU1c4SA0hig
+aIEuDSZuj1qeWVs6f6A/qIiwhRWSzUIH8G+NGvpyHcuIxJFGMCZBKXlezJTuEk4wUJlLLsxCCGaI
+zoC/S+dl+XD3mnDH35znQKEzak5D8SZDzBaHGq7JxXP+GAg3/E6ex5qR9lYZ7ur5SIhlobOTQG5Q
+aBCk4nK8E7b4M2wkDIcUpTbLwl9I7WR96Gf/Pg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -436,4 +453,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d19dddef-8588-4c06-b720-10fed49d715e" Target="#_cbde2983-d3cd-4a5c-afe2-b440124cfea9"><Timestamp>2020-01-15 10:11:33</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e3b8fafd-9a37-41ea-908a-0e2bf70abfb9" Target="#_b83a24ee-2424-4aa6-b109-54d8b7062141"><Timestamp>2020-01-15 10:18:04</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
