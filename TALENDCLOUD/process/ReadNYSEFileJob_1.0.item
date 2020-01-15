@@ -284,7 +284,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_3"/>
   </node>
-  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="-8" offsetLabelY="-7" posX="608" posY="576">
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="-8" offsetLabelY="-7" posX="384" posY="512">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRunJob_5"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" show="false" value=""/>
@@ -302,13 +302,6 @@
     <elementParameter field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" show="false" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_5"/>
-  </node>
-  <node componentName="tParallelize" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="352" posY="448">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tParallelize_1"/>
-    <elementParameter field="CLOSED_LIST" name="WAIT_FOR" value="All"/>
-    <elementParameter field="TEXT" name="SLEEPTIME" value="100"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
   <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="32">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPrejob_1"/>
@@ -416,8 +409,11 @@
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="4"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="iterate1"/>
   </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tParallelize_1">
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tFileList_1" target="tRunJob_3">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tFileList_1" target="tRunJob_5">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk2"/>
   </connection>
   <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tJava_1" target="tRunJob_1">
     <elementParameter field="MEMO_JAVA" name="CONDITION" value="((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEPATH&quot;)).contains(&quot;daily&quot;)"/>
@@ -426,12 +422,6 @@
   <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tJava_1" target="tRunJob_2">
     <elementParameter field="MEMO_JAVA" name="CONDITION" value="((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEPATH&quot;)).contains(&quot;daily&quot;)"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="If2"/>
-  </connection>
-  <connection connectorName="PARALLELIZE" label="Parallelize" lineStyle="13" metaname="tParallelize_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tParallelize_1" target="tRunJob_3">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Parallelize"/>
-  </connection>
-  <connection connectorName="PARALLELIZE" label="Parallelize" lineStyle="13" metaname="tParallelize_1" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tParallelize_1" target="tRunJob_5">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Parallelize"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tFileInputDelimited_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
@@ -502,11 +492,6 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tParallelize_1"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" show="false" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPrejob_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
@@ -530,13 +515,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_8073ccc9-ceed-4e53-999b-b571f4d9b5e6"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>SE7St+fzYCQi3dKqgV6yL/8augDOUEvMYvPrT0LbTrda+V0LT2xA3oDZ7by0bUQelLHowR6q+N+E
-r0Cs5pqDjA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_86f663f0-575d-4455-b10d-19130de5a018"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>M1wvaVF8+m5VYIF/oYcyjlZsQj0mxMFgU7SPMiA/OLjopRwoLMzuTabkGH5fHWD84Iz5ft+SaG22
-tKvmjd3rPQ==</DigestValue></Reference></SignedInfo><SignatureValue>PCO9VGixm0YkRCzTZZoTOIdXYCeMrk8gsVdzmAg3tFToS3sMEsTr2v7wxlGTtg9CwHwcifeS6SUj
-guGOReaovvwKDG6UWp7sOGDivAW4X1bAs0PArk55BXSFZhTYs/8dYHP3FP4JQxlNzaRNp3WFRtZA
-hfTaNzRxzYKsA/Yhe8nFHtsQ6qLd4J7ETCBt4JuVpej6aWpablISkHnC0xE736OdhMYiQ1Y0mXZK
-XNh9FgBYKpNp0cZZb7XviUiF9zSBg+copuJ2ojMxBaJ7YGrYJLajph/dnN5JG9f5VvSQRHkqt/i/
-sQDpzzESR1z+mJyg+bv4yseLNyOZ96o+koTbwg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_2e554682-77e2-4e79-aad2-279e3c29886e"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>gsKSPaZVZrtCmIKTjA6cG5+8pFizdjEqUHsFKXkHLzEI5eASppMTLzAin64c6SI7JQ3wULBjE66w
+gMNn61e7xw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_50504b55-9e27-4f25-b17b-8180ad7f83b6"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Hvgv4Tym0lpH85GETx3ulXqWhDhUkRlh2quh2HfYs3bXuxGCnEtZ9yhzCIAlzv7AeomfPpLtNIh6
+aG5g6NiNjw==</DigestValue></Reference></SignedInfo><SignatureValue>pQayOGsg+RfhZJm6m5J9m71cvTMgCPZhldOSGeE64nmoZ6HuYYUI1z/Kdf2NsnEUhiztmdwrX56j
+cjPpauOFqCDrUqTEthCU0k5a2oLZVSHGF3U+JfN88SLe0ntUqVqYlo6tUoqrIi8WECCR5SNSSa0Q
+8lh0viKDEsd5Q/VRH0fG7Lv99lscbvhaAWH73SuPXQA7qDXv6BXE/9awe98VNVg1Dfz/NKamJauY
+S8o3mJ6SJM3YZkl5NIdeH39TtcWMlJedTfR5266NhFVXqhiYoam3TIkAYzbiUj4lWgmbKvtzCZe5
+SfseFodcXD1uEZsekbLbKSYzcq2pWUg4YFLDCw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -558,4 +543,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_86f663f0-575d-4455-b10d-19130de5a018" Target="#_8073ccc9-ceed-4e53-999b-b571f4d9b5e6"><Timestamp>2019-11-27 07:13:28</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_50504b55-9e27-4f25-b17b-8180ad7f83b6" Target="#_2e554682-77e2-4e79-aad2-279e3c29886e"><Timestamp>2020-01-15 08:46:09</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
