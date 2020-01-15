@@ -415,17 +415,18 @@
   </node>
   <connection connectorName="FLOW" label="TotelMergeRecords" lineStyle="0" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tFlowMeter_4">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="PART_QUEUE_SIZE" show="false" value="10000"/>
-    <elementParameter field="CHECK" name="HASH_PARTITION" show="false" value="true"/>
-    <elementParameter field="TABLE" name="HASH_KEYS" show="false">
+    <elementParameter field="RADIO" name="PARTITIONER" value="true"/>
+    <elementParameter field="RADIO" name="NONE" value="false"/>
+    <elementParameter field="TEXT" name="PART_QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="HASH_PARTITION" value="true"/>
+    <elementParameter field="TABLE" name="HASH_KEYS">
       <elementValue elementRef="KEY_COLUMN" value="stock_symbol"/>
-      <elementValue elementRef="KEY_COLUMN" value="stockMonth"/>
-      <elementValue elementRef="KEY_COLUMN" value="stockYear"/>
     </elementParameter>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="TotelMergeRecords"/>
   </connection>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFlowMeter_4" offsetLabelX="0" offsetLabelY="0" source="tFlowMeter_4" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="HASH_PARTITION" show="false" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
   <connection connectorName="FLOW" label="out1" lineStyle="0" metaname="out1" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tAggregateRow_1">
@@ -438,6 +439,14 @@
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="RADIO" name="REPARTITIONER" value="true"/>
+    <elementParameter field="RADIO" name="NONE" value="false"/>
+    <elementParameter field="CHECK" name="HASH_PARTITION" value="true"/>
+    <elementParameter field="TABLE" name="HASH_KEYS">
+      <elementValue elementRef="KEY_COLUMN" value="stock_symbol"/>
+      <elementValue elementRef="KEY_COLUMN" value="stockMonth"/>
+      <elementValue elementRef="KEY_COLUMN" value="stockYear"/>
+    </elementParameter>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out1"/>
   </connection>
   <connection connectorName="FLOW" label="FinalSummaryCount" lineStyle="0" metaname="tAggregateRow_1" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_1" target="tFlowMeter_6">
@@ -446,7 +455,9 @@
   </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tFlowMeter_6" offsetLabelX="0" offsetLabelY="0" source="tFlowMeter_6" target="tFileOutputDelimited_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="DEPART_QUEUE_SIZE" show="false" value="10000"/>
+    <elementParameter field="RADIO" name="DEPARTITIONER" value="true"/>
+    <elementParameter field="RADIO" name="NONE" value="false"/>
+    <elementParameter field="TEXT" name="DEPART_QUEUE_SIZE" value="10000"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
   <subjob>
@@ -461,13 +472,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_566ce3ba-d7cd-4a41-a0f1-34e6e86de9cf"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>4A4PBtOCE1yihMshN5d+bDYN/grZc4loANNiBRHyg3QHZsR7mcA3g3TBR/E5TmEfmY1iNS83C38m
-7wv4xrgCkQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_c904ffe2-ab26-45ee-8a7b-1d909be77414"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>mYlvgHuEcooCgxJmLzmqN+C2oq35/eebtubXvapkwYdVoeZon2+zgNLJWJRXBtmDpr12FMeKkJc1
-8N9mLX2cqA==</DigestValue></Reference></SignedInfo><SignatureValue>goJY8sw4XsXo2+zcj5UOgKfg1bPGxrXX7TcF1InBQxgSagQIOT3mdsalZUkbPNqFF59HFzQUDX3Z
-LPOiZmFS5i5SeXHQrZkYUdnNnt0UhQVRaG2zDhSgcU04Dov8LPHPn08rQM3u0hdwB/l5gK7bDV7v
-Vyag1ceDWT6mfLIubndoWSLNJECUMQOZGgwCepH8r03E4YoIIuBQB3Ruk1HrdCCQr6jbgaB/r26C
-QvTcopIyC9YZgD3RSVaT1EpItcN5AhPOew+dW75js0FTpoK6Q3NpFxg3W0vbslp2LCBEi2kJkDwj
-KkCpU7U9lYUqQ0eIX/hN42nGtnIScpYhk5G0bA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_6ec92f53-9c37-4f0d-87f6-4ddcf3a7339f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>StnXf1fBNYHdjqTax4PmYm6vnwxe+tUL58KneWjuaHB9H6qU43DPICG0vdc9FocSnqe5D4JSgGe0
+mcj1Fua4jA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_2202d048-e4ae-4900-8834-242939a335b4"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ZIlYG92wNcx/2gat56C1QUnA+JX0Zu9Qsu2iBLkQLvhPVHCxp6wi0IuW6T9suCwt9VKoCRhj0+UA
+PlINoLbBMQ==</DigestValue></Reference></SignedInfo><SignatureValue>S72LRlEjByQSVnaYuXC6RULRZ5VBpSt4mAFBVnR6bCLatZD/XexdngLkYc68rPVIwmwPAAmVJ9ag
+JyGnlwU7WeeFnyccv5juONoM6AnLCRhASJ3h8acVER2WYtzIONM2GF5I7YV2DzSSzyjma2p8Bgua
+MqguKEqnF63jPcToBd/rp/9fC8IO9d88mUBVMxa5SM6LGm7YnuhKRZp297HdLlNwf2za80LqLcrC
+/IdkWOg4dU/alGBx2geq5qs3prNh9LdG+d4tWBckVIZuBlEjJG91eEWta28x0QwM44RuH/cRV+5I
+2EFlvhwjVHHUR5VCUwLFrJ48TsHaDoDN8jsJaQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -489,4 +500,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_c904ffe2-ab26-45ee-8a7b-1d909be77414" Target="#_566ce3ba-d7cd-4a41-a0f1-34e6e86de9cf"><Timestamp>2019-11-27 07:05:27</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_2202d048-e4ae-4900-8834-242939a335b4" Target="#_6ec92f53-9c37-4f0d-87f6-4ddcf3a7339f"><Timestamp>2020-01-15 09:27:14</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
