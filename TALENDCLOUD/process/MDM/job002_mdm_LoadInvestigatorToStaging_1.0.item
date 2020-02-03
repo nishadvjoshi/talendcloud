@@ -306,7 +306,7 @@
       <column comment="" key="false" length="50" name="City" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="50" name="State" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="5" name="ZipCode" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="newColumn" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Gender" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="30" name="ModifiedDate" nullable="true" originalLength="30" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
@@ -326,7 +326,7 @@
         <mapperTableEntries expression="row2.City" name="City" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row2.State" name="State" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row2.ZipCode" name="ZipCode" nullable="true" type="id_Integer"/>
-        <mapperTableEntries expression="" name="newColumn" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="(&quot;M&quot;,&quot;F&quot;) " name="Gender" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row2.ModifiedDate" name="ModifiedDate" nullable="true" type="id_Date"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row2" sizeState="INTERMEDIATE">
@@ -390,8 +390,8 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="ZipCode"/>
       <elementValue elementRef="KEY_ATTRIBUTE" value="true"/>
       <elementValue elementRef="CASE_SENSITIVE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="newColumn"/>
-      <elementValue elementRef="KEY_ATTRIBUTE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Gender"/>
+      <elementValue elementRef="KEY_ATTRIBUTE" value="false"/>
       <elementValue elementRef="CASE_SENSITIVE" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="ModifiedDate"/>
       <elementValue elementRef="KEY_ATTRIBUTE" value="true"/>
@@ -417,7 +417,7 @@
       <column comment="" key="false" length="50" name="City" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="50" name="State" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="5" name="ZipCode" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="newColumn" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Gender" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="30" name="ModifiedDate" nullable="true" originalLength="30" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
     </metadata>
     <metadata connector="UNIQUE" label="metadata" name="UNIQUE">
@@ -434,7 +434,7 @@
       <column comment="" key="false" length="50" name="City" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="50" name="State" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="5" name="ZipCode" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="newColumn" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Gender" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="30" name="ModifiedDate" nullable="true" originalLength="30" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
     </metadata>
     <metadata connector="DUPLICATE" label="metadata" name="DUPLICATE">
@@ -451,7 +451,7 @@
       <column comment="" key="false" length="50" name="City" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="50" name="State" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="5" name="ZipCode" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="newColumn" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Gender" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="30" name="ModifiedDate" nullable="true" originalLength="30" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
     </metadata>
   </node>
@@ -486,7 +486,7 @@
       <column comment="" key="false" length="30" name="ModifiedDate" nullable="true" originalLength="30" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="staging" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row3.FirstName " name="FirstName" nullable="true" type="id_String"/>
@@ -518,7 +518,7 @@
         <mapperTableEntries name="City" nullable="true" type="id_String"/>
         <mapperTableEntries name="State" nullable="true" type="id_String"/>
         <mapperTableEntries name="ZipCode" nullable="true" type="id_Integer"/>
-        <mapperTableEntries name="newColumn" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Gender" nullable="true" type="id_String"/>
         <mapperTableEntries name="ModifiedDate" nullable="true" type="id_Date"/>
       </inputTables>
     </nodeData>
@@ -567,7 +567,7 @@
       <column comment="" key="false" length="50" name="City" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="50" name="State" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="5" name="ZipCode" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="newColumn" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Gender" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="30" name="ModifiedDate" nullable="true" originalLength="30" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
     </metadata>
   </node>
@@ -665,13 +665,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_af5113ac-1074-494f-927b-81c8035159af"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>o/KIRdEBI+APQTXJVOeVGgDhUNp8gABiNnR02DslT8XsyBO0Pbic7nONAH2U+v96vOyk7YvcNnmv
-XzWeC9GF5A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_4ef775e0-8bff-419e-96f9-f09a3d664fcd"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>X7eksbBaZk9e9m/jDEWbxqdZ2ywE87Jd1auVgjyTPHwlSLYk8W8dBJCoA/wtpOaIOZRAMdHOgflX
-6ciCrkIgww==</DigestValue></Reference></SignedInfo><SignatureValue>ecfyrDmzAn+Z+nLH5Ztb93OyjtpWddnOrkMXWAkozc3qmKZU23e1WTr5TxGIBoWreEQ/QIx1N5um
-FwkmQEBOYaIQEoMsUrzVpQZ1vdeIMEHTeFsAnPL+aWBPB/oB3yTqtlYcWRb7bwUi+kcKR9zhGTKg
-4mFwNePgbcx7LpSIJVqo6uu9V7nV1zfIWER5uKhV56K0GtzSv9qb4SxTngMjTC6tDUc1IHZ2webf
-e7GfG8VuKwc5+QIOTbzcHiaGr/+sc6lQjyZ8FPR7A1k4FFSat7goHyxAXEntlMcwRDC2cOgTEJAu
-UPWR7yaM5kecM0lBK0gLs87wGhgrhmidEXs2kQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_239f8f5f-72e1-4a90-b66c-ee3aef87f4bf"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>QETNYGzzkDmweKqU1REHll5CzY9axPBQGFTpoI91Qod/abfHxx5TMCa504tFSev2eRmPfMOb0ypM
+plipc5PQfQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_800d5239-eaea-4a81-9124-4369b9fc1e4a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>pCaT6F4h9lbdpbruDHzFCxt+Ng4ZkMqQBMeZwq4DaqY4N+Pb4AxX0jXR3HS3j1LIbBSGaJHcBuim
+1QQB+gdHrw==</DigestValue></Reference></SignedInfo><SignatureValue>aot0AJV6oZ4tbcSys2U2FNO5zMiHxAa5uxz2a3qQjIbwwZu/GMYZze+TnnSSHHoVlZbhW9NgU7DI
+fwimdW3XS3ka/DnFhHeMf7ULkkIVYUHOJTdPni6xojdjHjgwHRiOnkpIBF6C0KkOkPZ7xl5iX+jX
+fMS/2Tyt7B836OHHiNlshwEPapLF2pTbQ4QxqpH2Mcz420NDq/SeafriNCoLu/1FxWVNJvUXfRft
+/X6PoLHOqjHsuWP5m04vJm9I3shxysn9aiiig6b6rH/d5eNUQRmndCbd2LV8s9Ob7zhfy91LnmAg
+WBA+NmWPcwE0xTJX/O8HZpi14iry1CyeCSNmXw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -693,4 +693,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_4ef775e0-8bff-419e-96f9-f09a3d664fcd" Target="#_af5113ac-1074-494f-927b-81c8035159af"><Timestamp>2020-02-03 09:11:31</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_800d5239-eaea-4a81-9124-4369b9fc1e4a" Target="#_239f8f5f-72e1-4a90-b66c-ee3aef87f4bf"><Timestamp>2020-02-03 16:52:31</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
