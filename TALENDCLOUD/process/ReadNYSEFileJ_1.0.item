@@ -230,12 +230,12 @@
     <metadata connector="FLOW" label="nyse" name="nyse">
       <column comment="" key="false" length="4" name="exchange" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="3" name="stock_symbol" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="4" name="stock_price_open" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="stock_price_open" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="4" name="stock_price_high" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="4" name="stock_price_low" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="4" name="stock_price_close" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="7" name="stock_volume" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="7" name="stock_volume" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="4" name="stock_price_adj_close" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Float" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
@@ -244,12 +244,12 @@
       <outputTables name="nyse" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row1.exchange " name="exchange" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row1.stock_symbol " name="stock_symbol" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.date " name="date" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.stock_price_open " name="stock_price_open" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.date " name="date" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="row1.stock_price_open " name="stock_price_open" nullable="true" type="id_Float"/>
         <mapperTableEntries expression="row1.stock_price_high " name="stock_price_high" nullable="true" type="id_Float"/>
         <mapperTableEntries expression="row1.stock_price_low " name="stock_price_low" nullable="true" type="id_Float"/>
         <mapperTableEntries expression="row1.stock_price_close " name="stock_price_close" nullable="true" type="id_Float"/>
-        <mapperTableEntries expression="row1.stock_volume " name="stock_volume" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.stock_volume " name="stock_volume" nullable="true" type="id_Integer"/>
         <mapperTableEntries expression="row1.stock_price_adj_close " name="stock_price_adj_close" nullable="true" type="id_Float"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row1" sizeState="INTERMEDIATE">
@@ -298,12 +298,12 @@
     <metadata connector="FLOW" label="nyse" name="tFileOutputDelimited_1">
       <column comment="" key="false" length="4" name="exchange" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="3" name="stock_symbol" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="4" name="stock_price_open" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="stock_price_open" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="4" name="stock_price_high" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="4" name="stock_price_low" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="4" name="stock_price_close" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="7" name="stock_volume" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="7" name="stock_volume" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="4" name="stock_price_adj_close" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Float" usefulColumn="true"/>
     </metadata>
   </node>
@@ -322,13 +322,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_92b46d52-4c35-4d9f-a1b9-22af22612612"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>xSp0ipBiG7wDpP+Sur5wf/JntVfoBqGXSH7gMKPxXVx/URKL4BYM6AuIh2oFO+sfI6yr9HuS799N
-CdrhVzo7OA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_718f361a-e6f4-4eb7-80b2-b3f90ab51223"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>fQ6+shbK5smUqFYLZkH5ch6OZYLeyFqcEtQzYTa6bWq9xMcdVrP24VY8pqeNaPYAT5aAUYaVI/IO
-dsAC9n+SOw==</DigestValue></Reference></SignedInfo><SignatureValue>GRZ83G0srm9O8CVS55J8RcBO/RRYpipmWfWdwUEqyWRk7qgbLga4C+ucjHmugUnfDA7W9QWPcnVM
-peEOmj5M/3e3oU9UO7LtFCXdBBGkljMEwy2T67UDIBhVQhdzY90SDdvQ/j1SlJMAAWlQYLYl8Dn2
-v49RR1fx1YMotc1sfHGEV5SECcHewcwDzDokzTUqoioupvrFYQLa0lHGHpQ8HDkVbapkW7+4WxA8
-9vz8SvF1KrvSyIqFr3ym0wfiQQfeLTmS9rXXfLWgIXJBL7YXb/otlwfKz7ioWMffBfvOTOzE1BHo
-cHDWxbwq2TJqguF6esgoKsdRCUKtBmQLOzwgnw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_fc6db28d-b5e1-4d3d-ad03-8eb5c352c767"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>PJoWl/da5mAibySQerXi7AS03NeuJhOVSiY09oGjEszg/WHgVGNAdDVkNC9GsUTG9Vu6uPWIt0hp
+iXvCxipxdw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_893312aa-1868-437f-bca8-cdd1a7783731"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ChiaMq2zLDub3CPA3Te1Fyn9jFmkALZXWHlGWvKkzlqopGkIQMFChmrkgvV2RWIwYOARkFoDgs7f
+3g/A7G+tig==</DigestValue></Reference></SignedInfo><SignatureValue>XicxAFT8pCxOs3w7Zp0t3TGdSCE8Ad55mTUIlHhsUkB3vWIsLKGyHg8KYVG6yrmObnp0oBM7gmo/
+eKGBsYyn9GANt/+kVa5jWAei5P7yL446FHrcOhlYlOqthZLe7ekXsBwcxQvKeLfJ2C2bbe9clYMI
+PxTW/lttbFgKkqqin7dt65HWkths+0WqKv+4P83hV5oNCCpAa9HGPQAz0rNPq7V9PLSQsbeHdmS8
+dBsEkMo+to0Pv9dPf+ng2JdcCC2R5fmtoxQ8wQZwgs2dIQ2KIQJSq9UtFsh/JW9Q/VzIAZE+ZRYk
+RX81Qoh170vRxaAZCpc7ffykfHaa4t3KvLHNaA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -350,4 +350,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_718f361a-e6f4-4eb7-80b2-b3f90ab51223" Target="#_92b46d52-4c35-4d9f-a1b9-22af22612612"><Timestamp>2020-02-08 05:57:35</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_893312aa-1868-437f-bca8-cdd1a7783731" Target="#_fc6db28d-b5e1-4d3d-ad03-8eb5c352c767"><Timestamp>2020-02-08 06:00:50</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
