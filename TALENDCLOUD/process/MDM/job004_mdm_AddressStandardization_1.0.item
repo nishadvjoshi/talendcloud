@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="Default" jobType="Standard" xmi:version="2.0">
   <context confirmationNeeded="false" name="Default"/>
   <parameters>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
@@ -107,13 +109,87 @@
     <routinesParameter id="_rZ0nUB-1EemtwtEDadxD9Q" name="TalendStringUtil"/>
     <routinesParameter id="_rZRNsB-1EemtwtEDadxD9Q" name="TalendString"/>
   </parameters>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_409d8de8-0a80-450b-ba04-be3af8877646"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>cK6sXoABerePEQkWwsaDJ33YJfF3Zo04FoUf3n3kgMwwxdZH+liEd+jxaAYZ0he9wd7NeZpKthN7
-r4fbHJOAgw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_f50c739f-2ea2-4ba8-9fe4-09faf6236746"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>RSMXS5JiXN1hA0Z88G5B/lODyv2Y+0/bYVqwUndHEA/nNvmdjXZ11102i8fwiEuj7u3bur0DDUmp
-DtcgTsbJdQ==</DigestValue></Reference></SignedInfo><SignatureValue>cwGDW6qZtqYeaDn2sZcoEnihbu5308p4++cFn20bjRmB8MtpHZrQCq7DCTDZrHuAtcty4hVJhDPG
-mDQD1mCB9QuN/bGhLKyMXoMkhxogu3/0lVRkt/rkVqZBtJzGa+nAATASf274MpkrBr3M1LCd3RI5
-yqDSlL1NQdUbpe7reeg2XZ9isvLl7g+s+PTKbXybM1EB0cdSwM9wD9t1bioNtI3pvg+uqiTMETUQ
-EZSC5xmZB8acbFq8D4FNADmgxBXXqbLW8EIgQLPbG38S8jsO63lltuyfrszKDfnGpWW1hJyv6Kw/
-TXp2hOnAva2p0PLKpeJ6UheGYqrTBC8ApPt36Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+  <node componentName="tMelissaDataAddress" componentVersion="0.201" offsetLabelX="0" offsetLabelY="0" posX="640" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMelissaDataAddress_1"/>
+    <elementParameter field="TABLE" name="INPUT_ADDRESS"/>
+    <elementParameter field="TABLE" name="OUTPUT_ADDRESS"/>
+    <elementParameter field="TEXT" name="LICENSE" value="&quot;DEMO&quot;"/>
+    <elementParameter field="TEXT" name="DATAFILE_DIR" value="&quot;C:/Program Files/Melissa DATA/DQT/Data&quot;"/>
+    <elementParameter field="RADIO" name="NOGEOCODE" value="false"/>
+    <elementParameter field="RADIO" name="GEOPOINT" value="true"/>
+    <elementParameter field="RADIO" name="GEOCODE" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tMelissaDataAddress_1">
+      <column defaultValue="" key="false" length="40" name="COMPANY_STANDARDIZED" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="ADDRESSLINE1_STANDARDIZED" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="ADDRESSLINE2_STANDARDIZED" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="38" name="CITY_STANDARDIZED" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="38" name="STATE_STANDARDIZED" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="38" name="POSTAL_STANDARDIZED" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="38" name="COUNTRY_STANDARDIZED" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="38" name="RESULTS_CODE" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tAddressRowCloud" componentVersion="0.100" offsetLabelX="0" offsetLabelY="0" posX="288" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tAddressRowCloud_1"/>
+    <elementParameter field="CLOSED_LIST" name="API_TYPE" value="MELISSA_DATA"/>
+    <elementParameter field="TEXT" name="LICENSE_KEY" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="COUNTRY" show="false" value="FRX"/>
+    <elementParameter field="TEXT" name="USER_NAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="0RMsyjmybrE="/>
+    <elementParameter field="CLOSED_LIST" name="PROCESSING_MODE" show="false" value="v+g"/>
+    <elementParameter field="CHECK" name="SECURE_MODE" value="false"/>
+    <elementParameter field="TABLE" name="INPUT_ADDRESS"/>
+    <elementParameter field="CHECK" name="USE_ADDITIONAL_OUTPUT" value="true"/>
+    <elementParameter field="TABLE" name="OUTPUT_MAPPING"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="ADDRESS_LINE_SEPARATOR" value="DEFAULT"/>
+    <elementParameter field="CLOSED_LIST" name="DEFAULT_COUNTRY" value="DEFAULT"/>
+    <elementParameter field="CLOSED_LIST" name="FORCED_COUNTRY" show="false" value="DEFAULT"/>
+    <elementParameter field="CLOSED_LIST" name="OUTPUT_SCRIPT" value="DEFAULT"/>
+    <elementParameter field="TEXT" name="MINIMUM_MATCH_SCORE" show="false" value="0"/>
+    <elementParameter field="TEXT" name="MINIMUM_VERIFICATION_LEVEL" show="false" value="0"/>
+    <elementParameter field="TEXT" name="QUERY_INTERVAL" value="100"/>
+    <elementParameter field="TEXT" name="TRIAL_LIMIT" value="10"/>
+    <elementParameter field="TEXT" name="TRIAL_INTERVAL" value="200"/>
+    <elementParameter field="TEXT" name="TERMINATION_WAITING_SECONDS" value="5"/>
+    <elementParameter field="TEXT" name="OUTPUT_HANDLER_TERMINATION_DELAY" show="false" value="2000"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tAddressRowCloud_1">
+      <column defaultValue="" key="false" length="31" name="Status" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="31" name="AddressVerificationCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="31" name="VerificationLevel" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="FormattedAddress" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="31" name="StreetNumber" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="63" name="Route" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="63" name="Locality" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="63" name="AdministrationAreaLevel2" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="63" name="AdministrationAreaLevel1" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="31" name="PostalCodeLong" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="31" name="PostalCodeShort" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="31" name="Country" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="31" name="Longitude" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="31" name="Latitude" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT"/>
+  </node>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMelissaDataAddress_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tAddressRowCloud_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_ad07c63e-1288-4fcb-95a1-6cad651d6a56"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>9+uQgJS9auF3fwe9QWga4EIPO/6I2q4n0fkVWpMWwivlkuZzoKY2eWemUlAmIQvjqdqfh45ruCTL
+vCSxFMVv4A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_1bd37a97-5325-419b-bb86-8c5950a7ef96"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>jmOVNyMA8KzN+cSPnpCsGkDTbjsYZB+7MI20NWoKXVzY+megtrwKmOaM8LHX5T2KPnIRwuFkIExF
+DnVvHXRTXw==</DigestValue></Reference></SignedInfo><SignatureValue>I9DQIUIYXT6toEpValpB94ZnxhssFIzi+JpGz3Qm/4YSdT/3fmSMCL1wirBygnPzQDxESovd8Zvb
+OZPOPCYlHihdtmvXFRTVZ+M+aIuyPsQxyA6zfzFwFQKCB641BfFFlRydlilQM2IWiz1+QQ/NfwHm
+aZabotekKOzVzEYWl62fmye7L/hOJLkwCe9PIcHrXlZ1ZWICbKVhLI0q+M9bD0XKGFQsVvsHi6sI
+W/EepaLe6/D3gcXZvPMoGxOBAkH5T2g1FDdWvJPA4gGMNGq+/fWBnr2svsqqFTN1LUYVvavDuZi9
+/kVsu5UIjJaBlUixtqIUbyA/8QZf0f7OfXaV+w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -135,4 +211,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_f50c739f-2ea2-4ba8-9fe4-09faf6236746" Target="#_409d8de8-0a80-450b-ba04-be3af8877646"><Timestamp>2020-02-10 17:20:38</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_1bd37a97-5325-419b-bb86-8c5950a7ef96" Target="#_ad07c63e-1288-4fcb-95a1-6cad651d6a56"><Timestamp>2020-02-10 17:24:44</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
