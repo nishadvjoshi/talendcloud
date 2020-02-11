@@ -142,7 +142,7 @@
       <column comment="" key="false" length="-1" name="Country" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tAddressRowCloud" componentVersion="0.100" offsetLabelX="0" offsetLabelY="0" posX="512" posY="224">
+  <node componentName="tAddressRowCloud" componentVersion="0.100" offsetLabelX="0" offsetLabelY="0" posX="512" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tAddressRowCloud_1"/>
     <elementParameter field="CLOSED_LIST" name="API_TYPE" value="MELISSA_DATA"/>
     <elementParameter field="TEXT" name="LICENSE_KEY" value="&quot;EI2jVQsYvUaAE66eiMY-E8**nSAcwXpxhQ0PC2lXxuDAZ-**&quot;"/>
@@ -163,10 +163,12 @@
     </elementParameter>
     <elementParameter field="CHECK" name="USE_ADDITIONAL_OUTPUT" value="true"/>
     <elementParameter field="TABLE" name="OUTPUT_MAPPING">
-      <elementValue elementRef="ADDRESS_FIELD" value="AddressLine1"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="FormattedAddress"/>
+      <elementValue elementRef="ADDRESS_FIELD" value="SubNationalArea"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="newColumn"/>
       <elementValue elementRef="ADDRESS_FIELD" value="AddressLine2"/>
       <elementValue elementRef="OUTPUT_COLUMN" value="AdministrationAreaLevel2"/>
+      <elementValue elementRef="ADDRESS_FIELD" value="RawResponse"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="Status"/>
     </elementParameter>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
     <elementParameter field="CLOSED_LIST" name="ADDRESS_LINE_SEPARATOR" value="DEFAULT"/>
@@ -182,6 +184,7 @@
     <elementParameter field="TEXT" name="OUTPUT_HANDLER_TERMINATION_DELAY" show="false" value="2000"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tAddressRowCloud_1">
+      <column comment="" key="false" length="-1" name="newColumn" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="31" name="Status" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="31" name="AddressVerificationCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="31" name="VerificationLevel" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
@@ -197,9 +200,25 @@
       <column defaultValue="" key="false" length="31" name="Longitude" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="31" name="Latitude" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
-    <metadata connector="REJECT" name="REJECT"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="-1" name="newColumn" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="31" name="Status" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="31" name="AddressVerificationCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="31" name="VerificationLevel" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="255" name="FormattedAddress" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="31" name="StreetNumber" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="63" name="Route" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="63" name="Locality" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="63" name="AdministrationAreaLevel2" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="63" name="AdministrationAreaLevel1" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="31" name="PostalCodeLong" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="31" name="PostalCodeShort" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="31" name="Country" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="31" name="Longitude" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="31" name="Latitude" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="832" posY="224">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="832" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
@@ -213,6 +232,8 @@
     <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
     <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
     <elementParameter field="TABLE" name="LENGTHS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="newColumn"/>
+      <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Status"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="AddressVerificationCode"/>
@@ -246,6 +267,7 @@
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tLogRow_1">
+      <column comment="" key="false" length="-1" name="newColumn" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="31" name="Status" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="31" name="AddressVerificationCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="31" name="VerificationLevel" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
@@ -281,6 +303,11 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tAddressRowCloud_1" offsetLabelX="0" offsetLabelY="0" source="tAddressRowCloud_1" target="tLogRow_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
@@ -289,13 +316,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_11e4c501-bd15-4de0-8a71-53556b2b0240"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>X+Vcxyp7BuBZPd7srDMqMcPPlntk9q6/IgvdNRNCEc6PQ5FbiJaJiBfFeGzOrwBlVGyxw/1Zq3ew
-csNgAUUFbQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e4f3b686-6091-40f5-a0ce-a86274106d8b"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>jh++og1sZy5zl45h7dHlvXOZ+QWjcc8MT3+U+4WNzlcpJrwBs6iSMMb8bTP+WmQRuVOyj+bp2vA+
-7xEQe7tXfw==</DigestValue></Reference></SignedInfo><SignatureValue>WD7e8wnEQV+d/Rb3cJ4lj9FTnSz26ZVD3HdTpmVDifPJQVpUnvwhN7G6YY7eyk+2MEw01zICElO9
-kaFib/1q8CY7IJff2e4Z+F98c8ULSEWqcdq7Fiv3dG0rGZy/zHYjpkLSFgasUsn9wbU+gWKwK0IV
-WjOoBKDv4vrHRxKpa+4f2qFRXPu9fsDuDmRF7Q9AVIgKAFo/vh2jD0twjeKUaxdxZvSl8aKZR9e6
-0TOyY0DdPQs8ThHytlu7UNUIhsQSzIoYw+kYgo6KJvlw7v59BwvKE312hmIbdDDq4aNIlXXuCFGs
-SnS6ygvgefLDedPNq00GiM1rY25Fh9KcbfUX5Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_3dcbb501-9886-4a24-8399-6928413b7a1f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>8e451UW6Twb07UxlAB8XFnCDA6RKJ287yay4cO+NqwtGACuG/1B68ZtB7VwPnW0uZ5LdD6V1Pc8N
+4Lho4pDw2Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_fab879a4-e893-467a-9646-de75612ab192"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>P2JoxjnDB+Lxud7Oa6bK00vnN/GDlR5xY8Oqpyl5FjcTP0R6qiiVy9sJ3npEKhSMlhpIiJ5nQZwQ
+m0gf7wBx6g==</DigestValue></Reference></SignedInfo><SignatureValue>ilg7SN5U2bEieHO8f0CGpeO3Ap1Rn1ck/RYexstrIiD+WZI3TPWAux2xVpnMyO7AZuKKTmujiAJp
+6T4Q04b6gRsUG+b/yD3MmtKzDU8T8ghyqENUxdXoZVDBUMVt8lR4a15iuuOGZB0Mz7Nvgom/zNF3
+xjh0ndbP1OSW/13wQVvuYWxbEmso187lcEXTgQxQSVyexGPLRbLt4rIlLeFZxzK4fXruTnuT03Z6
++3pL1c+whiAja+n0vvjVPZXJi4rlkOFiQRWcrllfGE+AIIiC7U89sa3YQkVmsxfl/33KZ/uIvO4g
+Vapn1tBkRgAvWb+p5bfHeApEBjKNPu2nEiv68g==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -317,4 +344,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e4f3b686-6091-40f5-a0ce-a86274106d8b" Target="#_11e4c501-bd15-4de0-8a71-53556b2b0240"><Timestamp>2020-02-11 15:28:14</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_fab879a4-e893-467a-9646-de75612ab192" Target="#_3dcbb501-9886-4a24-8399-6928413b7a1f"><Timestamp>2020-02-11 15:31:14</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
