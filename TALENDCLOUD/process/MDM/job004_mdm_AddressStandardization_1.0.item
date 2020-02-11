@@ -109,34 +109,37 @@
     <routinesParameter id="_rZ0nUB-1EemtwtEDadxD9Q" name="TalendStringUtil"/>
     <routinesParameter id="_rZRNsB-1EemtwtEDadxD9Q" name="TalendString"/>
   </parameters>
-  <node componentName="tRowGenerator" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="224">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRowGenerator_1"/>
-    <elementParameter field="TEXT" name="NB_ROWS" show="false" value="1"/>
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_1"/>
+    <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
+    <elementParameter field="RADIO" name="USE_SINGLEMODE" value="false"/>
     <elementParameter field="TABLE" name="VALUES" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="street"/>
-      <elementValue elementRef="ARRAY" value="TalendDataGenerator.getUsStreet()"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="city"/>
-      <elementValue elementRef="ARRAY" value="TalendDataGenerator.getUsCity()"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="state"/>
-      <elementValue elementRef="ARRAY" value="TalendDataGenerator.getUsState()"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="zip"/>
-      <elementValue elementRef="ARRAY" value="TalendString.getAsciiRandomString(6 )"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Address"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Locality"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PostalCode"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Country"/>
+      <elementValue elementRef="VALUE" value=""/>
     </elementParameter>
-    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="RADIO" name="USE_INTABLE" value="true"/>
+    <elementParameter field="TABLE" name="INTABLE">
+      <elementValue elementRef="Address" value="&quot;Ap #867-859 Sit Rd.&quot;"/>
+      <elementValue elementRef="Locality" value="&quot;Azusa&quot;"/>
+      <elementValue elementRef="PostalCode" value="&quot;39531&quot;"/>
+      <elementValue elementRef="Country" value="&quot;US&quot;"/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="false"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;;&quot;"/>
+    <elementParameter field="MEMO" name="INLINECONTENT" show="false" value=""/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tRowGenerator_1">
-      <column comment="" defaultValue="" key="false" length="-1" name="street" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true">
-        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getUsStreet&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
-      </column>
-      <column comment="" defaultValue="" key="false" length="-1" name="city" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true">
-        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getUsCity&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
-      </column>
-      <column comment="" defaultValue="" key="false" length="-1" name="state" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true">
-        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getUsState&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
-      </column>
-      <column comment="" defaultValue="" key="false" length="-1" name="zip" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true">
-        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
-      </column>
+    <metadata connector="FLOW" name="tFixedFlowInput_1">
+      <column comment="" key="false" length="-1" name="Address" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Locality" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PostalCode" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Country" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tAddressRowCloud" componentVersion="0.100" offsetLabelX="0" offsetLabelY="0" posX="512" posY="224">
@@ -150,11 +153,13 @@
     <elementParameter field="CHECK" name="SECURE_MODE" value="false"/>
     <elementParameter field="TABLE" name="INPUT_ADDRESS">
       <elementValue elementRef="ADDRESS_FIELD" value="originalAddress"/>
-      <elementValue elementRef="INPUT_COLUMN" value="street"/>
+      <elementValue elementRef="INPUT_COLUMN" value="Address"/>
       <elementValue elementRef="ADDRESS_FIELD" value="originalLocality"/>
-      <elementValue elementRef="INPUT_COLUMN" value="city"/>
-      <elementValue elementRef="ADDRESS_FIELD" value="originalAddress"/>
-      <elementValue elementRef="INPUT_COLUMN" value="street"/>
+      <elementValue elementRef="INPUT_COLUMN" value="Locality"/>
+      <elementValue elementRef="ADDRESS_FIELD" value="originalPostalCode"/>
+      <elementValue elementRef="INPUT_COLUMN" value="PostalCode"/>
+      <elementValue elementRef="ADDRESS_FIELD" value="originalCountry"/>
+      <elementValue elementRef="INPUT_COLUMN" value="Country"/>
     </elementParameter>
     <elementParameter field="CHECK" name="USE_ADDITIONAL_OUTPUT" value="true"/>
     <elementParameter field="TABLE" name="OUTPUT_MAPPING">
@@ -257,7 +262,21 @@
       <column defaultValue="" key="false" length="31" name="Latitude" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tRowGenerator_1" offsetLabelX="0" offsetLabelY="0" source="tRowGenerator_1" target="tAddressRowCloud_1">
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tAddressRowCloud_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="Address"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Locality"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PostalCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Country"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
@@ -266,17 +285,17 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRowGenerator_1"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_80c5bd70-319b-4d3e-8647-d700161f64ea"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>X0KKLE/WzefS5rF6egMBzdJHU8xiGhsml+qOcqzb6zAPg8hie2nfaJ++a5rfNM5DBvv2xstCRkHw
-mEC3NWErjQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_f45c5dc3-1bc0-4b50-a44d-8012cec5e80c"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>1OiAr43qO6OjmaVDksTn4wuFsX0VShSosXPbGYf+XfM6y2Hj1Idosprb4S56KK/O9xQbqGpBASnF
-bFStEWRbfA==</DigestValue></Reference></SignedInfo><SignatureValue>oWiYI6pfpVzEZ1lR6W3jtTKFWzC/HQsCtCk1/3/k79gLv/5WJIeM8h7LcDEHhIhX93TjZTIx35yl
-5WRuyn/bYziF5t57FATVzNa26nzKThUyH6UNBLL17WH5voDM9Xd6FzxRZjxq8NNTiss4RvySkkvB
-wRiB1vPpJkwebu9kOCF36NQFqIhlcsYPe8xoT9fcTCnqD4kU/z2ZHHslgSw5b78z6xhZu78gTY7y
-LnS6/H8EtK1hStOtW4OcZweqryZjWo298DADs6xOUIAcrts4wexSyaM58/PS9wJu9b1nOIh7Vr9E
-EGDnjlupN3O4cPKeVDRXCeOinGNY2Y6LDfy/+w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_576abbe7-e140-4265-9fc7-75354dcfa734"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ai5vqX8MQH8AAZNCC+ES00Fv5nirrzPW+hB5/kYWsWTqsl1K+ONhpvXOcqdb1j3u+FxFWCG2rCRz
+SOpqwmSTyA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_dafe3910-e099-4ad5-b2a7-590a52f05793"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>NSbrvwrplCLCBfDsgsw9W8mWqaKpFmZGwATUUQXW43VOXjBMKcSYoqTwk7wT1SNT6Tq9uvBFcGTr
+zC8k/8YCAQ==</DigestValue></Reference></SignedInfo><SignatureValue>TOtypJStpyitnY35lRSop8K9twEvIQjpIh48V3ewcOcIzX7SvKPo6ibYoMd0o5RdbEevzPUQKz4H
+A4f97PcjC86yPZcuuyzdNN7tr6H1bskru62zD2eYH58zO1V82CSRYonsMtt5i0rZre6J8X2zlx4p
+qnkw7pBrmLvP9I2eQBOMYS7+cNTcd7jAw+ZghZ/tX9Wsm+yH+/qglFCpZcRGNSlouUY7AW7WTgHW
+ABIKdLlZAndnnH6lUK+BrNCxHnDi/yQx5MHaTEonSZEolRyfXKRRv8mmjFMnN4rUWkiYfmtHqZvo
+MQlCIK/8VAd9Wx560yfZfdIkykcoxepJKs6e9w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -298,4 +317,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_f45c5dc3-1bc0-4b50-a44d-8012cec5e80c" Target="#_80c5bd70-319b-4d3e-8647-d700161f64ea"><Timestamp>2020-02-11 15:12:54</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_dafe3910-e099-4ad5-b2a7-590a52f05793" Target="#_576abbe7-e140-4265-9fc7-75354dcfa734"><Timestamp>2020-02-11 15:19:58</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
