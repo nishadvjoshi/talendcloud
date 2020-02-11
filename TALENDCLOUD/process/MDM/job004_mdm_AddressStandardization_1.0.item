@@ -109,28 +109,37 @@
     <routinesParameter id="_rZ0nUB-1EemtwtEDadxD9Q" name="TalendStringUtil"/>
     <routinesParameter id="_rZRNsB-1EemtwtEDadxD9Q" name="TalendString"/>
   </parameters>
-  <node componentName="tMelissaDataAddress" componentVersion="0.201" offsetLabelX="0" offsetLabelY="0" posX="640" posY="192">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMelissaDataAddress_1"/>
-    <elementParameter field="TABLE" name="INPUT_ADDRESS"/>
-    <elementParameter field="TABLE" name="OUTPUT_ADDRESS"/>
-    <elementParameter field="TEXT" name="LICENSE" value="&quot;DEMO&quot;"/>
-    <elementParameter field="TEXT" name="DATAFILE_DIR" value="&quot;C:/Program Files/Melissa DATA/DQT/Data&quot;"/>
-    <elementParameter field="RADIO" name="NOGEOCODE" value="false"/>
-    <elementParameter field="RADIO" name="GEOPOINT" value="true"/>
-    <elementParameter field="RADIO" name="GEOCODE" value="false"/>
+  <node componentName="tRowGenerator" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRowGenerator_1"/>
+    <elementParameter field="TEXT" name="NB_ROWS" show="false" value="100"/>
+    <elementParameter field="TABLE" name="VALUES" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="street"/>
+      <elementValue elementRef="ARRAY" value="TalendDataGenerator.getUsStreet()"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="city"/>
+      <elementValue elementRef="ARRAY" value="TalendDataGenerator.getUsCity()"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="state"/>
+      <elementValue elementRef="ARRAY" value="TalendDataGenerator.getUsState()"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="zip"/>
+      <elementValue elementRef="ARRAY" value="TalendString.getAsciiRandomString(6 )"/>
+    </elementParameter>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tMelissaDataAddress_1">
-      <column defaultValue="" key="false" length="40" name="COMPANY_STANDARDIZED" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="ADDRESSLINE1_STANDARDIZED" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="ADDRESSLINE2_STANDARDIZED" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="38" name="CITY_STANDARDIZED" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="38" name="STATE_STANDARDIZED" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="38" name="POSTAL_STANDARDIZED" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="38" name="COUNTRY_STANDARDIZED" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="38" name="RESULTS_CODE" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    <metadata connector="FLOW" name="tRowGenerator_1">
+      <column comment="" defaultValue="" key="false" length="-1" name="street" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getUsStreet&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="city" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getUsCity&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="state" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getUsState&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="zip" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
+      </column>
     </metadata>
   </node>
-  <node componentName="tAddressRowCloud" componentVersion="0.100" offsetLabelX="0" offsetLabelY="0" posX="288" posY="320">
+  <node componentName="tAddressRowCloud" componentVersion="0.100" offsetLabelX="0" offsetLabelY="0" posX="512" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tAddressRowCloud_1"/>
     <elementParameter field="CLOSED_LIST" name="API_TYPE" value="MELISSA_DATA"/>
     <elementParameter field="TEXT" name="LICENSE_KEY" value="&quot;&quot;"/>
@@ -139,9 +148,21 @@
     <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="0RMsyjmybrE="/>
     <elementParameter field="CLOSED_LIST" name="PROCESSING_MODE" show="false" value="v+g"/>
     <elementParameter field="CHECK" name="SECURE_MODE" value="false"/>
-    <elementParameter field="TABLE" name="INPUT_ADDRESS"/>
+    <elementParameter field="TABLE" name="INPUT_ADDRESS">
+      <elementValue elementRef="ADDRESS_FIELD" value="originalAddress"/>
+      <elementValue elementRef="INPUT_COLUMN" value="street"/>
+      <elementValue elementRef="ADDRESS_FIELD" value="originalLocality"/>
+      <elementValue elementRef="INPUT_COLUMN" value="city"/>
+      <elementValue elementRef="ADDRESS_FIELD" value="originalAddress"/>
+      <elementValue elementRef="INPUT_COLUMN" value="street"/>
+    </elementParameter>
     <elementParameter field="CHECK" name="USE_ADDITIONAL_OUTPUT" value="true"/>
-    <elementParameter field="TABLE" name="OUTPUT_MAPPING"/>
+    <elementParameter field="TABLE" name="OUTPUT_MAPPING">
+      <elementValue elementRef="ADDRESS_FIELD" value="AddressLine1"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="FormattedAddress"/>
+      <elementValue elementRef="ADDRESS_FIELD" value="AddressLine2"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="AdministrationAreaLevel2"/>
+    </elementParameter>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
     <elementParameter field="CLOSED_LIST" name="ADDRESS_LINE_SEPARATOR" value="DEFAULT"/>
     <elementParameter field="CLOSED_LIST" name="DEFAULT_COUNTRY" value="DEFAULT"/>
@@ -173,23 +194,89 @@
     </metadata>
     <metadata connector="REJECT" name="REJECT"/>
   </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="832" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" show="false" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" show="false" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="Status"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="AddressVerificationCode"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VerificationLevel"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FormattedAddress"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="StreetNumber"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Route"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Locality"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="AdministrationAreaLevel2"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="AdministrationAreaLevel1"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PostalCodeLong"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PostalCodeShort"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Country"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Longitude"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Latitude"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tLogRow_1">
+      <column defaultValue="" key="false" length="31" name="Status" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="31" name="AddressVerificationCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="31" name="VerificationLevel" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="FormattedAddress" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="31" name="StreetNumber" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="63" name="Route" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="63" name="Locality" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="63" name="AdministrationAreaLevel2" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="63" name="AdministrationAreaLevel1" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="31" name="PostalCodeLong" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="31" name="PostalCodeShort" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="31" name="Country" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="31" name="Longitude" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="31" name="Latitude" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tRowGenerator_1" offsetLabelX="0" offsetLabelY="0" source="tRowGenerator_1" target="tAddressRowCloud_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+  </connection>
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tAddressRowCloud_1" offsetLabelX="0" offsetLabelY="0" source="tAddressRowCloud_1" target="tLogRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
+  </connection>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMelissaDataAddress_1"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRowGenerator_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tAddressRowCloud_1"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_ad07c63e-1288-4fcb-95a1-6cad651d6a56"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>9+uQgJS9auF3fwe9QWga4EIPO/6I2q4n0fkVWpMWwivlkuZzoKY2eWemUlAmIQvjqdqfh45ruCTL
-vCSxFMVv4A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_1bd37a97-5325-419b-bb86-8c5950a7ef96"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>jmOVNyMA8KzN+cSPnpCsGkDTbjsYZB+7MI20NWoKXVzY+megtrwKmOaM8LHX5T2KPnIRwuFkIExF
-DnVvHXRTXw==</DigestValue></Reference></SignedInfo><SignatureValue>I9DQIUIYXT6toEpValpB94ZnxhssFIzi+JpGz3Qm/4YSdT/3fmSMCL1wirBygnPzQDxESovd8Zvb
-OZPOPCYlHihdtmvXFRTVZ+M+aIuyPsQxyA6zfzFwFQKCB641BfFFlRydlilQM2IWiz1+QQ/NfwHm
-aZabotekKOzVzEYWl62fmye7L/hOJLkwCe9PIcHrXlZ1ZWICbKVhLI0q+M9bD0XKGFQsVvsHi6sI
-W/EepaLe6/D3gcXZvPMoGxOBAkH5T2g1FDdWvJPA4gGMNGq+/fWBnr2svsqqFTN1LUYVvavDuZi9
-/kVsu5UIjJaBlUixtqIUbyA/8QZf0f7OfXaV+w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_488be02f-4e8d-48de-bb8f-3b28d08dba81"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>DGtlHrPVG14qTntwxhYmCy831ZHNnOQcjix3D2phrlQopFjzYr7y7DsyTqPGK3Kc2tHZTwuSuHWP
+l1JRxCVRyw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_0305c316-9eef-4e55-b5b7-c24fee0364f4"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>abxlPeRQsqkOP0Cvvg+wlgwvhtTSNw0INDlFT/E7YRbECOJz876tCV6Bf5ouLwZuT2EbgHJKo7wx
+Dh51D0aoeA==</DigestValue></Reference></SignedInfo><SignatureValue>kYMEp1PjVqXB3xycIWe9HqGlJe8gSwrviZp7a++x8UXws/xZQufb4PbGF/RwMgRLdG7Dpn84NL3k
+rCKe5bDTZPQQVyWmlOAHoh771lIFEbcKRw6bwKMPmtYPX4omVi+tkUzstunmcQg5V/4C+/EKGGc4
+lamIrU3j+9M3S10oHOp3bY6WO0jcBFWcjBpKpBZJs+dfcfw9rLdqNEIcwDNtfC4UijUXKqfdQ//u
+zTFty/MfA3GWetUZa4kWWYvki/hEm0J6fakoyBBrq4EpF3pF/zj6toRcgXsCw8Qs6e2klu1PK6om
+DFLkWdQRaMJykenGyrR6d8Rh/tjf/BTOFjx64g==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -211,4 +298,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_1bd37a97-5325-419b-bb86-8c5950a7ef96" Target="#_ad07c63e-1288-4fcb-95a1-6cad651d6a56"><Timestamp>2020-02-10 17:24:44</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_0305c316-9eef-4e55-b5b7-c24fee0364f4" Target="#_488be02f-4e8d-48de-bb8f-3b28d08dba81"><Timestamp>2020-02-11 15:11:15</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
