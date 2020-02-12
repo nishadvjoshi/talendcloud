@@ -1321,10 +1321,59 @@
       <elementValue elementRef="IGNORE_NULL" value="false"/>
       <elementValue elementRef="RELATION" value="SEQ"/>
       <elementValue elementRef="RULE_NAME" value="&quot;&quot;"/>
+      <elementValue elementRef="INPUT_COLUMN" value="Address2"/>
+      <elementValue elementRef="FUNCTION" value="Longest"/>
+      <elementValue elementRef="VALUE" value="&quot;&quot;"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="Address2"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="RELATION" value="SEQ"/>
+      <elementValue elementRef="RULE_NAME" value="&quot;&quot;"/>
+      <elementValue elementRef="INPUT_COLUMN" value="City"/>
+      <elementValue elementRef="FUNCTION" value="MostRecent"/>
+      <elementValue elementRef="VALUE" value="&quot;&quot;"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="City"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="RELATION" value="SEQ"/>
+      <elementValue elementRef="RULE_NAME" value="&quot;&quot;"/>
+      <elementValue elementRef="INPUT_COLUMN" value="State"/>
+      <elementValue elementRef="FUNCTION" value="MostRecent"/>
+      <elementValue elementRef="VALUE" value="&quot;&quot;"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="State"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="RELATION" value="SEQ"/>
+      <elementValue elementRef="RULE_NAME" value="&quot;&quot;"/>
+      <elementValue elementRef="INPUT_COLUMN" value="ZipCode"/>
+      <elementValue elementRef="FUNCTION" value="Expression"/>
+      <elementValue elementRef="VALUE" value="&quot;.length = 5&quot;"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="ZipCode"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="RELATION" value="SEQ"/>
+      <elementValue elementRef="RULE_NAME" value="&quot;&quot;"/>
+      <elementValue elementRef="INPUT_COLUMN" value="ModifiedDate"/>
+      <elementValue elementRef="FUNCTION" value="MostRecent"/>
+      <elementValue elementRef="VALUE" value="&quot;&quot;"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="ModifiedDate"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="RELATION" value="SEQ"/>
+      <elementValue elementRef="RULE_NAME" value="&quot;&quot;"/>
+      <elementValue elementRef="INPUT_COLUMN" value="Source"/>
+      <elementValue elementRef="FUNCTION" value="None"/>
+      <elementValue elementRef="VALUE" value="&quot;&quot;"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="Source"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="RELATION" value="MT"/>
+      <elementValue elementRef="RULE_NAME" value="&quot;&quot;"/>
       <elementValue elementRef="INPUT_COLUMN" value="FirstName"/>
       <elementValue elementRef="FUNCTION" value="None"/>
       <elementValue elementRef="VALUE" value="&quot;&quot;"/>
       <elementValue elementRef="OUTPUT_COLUMN" value="FirstName"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="RELATION" value="MT"/>
+      <elementValue elementRef="RULE_NAME" value="&quot;&quot;"/>
+      <elementValue elementRef="INPUT_COLUMN" value="FirstName"/>
+      <elementValue elementRef="FUNCTION" value="None"/>
+      <elementValue elementRef="VALUE" value="&quot;&quot;"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="LastName"/>
       <elementValue elementRef="IGNORE_NULL" value="false"/>
     </elementParameter>
     <elementParameter field="CHECK" name="DEFINE_CONFLICT" value="false"/>
@@ -1476,13 +1525,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_bd37eec4-0676-42fb-b906-3907560a9978"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>GRzSHwAX1Z4qsV1W7SbAp7+hcUlTHN/PR6ngIgSq3yO36pVI+ilWj9nkjKbnYF3dH31iywCBpbmD
-NmbwIMHIhw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_1996e8b3-df2f-4624-9d65-ecc52165120a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>mUWnVwikRZSJ2eCuFC7PGWqk5izRwkgy11xSpArqrkU29DYzzLrIjxy7+s8v3lhcmrz6GPAOf4xa
-LVA3YwYQ/g==</DigestValue></Reference></SignedInfo><SignatureValue>C11nFZcN8xv6izjJ41rR6HVowP/C7zInk3emcn3NQ8fB0uk3DqomN3umQZFZMeToDbpMetFPGq0P
-x0ZU6LaMpP0HuptlvOQgg10DIxUI0h+nJtRc3dAkOeRqPNgA8BN2/OPf/ENCEdCjp69AfzY2GIUH
-3DXT1RGwxLfH3qky/5F+QU+73HGid+nUBTmu0OWQWw+aSdR3CqH6iJNDsYkCPNwMi96aw5/u1/7B
-lUUGcvB/wXi811ApcKZlzjW9K0mTYTnxuVkV0p2PMHFZkQ4K8bx/pQOxjqGBccLuPckzLaZVBQlI
-lqaVJuOj5p0WlaJy7YW92aACvD3FmcWhW6MVyw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f4e80dc7-5ccb-4c7f-b9bf-02f81f55c171"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>PGSrEqES4UpRphWjt6rpUcmUtdhLslfQx/rx7YJ6J1zkncSyBZJzsUTKfaHGWg+dr5cbqevkosKM
+OXGauEVqhA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_9ff4985f-347b-42c8-bcf0-3ef918376965"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>LN9dJ+FRE4h630bLatnkVViMFYgz0Y/c5V6hkFF1hJMsShVgLcUizEnygq8WNDu22I5HfsL7U6T8
+51ZsBxRQoQ==</DigestValue></Reference></SignedInfo><SignatureValue>Gxq2WsjHA8bOAE57Hfl6ZQKOxdg80AdJwUerEUN8GxC3vu2+m0YGG1A+j5VMBHuRXsqcZ/iewbvf
+J/dwGryRiBl9Gtu0H0aLmSj6gZWMx68vjM1haEHMT0lTqrhJuq0dOAYRg5ieYdO2z6p2ToePHf64
+dgXJzNJaKReaVn7fLqJr41b3JrFspgnc7mIkcLNI+fKrMHBxZmIFjpvxrUqz5DglqLB1MgHUGoFh
+OrV3XqWcQ9Ff4xkGrF3grYToRyybaSRoaDcXk/zyJHx3MJTOeHjcoJ8EbuUV9o1zYW8CvpVLTmZw
+XYBCUb6irnBr9oB+5QM8YrWaNSax7fsLFdA5tQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -1504,4 +1553,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_1996e8b3-df2f-4624-9d65-ecc52165120a" Target="#_bd37eec4-0676-42fb-b906-3907560a9978"><Timestamp>2020-02-12 19:42:41</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_9ff4985f-347b-42c8-bcf0-3ef918376965" Target="#_f4e80dc7-5ccb-4c7f-b9bf-02f81f55c171"><Timestamp>2020-02-12 19:50:51</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
