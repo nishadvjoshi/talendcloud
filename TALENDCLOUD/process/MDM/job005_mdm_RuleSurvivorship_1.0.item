@@ -1284,6 +1284,77 @@
       <column defaultValue="" key="false" length="20" name="GRP_QUALITY" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tRuleSurvivorship" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1056" posY="768">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRuleSurvivorship_1"/>
+    <elementParameter field="TEXT" name="PACKAGE_NAME" value="&quot;org.talend.survivorship.sample&quot;"/>
+    <elementParameter field="GENERATE_SURVIVORSHIP_RULES_CONTROLLER" name="GEN_SURVIVORSHIP_RULES" value="false"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="GRP_ID" value="GID"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="GRP_SIZE" value="GRP_SIZE"/>
+    <elementParameter field="TABLE" name="OPERATIONS">
+      <elementValue elementRef="RELATION" value="SEQ"/>
+      <elementValue elementRef="RULE_NAME" value="&quot;&quot;"/>
+      <elementValue elementRef="INPUT_COLUMN" value="EmailAddress"/>
+      <elementValue elementRef="FUNCTION" value="Longest"/>
+      <elementValue elementRef="VALUE" value="&quot;&quot;"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="EmailAddress"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="RELATION" value="SEQ"/>
+      <elementValue elementRef="RULE_NAME" value="&quot;&quot;"/>
+      <elementValue elementRef="INPUT_COLUMN" value="SupportingURL"/>
+      <elementValue elementRef="FUNCTION" value="Longest"/>
+      <elementValue elementRef="VALUE" value="&quot;&quot;"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="SupportingURL"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="RELATION" value="SEQ"/>
+      <elementValue elementRef="RULE_NAME" value="&quot;&quot;"/>
+      <elementValue elementRef="INPUT_COLUMN" value="PhoneNumber"/>
+      <elementValue elementRef="FUNCTION" value="MostComplete"/>
+      <elementValue elementRef="VALUE" value="&quot;&quot;"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="PhoneNumber"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="RELATION" value="SEQ"/>
+      <elementValue elementRef="RULE_NAME" value="&quot;&quot;"/>
+      <elementValue elementRef="INPUT_COLUMN" value="Address1"/>
+      <elementValue elementRef="FUNCTION" value="Longest"/>
+      <elementValue elementRef="VALUE" value="&quot;&quot;"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="Address1"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="RELATION" value="SEQ"/>
+      <elementValue elementRef="RULE_NAME" value="&quot;&quot;"/>
+      <elementValue elementRef="INPUT_COLUMN" value="FirstName"/>
+      <elementValue elementRef="FUNCTION" value="None"/>
+      <elementValue elementRef="VALUE" value="&quot;&quot;"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="FirstName"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="DEFINE_CONFLICT" value="false"/>
+    <elementParameter field="TABLE" name="CONFLICT_TABLE" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="tRuleSurvivorship_1">
+      <column comment="" key="false" length="10" name="FirstName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="LastName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="NPI" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="24" name="Degree" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="Speciality" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="100" name="EmailAddress" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="100" name="SupportingURL" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="100" name="PhoneNumber" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="100" name="Address1" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="100" name="Address2" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="City" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="State" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="ZipCode" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="ModifiedDate" nullable="true" originalLength="30" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Source" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="GID" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="GRP_SIZE" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="MASTER" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="SCORE" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="GRP_QUALITY" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="SURVIVOR" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="CONFLICT" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tRecordMatching_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="Source"/>
@@ -1391,6 +1462,10 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row10"/>
   </connection>
+  <connection connectorName="FLOW" label="row11" lineStyle="0" metaname="tLogRow_4" offsetLabelX="0" offsetLabelY="0" source="tLogRow_4" target="tRuleSurvivorship_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row11"/>
+  </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputDelimited_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
@@ -1401,13 +1476,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_899eb1a4-3a43-4ca7-96ed-5faf5ca7d5f8"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>4+OyRw4JctI54Ws+2tGh0FN8MPhqficVQbvbOdsv36IUn5PbxchCRES9G7vmlNrsKgX16PBvOPTC
-NvLkmnWSVg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_6d7f1a5f-0ad9-4c06-8abf-0c71779ef423"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>igbsbIcXOwv40vIaEQZd8aL011XDQDyH4nGGGfG6TMWT/Owa2AaOi+5OYT9TK2GGWwe73Kvtfkag
-ldrPDu+/hQ==</DigestValue></Reference></SignedInfo><SignatureValue>ausZmN1qEqPKzoGLVMP0x7JO5s9f54tew3EvTS/TXnKnrakHNmHOoNautSutJoddhKcAsWPpRc2b
-9VLuxfiLH2pKlLPppGFDjbe1uwJOqEU5BrADBkBs0GrO4SoCxN6ocAL62si5ajl1WwRfjoQ54gQ9
-8flBVMVOyDJr0rJryfw6DyL0eu4Ar2GEcntoMNDHrFpIPcwxa9nazVjQl4wN86A7AYaoewwVRgaI
-u4EN+dSmpRyVGNk/TIBqzgC6me1YXVjitxZHbKybjsQvoh3nDqTV1DJsFGUpF66V/QhF3b6/T4Zu
-VZxthTOZt7OaWOnA1+6OGX7rE/AAAhGfWaKc5w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_bd37eec4-0676-42fb-b906-3907560a9978"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>GRzSHwAX1Z4qsV1W7SbAp7+hcUlTHN/PR6ngIgSq3yO36pVI+ilWj9nkjKbnYF3dH31iywCBpbmD
+NmbwIMHIhw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_1996e8b3-df2f-4624-9d65-ecc52165120a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>mUWnVwikRZSJ2eCuFC7PGWqk5izRwkgy11xSpArqrkU29DYzzLrIjxy7+s8v3lhcmrz6GPAOf4xa
+LVA3YwYQ/g==</DigestValue></Reference></SignedInfo><SignatureValue>C11nFZcN8xv6izjJ41rR6HVowP/C7zInk3emcn3NQ8fB0uk3DqomN3umQZFZMeToDbpMetFPGq0P
+x0ZU6LaMpP0HuptlvOQgg10DIxUI0h+nJtRc3dAkOeRqPNgA8BN2/OPf/ENCEdCjp69AfzY2GIUH
+3DXT1RGwxLfH3qky/5F+QU+73HGid+nUBTmu0OWQWw+aSdR3CqH6iJNDsYkCPNwMi96aw5/u1/7B
+lUUGcvB/wXi811ApcKZlzjW9K0mTYTnxuVkV0p2PMHFZkQ4K8bx/pQOxjqGBccLuPckzLaZVBQlI
+lqaVJuOj5p0WlaJy7YW92aACvD3FmcWhW6MVyw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -1429,4 +1504,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_6d7f1a5f-0ad9-4c06-8abf-0c71779ef423" Target="#_899eb1a4-3a43-4ca7-96ed-5faf5ca7d5f8"><Timestamp>2020-02-12 19:32:28</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_1996e8b3-df2f-4624-9d65-ecc52165120a" Target="#_bd37eec4-0676-42fb-b906-3907560a9978"><Timestamp>2020-02-12 19:42:41</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
