@@ -15,9 +15,9 @@
   <process processType="Private" isExecutable="true" id="org.talend.survivorship.CITELINE.SurvivorFlow" name="SurvivorFlow" >
 
     <!-- nodes -->
-    <startEvent id="_jbpm-unique-72" name="start"  isInterrupting="false">
+    <startEvent id="_jbpm-unique-96" name="start"  isInterrupting="false">
     </startEvent>
-    <businessRuleTask id="_jbpm-unique-73" name="rEmail" g:ruleFlowGroup="rEmailGroup" >
+    <businessRuleTask id="_jbpm-unique-97" name="rEmail" g:ruleFlowGroup="rEmailGroup" >
       <ioSpecification>
         <inputSet>
         </inputSet>
@@ -25,7 +25,7 @@
         </outputSet>
       </ioSpecification>
     </businessRuleTask>
-    <businessRuleTask id="_jbpm-unique-74" name="rURL" g:ruleFlowGroup="rURLGroup" >
+    <businessRuleTask id="_jbpm-unique-98" name="rURL" g:ruleFlowGroup="rURLGroup" >
       <ioSpecification>
         <inputSet>
         </inputSet>
@@ -33,7 +33,7 @@
         </outputSet>
       </ioSpecification>
     </businessRuleTask>
-    <businessRuleTask id="_jbpm-unique-75" name="rPhone" g:ruleFlowGroup="rPhoneGroup" >
+    <businessRuleTask id="_jbpm-unique-99" name="rPhone" g:ruleFlowGroup="rPhoneGroup" >
       <ioSpecification>
         <inputSet>
         </inputSet>
@@ -41,7 +41,7 @@
         </outputSet>
       </ioSpecification>
     </businessRuleTask>
-    <businessRuleTask id="_jbpm-unique-76" name="rAddr1" g:ruleFlowGroup="rAddr1Group" >
+    <businessRuleTask id="_jbpm-unique-100" name="rAddr1" g:ruleFlowGroup="rAddr1Group" >
       <ioSpecification>
         <inputSet>
         </inputSet>
@@ -49,7 +49,7 @@
         </outputSet>
       </ioSpecification>
     </businessRuleTask>
-    <businessRuleTask id="_jbpm-unique-77" name="rAddr2" g:ruleFlowGroup="rAddr2Group" >
+    <businessRuleTask id="_jbpm-unique-101" name="rAddr2" g:ruleFlowGroup="rAddr2Group" >
       <ioSpecification>
         <inputSet>
         </inputSet>
@@ -57,7 +57,7 @@
         </outputSet>
       </ioSpecification>
     </businessRuleTask>
-    <businessRuleTask id="_jbpm-unique-78" name="rCity" g:ruleFlowGroup="rCityGroup" >
+    <businessRuleTask id="_jbpm-unique-102" name="rCity" g:ruleFlowGroup="rCityGroup" >
       <ioSpecification>
         <inputSet>
         </inputSet>
@@ -65,7 +65,7 @@
         </outputSet>
       </ioSpecification>
     </businessRuleTask>
-    <businessRuleTask id="_jbpm-unique-79" name="rState" g:ruleFlowGroup="rStateGroup" >
+    <businessRuleTask id="_jbpm-unique-103" name="rState" g:ruleFlowGroup="rStateGroup" >
       <ioSpecification>
         <inputSet>
         </inputSet>
@@ -73,7 +73,7 @@
         </outputSet>
       </ioSpecification>
     </businessRuleTask>
-    <businessRuleTask id="_jbpm-unique-80" name="rZipCode" g:ruleFlowGroup="rZipCodeGroup" >
+    <businessRuleTask id="_jbpm-unique-104" name="rZipCode" g:ruleFlowGroup="rZipCodeGroup" >
       <ioSpecification>
         <inputSet>
         </inputSet>
@@ -81,7 +81,7 @@
         </outputSet>
       </ioSpecification>
     </businessRuleTask>
-    <businessRuleTask id="_jbpm-unique-81" name="rMDate" g:ruleFlowGroup="rMDateGroup" >
+    <businessRuleTask id="_jbpm-unique-105" name="rMDate" g:ruleFlowGroup="rMDateGroup" >
       <ioSpecification>
         <inputSet>
         </inputSet>
@@ -89,7 +89,7 @@
         </outputSet>
       </ioSpecification>
     </businessRuleTask>
-    <businessRuleTask id="_jbpm-unique-82" name="rSpeciality" g:ruleFlowGroup="rSpecialityGroup" >
+    <businessRuleTask id="_jbpm-unique-106" name="rSpeciality" g:ruleFlowGroup="rSpecialityGroup" >
       <ioSpecification>
         <inputSet>
         </inputSet>
@@ -97,104 +97,104 @@
         </outputSet>
       </ioSpecification>
     </businessRuleTask>
-    <endEvent id="_jbpm-unique-83" name="end" >
+    <endEvent id="_jbpm-unique-107" name="end" >
         <terminateEventDefinition />
     </endEvent>
 
     <!-- connections -->
-    <sequenceFlow id="_jbpm-unique-72-_jbpm-unique-73" sourceRef="_jbpm-unique-72" targetRef="_jbpm-unique-73" />
-    <sequenceFlow id="_jbpm-unique-73-_jbpm-unique-74" sourceRef="_jbpm-unique-73" targetRef="_jbpm-unique-74" />
-    <sequenceFlow id="_jbpm-unique-74-_jbpm-unique-75" sourceRef="_jbpm-unique-74" targetRef="_jbpm-unique-75" />
-    <sequenceFlow id="_jbpm-unique-75-_jbpm-unique-76" sourceRef="_jbpm-unique-75" targetRef="_jbpm-unique-76" />
-    <sequenceFlow id="_jbpm-unique-76-_jbpm-unique-77" sourceRef="_jbpm-unique-76" targetRef="_jbpm-unique-77" />
-    <sequenceFlow id="_jbpm-unique-77-_jbpm-unique-78" sourceRef="_jbpm-unique-77" targetRef="_jbpm-unique-78" />
-    <sequenceFlow id="_jbpm-unique-78-_jbpm-unique-79" sourceRef="_jbpm-unique-78" targetRef="_jbpm-unique-79" />
-    <sequenceFlow id="_jbpm-unique-79-_jbpm-unique-80" sourceRef="_jbpm-unique-79" targetRef="_jbpm-unique-80" />
-    <sequenceFlow id="_jbpm-unique-80-_jbpm-unique-81" sourceRef="_jbpm-unique-80" targetRef="_jbpm-unique-81" />
-    <sequenceFlow id="_jbpm-unique-81-_jbpm-unique-82" sourceRef="_jbpm-unique-81" targetRef="_jbpm-unique-82" />
-    <sequenceFlow id="_jbpm-unique-82-_jbpm-unique-83" sourceRef="_jbpm-unique-82" targetRef="_jbpm-unique-83" />
+    <sequenceFlow id="_jbpm-unique-96-_jbpm-unique-97" sourceRef="_jbpm-unique-96" targetRef="_jbpm-unique-97" />
+    <sequenceFlow id="_jbpm-unique-97-_jbpm-unique-98" sourceRef="_jbpm-unique-97" targetRef="_jbpm-unique-98" />
+    <sequenceFlow id="_jbpm-unique-98-_jbpm-unique-99" sourceRef="_jbpm-unique-98" targetRef="_jbpm-unique-99" />
+    <sequenceFlow id="_jbpm-unique-99-_jbpm-unique-100" sourceRef="_jbpm-unique-99" targetRef="_jbpm-unique-100" />
+    <sequenceFlow id="_jbpm-unique-100-_jbpm-unique-101" sourceRef="_jbpm-unique-100" targetRef="_jbpm-unique-101" />
+    <sequenceFlow id="_jbpm-unique-101-_jbpm-unique-102" sourceRef="_jbpm-unique-101" targetRef="_jbpm-unique-102" />
+    <sequenceFlow id="_jbpm-unique-102-_jbpm-unique-103" sourceRef="_jbpm-unique-102" targetRef="_jbpm-unique-103" />
+    <sequenceFlow id="_jbpm-unique-103-_jbpm-unique-104" sourceRef="_jbpm-unique-103" targetRef="_jbpm-unique-104" />
+    <sequenceFlow id="_jbpm-unique-104-_jbpm-unique-105" sourceRef="_jbpm-unique-104" targetRef="_jbpm-unique-105" />
+    <sequenceFlow id="_jbpm-unique-105-_jbpm-unique-106" sourceRef="_jbpm-unique-105" targetRef="_jbpm-unique-106" />
+    <sequenceFlow id="_jbpm-unique-106-_jbpm-unique-107" sourceRef="_jbpm-unique-106" targetRef="_jbpm-unique-107" />
 
   </process>
 
   <bpmndi:BPMNDiagram>
     <bpmndi:BPMNPlane bpmnElement="org.talend.survivorship.CITELINE.SurvivorFlow" >
-      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-72" >
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-96" >
         <dc:Bounds x="45" y="16" width="48" height="48" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-73" >
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-97" >
         <dc:Bounds x="29" y="96" width="80" height="48" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-74" >
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-98" >
         <dc:Bounds x="29" y="176" width="80" height="48" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-75" >
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-99" >
         <dc:Bounds x="29" y="256" width="80" height="48" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-76" >
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-100" >
         <dc:Bounds x="29" y="336" width="80" height="48" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-77" >
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-101" >
         <dc:Bounds x="29" y="416" width="80" height="48" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-78" >
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-102" >
         <dc:Bounds x="29" y="496" width="80" height="48" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-79" >
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-103" >
         <dc:Bounds x="29" y="576" width="80" height="48" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-80" >
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-104" >
         <dc:Bounds x="29" y="656" width="80" height="48" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-81" >
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-105" >
         <dc:Bounds x="29" y="736" width="80" height="48" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-82" >
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-106" >
         <dc:Bounds x="16" y="816" width="106" height="48" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-83" >
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-107" >
         <dc:Bounds x="45" y="896" width="48" height="48" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-72-_jbpm-unique-73" >
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-96-_jbpm-unique-97" >
         <di:waypoint x="69" y="40" />
         <di:waypoint x="69" y="120" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-73-_jbpm-unique-74" >
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-97-_jbpm-unique-98" >
         <di:waypoint x="69" y="120" />
         <di:waypoint x="69" y="200" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-74-_jbpm-unique-75" >
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-98-_jbpm-unique-99" >
         <di:waypoint x="69" y="200" />
         <di:waypoint x="69" y="280" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-75-_jbpm-unique-76" >
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-99-_jbpm-unique-100" >
         <di:waypoint x="69" y="280" />
         <di:waypoint x="69" y="360" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-76-_jbpm-unique-77" >
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-100-_jbpm-unique-101" >
         <di:waypoint x="69" y="360" />
         <di:waypoint x="69" y="440" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-77-_jbpm-unique-78" >
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-101-_jbpm-unique-102" >
         <di:waypoint x="69" y="440" />
         <di:waypoint x="69" y="520" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-78-_jbpm-unique-79" >
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-102-_jbpm-unique-103" >
         <di:waypoint x="69" y="520" />
         <di:waypoint x="69" y="600" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-79-_jbpm-unique-80" >
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-103-_jbpm-unique-104" >
         <di:waypoint x="69" y="600" />
         <di:waypoint x="69" y="680" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-80-_jbpm-unique-81" >
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-104-_jbpm-unique-105" >
         <di:waypoint x="69" y="680" />
         <di:waypoint x="69" y="760" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-81-_jbpm-unique-82" >
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-105-_jbpm-unique-106" >
         <di:waypoint x="69" y="760" />
         <di:waypoint x="69" y="840" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-82-_jbpm-unique-83" >
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-106-_jbpm-unique-107" >
         <di:waypoint x="69" y="840" />
         <di:waypoint x="69" y="920" />
       </bpmndi:BPMNEdge>
