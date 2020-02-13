@@ -5,7 +5,7 @@ rule "rCity"
     dialect "mvel"
     ruleflow-group "rCityGroup"
 when
-    $input : RecordIn( dataset.isLatest( city, "City" ) )  
+    $input : RecordIn( dataset.isLongest( city, "City", false) )  
 then
     dataset.survive( $input.TALEND_INTERNAL_ID, "City", drools.getRule().getName());
 

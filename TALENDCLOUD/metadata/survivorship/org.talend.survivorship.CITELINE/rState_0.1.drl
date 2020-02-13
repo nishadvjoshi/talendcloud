@@ -5,7 +5,7 @@ rule "rState"
     dialect "mvel"
     ruleflow-group "rStateGroup"
 when
-    $input : RecordIn( dataset.isLatest( state, "State" ) )  
+    $input : RecordIn( dataset.isMostComplete( $input.TALEND_INTERNAL_ID ) )  
 then
     dataset.survive( $input.TALEND_INTERNAL_ID, "State", drools.getRule().getName());
 
