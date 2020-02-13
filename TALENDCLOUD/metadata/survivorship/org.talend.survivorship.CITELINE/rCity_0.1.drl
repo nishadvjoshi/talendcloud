@@ -1,0 +1,14 @@
+package org.talend.survivorship.CITELINE 
+
+rule "rCity"
+    no-loop true
+    dialect "mvel"
+    ruleflow-group "rCityGroup"
+when
+    $input : RecordIn( dataset.isLatest( city, "City" ) )  
+then
+    dataset.survive( $input.TALEND_INTERNAL_ID, "City", drools.getRule().getName());
+
+end
+
+

@@ -1,0 +1,14 @@
+package org.talend.survivorship.CITELINE 
+
+rule "rEmail"
+    no-loop true
+    dialect "mvel"
+    ruleflow-group "rEmailGroup"
+when
+    $input : RecordIn( dataset.isLongest( emailaddress, "EmailAddress", false) )  
+then
+    dataset.survive( $input.TALEND_INTERNAL_ID, "EmailAddress", drools.getRule().getName());
+
+end
+
+

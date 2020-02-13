@@ -1,0 +1,14 @@
+package org.talend.survivorship.CITELINE 
+
+rule "rAddr2"
+    no-loop true
+    dialect "mvel"
+    ruleflow-group "rAddr2Group"
+when
+    $input : RecordIn( dataset.isLongest( address2, "Address2", false) )  
+then
+    dataset.survive( $input.TALEND_INTERNAL_ID, "Address2", drools.getRule().getName());
+
+end
+
+

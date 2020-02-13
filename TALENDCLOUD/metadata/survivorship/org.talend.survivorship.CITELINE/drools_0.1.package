@@ -1,0 +1,33 @@
+package org.talend.survivorship.CITELINE 
+
+import java.util.Date
+import java.math.BigDecimal
+
+global org.talend.survivorship.model.DataSet dataset
+
+declare  RecordIn 
+
+    TALEND_INTERNAL_ID : int  
+    firstname : String  
+    lastname : String  
+    npi : String  
+    degree : String  
+    speciality : String  
+    emailaddress : String  
+    supportingurl : String  
+    phonenumber : String  
+    address1 : String  
+    address2 : String  
+    city : String  
+    state : String  
+    zipcode : Integer  
+    modifieddate : Date  
+    source : String  
+    gid : String  
+    grp_size : Integer  
+    master : Boolean  
+    score : Double  
+    grp_quality : Double  
+end
+
+

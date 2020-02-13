@@ -1,0 +1,18 @@
+package org.talend.survivorship.CITELINE 
+
+rule "rMDate"
+    no-loop true
+    dialect "mvel"
+    ruleflow-group "rMDateGroup"
+when
+    $input : RecordIn( dataset.isLatest( modifieddate, "ModifiedDate" ) )  
+then
+    dataset.survive( $input.TALEND_INTERNAL_ID, "ModifiedDate", drools.getRule().getName());
+    dataset.survive( $input.TALEND_INTERNAL_ID, "FirstName", drools.getRule().getName());
+    dataset.survive( $input.TALEND_INTERNAL_ID, "LastName", drools.getRule().getName());
+    dataset.survive( $input.TALEND_INTERNAL_ID, "NPI", drools.getRule().getName());
+    dataset.survive( $input.TALEND_INTERNAL_ID, "Degree", drools.getRule().getName());
+
+end
+
+

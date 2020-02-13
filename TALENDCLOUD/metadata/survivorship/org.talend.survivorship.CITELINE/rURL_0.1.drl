@@ -1,0 +1,14 @@
+package org.talend.survivorship.CITELINE 
+
+rule "rURL"
+    no-loop true
+    dialect "mvel"
+    ruleflow-group "rURLGroup"
+when
+    $input : RecordIn( dataset.isLongest( supportingurl, "SupportingURL", false) )  
+then
+    dataset.survive( $input.TALEND_INTERNAL_ID, "SupportingURL", drools.getRule().getName());
+
+end
+
+
