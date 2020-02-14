@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="Default" jobType="Standard" xmi:version="2.0">
   <context confirmationNeeded="false" name="Default"/>
   <parameters>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
@@ -107,13 +109,116 @@
     <routinesParameter id="_rZ0nUB-1EemtwtEDadxD9Q" name="TalendStringUtil"/>
     <routinesParameter id="_rZRNsB-1EemtwtEDadxD9Q" name="TalendString"/>
   </parameters>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_a8a1196a-47b4-49a4-9de2-82438a9c88ec"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>cK6sXoABerePEQkWwsaDJ33YJfF3Zo04FoUf3n3kgMwwxdZH+liEd+jxaAYZ0he9wd7NeZpKthN7
-r4fbHJOAgw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_17ed07b6-f01d-4d79-99f1-b0d0a979550c"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>kSeAhuGFhhcNHSEzqUFB0gsX2FUY1OrufHNQ/DGPzCLQySbBW+E3kQJ4zMgVbsnBI/cF5f7aWgig
-OxS8J0oihw==</DigestValue></Reference></SignedInfo><SignatureValue>nqnO0+t3ot1jhALy16cWnAeXdJMwZjr3HPHMfBGLCyb0Q37z++6/UZ5ypsPLPRApBwh5eAsJnxOD
-1sJ3rOyk/sFjb4R0Nuls+va9JU6Vrll/ag2DlxyFbOZLB75Cpucj+SOw1WLz9HNhu+EeE7voUTkd
-/lUfG7DceY3uqZxiGQKGhmlQg3UZCY0AAIS3Gja36wbcihnWC6+60dddkmU8+EKR3N6VzXk0Dxqr
-s5+Gwt++WBvQmt9oNjhYuAS99DAZBwGbgb63LueEIv6Isi1I0XVCJNCooO2199LBTUVEEou1ytsH
-n+vTI1a7+lTZ1JsKM3+7RZX+Zg7m8SBJSYa8Hw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_1"/>
+    <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
+    <elementParameter field="RADIO" name="USE_SINGLEMODE" value="false"/>
+    <elementParameter field="TABLE" name="VALUES" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="EmailAddress"/>
+      <elementValue elementRef="VALUE" value=""/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="USE_INTABLE" value="true"/>
+    <elementParameter field="TABLE" name="INTABLE">
+      <elementValue elementRef="EmailAddress" value="&quot;nvj@xyz.com&quot;"/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="false"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;;&quot;"/>
+    <elementParameter field="MEMO" name="INLINECONTENT" show="false" value=""/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFixedFlowInput_1">
+      <column comment="" key="false" length="-1" name="EmailAddress" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tVerifyEmail" componentVersion="0.100" offsetLabelX="0" offsetLabelY="0" posX="480" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tVerifyEmail_1"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="EMAIL_COLUMN" value="EmailAddress"/>
+    <elementParameter field="CHECK" name="USE_REGULAR_EXPRESSION" value="false"/>
+    <elementParameter field="TEXT" name="COMPLETE_REGEX" show="false" value="&quot;^(([^\\s\\p{Cntrl}\\(\\)&lt;&gt;@,;:'\\\\\\\&quot;\\.\\[\\]]|')+|(\\\&quot;[^\\\&quot;]*\\\&quot;))(\\.(([^\\s\\p{Cntrl}\\(\\)&lt;&gt;@,;:'\\\\\\\&quot;\\.\\[\\]]|')+|(\\\&quot;[^\\\&quot;]*\\\&quot;)))*@([\\p{L}\\p{M}0-9]([\\p{L}\\p{M}0-9\\-]{0,61}[\\p{L}\\p{M}0-9])?\\.)+[\\p{L}\\p{M}]{2,6}$&quot;"/>
+    <elementParameter field="RADIO" name="USE_REGEX" value="true"/>
+    <elementParameter field="RADIO" name="USE_SHORT" value="false"/>
+    <elementParameter field="RADIO" name="USE_COLUMN" value="false"/>
+    <elementParameter field="CHECK" name="CASE_SENSITIVE" value="false"/>
+    <elementParameter field="TEXT" name="LOCAL_REGEX_PART" value="&quot;(?:[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+)*|&quot;(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*&quot;)@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SHORT_PART" show="false" value="&quot;w[-_.]w&quot;"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="COLUMN_FIRSTNAME" show="false" value="EmailAddress"/>
+    <elementParameter field="TEXT" name="COLUMN_NFIRSTCHAR_FIRSTNAME" show="false" value="&quot;1&quot;"/>
+    <elementParameter field="TEXT" name="COLUMN_NLASTCHAR_FIRSTNAME" show="false" value="&quot;20&quot;"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="COLUMN_LASTNAME" show="false" value="EmailAddress"/>
+    <elementParameter field="TEXT" name="COLUMN_NFIRSTCHAR_LASTNAME" show="false" value="&quot;1&quot;"/>
+    <elementParameter field="TEXT" name="COLUMN_NLASTCHAR_LASTNAME" show="false" value="&quot;20&quot;"/>
+    <elementParameter field="TEXT" name="COLUMN_SEPARATOR" show="false" value="&quot;-&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="COLUMN_CASE_TYPE" show="false" value="L"/>
+    <elementParameter field="CHECK" name="SHOW_HELP" show="false" value="false"/>
+    <elementParameter field="LABEL" name="HELP_CONTENT" show="false" value=" &#10;    Syntax              Equivalent Regex                Description   &#10;    9                        [0-9]                                     adigit       &#10;    a                        [a-z]                                     a lowercased ascii letter    &#10;    A                       [A-Z]                                    an uppercased ascii letter   &#10;    w                       [a-z]+                                  one or more lowercased ascii letters &#10;    W                      [A-Z]+                                  one or more uppercased ascii letters&#10;    ?                        .                                            any character which valid in the email address&#10;    *                        .*                                          any string which valid in the email address&#10;    .                        \.                                           the period symbol &#10;    [-_+]                 [-_+]                                    any of the symbols listed between brackets   &#10;    &lt;pattern&gt;        pattern                                any standard regex can be placed inside angle brackets&#10;    "/>
+    <elementParameter field="CHECK" name="CHECK_TLDS" value="false"/>
+    <elementParameter field="TABLE" name="ADDITIONAL_TLDS" show="false"/>
+    <elementParameter field="RADIO" name="CHECK_BLACK_DOMAINS" value="false"/>
+    <elementParameter field="RADIO" name="CHECK_WHITE_DOMAINS" value="true"/>
+    <elementParameter field="TABLE" name="DOMAINS_LIST"/>
+    <elementParameter field="CHECK" name="CALL_BACK" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tVerifyEmail_1">
+      <column comment="" key="false" length="-1" name="EmailAddress" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="31" name="VerificationLevel" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="31" name="SuggestedEmail" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="672" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" show="false" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" show="false" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="EmailAddress"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VerificationLevel"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SuggestedEmail"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tLogRow_1">
+      <column comment="" key="false" length="-1" name="EmailAddress" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="31" name="VerificationLevel" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="31" name="SuggestedEmail" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tVerifyEmail_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="EmailAddress"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+  </connection>
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tVerifyEmail_1" offsetLabelX="0" offsetLabelY="0" source="tVerifyEmail_1" target="tLogRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f213e54c-16f6-4aad-a736-b5ece322be00"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>CcezFK6ga1g4blCWVaHIz5DUEfZmElmmDwZcSjIu/TFgeQtaLqAFIjh03lM8ISrgz8WS/xrnkUJZ
+1DpD3Siirw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_71947594-7c96-4431-9e1f-47aebca5b14d"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>hW4ZJLFWWEb4U5nj3dIQYJ96FxVIDYR0qsK2GUdaknxZQSdRHApycOYgGp65SOisSuyEiXX7P8rV
+HYZayw1YTg==</DigestValue></Reference></SignedInfo><SignatureValue>hjQm5Ucj1I1n19OsnEeyvpvZfN+6DeMSDHkexfa0HJxFHPNs029214xcXKxmQXN1QaAXUpD9tdQA
+NjbWEk5K9OK65Na2SBMz12dWTR5UHBuFkret7Ys78sMiRReH9pD5Rblhvv6lRDJSpKzk79gQyrSr
+GDLrPCHVJJW0dikWLi75bkboPu8W11D9oIQixWoo+HPFOdxM1hvrgmKmeRsoggPn5nABP9HinM77
+0tYkdfx/Jb0is5ovw/xlldR+PdF6n8o//nh1FVkJZ5v2Hid4htPN90V/KKhY+ZZvdXrlKzJ7xmQz
+8Ub/wLF5d+LQmG5GyGX9trsLaqvOWQVavIV7Lw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -135,4 +240,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_17ed07b6-f01d-4d79-99f1-b0d0a979550c" Target="#_a8a1196a-47b4-49a4-9de2-82438a9c88ec"><Timestamp>2020-02-14 16:47:40</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_71947594-7c96-4431-9e1f-47aebca5b14d" Target="#_f213e54c-16f6-4aad-a736-b5ece322be00"><Timestamp>2020-02-14 16:53:37</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
