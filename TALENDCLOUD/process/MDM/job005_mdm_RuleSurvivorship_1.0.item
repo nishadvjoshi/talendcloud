@@ -1320,8 +1320,8 @@
       <elementValue elementRef="RELATION" value="SEQ"/>
       <elementValue elementRef="RULE_NAME" value="&quot;rZipCode&quot;"/>
       <elementValue elementRef="INPUT_COLUMN" value="ZipCode"/>
-      <elementValue elementRef="FUNCTION" value="Largest"/>
-      <elementValue elementRef="VALUE" value="&quot;.length = 5&quot;"/>
+      <elementValue elementRef="FUNCTION" value="Longest"/>
+      <elementValue elementRef="VALUE" value="&quot;\\d{5}&quot;"/>
       <elementValue elementRef="OUTPUT_COLUMN" value="ZipCode"/>
       <elementValue elementRef="IGNORE_NULL" value="false"/>
       <elementValue elementRef="RELATION" value="SEQ"/>
@@ -1361,7 +1361,7 @@
       <elementValue elementRef="IGNORE_NULL" value="false"/>
       <elementValue elementRef="RELATION" value="SEQ"/>
       <elementValue elementRef="RULE_NAME" value="&quot;rSpeciality&quot;"/>
-      <elementValue elementRef="INPUT_COLUMN" value="Source"/>
+      <elementValue elementRef="INPUT_COLUMN" value="Speciality"/>
       <elementValue elementRef="FUNCTION" value="Expression"/>
       <elementValue elementRef="VALUE" value="&quot;.equals('CITELINE')&quot;"/>
       <elementValue elementRef="OUTPUT_COLUMN" value="Speciality"/>
@@ -1373,22 +1373,29 @@
       <elementValue elementRef="VALUE" value="&quot;&quot;"/>
       <elementValue elementRef="OUTPUT_COLUMN" value="FirstName"/>
       <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="RELATION" value="MT"/>
+      <elementValue elementRef="RULE_NAME" value="&quot;&quot;"/>
+      <elementValue elementRef="INPUT_COLUMN" value="FirstName"/>
+      <elementValue elementRef="FUNCTION" value="None"/>
+      <elementValue elementRef="VALUE" value="&quot;&quot;"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="Source"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
     </elementParameter>
     <elementParameter field="CHECK" name="DEFINE_CONFLICT" value="false"/>
     <elementParameter field="TABLE" name="CONFLICT_TABLE" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <elementParameter field="SURVIVOR_RELATION" name="drools" show="false" value="_JItxYE4rEeqcc6bTz_gcdg"/>
-    <elementParameter field="SURVIVOR_RELATION" name="rZipCode" show="false" value="_JI6lsE4rEeqcc6bTz_gcdg"/>
-    <elementParameter field="SURVIVOR_RELATION" name="rAddr2" show="false" value="_JJd_UE4rEeqcc6bTz_gcdg"/>
-    <elementParameter field="SURVIVOR_RELATION" name="rAddr1" show="false" value="_JJl7IE4rEeqcc6bTz_gcdg"/>
-    <elementParameter field="SURVIVOR_RELATION" name="rURL" show="false" value="_JJtP4E4rEeqcc6bTz_gcdg"/>
-    <elementParameter field="SURVIVOR_RELATION" name="rSpeciality" show="false" value="_JJ3A4E4rEeqcc6bTz_gcdg"/>
-    <elementParameter field="SURVIVOR_RELATION" name="rCity" show="false" value="_JJ-VoE4rEeqcc6bTz_gcdg"/>
-    <elementParameter field="SURVIVOR_RELATION" name="rPhone" show="false" value="_JKKi4E4rEeqcc6bTz_gcdg"/>
-    <elementParameter field="SURVIVOR_RELATION" name="rMDate" show="false" value="_JKUT4E4rEeqcc6bTz_gcdg"/>
-    <elementParameter field="SURVIVOR_RELATION" name="rEmail" show="false" value="_JKhvQE4rEeqcc6bTz_gcdg"/>
-    <elementParameter field="SURVIVOR_RELATION" name="rState" show="false" value="_JKprEE4rEeqcc6bTz_gcdg"/>
-    <elementParameter field="SURVIVOR_RELATION" name="SurvivorFlow" show="false" value="_JKw_0E4rEeqcc6bTz_gcdg"/>
+    <elementParameter field="SURVIVOR_RELATION" name="drools" show="false" value="_1LBW8E-2EeqR28lBM8fXpA"/>
+    <elementParameter field="SURVIVOR_RELATION" name="rZipCode" show="false" value="_1LWHEE-2EeqR28lBM8fXpA"/>
+    <elementParameter field="SURVIVOR_RELATION" name="rAddr2" show="false" value="_1L788E-2EeqR28lBM8fXpA"/>
+    <elementParameter field="SURVIVOR_RELATION" name="rAddr1" show="false" value="_1MGVAE-2EeqR28lBM8fXpA"/>
+    <elementParameter field="SURVIVOR_RELATION" name="rURL" show="false" value="_1MPe8E-2EeqR28lBM8fXpA"/>
+    <elementParameter field="SURVIVOR_RELATION" name="rSpeciality" show="false" value="_1MYo4E-2EeqR28lBM8fXpA"/>
+    <elementParameter field="SURVIVOR_RELATION" name="rCity" show="false" value="_1Mk2IE-2EeqR28lBM8fXpA"/>
+    <elementParameter field="SURVIVOR_RELATION" name="rPhone" show="false" value="_1MunIE-2EeqR28lBM8fXpA"/>
+    <elementParameter field="SURVIVOR_RELATION" name="rMDate" show="false" value="_1M4_ME-2EeqR28lBM8fXpA"/>
+    <elementParameter field="SURVIVOR_RELATION" name="rEmail" show="false" value="_1Ne1EE-2EeqR28lBM8fXpA"/>
+    <elementParameter field="SURVIVOR_RELATION" name="rState" show="false" value="_1NpNIE-2EeqR28lBM8fXpA"/>
+    <elementParameter field="SURVIVOR_RELATION" name="SurvivorFlow" show="false" value="_1N0zUE-2EeqR28lBM8fXpA"/>
     <metadata connector="FLOW" label="metadata" name="tRuleSurvivorship_1">
       <column comment="" key="false" length="10" name="FirstName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="LastName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
@@ -1655,13 +1662,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_3ecb79e9-f9f7-4e54-a569-2f291afc46d5"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>X1jIrNojP90E9cqFpRetWr5Yd5dqQ3CEMyEuPEJpXljbDjeCR9VTjHivA1Y2j7retkJKTD2FCdJY
-tFtWDyw7Gw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_58683903-0c1b-4a92-b296-909d8940bf8b"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>v0QNAHn1jOCIDpc0dJsqYc6CCYiuQgia4cksEn+WLdm+nJs15zs9owFQSZ0r4s1HEUQNbgrI4jQR
-Zbi4RSHm3w==</DigestValue></Reference></SignedInfo><SignatureValue>EMGJA0mrrSJ/xJHqWh0bTi7LIU0CUhCSqmz1HtVI2a4uZV9mnebfufWdAWJ2W5vskMCGisHrgMAY
-yoFqWx5fT04Xh0rWimT1Zq8o6EMZcHmI+Pvn5eejK+PiOSTb7jEo4ryFcPrIIhDXkJXtgnn1AO/I
-zoyzbHEqJOas+Sl5F6x1V6IDbyJZWWgn3bXY1bK5Imw7+hJK9jMQbnM5/iwCfoL5r12K7h1Yv3vU
-QPW+49PGDRfqm+ySO8hG3phBL5HGLaYLcK+3dZjj2I+6tVVhQPDPji+jQi2K460G8RyzURj1bF2d
-XoeurCaWXFEa0xbpXM+Si/ixdPaEMhmFFNFSTg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_8d3369c7-ecfd-4be3-b7a8-e204a468d6f9"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>DLNar1CWcbZYgzzKKlBuotikNk2oNreg521VhL6hnjYZClpiPpuemciOYrigrPyr1UtMtIvRympW
+Frfw6fWJVA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_cd5b8548-7484-42e7-905f-f1433ee54b24"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>hgImceQZuUajuY6dUvzWRqRNFETZai+FTECB2BTN4sSNI8gUlrakFqUDFLb9e63DAy2nkXVLD51B
+Rl77YvHZ4g==</DigestValue></Reference></SignedInfo><SignatureValue>X3j4quq6NqKHz7SAyPyv3YSIoBANAGnNWfYJcVCEYWRNLmfsyfQidPpbStMvMuJZkwel+ccJPDUr
+buCq2o3e9PCjI/e0EMj/kkrDbivXdOIPOXX7e3C/OhdqIk9TlA1Kt5X6nzDaVlQ9mfO8iSRD58QH
+Zprbim9Rdw1QIqInN5qlNhKm1DlrnY7t1s5Km3b9qtzxYzjlbdJ9jZuspfyUVB5A6KGl+z/g9Tpn
+4HTyKbxQx+EZXKkNwoDhhiG1csm+K1pSc1kqGP6IKc12EMEXfwUjfFTZVc4TWCMKY096Bed7jtH8
+mlC2a4G74rXobiZO/lEkbm/w3ENeQzsi7mtjTA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -1683,4 +1690,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_58683903-0c1b-4a92-b296-909d8940bf8b" Target="#_3ecb79e9-f9f7-4e54-a569-2f291afc46d5"><Timestamp>2020-02-15 05:35:12</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_cd5b8548-7484-42e7-905f-f1433ee54b24" Target="#_8d3369c7-ecfd-4be3-b7a8-e204a468d6f9"><Timestamp>2020-02-15 05:53:40</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
