@@ -5,7 +5,7 @@ rule "rSpeciality"
     dialect "mvel"
     ruleflow-group "rSpecialityGroup"
 when
-    $input : RecordIn( source.equals('CITELINE'), dataset.isLongest( speciality, "Speciality", false) )  
+    $input : RecordIn( speciality.equals('CITELINE'), dataset.isLongest( speciality, "Speciality", false) )  
 then
     dataset.survive( $input.TALEND_INTERNAL_ID, "Speciality", drools.getRule().getName());
 
