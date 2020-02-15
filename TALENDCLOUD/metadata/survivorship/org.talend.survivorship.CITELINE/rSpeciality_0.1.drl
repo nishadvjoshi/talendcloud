@@ -8,6 +8,7 @@ when
     $input : RecordIn( speciality.equals('CITELINE'), dataset.isLongest( speciality, "Speciality", false) )  
 then
     dataset.survive( $input.TALEND_INTERNAL_ID, "Speciality", drools.getRule().getName());
+    dataset.survive( $input.TALEND_INTERNAL_ID, "Source", drools.getRule().getName());
 
 end
 

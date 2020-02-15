@@ -5,7 +5,7 @@ rule "rZipCode"
     dialect "mvel"
     ruleflow-group "rZipCodeGroup"
 when
-    $input : RecordIn( dataset.isLongest( zipcode, "ZipCode", false) )  
+    $input : RecordIn( dataset.isMostCommon( zipcode, "ZipCode", false) )  
 then
     dataset.survive( $input.TALEND_INTERNAL_ID, "ZipCode", drools.getRule().getName());
 
